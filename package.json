@@ -8,5 +8,13 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "fs-extra": "^10.1.0",
+    "globby": "^11.1.0"
+  },
+  "peerDependencies": {
+    "fs-extra": "^10.1.0",
+    "globby": "^11.1.0"
+  }
 }

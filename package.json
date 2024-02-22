@@ -9,6 +9,10 @@
   "keywords": [],
   "author": "",
   "license": "SEE LICENSE IN LICENSE",
+  "workspaces": [
+    "packages/styles/*",
+    "packages/*"
+  ],
   "devDependencies": {
     "fs-extra": "^10.1.0",
     "globby": "^11.1.0"

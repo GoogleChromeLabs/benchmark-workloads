@@ -1,0 +1,20 @@
+{
+  "name": "aurora-workloads",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "SEE LICENSE IN LICENSE",
+  "devDependencies": {
+    "fs-extra": "^10.1.0",
+    "globby": "^11.1.0"
+  },
+  "peerDependencies": {
+    "fs-extra": "^10.1.0",
+    "globby": "^11.1.0"
+  }
+}

@@ -1,7 +1,5 @@
 # todomvc-css
 
-> **_NOTE:_** This is not an official repo from todomvc and only serves as personal research.
-
 ## Overview
 
 This todomvc-css repo implements changes to adhere to some a11y audit results that needed to get addressed.

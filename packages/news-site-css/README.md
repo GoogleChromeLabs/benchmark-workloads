@@ -1,7 +1,5 @@
 # news-site-css
 
-![NPM version](https://img.shields.io/npm/v/news-site-css.svg?style=for-the-badge&labelColor=000000)
-
 ## How to use
 
 This package allows you to use the stylesheets in various ways, either by including the complete rules (index.css, index.min.css) in a link tag, or by importing partial css / css module files in your code.

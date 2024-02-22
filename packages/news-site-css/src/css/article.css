@@ -34,14 +34,12 @@
     width: 100%;
 }
 
-/* stylelint-disable */
 .article-header a {
     display: flex;
     text-decoration: none;
     color: var(--theme-text-dark);
     pointer-events: auto;
 }
-/* stylelint-enable */
 
 .article-body {
     display: flex;
@@ -49,7 +47,6 @@
     position: relative;
 }
 
-/* stylelint-disable */
 .article-body a {
     text-decoration: none;
     color: var(--theme-link-color);
@@ -61,7 +58,6 @@
     color: var(--theme-link-hover);
     text-decoration: underline;
 }
-/* stylelint-enable */
 
 .article-image-container {
     display: flex;
@@ -121,11 +117,9 @@
     margin-inline-end: var(--content-spacing-small);
 }
 
-/* stylelint-disable */
 .article-image-tag svg path {
     fill: var(--theme-icon-fill-light);
 }
-/* stylelint-enable */
 
 .article-title {
     display: flex;

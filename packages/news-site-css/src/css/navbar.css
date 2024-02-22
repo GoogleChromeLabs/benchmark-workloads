@@ -37,7 +37,6 @@
     --animated-icon-hover: var(--theme-navigation-text-hover);
 }
 
-/* stylelint-disable */
 #navbar-toggle:checked ~ .navbar-label div span span:nth-child(2) {
     transform: scale(0);
 }
@@ -49,7 +48,6 @@
 #navbar-toggle:checked ~ .navbar-label div span span:nth-child(3) {
     transform: rotate(-45deg);
 }
-/* stylelint-enable */
 
 .navbar-content {
     display: flex;

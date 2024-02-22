@@ -17,7 +17,6 @@ importers:
       http-server: ^14.1.1
       rollup: ^3.23.0
       rollup-plugin-cleaner: ^1.0.0
-      rollup-plugin-copy-merge: ^1.0.2
       rollup-plugin-import-css: ^3.2.1
       semver: ^7.5.1
       strip-comments: ^2.0.1
@@ -29,7 +28,6 @@ importers:
       http-server: 14.1.1
       rollup: 3.29.4
       rollup-plugin-cleaner: 1.0.0_rollup@3.29.4
-      rollup-plugin-copy-merge: 1.0.2_ss2dk6eq7nailb22ewhebbgvoy
       rollup-plugin-import-css: 3.4.0_rollup@3.29.4
       semver: 7.6.0
       strip-comments: 2.0.1
@@ -134,20 +132,8 @@ packages:
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
     dev: true
 
-  /@types/fs-extra/9.0.13:
-    resolution: {integrity: sha512-nEnwB++1u5lVDM2UI4c1+5R+FYaKfaAzS4OococimjVm3nQw3TuzH5UNsocrcTBbhnerblyHj4A49qXbIiZdpA==}
-    dependencies:
-      '@types/node': 20.11.19
-    dev: true
-
   /@types/minimist/1.2.5:
     resolution: {integrity: sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==}
-    dev: true
-
-  /@types/node/20.11.19:
-    resolution: {integrity: sha512-7xMnVEcZFu0DikYjWOlRq7NTPETrm7teqUT2WkQjrTIkEgUyyGdWsj/Zg8bEJt5TNklzbPD1X3fqfsHw3SpapQ==}
-    dependencies:
-      undici-types: 5.26.5
     dev: true
 
   /@types/normalize-package-data/2.4.4:
@@ -307,10 +293,6 @@ packages:
 
   /colord/2.9.3:
     resolution: {integrity: sha512-jeC1axXpnb0/2nn/Y1LPuLdgXBLH7aDcHu4KEKfqw3CUhX7ZpfBSlPKyqXE6btIgEzfWtrX3/tyBCaCvXvMkOw==}
-    dev: true
-
-  /colorette/2.0.20:
-    resolution: {integrity: sha512-IfEDxwoWIjkeXL1eXcDiow4UbKjhLdq6/EuSVR9GMN7KVH3r9gQ83e73hsz1Nd1T3ijd5xv1wcWRYO+D6kCI2w==}
     dev: true
 
   /concat-map/0.0.1:
@@ -818,11 +800,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /is-plain-obj/4.1.0:
-    resolution: {integrity: sha512-+Pgi+vMuUNkJyExiMBt5IlFoMyKnr5zhJ4Uspz58WOhBF5QoIZkFyNHIbBAtHwzVAgk5RtndVNsDRN61/mmDqg==}
-    engines: {node: '>=12'}
-    dev: true
-
   /is-plain-object/5.0.0:
     resolution: {integrity: sha512-VRSzKkbMm5jMDoKLbltAkFQ5Qr7VDiTFGXxYFXXowVj387GeGNOCsOH6Msy00SGZ3Fp84b1Naa1psqgcCIEP5Q==}
     engines: {node: '>=0.10.0'}
@@ -1230,22 +1207,6 @@ packages:
       rollup: 3.29.4
     dev: true
 
-  /rollup-plugin-copy-merge/1.0.2_ss2dk6eq7nailb22ewhebbgvoy:
-    resolution: {integrity: sha512-EVz8lFbyoqqFh9xdj2lRskd91zCYHBcavMaMdO5KHnSF1rvzDPi55qntEvBe1VV695DNn9Nx7E1E9/8Pdc+lxg==}
-    engines: {node: '>=14'}
-    peerDependencies:
-      '@types/fs-extra': ^9.0.13
-      colorette: ^2.0.17
-      fs-extra: ^10.1.0
-      globby: ^11.1.0
-    dependencies:
-      '@types/fs-extra': 9.0.13
-      colorette: 2.0.20
-      fs-extra: 11.2.0
-      globby: 13.2.2
-      is-plain-obj: 4.1.0
-    dev: true
-
   /rollup-plugin-import-css/3.4.0_rollup@3.29.4:
     resolution: {integrity: sha512-997dJi7M7yYFn7tZer/UVt72mh4GH/hHBv48j3V4jsGSg+1DdYUXn+QB9SMMCNKF99pSv6QXmIOLTyeuijIsgg==}
     engines: {node: '>=16'}
@@ -1514,10 +1475,6 @@ packages:
   /type-fest/1.4.0:
     resolution: {integrity: sha512-yGSza74xk0UG8k+pLh5oeoYirvIiWo5t0/o3zHHAO2tRDiZcxWP7fywNlXhqb6/r6sWvwi+RsyQMWhVLe4BVuA==}
     engines: {node: '>=10'}
-    dev: true
-
-  /undici-types/5.26.5:
-    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
     dev: true
 
   /union/0.5.0:

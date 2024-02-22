@@ -9,6 +9,7 @@ async function create(src, dest) {
     const { name } = path.parse(src);
     const fileName = `${name}.constructable.js`;
     const outputPath = path.join(dest, fileName);
+    await fs.createFile(outputPath);
     await fs.writeFile(outputPath, output);
 }
 

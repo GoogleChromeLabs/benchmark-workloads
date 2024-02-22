@@ -107,7 +107,6 @@ html[dir="rtl"] .animated-icon {
 .arrow-icon.hover:hover .animated-icon-inner span:nth-child(2) {
     transform: translate(calc(var(--animated-icon-center) * var(--language-direction-adjustment)), 0) rotate(215deg);
 }
-/* stylelint-enable */
 
 .hamburger-icon .animated-icon-inner span {
     inset-inline-start: var(--animated-icon-center-negative);
@@ -118,3 +117,4 @@ html[dir="rtl"] .arrow-icon {
     transform: rotate(180deg);
 }
 /** RTL ICONS END **/
+/* stylelint-enable */

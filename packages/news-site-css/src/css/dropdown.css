@@ -45,7 +45,6 @@
     margin-inline-end: 8px;
 }
 
-/* stylelint-disable */
 .dropdown-toggle:checked ~ .dropdown-label div span span:nth-child(1) {
     transform: translate(calc(var(--animated-icon-height-half) * var(--language-direction-adjustment)), 0) rotate(-35deg);
 }
@@ -53,7 +52,6 @@
 .dropdown-toggle:checked ~ .dropdown-label div span span:nth-child(2) {
     transform: translate(calc(var(--animated-icon-center) * var(--language-direction-adjustment)), 0) rotate(215deg);
 }
-/* stylelint-enable */
 
 .dropdown-content {
     list-style-type: none;

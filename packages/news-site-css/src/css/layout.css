@@ -13,7 +13,6 @@
     width: 100%;
     min-width: 300px;
     height: 100%;
-    overflow-x: hidden;
     font-size: var(--font-size-medium);
     font-family: var(--font-family-default);
     background-color: var(--theme-ui-background);
@@ -88,8 +87,7 @@
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: var(--content-spacing-xlarge);
-    row-gap: var(--content-spacing-xlarge);
+    gap: var(--content-spacing-xlarge) var(--content-spacing-xlarge);
 }
 
 .grid-container.grid-wrap {

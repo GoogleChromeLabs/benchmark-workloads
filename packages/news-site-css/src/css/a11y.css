@@ -47,7 +47,6 @@ but useful for people who use screen readers */
   Apply forced-colors class to html tag
   to manually envoke reduced-motion on child elements.
 */
-/* stylelint-disable */
 .forced-colors *:not(button):not(.animated-icon),
 .forced-colors *::before,
 .forced-colors *::after {
@@ -63,7 +62,6 @@ but useful for people who use screen readers */
     color-scheme: light dark !important;
     scrollbar-color: auto !important;
 }
-/* stylelint-enable */
 
 @media (forced-colors: active) {
     button,

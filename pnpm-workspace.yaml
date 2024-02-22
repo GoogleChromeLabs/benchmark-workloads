@@ -1,6 +1,5 @@
 packages:
   # applications
-  - 'apps/*'
+  - 'apps/**/*'
   # packages
-  - 'packages/*'
-  - 'packages/styles/*'
+  - 'packages/**/*'

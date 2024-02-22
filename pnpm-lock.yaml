@@ -10,7 +10,7 @@ importers:
       fs-extra: 10.1.0
       globby: 11.1.0
 
-  packages/news-site-css:
+  packages/styles/news-site-css:
     specifiers:
       fs-extra: ^11.1.1
       globby: ^13.2.0
@@ -32,7 +32,7 @@ importers:
       stylelint: 15.11.0
       stylelint-config-standard: 33.0.0_stylelint@15.11.0
 
-  packages/todomvc-css:
+  packages/styles/todomvc-css:
     specifiers:
       fs-extra: ^11.1.1
       globby: ^13.2.0

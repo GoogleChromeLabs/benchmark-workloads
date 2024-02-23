@@ -14,7 +14,6 @@
         "build:gh": "TARGET=github next build && touch docs/.nojekyll",
         "start": "next start",
         "start:static": "http-server ./dist -p 3001 -c-1 --cors",
-        "start:gh": "http-server ./docs -p 3001 -c-1 --cors",
         "lint": "next lint",
         "lint:fix": "DEBUG=eslint:cli-engine eslint \"**/*.{js,mjs,jsx,ts,tsx}\" --fix",
         "pretty:check": "prettier --check ./",

@@ -65,7 +65,7 @@ const githubConfig = {
     },
     app: {
         head: { ...headConfig },
-        baseURL: `/${repository}/`,
+        baseURL: `/${repository}`,
     },
 }
 

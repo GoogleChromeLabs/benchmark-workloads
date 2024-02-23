@@ -1,0 +1,34 @@
+{
+    "name": "news-site-nuxt",
+    "version": "1.0.0",
+    "author": "Thorsten Kober",
+    "license": "SEE LICENSE IN LICENSE",
+    "engines": {
+        "node": ">=18.13.0",
+        "npm": ">=8.19.3"
+    },
+    "scripts": {
+        "dev": "nuxt dev",
+        "build": "nuxt build",
+        "build:static": "TARGET=static nuxt generate",
+        "build:gh": "TARGET=github nuxt generate && touch docs/.nojekyll",
+        "start": "nuxt preview",
+        "start:static": "http-server ./dist -p 3001 -c-1 --cors",
+        "postinstall": "nuxt prepare",
+        "lint:fix": "eslint . --fix",
+        "pretty:check": "prettier --check ./",
+        "pretty:fix": "prettier --write ./",
+        "format": "npm run pretty:fix ; npm run lint:fix"
+    },
+    "devDependencies": {
+        "@nuxt/eslint-config": "^0.1.1",
+        "@types/node": "^18",
+        "eslint": "^8.41.0",
+        "nuxt": "^3.8.1",
+        "prettier": "^2.8.8"
+    },
+    "dependencies": {
+        "http-server": "^14.1.1",
+        "news-site-css": "^1.11.42"
+    }
+}

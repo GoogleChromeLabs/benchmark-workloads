@@ -8,6 +8,15 @@ const baseConfig = {
     productionBrowserSourceMaps: true,
 };
 
+const staticConfig = {
+    output: "export",
+    distDir: "dist",
+    assetPrefix: "./",
+    images: {
+        unoptimized: true,
+    },
+};
+
 const githubConfig = {
     output: "export",
     distDir: "docs",
@@ -16,15 +25,6 @@ const githubConfig = {
     images: {
         unoptimized: true,
     }
-};
-
-const staticConfig = {
-    output: "export",
-    distDir: "dist",
-    assetPrefix: "./",
-    images: {
-        unoptimized: true,
-    },
 };
 
 switch (target) {

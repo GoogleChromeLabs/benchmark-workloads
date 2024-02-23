@@ -18,7 +18,6 @@ export default function Layout({ children, id }) {
     const { content, links } = useDataContext();
     const router = useRouter();
 
-    // Speedo
     function handleRouteChangeComplete(url) {
         window.dispatchEvent(new CustomEvent("route-change-complete", { detail: { url } }));
     }

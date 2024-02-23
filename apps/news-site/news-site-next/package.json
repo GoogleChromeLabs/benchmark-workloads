@@ -1,0 +1,36 @@
+{
+    "name": "news-site-next",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "build:static": "TARGET=static next build",
+        "build:gh": "TARGET=github next build && touch docs/.nojekyll",
+        "start": "next start",
+        "start:static": "http-server ./dist -p 3001 -c-1 --cors",
+        "start:gh": "http-server ./docs -p 3001 -c-1 --cors",
+        "lint": "next lint",
+        "lint:fix": "DEBUG=eslint:cli-engine eslint \"**/*.{js,mjs,jsx,ts,tsx}\" --fix",
+        "pretty:check": "prettier --check ./",
+        "pretty:fix": "prettier --write ./",
+        "format": "npm run pretty:fix ; npm run lint:fix"
+    },
+    "dependencies": {
+        "@babel/eslint-parser": "^7.22.5",
+        "@babel/plugin-proposal-decorators": "^7.22.5",
+        "@typescript-eslint/eslint-plugin": "^5.60.1",
+        "classnames": "^2.3.2",
+        "eslint": "8.39.0",
+        "eslint-config-next": "13.3.4",
+        "http-server": "^14.1.1",
+        "install": "^0.13.0",
+        "news-site-css": "^1.11.42",
+        "next": "13.3.4",
+        "npm": "^9.6.7",
+        "prettier": "^2.8.8",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "uuid": "^9.0.0"
+    }
+}

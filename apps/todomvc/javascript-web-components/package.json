@@ -8,9 +8,9 @@
     },
     "private": true,
     "scripts": {
-        "dev": "http-server ./ -p 7005 -c-1 --cors -o",
-        "build": "node scripts/build.js",
-        "serve": "http-server ./dist -p 7006 -c-1 --cors -o"
+        "dev": "http-server ./ -p 3001 -c-1 --cors -o",
+        "build:static": "node scripts/build.js",
+        "start:static": "http-server ./dist -p 3001 -c-1 --cors"
     },
     "keywords": [],
     "author": "",

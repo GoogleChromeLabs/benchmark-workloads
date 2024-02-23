@@ -1,0 +1,13 @@
+{
+  "/_app": "pages/_app.js",
+  "/health": "pages/health.html",
+  "/business": "pages/business.html",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/opinion": "pages/opinion.html",
+  "/politics": "pages/politics.html",
+  "/": "pages/index.html",
+  "/us": "pages/us.html",
+  "/world": "pages/world.html",
+  "/404": "pages/404.html"
+}

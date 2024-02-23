@@ -4,13 +4,24 @@ Aurora Workloads is a collection of open source example apps and sites that aim 
 
 ## Apps
 
+### news-site
+
+#### news-site-next
+
+```bash
+pnpm -F news-site-next dev
+pnpm -F news-site-next build
+pnpm -F news-site-next build:static
+pnpm -F news-site-next build:gh
+```
+
 ### todomvc
 
 #### javascript-web-components
 
 ```bash
 pnpm -F javascript-web-components dev
-pnpm -F javascript-web-components build
+pnpm -F javascript-web-components build:static
 ```
 
 ## Packages

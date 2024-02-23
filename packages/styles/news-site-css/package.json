@@ -1,12 +1,11 @@
 {
   "name": "news-site-css",
   "version": "1.0.0",
-  "description": "News-site styles.",
   "author": "Thorsten Kober",
   "license": "SEE LICENSE IN LICENSE",
   "engines": {
-    "node": ">=18.13.0",
-    "npm": ">=8.19.3"
+      "node": ">=18.13.0",
+      "npm": ">=8.19.3"
   },
   "scripts": {
     "lint": "stylelint \"src/css/*.css\"",

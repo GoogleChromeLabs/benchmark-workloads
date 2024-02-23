@@ -1,7 +1,6 @@
 {
     "name": "todomvc-css",
     "version": "1.0.0",
-    "description": "An alt version to the official todo-app-css.",
     "author": "Thorsten Kober",
     "license": "SEE LICENSE IN LICENSE",
     "engines": {

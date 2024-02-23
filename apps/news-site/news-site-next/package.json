@@ -1,7 +1,12 @@
 {
     "name": "news-site-next",
-    "version": "0.1.0",
-    "private": true,
+    "version": "1.0.0",
+    "author": "Thorsten Kober",
+    "license": "SEE LICENSE IN LICENSE",
+    "engines": {
+        "node": ">=18.13.0",
+        "npm": ">=8.19.3"
+    },
     "scripts": {
         "dev": "next dev",
         "build": "next build",

@@ -63,7 +63,7 @@ importers:
       nuxt: 3.10.3_vf2lmf7cvje6ph342j3j57cxju
       prettier: 2.8.8
 
-  apps/todomvc/javascript-web-components:
+  apps/todomvc/todomvc-web-components:
     specifiers:
       http-server: ^14.1.1
       todomvc-css: workspace:*

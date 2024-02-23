@@ -30,12 +30,12 @@ pnpm -F news-site-next start:static
 
 ### todomvc
 
-#### javascript-web-components
+#### todomvc-web-components
 
 ```bash
-pnpm -F javascript-web-components dev
-pnpm -F javascript-web-components build:static
-pnpm -F javascript-web-components start:static
+pnpm -F todomvc-web-components dev
+pnpm -F todomvc-web-components build:static
+pnpm -F todomvc-web-components start:static
 ```
 
 ## Packages

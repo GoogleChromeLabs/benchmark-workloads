@@ -18,6 +18,16 @@ pnpm -F news-site-next start:static
 pnpm -F news-site-next start:gh
 ```
 
+#### news-site-nuxt
+
+```bash
+pnpm -F news-site-nuxt dev
+pnpm -F news-site-nuxt build
+pnpm -F news-site-nuxt build:static
+pnpm -F news-site-nuxt build:gh
+pnpm -F news-site-next start:static
+```
+
 ### todomvc
 
 #### javascript-web-components

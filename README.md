@@ -13,6 +13,9 @@ pnpm -F news-site-next dev
 pnpm -F news-site-next build
 pnpm -F news-site-next build:static
 pnpm -F news-site-next build:gh
+pnpm -F news-site-next start
+pnpm -F news-site-next start:static
+pnpm -F news-site-next start:gh
 ```
 
 ### todomvc
@@ -22,6 +25,7 @@ pnpm -F news-site-next build:gh
 ```bash
 pnpm -F javascript-web-components dev
 pnpm -F javascript-web-components build:static
+pnpm -F javascript-web-components start:static
 ```
 
 ## Packages

@@ -78,6 +78,14 @@ pnpm -F todomvc-lit build:static
 pnpm -F todomvc-lit start:static
 ```
 
+#### todomvc-preact
+
+```bash
+pnpm -F todomvc-preact dev
+pnpm -F todomvc-preact build:static
+pnpm -F todomvc-preact start:static
+```
+
 #### todomvc-web-components
 
 ```bash

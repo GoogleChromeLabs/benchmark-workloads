@@ -1,4 +1,4 @@
-# Speedometer 3.0: TodoMVC: Backbone
+# TodoMVC: Backbone
 
 ## Description
 

@@ -38,5 +38,5 @@ terminal:
 2. npm run dev
 
 browser:
-1. http://localhost:7001/
+1. http://localhost:3000/
 ```

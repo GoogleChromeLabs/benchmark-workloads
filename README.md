@@ -38,6 +38,14 @@ pnpm -F todomvc-angular build:static
 pnpm -F todomvc-angular start:static
 ```
 
+#### todomvc-backbone
+
+```bash
+pnpm -F todomvc-backbone dev
+pnpm -F todomvc-backbone build:static
+pnpm -F todomvc-backbone start:static
+```
+
 #### todomvc-es5
 
 ```bash

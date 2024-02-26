@@ -9,8 +9,8 @@
     },
     "scripts": {
         "dev": "wireit",
-        "build": "wireit",
-        "serve": "wireit",
+        "build:static": "wireit",
+        "start:static": "wireit",
         "tsc": "wireit",
         "rollup": "wireit",
         "copy-index-html": "wireit"
@@ -30,12 +30,12 @@
         "tslib": "^2.5.2"
     },
     "wireit": {
-        "serve": {
+        "start:static": {
             "dependencies": [
-                "build"
+                "build:static"
             ],
             "files": [
-                "web-dev-server.config.js"
+                "web-dev-server.config.mjs"
             ],
             "service": true,
             "command": "wds"
@@ -46,12 +46,12 @@
                 "tsc"
             ],
             "files": [
-                "web-dev-server.config.js"
+                "web-dev-server.config.mjs"
             ],
             "service": true,
             "command": "wds"
         },
-        "build": {
+        "build:static": {
             "dependencies": [
                 "tsc",
                 "rollup",

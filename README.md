@@ -62,6 +62,14 @@ pnpm -F todomvc-es6-webpack build:static
 pnpm -F todomvc-es6-webpack start:static
 ```
 
+#### todomvc-jquery
+
+```bash
+pnpm -F todomvc-jquery dev
+pnpm -F todomvc-jquery build:static
+pnpm -F todomvc-jquery start:static
+```
+
 #### todomvc-web-components
 
 ```bash

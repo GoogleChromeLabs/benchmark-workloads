@@ -38,6 +38,14 @@ pnpm -F todomvc-es5 build:static
 pnpm -F todomvc-es5 start:static
 ```
 
+#### todomvc-es6-webpack
+
+```bash
+pnpm -F todomvc-es6-webpack dev
+pnpm -F todomvc-es6-webpack build:static
+pnpm -F todomvc-es6-webpack start:static
+```
+
 #### todomvc-web-components
 
 ```bash

@@ -30,6 +30,14 @@ pnpm -F news-site-next start:static
 
 ### todomvc
 
+#### todomvc-es5
+
+```bash
+pnpm -F todomvc-es5 dev
+pnpm -F todomvc-es5 build:static
+pnpm -F todomvc-es5 start:static
+```
+
 #### todomvc-web-components
 
 ```bash

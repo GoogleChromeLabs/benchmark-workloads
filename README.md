@@ -70,6 +70,14 @@ pnpm -F todomvc-jquery build:static
 pnpm -F todomvc-jquery start:static
 ```
 
+#### todomvc-lit
+
+```bash
+pnpm -F todomvc-lit dev
+pnpm -F todomvc-lit build:static
+pnpm -F todomvc-lit start:static
+```
+
 #### todomvc-web-components
 
 ```bash

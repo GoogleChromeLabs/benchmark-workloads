@@ -1,4 +1,20 @@
-/node_modules
+# system
+.DS_Store
+
+# dependencies
+node_modules
+
+# angular
+.angular
+
+# next.js
+.next
+
+# nuxt
+.nuxt
+.output
+
+# Lit specific
 /.tsbuildinfo
 /.wireit
 /.rollup.cache

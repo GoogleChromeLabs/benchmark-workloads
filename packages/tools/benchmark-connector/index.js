@@ -31,7 +31,7 @@ const appId = "222";
 
 window.onmessage = async (event) => {
     // ensure we only let legit functions run...
-    if (event.data.id !== appId || event.data.type !== "speedo")
+    if (event.data.id !== appId || event.data.type !== "benchmark-connector")
         return;
 
     const { name } = event.data;

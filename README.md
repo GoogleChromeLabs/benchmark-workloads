@@ -94,6 +94,14 @@ pnpm -F todomvc-react build:static
 pnpm -F todomvc-react start:static
 ```
 
+#### todomvc-react-redux
+
+```bash
+pnpm -F todomvc-react-redux dev
+pnpm -F todomvc-react-redux build:static
+pnpm -F todomvc-react-redux start:static
+```
+
 #### todomvc-web-components
 
 ```bash

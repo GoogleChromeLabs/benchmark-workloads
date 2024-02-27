@@ -9,7 +9,7 @@
     },
     "scripts": {
         "dev": "webpack serve --open --config webpack.dev.js",
-        "sanitize": "OUTPUT_FOLDER=./dist node node_modules/sanitize-language",
+        "sanitize": "OUTPUT_FOLDER=./dist node node_modules/sanitize-language/dist/index.min.js",
         "build:static": "webpack --config webpack.prod.js && npm run sanitize",
         "start:static": "http-server ./dist -p 3001 -c-1 --cors",
         "test": "jest"

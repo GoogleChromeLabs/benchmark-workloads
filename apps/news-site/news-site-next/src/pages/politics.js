@@ -2,6 +2,7 @@ import React from "react";
 import Page from "@/partials/page/page";
 import Head from "next/head";
 import { DataContextProvider } from "@/context/data-context";
+import Script from "next/script";
 
 export default function Politics() {
     return (
@@ -14,6 +15,7 @@ export default function Politics() {
             <DataContextProvider>
                 <Page id="politics" />
             </DataContextProvider>
+            <Script src="./benchmark-connector.min.js" />
         </>
     );
 }

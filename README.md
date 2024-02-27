@@ -119,3 +119,11 @@ pnpm -F news-site-css build
 pnpm -F todomvc-css lint
 pnpm -F todomvc-css build
 ```
+
+### Tools
+
+#### sanitize-language
+
+```bash
+pnpm -F sanitize-language build
+```

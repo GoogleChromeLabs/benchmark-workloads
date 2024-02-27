@@ -1,6 +1,21 @@
 {
-    "name": "sanitize-language",
-    "version": "1.0.0",
-    "description": "A script to parse files for non-inclusive words.",
-    "main": "index.js"
+  "name": "sanitize-language",
+  "version": "1.0.0",
+  "description": "A script to parse files for non-inclusive words.",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c --bundleConfigAsCjs",
+    "release:major": "npm run build && npm version $(semver $npm_package_version -i major) && npm publish --tag latest && git push",
+    "release:minor": "npm run build && npm version $(semver $npm_package_version -i minor) && npm publish --tag latest && git push",
+    "release:patch": "npm run build && npm version $(semver $npm_package_version -i patch) && npm publish --tag latest && git push"
+  },
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.3",
+    "rollup": "^3.23.0",
+    "rollup-plugin-cleaner": "^1.0.0",
+    "semver": "^7.5.1"
+  },
+  "files": [
+    "/dist"
+  ]
 }

@@ -102,6 +102,14 @@ pnpm -F todomvc-react-redux build:static
 pnpm -F todomvc-react-redux start:static
 ```
 
+#### todomvc-svelte
+
+```bash
+pnpm -F todomvc-svelte dev
+pnpm -F todomvc-svelte build:static
+pnpm -F todomvc-svelte start:static
+```
+
 #### todomvc-web-components
 
 ```bash

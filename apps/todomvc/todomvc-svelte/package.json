@@ -9,9 +9,9 @@
     },
     "scripts": {
         "watch": "rollup -c -w",
-        "dev": "npm run serve & npm run watch",
+        "dev": "npm run start:static & npm run watch",
         "build:static": "rollup -c",
-        "start:static": "http-server ./dist -p 7002 -c-1 --cors"
+        "start:static": "http-server ./dist -p 3001 -c-1 --cors"
     },
     "dependencies": {
         "todomvc-app-css": "^2.4.2",

@@ -16,5 +16,8 @@
     "dependencies": {
         "http-server": "^14.1.1",
         "todomvc-css": "workspace:*"
-    }
+    },
+    "files": [
+        "/dist"
+    ]
 }

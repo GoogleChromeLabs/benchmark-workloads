@@ -10,7 +10,7 @@ async function deleteFile(src) {
     }
 }
 
-async function copyFile(src, dest){
+async function copyFile(src, dest) {
     await fs.mkdir(getDirName(dest), { recursive: true });
     await fs.copyFile(src, dest);
     console.log(`File ${src} has been copied to ${dest}.`);

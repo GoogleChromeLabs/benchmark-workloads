@@ -146,6 +146,12 @@ pnpm -F todomvc-css build
 
 ### Tools
 
+#### benchmark-connector
+
+```bash
+pnpm -F benchmark-connector build
+```
+
 #### sanitize-language
 
 ```bash

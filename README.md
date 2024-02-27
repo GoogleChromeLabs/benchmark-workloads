@@ -110,6 +110,14 @@ pnpm -F todomvc-svelte build:static
 pnpm -F todomvc-svelte start:static
 ```
 
+#### todomvc-vue
+
+```bash
+pnpm -F todomvc-vue dev
+pnpm -F todomvc-vue build:static
+pnpm -F todomvc-vue start:static
+```
+
 #### todomvc-web-components
 
 ```bash

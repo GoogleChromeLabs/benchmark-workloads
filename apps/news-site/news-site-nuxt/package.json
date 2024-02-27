@@ -29,6 +29,6 @@
     },
     "dependencies": {
         "http-server": "^14.1.1",
-        "news-site-css": "^1.11.42"
+        "news-site-css": "workspace:*"
     }
 }

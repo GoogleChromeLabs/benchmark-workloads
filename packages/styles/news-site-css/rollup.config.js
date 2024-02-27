@@ -21,11 +21,11 @@ export default {
             output: "index.min.css",
         }),
         copyFiles({
-            src: ["src/css/*", "!src/css/partials.css", "!src/css/global.css"],
+            src: ["src/css/*", "!src/css/partials.css"],
             dest: "dist/",
         }),
         copyFiles({
-            src: ["src/css/*", "!src/css/partials.css", "!src/css/global.css"],
+            src: ["src/css/*", "!src/css/partials.css"],
             dest: "dist/",
             rename: (name, extension) => `${name}.module.${extension}`,
         }),

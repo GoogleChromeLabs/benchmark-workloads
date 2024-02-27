@@ -29,7 +29,7 @@
         "eslint-config-next": "13.3.4",
         "http-server": "^14.1.1",
         "install": "^0.13.0",
-        "news-site-css": "^1.11.42",
+        "news-site-css": "workspace:*",
         "next": "13.3.4",
         "npm": "^9.6.7",
         "prettier": "^2.8.8",

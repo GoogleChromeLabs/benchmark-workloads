@@ -20,7 +20,7 @@ importers:
       eslint-config-next: 13.3.4
       http-server: ^14.1.1
       install: ^0.13.0
-      news-site-css: ^1.11.42
+      news-site-css: workspace:*
       next: 13.3.4
       npm: ^9.6.7
       prettier: ^2.8.8
@@ -36,7 +36,7 @@ importers:
       eslint-config-next: 13.3.4_nx3uwtstnvrksnfvdrrar7vgdi
       http-server: 14.1.1
       install: 0.13.0
-      news-site-css: 1.11.42
+      news-site-css: link:../../../packages/styles/news-site-css
       next: 13.3.4_ogqwiwd4e24b5w6o4ksjhrnoye
       npm: 9.9.2
       prettier: 2.8.8
@@ -50,12 +50,12 @@ importers:
       '@types/node': ^18
       eslint: ^8.41.0
       http-server: ^14.1.1
-      news-site-css: ^1.11.42
+      news-site-css: workspace:*
       nuxt: ^3.8.1
       prettier: ^2.8.8
     dependencies:
       http-server: 14.1.1
-      news-site-css: 1.11.42
+      news-site-css: link:../../../packages/styles/news-site-css
     devDependencies:
       '@nuxt/eslint-config': 0.1.1_eslint@8.56.0
       '@types/node': 18.19.18
@@ -348,6 +348,9 @@ importers:
       strip-comments: 2.0.1
       stylelint: 15.11.0
       stylelint-config-standard: 33.0.0_stylelint@15.11.0
+
+  packages/tools/sanitize-language:
+    specifiers: {}
 
 packages:
 
@@ -12017,11 +12020,6 @@ packages:
 
   /neo-async/2.6.2:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
-
-  /news-site-css/1.11.42:
-    resolution: {integrity: sha512-YfQnf/BU5I+ePh8zMZmbkfrwztWBUNFHJ2RrjBtTvGBzvvMr/gT7/yfbY4m47DPjRY/u64RD3Vg/c8lQ2Rm0LQ==}
-    engines: {node: '>=18.13.0', npm: '>=8.19.3'}
-    dev: false
 
   /next/13.3.4_ogqwiwd4e24b5w6o4ksjhrnoye:
     resolution: {integrity: sha512-sod7HeokBSvH5QV0KB+pXeLfcXUlLrGnVUXxHpmhilQ+nQYT3Im2O8DswD5e4uqbR8Pvdu9pcWgb1CbXZQZlmQ==}

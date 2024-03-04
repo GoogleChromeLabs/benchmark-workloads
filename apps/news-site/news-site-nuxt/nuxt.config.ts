@@ -21,7 +21,7 @@ const headConfig = {
             content: "A news site developed with Nuxt.",
         },
     ],
-}
+};
 
 const baseConfig = {
     css: ["news-site-css/dist/variables.css", "news-site-css/dist/global.css", "news-site-css/dist/a11y.css", "news-site-css/dist/icons.css", "news-site-css/dist/text.css"],
@@ -37,6 +37,9 @@ const baseConfig = {
     $production: {
         sourcemap: true
     },
+    plugins: [
+        { src: "~/node_modules/benchmark-connector/dist/benchmark-connector.min.js", mode: "client" },
+    ]
 };
 
 const staticConfig = {
@@ -54,7 +57,7 @@ const staticConfig = {
         cdnURL: "./",
         baseURL: "./",
     },
-}
+};
 
 const githubConfig = {
     ssr: false,
@@ -67,9 +70,9 @@ const githubConfig = {
         head: { ...headConfig },
         baseURL: `/${repository}`,
     },
-}
+};
 
-switch(target) {
+switch (target) {
     case "static":
         nuxtConfig = { ...baseConfig, ...staticConfig };
         break;

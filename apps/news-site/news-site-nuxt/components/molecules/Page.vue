@@ -1,29 +1,18 @@
-<script lang="js">
-import { inject } from "vue";
+<script setup>
+import { inject, onMounted, ref } from "vue";
 import { useRoute } from "#imports";
-export default {
-    setup() {
-        const { content } = inject("data");
-        const route = useRoute();
-        return { route, content };
-    },
-    data() {
-        return {
-            showPortal: false,
-        };
-    },
-    mounted() {
-        this.showPortal = this.content[this.$route.name].notification;
-    },
-    methods: {
-        openPortal() {
-            this.showPortal = true;
-        },
-        closePortal() {
-            this.showPortal = false;
-        }
-    },
-};
+
+const { content } = inject("data");
+const route = useRoute();
+const showPortal = ref(false);
+
+onMounted(() => {
+    showPortal.value = content[route.name].notification ? true : false;
+});
+
+function closePortal() {
+    showPortal.value = false;
+}
 </script>
 
 <template>

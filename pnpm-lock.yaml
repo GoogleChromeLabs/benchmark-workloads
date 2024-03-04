@@ -50,12 +50,14 @@ importers:
     specifiers:
       '@nuxt/eslint-config': ^0.1.1
       '@types/node': ^18
+      benchmark-connector: 'workspace: *'
       eslint: ^8.41.0
       http-server: ^14.1.1
       news-site-css: workspace:*
       nuxt: ^3.8.1
       prettier: ^2.8.8
     dependencies:
+      benchmark-connector: link:../../../packages/tools/benchmark-connector
       http-server: 14.1.1
       news-site-css: link:../../../packages/styles/news-site-css
     devDependencies:

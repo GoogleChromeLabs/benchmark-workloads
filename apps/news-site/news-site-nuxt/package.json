@@ -8,10 +8,11 @@
         "npm": ">=8.19.3"
     },
     "scripts": {
-        "dev": "nuxt dev",
-        "build": "nuxt build",
-        "build:static": "TARGET=static nuxt generate",
-        "build:gh": "TARGET=github nuxt generate && touch docs/.nojekyll",
+        "prepare": "node scripts/prepare.js",
+        "dev": "npm run prepare && nuxt dev",
+        "build": "npm run prepare && nuxt build",
+        "build:static": "npm run prepare && TARGET=static nuxt generate",
+        "build:gh": "npm run prepare && TARGET=github nuxt generate && touch docs/.nojekyll",
         "start": "nuxt preview",
         "start:static": "http-server ./dist -p 3001 -c-1 --cors",
         "postinstall": "nuxt prepare",

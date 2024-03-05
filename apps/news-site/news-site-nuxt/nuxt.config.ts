@@ -21,6 +21,9 @@ const headConfig = {
             content: "A news site developed with Nuxt.",
         },
     ],
+    script: [
+        { src: "./benchmark-connector.min.js" },
+    ]
 };
 
 const baseConfig = {
@@ -36,10 +39,7 @@ const baseConfig = {
     },
     $production: {
         sourcemap: true
-    },
-    plugins: [
-        { src: "~/node_modules/benchmark-connector/dist/benchmark-connector.min.js", mode: "client" },
-    ]
+    }
 };
 
 const staticConfig = {

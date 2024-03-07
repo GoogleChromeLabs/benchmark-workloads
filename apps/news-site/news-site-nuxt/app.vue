@@ -7,7 +7,7 @@ scrollOnNavigation();
 </script>
 
 <template>
-    <Layout>
-        <NuxtPage />
-    </Layout>
+  <Layout>
+    <NuxtPage />
+  </Layout>
 </template>

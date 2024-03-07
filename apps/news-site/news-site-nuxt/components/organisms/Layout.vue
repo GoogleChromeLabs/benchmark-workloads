@@ -1,5 +1,5 @@
 <script setup>
-import { ref, inject, onMounted } from "vue";
+import { ref, inject, onMounted, watch } from "vue";
 import { useRoute } from "#imports";
 import styles from "news-site-css/dist/layout.module.css";
 
@@ -8,9 +8,12 @@ const route = useRoute();
 
 const { content, links } = inject("data");
 
-onMounted(() => {
-    showMessage.value = content[route.name].message;
-});
+function updateShowMessage() {
+    showMessage.value = content[route.name].message ? true : false;
+}
+
+onMounted(updateShowMessage);
+watch(() => route.path, updateShowMessage);
 
 const closeMessage = () => {
     showMessage.value = false;

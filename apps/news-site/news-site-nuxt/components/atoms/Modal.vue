@@ -1,28 +1,18 @@
-<script lang="js">
+<script setup>
 import { inject } from "vue";
 import styles from "news-site-css/dist/modal.module.css";
 
-export default {
-    props: {
-        onClose: Function,
-    },
-    setup() {
-        const { forms } = inject("data");
-        return { login: forms.login };
-    },
-    data() {
-        return {
-            styles,
-        };
-    },
-    methods: {
-        handleSubmit(e) {
-            const { elements } = e.target;
-            console.log(elements.username.value, elements.password.value);
-            this.onClose();
-        },
-    }
-};
+const { onClose } = defineProps({
+    onClose: Function,
+});
+
+const { forms: { login } } = inject("data");
+
+function handleSubmit(e) {
+    const { elements } = e.target;
+    console.log(elements.username.value, elements.password.value);
+    onClose();
+}
 </script>
 
 <template>

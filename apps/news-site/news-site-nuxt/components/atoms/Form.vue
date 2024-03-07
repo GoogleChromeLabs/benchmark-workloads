@@ -1,33 +1,23 @@
-<script lang="js">
+<script setup>
 import { inject } from "vue";
 import formStyles from "news-site-css/dist/form.module.css";
 import buttonStyles from "news-site-css/dist/button.module.css";
 
-export default {
-    props: {
-        onCancel: Function,
-        onSubmit: Function,
-    },
-    setup() {
-        const { forms } = inject("data");
-        return { login: forms.login };
-    },
-    data() {
-        return {
-            formStyles,
-            buttonStyles,
-        };
-    },
-    methods: {
-        handleSubmit(e) {
-            this.onSubmit(e);
-            e.preventDefault();
-        },
-        handleChange(e) {
-            console.log(e.target.value);
-        }
-    }
-};
+const { onCancel, onSubmit } = defineProps({
+    onCancel: Function,
+    onSubmit: Function,
+});
+
+const { forms: { login } } = inject("data");
+
+function handleSubmit(e) {
+    onSubmit(e);
+    e.preventDefault();
+}
+
+function handleChange(e) {
+    console.log(e.target.value);
+}
 </script>
 
 <template>

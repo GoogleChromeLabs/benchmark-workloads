@@ -1,8 +1,25 @@
-<script lang="js">
-import { inject } from "vue";
+<script setup>
+import { inject, onMounted, onUnmounted, ref } from "vue";
 import { useRoute } from "#imports";
 import navStyles from "news-site-css/dist/nav.module.css";
 import navbarStyles from "news-site-css/dist/navbar.module.css";
+
+const { callback } = defineProps({
+    callback: Function
+});
+
+const { content } = inject("data");
+const route = useRoute();
+
+const isOpen = ref(false);
+
+function handleClick() {
+    isOpen.value = false;
+}
+
+function handleChange(e) {
+    isOpen.value = e.target.checked;
+}
 
 function calculateViewportHeight() {
     // Since the navbar is supposed to appear below the menu, we can't use position: fixed, height: 100%.
@@ -15,38 +32,14 @@ function calculateViewportHeight() {
     document.documentElement.style.setProperty("--vh", `${vh}px`);
 }
 
-export default {
-    props: {
-        callback: Function
-    },
-    setup() {
-        const { content } = inject("data");
-        const route = useRoute();
-        return { route, content };
-    },
-    data () {
-        return {
-            navbarStyles,
-            navStyles,
-            isOpen: false,
-        };
-    },
-    mounted() {
-        calculateViewportHeight();
-        window.addEventListener("resize", calculateViewportHeight);
-    },
-    unmounted() {
-        window.removeEventListener("resize", calculateViewportHeight);
-    },
-    methods: {
-        handleClick() {
-            this.isOpen = false;
-        },
-        handleChange(e) {
-            this.isOpen = e.target.checked;
-        }
-    },
-};
+onMounted(() => {
+    calculateViewportHeight();
+    window.addEventListener("resize", calculateViewportHeight);
+});
+
+onUnmounted(() => {
+    window.removeEventListener("resize", calculateViewportHeight);
+});
 </script>
 
 <template>
@@ -61,12 +54,12 @@ export default {
       :for="navbarStyles['navbar-toggle']"
       :class="navbarStyles['navbar-label']"
     >
-      <span className="visually-hidden">Navbar Toggle</span>
+      <span class="visually-hidden">Navbar Toggle</span>
       <div
         :class="[navbarStyles['navbar-label-icon'], 'animated-icon', 'hamburger-icon']"
         title="Hamburger Icon"
       >
-        <span className="animated-icon-inner">
+        <span class="animated-icon-inner">
           <span />
           <span />
           <span />

@@ -1,18 +1,12 @@
-<script lang="js">
+<script setup>
 import styles from "news-site-css/dist/navbar.module.css";
-export default {
-    props: {
-        label: String,
-        url: String,
-        callback: Function,
-        id: String,
-    },
-    data () {
-        return {
-            styles,
-        };
-    }
-};
+
+const { label, url, callback, id } = defineProps({
+    label: String,
+    url: String,
+    callback: Function,
+    id: String,
+});
 </script>
 
 <template>

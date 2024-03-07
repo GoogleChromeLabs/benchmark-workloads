@@ -1,18 +1,10 @@
-<script lang="js">
+<script setup>
 import layoutStyles from "news-site-css/dist/layout.module.css";
 import articleStyles from "news-site-css/dist/article.module.css";
 
-export default {
-    props: {
-        article: Object,
-    },
-    data() {
-        return {
-            layoutStyles,
-            articleStyles
-        };
-    }
-};
+const { article } = defineProps({
+    article: Object,
+});
 </script>
 
 <template>

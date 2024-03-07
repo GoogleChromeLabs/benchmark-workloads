@@ -1,12 +1,10 @@
-<script lang="js">
+<script setup>
 
-export default {
-    props: {
-        text: String,
-        textClass: [String, Array],
-        type: String,
-    }
-};
+const { text, textClass, type } = defineProps({
+    text: String,
+    textClass: [String, Array],
+    type: String,
+});
 </script>
 
 <template>

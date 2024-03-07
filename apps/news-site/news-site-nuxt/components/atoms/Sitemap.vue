@@ -1,30 +1,21 @@
-<script lang="js">
+<script setup>
 import { inject } from "vue";
 import styles from "news-site-css/dist/sitemap.module.css";
 
-export default {
-    props: {
-        onClick: Function
-    },
-    setup() {
-        const { content } = inject("data");
+defineProps({
+    onClick: Function
+});
 
-        const keys = Object.keys(content);
-        const navItems = keys.reduce(
-            (result, key) => {
-                result.push(key);
-                return result;
-            },
-            []
-        );
-        return { content, navItems };
+const { content } = inject("data");
+
+const keys = Object.keys(content);
+const navItems = keys.reduce(
+    (result, key) => {
+        result.push(key);
+        return result;
     },
-    data() {
-        return {
-            styles,
-        };
-    }
-};
+    []
+);
 </script>
 
 <template>

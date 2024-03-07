@@ -1,24 +1,17 @@
-<script lang="js">
+<script setup>
 import toastStyles from "news-site-css/dist/toast.module.css";
 import buttonStyles from "news-site-css/dist/button.module.css";
 
-export default {
-    props: {
-        onClose: Function,
-        onAccept: Function,
-        onReject: Function,
-        notification: Object
-    },
-    data() {
-        return {
-            toastStyles,
-            buttonStyles,
-            callbacks: {
-                "accept": this.onAccept,
-                "reject": this.onReject,
-            }
-        };
-    },
+const { onClose, onAccept, onReject, notification } = defineProps({
+    onClose: Function,
+    onAccept: Function,
+    onReject: Function,
+    notification: Object
+});
+
+const callbacks = {
+    "accept": onAccept,
+    "reject": onReject
 };
 </script>
 

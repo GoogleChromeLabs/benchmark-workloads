@@ -1,29 +1,22 @@
-<script lang="js">
-import { inject } from "vue";
+<script setup>
+import { inject, ref } from "vue";
 import styles from "news-site-css/dist/dropdown.module.css";
-export default {
-    props: {
-        animatedIconClass: String,
-    },
-    setup() {
-        const { buttons } = inject("data");
-        return { buttons };
-    },
-    data() {
-        return {
-            styles,
-            isOpen: false,
-        };
-    },
-    methods: {
-        closeDropdown() {
-            this.isOpen = false;
-        },
-        handleChange(e) {
-            this.isOpen = e.target.checked;
-        }
-    }
-};
+
+const { buttons } = inject("data");
+
+const { animatedIconClass } = defineProps({
+    animatedIconClass: String,
+});
+
+const isOpen = ref(false);
+
+function closeDropdown() {
+    isOpen.value = false;
+}
+
+function handleChange(e) {
+    isOpen.value = e.target.checked;
+}
 </script>
 
 <template>

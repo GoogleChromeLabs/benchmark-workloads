@@ -1,35 +1,24 @@
-<script lang="js">
+<script setup>
 import { inject } from "vue";
-import { useRoute } from "#imports";
 import styles from "news-site-css/dist/navbar.module.css";
 
-export default {
-    props: {
-        callback: Function,
-        id: String,
-    },
-    setup() {
-        const { content } = inject("data");
+const { callback, id } = defineProps({
+    callback: Function,
+    id: String,
+});
 
-        const navItems = [];
-        const dropdownItems = [];
+const { content } = inject("data");
 
-        Object.keys(content).forEach(key => {
-            if (content[key].priority === 1)
-                navItems.push(key);
-            else if (content[key].priority === 2)
-                dropdownItems.push(key);
-        });
+const navItems = [];
+const dropdownItems = [];
 
-        const route = useRoute();
-        return { route, content, navItems, dropdownItems };
-    },
-    data() {
-        return {
-            styles,
-        };
-    }
-};
+Object.keys(content).forEach(key => {
+    if (content[key].priority === 1)
+        navItems.push(key);
+    else if (content[key].priority === 2)
+        dropdownItems.push(key);
+});
+
 </script>
 
 <template>

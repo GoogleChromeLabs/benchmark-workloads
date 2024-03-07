@@ -1,16 +1,9 @@
-<script lang="js">
+<script setup>
 import styles from "news-site-css/dist/article.module.css";
 
-export default {
-    props: {
-        tag: Object,
-    },
-    data() {
-        return {
-            styles
-        };
-    }
-};
+const { tag } = defineProps({
+    tag: Object,
+});
 </script>
 
 <template>

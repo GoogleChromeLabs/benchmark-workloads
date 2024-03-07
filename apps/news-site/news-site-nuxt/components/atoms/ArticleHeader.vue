@@ -1,11 +1,10 @@
-<script lang="js">
-export default {
-    props: {
-        headerClass: String,
-        text: String,
-        link: String,
-    }
-};
+<script setup>
+
+const { headerClass, text, link } = defineProps({
+    headerClass: String,
+    text: String,
+    link: String,
+});
 </script>
 
 <template>

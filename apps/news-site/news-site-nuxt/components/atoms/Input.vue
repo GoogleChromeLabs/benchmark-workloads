@@ -1,26 +1,18 @@
-<script lang="js">
+<script setup>
 import styles from "news-site-css/dist/input.module.css";
 
-export default {
-    props: {
-        id: String,
-        placeholder: String,
-        label: String,
-        containerClass: String,
-        type: String,
-        onChange: Function
-    },
-    data() {
-        return {
-            styles,
-        };
-    },
-    methods: {
-        handleChange(e) {
-            this.onChange(e);
-        }
-    }
-};
+const { id, placeholder, label, containerClass, type, onChange } = defineProps({
+    id: String,
+    placeholder: String,
+    label: String,
+    containerClass: String,
+    type: String,
+    onChange: Function
+});
+
+function handleChange(e) {
+    onChange(e);
+}
 </script>
 
 <template>

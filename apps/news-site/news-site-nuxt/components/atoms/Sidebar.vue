@@ -1,30 +1,21 @@
-<script lang="js">
+<script setup>
 import { inject } from "vue";
 import styles from "news-site-css/dist/sidebar.module.css";
 
-export default {
-    props: {
-        onClose: Function
-    },
-    setup() {
-        const { content, sitemap } = inject("data");
+const { onClose } = defineProps({
+    onClose: Function
+});
 
-        const keys = Object.keys(content);
-        const navItems = keys.reduce(
-            (result, key) => {
-                result.push(key);
-                return result;
-            },
-            []
-        );
-        return { content, navItems, sitemap };
+const { content, sitemap } = inject("data");
+
+const keys = Object.keys(content);
+const navItems = keys.reduce(
+    (result, key) => {
+        result.push(key);
+        return result;
     },
-    data() {
-        return {
-            styles,
-        };
-    }
-};
+    []
+);
 </script>
 
 <template>
@@ -65,7 +56,10 @@ export default {
             :key="`sidebar-section${section.id}`"
             :class="styles['sidebar-list-item']"
           >
-            <NuxtLink :to="`${content[key].url}#${section.id}`" @click="onClose">
+            <NuxtLink
+              :to="`${content[key].url}#${section.id}`"
+              @click="onClose"
+            >
               {{ section.name }}
             </NuxtLink>
           </li>

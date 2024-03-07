@@ -1,17 +1,10 @@
-<script lang="js">
+<script setup>
 import styles from "news-site-css/dist/message.module.css";
 
-export default {
-    props: {
-        onClose: Function,
-        message: Object,
-    },
-    data() {
-        return {
-            styles,
-        };
-    },
-};
+const { onClose, message } = defineProps({
+    onClose: Function,
+    message: Object,
+});
 </script>
 
 <template>

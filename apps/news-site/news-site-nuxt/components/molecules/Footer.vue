@@ -1,26 +1,17 @@
-<script lang="js">
-import { inject } from "vue";
+<script setup>
+import { inject, ref } from "vue";
 import styles from "news-site-css/dist/footer.module.css";
-export default {
-    setup() {
-        const { footer, links } = inject("data");
-        return { footer, links };
-    },
-    data() {
-        return {
-            styles,
-            showPortal: false,
-        };
-    },
-    methods: {
-        openPortal() {
-            this.showPortal = true;
-        },
-        closePortal() {
-            this.showPortal = false;
-        }
-    }
-};
+
+const { footer, links } = inject("data");
+const showPortal = ref(false);
+
+function openPortal() {
+    showPortal.value = true;
+}
+
+function closePortal() {
+    showPortal.value = false;
+}
 </script>
 
 <template>

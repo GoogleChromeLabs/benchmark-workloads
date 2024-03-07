@@ -18,16 +18,27 @@ const closeMessage = () => {
 </script>
 
 <template>
-    <NuxtLink :to="`${route.path}#content`" class="skip-link">
-        {{ links.a11y.skip.label }}
-    </NuxtLink>
-    <div id="page" :class="styles.page">
-        <Header />
-        <Navigation />
-        <Message v-if="content[route.name].message" v-show="showMessage" :on-close="closeMessage" :message="content[route.name].message" />
-        <Main>
-            <slot />
-        </Main>
-        <Footer />
-    </div>
+  <NuxtLink
+    :to="`${route.path}#content`"
+    class="skip-link"
+  >
+    {{ links.a11y.skip.label }}
+  </NuxtLink>
+  <div
+    id="page"
+    :class="styles.page"
+  >
+    <Header />
+    <Navigation />
+    <Message
+      v-if="content[route.name].message"
+      v-show="showMessage"
+      :on-close="closeMessage"
+      :message="content[route.name].message"
+    />
+    <Main>
+      <slot />
+    </Main>
+    <Footer />
+  </div>
 </template>

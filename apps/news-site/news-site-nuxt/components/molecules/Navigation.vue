@@ -1,35 +1,27 @@
-<script lang="js">
-import { inject } from "vue";
+<script setup>
+import { inject, ref } from "vue";
 import navStyles from "news-site-css/dist/nav.module.css";
 import buttonStyles from "news-site-css/dist/button.module.css";
-export default {
-    setup() {
-        const { buttons } = inject("data");
-        return { buttons };
-    },
-    data () {
-        return {
-            navStyles,
-            buttonStyles,
-            showSidebar: false,
-            showLogin: false,
-        };
-    },
-    methods: {
-        openLogin() {
-            this.showLogin = true;
-        },
-        closeLogin() {
-            this.showLogin = false;
-        },
-        openSidebar() {
-            this.showSidebar = true;
-        },
-        closeSidebar() {
-            this.showSidebar = false;
-        }
-    },
-};
+
+const { buttons } = inject("data");
+const showSidebar = ref(false);
+const showLogin = ref(false);
+
+function openLogin() {
+    showLogin.value = true;
+}
+
+function closeLogin() {
+    showLogin.value = false;
+}
+
+function openSidebar() {
+    showSidebar.value = true;
+}
+
+function closeSidebar() {
+    showSidebar.value = false;
+}
 </script>
 
 <template>

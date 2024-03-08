@@ -13,6 +13,14 @@ pnpm -F charts build
 pnpm -F charts start
 ```
 
+## complex-dom
+
+### todomvc-react-complex
+```bash
+pnpm -F todomvc-react-complex build
+pnpm -F todomvc-react-complex start
+```
+
 ## editors
 
 ### codemirror / tiptap
@@ -168,6 +176,13 @@ pnpm -F todomvc-css build
 
 ```bash
 pnpm -F benchmark-connector build
+```
+
+#### big-dom-generator
+
+```bash
+pnpm -F big-dom-generator build
+pnpm -F big-dom-generator postbuild
 ```
 
 #### sanitize-language

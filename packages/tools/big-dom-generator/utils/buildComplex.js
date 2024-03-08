@@ -38,7 +38,8 @@ function buildComplex(options) {
         cssFilesToAddLinksFor = ["big-dom.css"],
     } = options;
 
-    prepareComplex(options);
+    // [DISABLING FOR NOW]
+    // prepareComplex(options);
 
     // npm ci in big-dom-generator needs to run before we import JSDOM
     let JSDOM;

@@ -1,13 +1,14 @@
 <script setup>
 import { inject, onMounted, ref } from "vue";
-import { useRoute } from "#imports";
 
+const { id } = defineProps({
+    id: String
+});
 const { content } = inject("data");
-const route = useRoute();
 const showPortal = ref(false);
 
 onMounted(() => {
-    showPortal.value = content[route.name].notification ? true : false;
+    showPortal.value = content[id].notification ? true : false;
 });
 
 function closePortal() {
@@ -17,18 +18,18 @@ function closePortal() {
 
 <template>
   <Section
-    v-for="section in content[route.name].sections"
+    v-for="section in content[id].sections"
     :key="section.id"
     :section="section"
   />
   <Teleport to="body">
     <Toast
-      v-if="content[route.name].notification"
+      v-if="content[id].notification"
       v-show="showPortal"
       :on-close="closePortal"
       :on-accept="closePortal"
       :on-reject="closePortal"
-      :notification="content[route.name].notification"
+      :notification="content[id].notification"
     />
   </Teleport>
 </template>

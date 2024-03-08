@@ -9,7 +9,7 @@ const route = useRoute();
 const { content, links } = inject("data");
 
 function updateShowMessage() {
-    showMessage.value = content[route.name].message ? true : false;
+    showMessage.value = content[route.name]?.message ? true : false;
 }
 
 onMounted(updateShowMessage);
@@ -34,10 +34,10 @@ const closeMessage = () => {
     <Header />
     <Navigation />
     <Message
-      v-if="content[route.name].message"
+      v-if="content[route.name]?.message"
       v-show="showMessage"
       :on-close="closeMessage"
-      :message="content[route.name].message"
+      :message="content[route.name]?.message"
     />
     <Main>
       <slot />

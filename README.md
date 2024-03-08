@@ -4,6 +4,15 @@ Aurora Workloads is a collection of open source example apps and sites that aim 
 
 ## Apps
 
+## editors
+
+### codemirror / tiptap
+```bash
+pnpm -F editors dev
+pnpm -F editors build
+pnpm -F editors start
+```
+
 ### news-site
 
 #### news-site-next

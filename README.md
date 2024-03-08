@@ -4,6 +4,15 @@ Aurora Workloads is a collection of open source example apps and sites that aim 
 
 ## Apps
 
+## charts
+
+### chartjs / observable-plot
+```bash
+pnpm -F charts dev
+pnpm -F charts build
+pnpm -F charts start
+```
+
 ## editors
 
 ### codemirror / tiptap

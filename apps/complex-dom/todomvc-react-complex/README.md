@@ -23,7 +23,7 @@ terminal
 
 ```
 terminal:
-1. npm run serve
+1. npm run start
 browser:
-1. http://localhost:7002
+1. http://localhost:3001
 ```

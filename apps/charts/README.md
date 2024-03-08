@@ -29,7 +29,7 @@ npm run build
 ### Preview the production build
 
 ```
-npm run preview
+npm run start
 ```
 
 ## Included benchmarks

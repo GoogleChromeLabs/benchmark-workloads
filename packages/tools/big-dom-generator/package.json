@@ -87,5 +87,8 @@
         "webpack-cli": "^5.0.1",
         "webpack-dev-server": "^4.15.0",
         "webpack-merge": "^5.9.0"
-    }
+    },
+    "files": [
+      "/dist"
+    ]
 }

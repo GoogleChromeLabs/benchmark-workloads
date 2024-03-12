@@ -9,8 +9,8 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build",
-        "start": "vite preview"
+        "build:static": "vite build",
+        "start:static": "vite preview"
     },
     "devDependencies": {
         "@codemirror/lang-javascript": "^6.1.4",

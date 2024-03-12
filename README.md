@@ -9,16 +9,16 @@ Aurora Workloads is a collection of open source example apps and sites that aim 
 ### chartjs / observable-plot
 ```bash
 pnpm -F charts dev
-pnpm -F charts build
-pnpm -F charts start
+pnpm -F charts build:static
+pnpm -F charts start:static
 ```
 
 ## complex-dom
 
 ### todomvc-react-complex
 ```bash
-pnpm -F todomvc-react-complex build
-pnpm -F todomvc-react-complex start
+pnpm -F todomvc-react-complex build:static
+pnpm -F todomvc-react-complex start:static
 ```
 
 ## editors
@@ -26,8 +26,8 @@ pnpm -F todomvc-react-complex start
 ### codemirror / tiptap
 ```bash
 pnpm -F editors dev
-pnpm -F editors build
-pnpm -F editors start
+pnpm -F editors build:static
+pnpm -F editors start:static
 ```
 
 ### news-site
@@ -181,8 +181,6 @@ pnpm -F benchmark-connector build
 #### big-dom-generator
 
 ```bash
-pnpm -F big-dom-generator prepare
-pnpm -F big-dom-generator copy
 pnpm -F big-dom-generator build
 ```
 

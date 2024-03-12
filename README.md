@@ -189,3 +189,9 @@ pnpm -F big-dom-generator build
 ```bash
 pnpm -F sanitize-language build
 ```
+
+#### workloads-manager
+
+```bash
+pnpm -F workloads-manager build
+```

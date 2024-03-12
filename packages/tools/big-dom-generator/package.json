@@ -7,8 +7,9 @@
         "npm": ">=8.19.3"
     },
     "scripts": {
-        "build": "webpack --config webpack.prod.js",
-        "postbuild": "node dist/app.bundle.js && purgecss -css dist/big-dom.css --content dist/index.html --output=dist/big-dom.css && rm dist/app.bundle.js && rm dist/app.bundle.js.LICENSE.txt && node utils/createVariant.js"
+        "prepare": "webpack --config webpack.prod.js",
+        "copy": "node dist/app.bundle.js && purgecss -css dist/big-dom.css --content dist/index.html --output=dist/big-dom.css && rm dist/app.bundle.js && rm dist/app.bundle.js.LICENSE.txt && node utils/createVariant.js",
+        "build": "npm run prepare && npm run copy"
     },
     "devDependencies": {
         "@babel/core": "^7.21.0",

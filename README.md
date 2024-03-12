@@ -181,8 +181,9 @@ pnpm -F benchmark-connector build
 #### big-dom-generator
 
 ```bash
+pnpm -F big-dom-generator prepare
+pnpm -F big-dom-generator copy
 pnpm -F big-dom-generator build
-pnpm -F big-dom-generator postbuild
 ```
 
 #### sanitize-language

@@ -35,7 +35,6 @@ async function findDirectories({ start, target, root, directories = [] }) {
                             path.dirname(current)
                         )}" directory 🚀`
                     );
-                    console.log("Adding directory to result.")
                     directories.push(path.dirname(current));
                 }
             }

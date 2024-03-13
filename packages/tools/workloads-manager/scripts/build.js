@@ -2,7 +2,9 @@ const fs = require("fs").promises;
 const path = require("path");
 const { execSync } = require("child_process");
 
-const excludeList = ["packages", "node_modules", '.next'];
+const excludeList = ["packages", "node_modules", ".angular", ".next", ".nuxt", ".output", ".dist", ".docs"];
+
+const reports = [];
 
 async function searchDir(dir, target) {
     const list = await fs.readdir(dir);
@@ -15,9 +17,13 @@ async function searchDir(dir, target) {
             }
         } else {
             if (entry === target) {
-                console.log("found one 🚀", file, "stat", path.basename(path.dirname(file)));
                 if (path.basename(path.dirname(file)) !== "aurora-workloads") {
+                    reports.push(path.basename(path.dirname(file)))
+                    console.log("Found one 🚀", entry, "directory: ", path.basename(path.dirname(file)));
+                    console.log("Attempting to build.. ⚙️");
                     execSync("npm run build:static", { cwd: path.dirname(file), stdio: "inherit" });
+                    console.log("Build script completed! 👏");
+                    console.log("*********************************")
                 }
             }
         }
@@ -28,7 +34,11 @@ async function searchDir(dir, target) {
 
 async function build() {
     await (searchDir("../../../", "package.json"));
-    console.log("done!");
+    console.log("The following apps have been built:")
+    reports.forEach(report => console.log(`✅ ${report}`))
+    console.log("*********************************")
+    console.log("See you later! 👋");
+    console.log("*********************************")
 }
 
 build();

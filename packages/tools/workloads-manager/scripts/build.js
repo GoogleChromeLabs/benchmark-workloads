@@ -31,18 +31,23 @@ async function searchDir(dir, target) {
         } else {
             if (entry === target) {
                 if (path.basename(path.dirname(file)) !== "aurora-workloads") {
-                    reports.push(path.basename(path.dirname(file)));
                     console.log(
                         `Found a ${target} in the "${path.basename(
                             path.dirname(file)
                         )}" directory 🚀`
                     );
                     console.log("Attempting to run the build script.. ⚙️");
-                    execSync("npm run build:static", {
-                        cwd: path.dirname(file),
-                        stdio: "inherit",
-                    });
-                    console.log("Success! 👏");
+                    try {
+                        execSync("npm run build:static", {
+                            cwd: path.dirname(file),
+                            stdio: "inherit",
+                        });
+                        reports.push({dir: path.basename(path.dirname(file)), status: "success"});
+                        console.log("Success! 👏");
+                    } catch(e) {
+                        reports.push({dir: path.basename(path.dirname(file)), status: "failure"});
+                        console.log("Failure! 😔");
+                    }
                     console.log("*********************************");
                 }
             }
@@ -59,8 +64,10 @@ async function build() {
     console.log(`Looking for ${target} files, starting from root 👀`);
     await searchDir(dir, target);
 
-    console.log("The following apps have been built:");
-    reports.forEach((report) => console.log(`✅ ${report}`));
+    console.log("The following apps have been attempted to build:");
+    reports.forEach(({dir, status}) => {
+        status === "success" ? console.log(`🟢 ${dir}`) : console.log(`🔴 ${dir}`);
+    });
     console.log("*********************************");
     console.log("Bye! 👋");
     console.log("*********************************");

@@ -685,6 +685,16 @@ importers:
       '@rollup/plugin-terser': ^0.4.3
       rollup: ^3.23.0
       rollup-plugin-cleaner: ^1.0.0
+    devDependencies:
+      '@rollup/plugin-terser': 0.4.4_rollup@3.29.4
+      rollup: 3.29.4
+      rollup-plugin-cleaner: 1.0.0_rollup@3.29.4
+
+  packages/tools/workloads-manager:
+    specifiers:
+      '@rollup/plugin-terser': ^0.4.3
+      rollup: ^3.23.0
+      rollup-plugin-cleaner: ^1.0.0
       semver: ^7.5.1
     devDependencies:
       '@rollup/plugin-terser': 0.4.4_rollup@3.29.4

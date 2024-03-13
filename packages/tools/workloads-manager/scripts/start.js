@@ -1,3 +1,10 @@
-console.log("workloads manager: start")
-const data = process.env?.DATA ?? [];
-console.log("data", data);
+const path = require("path");
+const { findDirectories, executeScript } = require("./utils");
+const { getPorts } = require("./ports");
+
+async function start() {
+    // const ports = await getPorts({ total: 10 });
+    // console.log("ports", ports);
+}
+
+start();

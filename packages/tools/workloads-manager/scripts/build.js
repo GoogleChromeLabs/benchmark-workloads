@@ -58,7 +58,9 @@ async function searchDir(dir, target) {
 }
 
 async function build() {
+    // We're looking for package.json files, to know what directory we should run the build script in.
     const target = "package.json";
+    // We're starting from the root directory of the monorepo.
     const dir = "../../../";
 
     console.log(`Looking for ${target} files, starting from root 👀`);

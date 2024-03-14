@@ -1,6 +1,7 @@
 const fs = require("fs").promises;
 const path = require("path");
-const { execSync } = require("child_process");
+const { exec, execSync } = require("child_process");
+const chalk = require("chalk");
 
 const excludeList = [
     ".angular",
@@ -44,12 +45,13 @@ async function findDirectories({ start, target, root, directories = [] }) {
     return directories;
 }
 
-function executeScript({ script, directory }) {
-    console.log(`Attempting to run the ${script} script.. ⚙️`);
+function executeScriptSync({ script, directory, env = {} }) {
+    console.log(`Attempting to run the ${script} script, with env: ${env}.. ⚙️`);
     try {
         execSync(`npm run ${script}`, {
             cwd: directory,
             stdio: "inherit",
+            env: { ...process.env, ...env }
         });
         console.log("Success! 👏");
         return ({
@@ -65,7 +67,37 @@ function executeScript({ script, directory }) {
     }
 }
 
+async function executeScript({ script, directory, env = {} }) {
+    console.log(`Attempting to run the ${script} script, with env: ${env}.. ⚙️`);
+
+    const currentHex = '#' + Math.floor(Math.random()*16777215).toString(16);
+
+    const child = exec(`npm run ${script}`, {
+        cwd: directory,
+        stdio: "inherit",
+        env: { ...process.env, ...env }
+    });
+
+    child.stdout.on('data', (data) => {
+        console.log(chalk.hex(currentHex)(`${path.basename(directory)}: ${data}`));
+    });
+
+    child.stderr.on('data', (data) => {
+        console.log(chalk.red(`${path.basename(directory)} Failure! 😔 - ${data}`));
+    });
+
+    function cleanup() {
+        child.kill();
+        process.exit();
+    }
+
+    process.once("SIGINT", cleanup);
+    process.once("SIGTERM", cleanup);
+    process.once("SIGQUIT", cleanup);
+}
+
 module.exports = {
     findDirectories,
-    executeScript
+    executeScript,
+    executeScriptSync
 }

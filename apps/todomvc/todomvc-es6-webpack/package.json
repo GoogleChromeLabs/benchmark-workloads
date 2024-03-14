@@ -10,7 +10,7 @@
     "scripts": {
         "dev": "webpack serve --open --config webpack.dev.js",
         "build:static": "webpack --config webpack.prod.js",
-        "start:static": "http-server ./dist -p 3001 -c-1 --cors"
+        "start:static": "http-server ./dist -c-1 --cors"
     },
     "dependencies": {
         "todomvc-app-css": "^2.4.2",

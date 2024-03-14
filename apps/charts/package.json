@@ -10,7 +10,7 @@
     "scripts": {
         "dev": "vite",
         "build:static": "vite build",
-        "start:static": "vite preview"
+        "start:static": "vite preview --host"
     },
     "devDependencies": {
         "vite": "^4.1.0"

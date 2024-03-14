@@ -2,6 +2,11 @@
 
 Aurora Workloads is a collection of open source example apps and sites that aim to be representative of the web. These workloads can be consumed by benchmarks for testing and benchmarking purposes.
 
+## Development
+```bash
+pnpm install
+```
+
 ## Apps
 
 ## charts
@@ -194,4 +199,5 @@ pnpm -F sanitize-language build
 
 ```bash
 pnpm -F workloads-manager build
+pnpm -F workloads-manager start
 ```

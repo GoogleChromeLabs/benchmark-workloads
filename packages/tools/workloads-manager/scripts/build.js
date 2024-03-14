@@ -1,5 +1,5 @@
 const path = require("path");
-const { findDirectories, executeScript } = require("./utils");
+const { findDirectories, executeScriptSync } = require("./utils");
 
 async function build() {
     // We're looking for package.json files, to know what directory we should run the build script in.
@@ -16,7 +16,7 @@ async function build() {
     const reports = [];
     
     for (const directory of directories) {
-        const result = executeScript({ script, directory })
+        const result = executeScriptSync({ script, directory })
         reports.push(result);
     }
 

@@ -1,4 +1,5 @@
 const net = require("node:net");
+const os = require("node:os");
 
 function getPort(options = { port: 0, host: "localhost" }) {
     return new Promise(function (resolve, reject) {
@@ -24,7 +25,22 @@ async function getPorts({ total = 1}){
     return ports;
 }
 
+function getLocalHosts() {
+    const interfaces = os.networkInterfaces();
+
+    const results = new Set();
+
+	for (const _interface of Object.values(interfaces)) {
+		for (const config of _interface) {
+			if (config.family === "IPv4") results.add(config.address);
+		}
+	}
+
+	return results;
+}
+
 module.exports = {
     getPort,
-    getPorts
+    getPorts,
+    getLocalHosts
 };

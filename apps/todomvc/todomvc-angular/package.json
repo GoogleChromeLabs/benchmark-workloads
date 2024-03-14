@@ -11,7 +11,7 @@
         "ng": "ng",
         "dev": "ng serve",
         "build:static": "ng build --source-map=true",
-        "start:static": "http-server ./dist -p 3001 -c-1 --cors",
+        "start:static": "http-server ./dist -c-1 --cors",
         "watch": "ng build --watch --configuration development",
         "test": "ng test"
     },

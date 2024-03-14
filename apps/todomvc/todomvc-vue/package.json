@@ -12,7 +12,7 @@
         "dev": "npm run start",
         "build:static": "vue-cli-service build && npm run sanitize",
         "start": "vue-cli-service serve",
-        "start:static": "http-server ./dist -p 3001 -c-1 --cors"
+        "start:static": "http-server ./dist -c-1 --cors"
     },
     "dependencies": {
         "core-js": "^3.8.3",

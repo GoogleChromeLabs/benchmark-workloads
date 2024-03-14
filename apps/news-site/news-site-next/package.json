@@ -14,7 +14,7 @@
         "build:static": "npm run prepare && TARGET=static next build",
         "build:gh": "npm run prepare && TARGET=github next build && touch docs/.nojekyll",
         "start": "next start",
-        "start:static": "http-server ./dist -c-1 --cors",
+        "start:static": "http-server ./dist -c-1 --cors --silent",
         "lint": "next lint",
         "lint:fix": "DEBUG=eslint:cli-engine eslint \"**/*.{js,mjs,jsx,ts,tsx}\" --fix",
         "pretty:check": "prettier --check ./",

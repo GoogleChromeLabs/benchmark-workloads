@@ -10,7 +10,7 @@
     "scripts": {
         "dev": "http-server ./ -c-1 --cors -o",
         "build:static": "node scripts/build.js",
-        "start:static": "http-server ./dist -c-1 --cors"
+        "start:static": "http-server ./dist -c-1 --cors --silent"
     },
     "dependencies": {
         "todomvc-app-css": "^2.4.2",

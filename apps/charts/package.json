@@ -10,7 +10,7 @@
     "scripts": {
         "dev": "vite",
         "build:static": "vite build",
-        "start:static": "http-server ./dist -c-1 --cors"
+        "start:static": "http-server ./dist -c-1 --cors --silent"
     },
     "devDependencies": {
         "vite": "^4.1.0"

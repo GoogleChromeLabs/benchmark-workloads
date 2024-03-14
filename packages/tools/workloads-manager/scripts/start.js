@@ -1,6 +1,7 @@
 const path = require("path");
-const { findDirectories, executeScript, executeScriptSync } = require("./utils");
+const { findDirectories, executeScript } = require("./utils");
 const { getPorts, getLocalHosts } = require("./ports");
+const chalk = require("chalk");
 
 async function start() {
     // const ports = await getPorts({ total: 10 });
@@ -33,9 +34,10 @@ async function start() {
 
     console.log("*********************************");
     console.log("The following apps have been attempted to start:");
-    reports.forEach(({ port, name }) => console.log(`🟢 port ${port} is used by ${name}!`));
-    console.log("*********************************");
-    console.log(`available local hosts: ${ hosts }`)
+    reports.forEach(({ port, name }) => {
+        hosts.forEach(host => console.log(`🟢 ${chalk.blue(name)} is available at: ${chalk.underline(chalk.blue(`http://${host}:${port}`))}`))
+        console.log("*********************************");
+    });
     console.log("Bye! 👋");
     console.log("*********************************");
 }

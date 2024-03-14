@@ -12,8 +12,10 @@
     },
     "devDependencies": {
         "big-dom-generator": "workspace:*",
-        "http-server": "^14.1.1",
         "todomvc-react": "workspace:*"
+    },
+    "dependencies": {
+        "http-server": "^14.1.1"
     },
     "files": [
         "/dist"

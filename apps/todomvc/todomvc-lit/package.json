@@ -10,7 +10,7 @@
     "scripts": {
         "dev": "wireit",
         "build:static": "wireit",
-        "start:static": "wireit",
+        "start:static": "http-server ./dist -c-1 --cors",
         "tsc": "wireit",
         "rollup": "wireit",
         "copy-index-html": "wireit"
@@ -26,6 +26,7 @@
         "wireit": "^0.9.5"
     },
     "dependencies": {
+        "http-server": "^14.1.1",
         "lit": "^3.0.0-pre.0",
         "tslib": "^2.5.2"
     },

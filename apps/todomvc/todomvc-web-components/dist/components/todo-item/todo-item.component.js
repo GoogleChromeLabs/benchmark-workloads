@@ -13,9 +13,6 @@ class TodoItem extends HTMLElement {
     constructor() {
         super();
 
-        // Renamed this.id to this.itemid and this.title to this.itemtitle.
-        // When the component assigns to this.id or this.title, this causes the browser's implementation of the existing setters to run, which convert these property sets into internal setAttribute calls. This can have surprising consequences.
-        // [Issue]: https://github.com/WebKit/Speedometer/issues/313
         this.itemid = "";
         this.itemtitle = "Todo Item";
         this.itemcompleted = "false";

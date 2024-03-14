@@ -10,7 +10,7 @@
     "scripts": {
         "dev": "vite",
         "build:static": "vite build",
-        "start:static": "vite preview"
+        "start:static": "http-server ./dist -c-1 --cors"
     },
     "devDependencies": {
         "vite": "^4.1.0"
@@ -20,7 +20,8 @@
         "chart.js": "^4.2.1",
         "d3-array": "^3.2.4",
         "d3-dsv": "^3.0.1",
-        "d3-format": "^3.1.0"
+        "d3-format": "^3.1.0",
+        "http-server": "^14.1.1"
     },
     "files": [
         "/dist"

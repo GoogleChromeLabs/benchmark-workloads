@@ -17,6 +17,7 @@ importers:
       d3-array: ^3.2.4
       d3-dsv: ^3.0.1
       d3-format: ^3.1.0
+      http-server: ^14.1.1
       vite: ^4.1.0
     dependencies:
       '@observablehq/plot': 0.6.13
@@ -24,6 +25,7 @@ importers:
       d3-array: 3.2.4
       d3-dsv: 3.0.1
       d3-format: 3.1.0
+      http-server: 14.1.1
     devDependencies:
       vite: 4.5.2
 
@@ -32,9 +34,10 @@ importers:
       big-dom-generator: workspace:*
       http-server: ^14.1.1
       todomvc-react: workspace:*
+    dependencies:
+      http-server: 14.1.1
     devDependencies:
       big-dom-generator: link:../../../packages/tools/big-dom-generator
-      http-server: 14.1.1
       todomvc-react: link:../../todomvc/todomvc-react
 
   apps/editors:
@@ -44,9 +47,11 @@ importers:
       '@tiptap/core': ^2.0.0-beta.217
       '@tiptap/starter-kit': ^2.0.0-beta.217
       codemirror: ^6.0.1
+      http-server: ^14.1.1
       vite: ^4.1.0
     dependencies:
       '@codemirror/state': 6.4.1
+      http-server: 14.1.1
     devDependencies:
       '@codemirror/lang-javascript': 6.2.2
       '@tiptap/core': 2.2.4_@tiptap+pm@2.2.4
@@ -146,6 +151,7 @@ importers:
       '@angular/platform-browser': 14.3.0_wd3bqoh2pkuw5m54j2g5y4s4ra
       '@angular/platform-browser-dynamic': 14.3.0_66avhzcjyfbc4wwcsnykbga42a
       '@angular/router': 14.3.0_rmubd7q5dbiie2xgqqhnhdvaaa
+      http-server: 14.1.1
       rxjs: 7.5.7
       todomvc-app-css: 2.4.3
       tslib: 2.6.2
@@ -155,7 +161,6 @@ importers:
       '@angular/cli': 14.2.13
       '@angular/compiler-cli': 14.3.0_hqum5h22eee7se2j6vjxtwehsi
       '@types/jasmine': 4.0.3
-      http-server: 14.1.1
       jasmine-core: 4.3.0
       karma: 6.4.3
       karma-chrome-launcher: 3.1.1
@@ -173,11 +178,10 @@ importers:
       underscore: ^1.13.6
     dependencies:
       backbone: 1.6.0
+      http-server: 14.1.1
       jquery: 3.7.1
       todomvc-app-css: 2.4.3
       underscore: 1.13.6
-    devDependencies:
-      http-server: 14.1.1
 
   apps/todomvc/todomvc-es5:
     specifiers:
@@ -234,6 +238,7 @@ importers:
       '@rollup/plugin-terser': ^0.4.3
       '@rollup/plugin-typescript': ^11.1.1
       '@web/dev-server': ^0.2.1
+      http-server: ^14.1.1
       lit: ^3.0.0-pre.0
       rollup: ^2.79.1
       rollup-plugin-minify-html-literals: ^1.2.6
@@ -241,6 +246,7 @@ importers:
       typescript: ^5.0.4
       wireit: ^0.9.5
     dependencies:
+      http-server: 14.1.1
       lit: 3.1.2
       tslib: 2.6.2
     devDependencies:
@@ -278,6 +284,7 @@ importers:
       todomvc-app-css: ^2.4.2
     dependencies:
       classnames: 2.5.1
+      http-server: 14.1.1
       linkstate: 2.0.1_preact@10.19.6
       preact: 10.19.6
       preact-router: 4.1.2_preact@10.19.6
@@ -291,7 +298,6 @@ importers:
       '@rollup/plugin-node-resolve': 15.2.3_rollup@3.29.4
       '@rollup/plugin-terser': 0.4.4_rollup@3.29.4
       eslint-plugin-react: 7.33.2_eslint@8.56.0
-      http-server: 14.1.1
       npm-run-all: 4.1.5
       rollup: 3.29.4
       rollup-plugin-copy: 3.5.0
@@ -475,7 +481,6 @@ importers:
       rollup: ^3.23.0
       rollup-plugin-cleaner: ^1.0.0
       rollup-plugin-import-css: ^3.2.1
-      semver: ^7.5.1
       strip-comments: ^2.0.1
       stylelint: ^15.6.2
       stylelint-config-standard: ^33.0.0
@@ -485,7 +490,6 @@ importers:
       rollup: 3.29.4
       rollup-plugin-cleaner: 1.0.0_rollup@3.29.4
       rollup-plugin-import-css: 3.4.0_rollup@3.29.4
-      semver: 7.6.0
       strip-comments: 2.0.1
       stylelint: 15.11.0
       stylelint-config-standard: 33.0.0_stylelint@15.11.0
@@ -497,7 +501,6 @@ importers:
       rollup: ^3.23.0
       rollup-plugin-cleaner: ^1.0.0
       rollup-plugin-import-css: ^3.2.1
-      semver: ^7.5.1
       strip-comments: ^2.0.1
       stylelint: ^15.6.2
       stylelint-config-standard: ^33.0.0
@@ -507,7 +510,6 @@ importers:
       rollup: 3.29.4
       rollup-plugin-cleaner: 1.0.0_rollup@3.29.4
       rollup-plugin-import-css: 3.4.0_rollup@3.29.4
-      semver: 7.6.0
       strip-comments: 2.0.1
       stylelint: 15.11.0
       stylelint-config-standard: 33.0.0_stylelint@15.11.0
@@ -517,12 +519,10 @@ importers:
       '@rollup/plugin-terser': ^0.4.3
       rollup: ^3.23.0
       rollup-plugin-cleaner: ^1.0.0
-      semver: ^7.5.1
     devDependencies:
       '@rollup/plugin-terser': 0.4.4_rollup@3.29.4
       rollup: 3.29.4
       rollup-plugin-cleaner: 1.0.0_rollup@3.29.4
-      semver: 7.6.0
 
   packages/tools/big-dom-generator:
     specifiers:
@@ -685,12 +685,23 @@ importers:
       '@rollup/plugin-terser': ^0.4.3
       rollup: ^3.23.0
       rollup-plugin-cleaner: ^1.0.0
-      semver: ^7.5.1
     devDependencies:
       '@rollup/plugin-terser': 0.4.4_rollup@3.29.4
       rollup: 3.29.4
       rollup-plugin-cleaner: 1.0.0_rollup@3.29.4
-      semver: 7.6.0
+
+  packages/tools/workloads-manager:
+    specifiers:
+      '@rollup/plugin-terser': ^0.4.3
+      chalk: 4.1.2
+      rollup: ^3.23.0
+      rollup-plugin-cleaner: ^1.0.0
+    dependencies:
+      chalk: 4.1.2
+    devDependencies:
+      '@rollup/plugin-terser': 0.4.4_rollup@3.29.4
+      rollup: 3.29.4
+      rollup-plugin-cleaner: 1.0.0_rollup@3.29.4
 
 packages:
 

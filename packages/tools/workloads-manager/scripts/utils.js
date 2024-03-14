@@ -31,11 +31,11 @@ async function findDirectories({ start, target, root, directories = [] }) {
         } else {
             if (entry === target) {
                 if (path.basename(path.dirname(current)) !== root) {
-                    console.log(
+                    /* console.log(
                         `Found a ${target} in the "${path.basename(
                             path.dirname(current)
                         )}" directory 🚀`
-                    );
+                    ); */
                     directories.push(path.dirname(current));
                 }
             }
@@ -68,7 +68,7 @@ function executeScriptSync({ script, directory, env = {} }) {
 }
 
 async function executeScript({ script, directory, env = {} }) {
-    console.log(`Attempting to run the ${script} script, with env: ${env}.. ⚙️`);
+    // console.log(`Attempting to run the ${script} script, with env: ${env}.. ⚙️`);
 
     const currentHex = '#' + Math.floor(Math.random()*16777215).toString(16);
 

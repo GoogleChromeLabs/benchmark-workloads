@@ -27,7 +27,6 @@ async function start() {
     for (let i = 0; i < directories.length; i++) {
         const directory = directories[i];
         const port = ports[i];
-        console.log("port", port, "directory", directory)
         executeScript({ script, directory, env: { "PORT": port } })
         reports.push({ port, name: path.basename(directory), directory})
     }

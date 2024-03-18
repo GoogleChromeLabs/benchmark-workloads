@@ -694,12 +694,16 @@ importers:
     specifiers:
       '@rollup/plugin-terser': ^0.4.3
       chalk: 4.1.2
+      fs-extra: ^11.1.1
+      globby: ^13.2.0
       rollup: ^3.23.0
       rollup-plugin-cleaner: ^1.0.0
     dependencies:
       chalk: 4.1.2
     devDependencies:
       '@rollup/plugin-terser': 0.4.4_rollup@3.29.4
+      fs-extra: 11.2.0
+      globby: 13.2.2
       rollup: 3.29.4
       rollup-plugin-cleaner: 1.0.0_rollup@3.29.4
 

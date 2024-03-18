@@ -199,5 +199,6 @@ pnpm -F sanitize-language build
 
 ```bash
 pnpm -F workloads-manager build
+pnpm -F workloads-manager build:apps
 pnpm -F workloads-manager start
 ```

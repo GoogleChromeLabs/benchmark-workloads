@@ -20,5 +20,12 @@
   "peerDependencies": {
     "fs-extra": "^10.1.0",
     "globby": "^11.1.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "postcss@<8.4.31": ">=8.4.31",
+      "next@>=0.9.9 <13.4.20-canary.13": ">=13.4.20-canary.13",
+      "follow-redirects@<=1.15.5": ">=1.15.6"
+    }
   }
 }

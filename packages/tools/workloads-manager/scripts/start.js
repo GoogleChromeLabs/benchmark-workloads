@@ -3,10 +3,9 @@ const { findDirectories, executeScript } = require("./utils");
 const { getPorts, getLocalHosts } = require("./ports");
 const chalk = require("chalk");
 
-async function start() {
-    // const ports = await getPorts({ total: 10 });
-    // console.log("ports", ports);
+const defaultPorts = [3001, 3002, 3003, 3004, 3005, 3006, 3007, 3008, 3009, 3010, 3011, 3012, 3013, 3014, 3015, 3016, 3017];
 
+async function start() {
     // We're looking for package.json files, to know what directory we should run the build script in.
     const target = "package.json";
     // We're starting from the root directory of the monorepo.
@@ -19,8 +18,30 @@ async function start() {
     const directories = await findDirectories({ start, target, root });
 
     const reports = [];
-    const ports = await getPorts({ total: directories.length });
     const hosts = [...getLocalHosts()];
+
+    let ports;
+
+    // should move this into a separate function...
+    if (process.env.PORTS) {
+        if (process.env.PORTS === "default") {
+            ports = [...defaultPorts];
+        } else {
+            const temp = process.env.PORTS.split(",");
+            if (temp.length !== directories.length) {
+                throw Error("Not enough ports passed in");
+            }
+            ports = temp.map(s => {
+                const port = Number(s);
+                if (isNaN(port)) {
+                    throw Error("Not all ports a numbers");
+                }
+                return port;
+            });
+        }
+    } else {
+        ports = await getPorts({ total: directories.length });
+    }
 
     // prevents warning: MaxListenersExceededWarning: Possible EventEmitter memory leak detected.
     process.setMaxListeners(directories.length);

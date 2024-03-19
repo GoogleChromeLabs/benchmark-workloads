@@ -18,6 +18,7 @@ importers:
   apps/charts:
     specifiers:
       '@observablehq/plot': ^0.6.4
+      benchmark-connector: 'workspace: *'
       chart.js: ^4.2.1
       d3-array: ^3.2.4
       d3-dsv: ^3.0.1
@@ -26,6 +27,7 @@ importers:
       vite: ^4.1.0
     dependencies:
       '@observablehq/plot': 0.6.13
+      benchmark-connector: link:../../packages/tools/benchmark-connector
       chart.js: 4.4.2
       d3-array: 3.2.4
       d3-dsv: 3.0.1

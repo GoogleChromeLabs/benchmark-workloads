@@ -23,11 +23,12 @@ async function copyAndUpdate({ meta, src, dest }) {
 }
 
 async function prepare() {
-    await deleteFile("public/benchmark-connector.min.js");
+    const hostDirectory = process.env.HOST ?? "public";
+    await deleteFile(`${hostDirectory}/benchmark-connector.min.js`);
     await copyAndUpdate({
         meta: "./package.json",
         src: "node_modules/benchmark-connector/dist/benchmark-connector.min.js",
-        dest: "public/benchmark-connector.min.js",
+        dest: `${hostDirectory}/benchmark-connector.min.js`,
     });
     console.log("Done with preparation!");
 }

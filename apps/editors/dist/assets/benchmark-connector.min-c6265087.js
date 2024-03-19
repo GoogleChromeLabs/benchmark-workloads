@@ -117,6 +117,39 @@ function keyName(event) {
     name = "ArrowDown";
   return name;
 }
+window.name = "editors";
+window.version = "1.0.0";
+function triggerEvent(t, e, n) {
+  const a = new CustomEvent(e);
+  a.name = e, a.state = n, t.dispatchEvent(a);
+}
+const pushState = history.pushState;
+history.pushState = function(t) {
+  const e = pushState.apply(history, arguments);
+  return triggerEvent(window, "pushstate", t), triggerEvent(window, "statechange", t), e;
+};
+const replaceState = history.replaceState;
+history.replaceState = function(t) {
+  const e = replaceState.apply(history, arguments);
+  return triggerEvent(window, "replacestate", t), triggerEvent(window, "statechange", t), e;
+}, window.addEventListener("popstate", function(t) {
+  triggerEvent(window, "statechange", t.state);
+});
+const appId = window.name && window.version ? `${window.name}-${window.version}` : -1;
+window.onmessage = async (t) => {
+  if (t.data.id !== appId || "benchmark-connector" !== t.data.type)
+    return;
+  const { name: e } = t.data, n = new Function(`return ${t.data.fn}`)();
+  n && (requestAnimationFrame(() => {
+    performance.mark(`${e}-start`);
+  }), requestAnimationFrame(async () => {
+    await n(), setTimeout(() => {
+      performance.mark(`${e}-end`), performance.measure(`${e}`, { start: `${e}-start`, end: `${e}-end` });
+      const t2 = JSON.stringify(performance.getEntriesByName(`${e}`)[0]);
+      window.top.postMessage({ type: "test-completed", status: "success", result: t2 }, "*");
+    }, 0);
+  }));
+}, window.top.postMessage({ type: "app-ready", status: "success", appId }, "*"), console.log(`Hello, benchmark connector for ${appId} is ready!`);
 export {
   base as b,
   code$1 as c,
@@ -124,4 +157,4 @@ export {
   shift as s,
   text as t
 };
-//# sourceMappingURL=index-b3fc6502.js.map
+//# sourceMappingURL=benchmark-connector.min-c6265087.js.map

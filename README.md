@@ -191,8 +191,8 @@ pnpm -F todomvc-css build
 
 #### benchmark-connector
 
-benchmark-connector.min.js: communication between benchmark and workload.
-prepare.min.js: script to copy benchmark-connector.min.js file to the public folder of workload.
+- benchmark-connector.min.js: communication between benchmark and workload.
+- prepare.min.js: script to copy benchmark-connector.min.js file to the public folder of workload.
 
 ```bash
 pnpm -F benchmark-connector build
@@ -211,8 +211,8 @@ pnpm -F sanitize-language build
 ```
 
 #### workloads-manager
-build:apps: builds all workloads in the apps directory.
-start: starts node server for static workloads in the apps directory.
+- build:apps: builds all workloads in the apps directory.
+- start: starts node server for static workloads in the apps directory.
 
 ```bash
 pnpm -F workloads-manager build

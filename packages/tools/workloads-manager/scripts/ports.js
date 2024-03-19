@@ -26,7 +26,7 @@ async function getPorts({ total = 1 }) {
 }
 
 async function checkPorts({ ports }) {
-    for( const port of ports) {
+    for (const port of ports) {
         try {
             await getPort({ port });
         } catch (e) {

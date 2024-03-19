@@ -26,7 +26,12 @@ async function findDirectories({ start, target, root, directories = [] }) {
         const stat = await fs.stat(current);
         if (stat && stat.isDirectory()) {
             if (!excludeList.includes(entry)) {
-                await findDirectories({ start: current, target, root, directories });
+                await findDirectories({
+                    start: current,
+                    target,
+                    root,
+                    directories,
+                });
             }
         } else {
             if (entry === target) {
@@ -46,44 +51,50 @@ async function findDirectories({ start, target, root, directories = [] }) {
 }
 
 function executeScriptSync({ script, directory, env = {} }) {
-    console.log(`Attempting to run the ${script} script, with env: ${env}.. ⚙️`);
+    console.log(
+        `Attempting to run the ${script} script, with env: ${env}.. ⚙️`
+    );
     try {
         execSync(`npm run ${script}`, {
             cwd: directory,
             stdio: "inherit",
-            env: { ...process.env, ...env }
+            env: { ...process.env, ...env },
         });
         console.log("Success! 👏");
-        return ({
+        return {
             dir: path.basename(directory),
             status: "success",
-        });
+        };
     } catch (e) {
         console.log("Failure! 😔");
-        return ({
+        return {
             dir: path.basename(directory),
             status: "failure",
-        });
+        };
     }
 }
 
 async function executeScript({ script, directory, env = {} }) {
     // console.log(`Attempting to run the ${script} script, with env: ${env}.. ⚙️`);
 
-    const currentHex = '#' + Math.floor(Math.random()*16777215).toString(16);
+    const currentHex = "#" + Math.floor(Math.random() * 16777215).toString(16);
 
     const child = exec(`npm run ${script}`, {
         cwd: directory,
         stdio: "inherit",
-        env: { ...process.env, ...env }
+        env: { ...process.env, ...env },
     });
 
-    child.stdout.on('data', (data) => {
-        console.log(chalk.hex(currentHex)(`${path.basename(directory)}: ${data}`));
+    child.stdout.on("data", (data) => {
+        console.log(
+            chalk.hex(currentHex)(`${path.basename(directory)}: ${data}`)
+        );
     });
 
-    child.stderr.on('data', (data) => {
-        console.log(chalk.red(`${path.basename(directory)} Failure! 😔 - ${data}`));
+    child.stderr.on("data", (data) => {
+        console.log(
+            chalk.red(`${path.basename(directory)} Failure! 😔 - ${data}`)
+        );
     });
 
     function cleanup() {
@@ -99,5 +110,5 @@ async function executeScript({ script, directory, env = {} }) {
 module.exports = {
     findDirectories,
     executeScript,
-    executeScriptSync
-}
+    executeScriptSync,
+};

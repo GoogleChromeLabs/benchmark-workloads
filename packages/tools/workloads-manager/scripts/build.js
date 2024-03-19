@@ -14,9 +14,9 @@ async function build() {
     const directories = await findDirectories({ start, target, root });
 
     const reports = [];
-    
+
     for (const directory of directories) {
-        const result = executeScriptSync({ script, directory })
+        const result = executeScriptSync({ script, directory });
         reports.push(result);
     }
 

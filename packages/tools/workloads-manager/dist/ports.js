@@ -16,7 +16,7 @@ function getPort(options = { port: 0, host: "localhost" }) {
     });
 }
 
-async function getPorts({ total = 1}){
+async function getPorts({ total = 1 }) {
     const ports = [];
     for (let i = 0; i < total; i++) {
         const port = await getPort();
@@ -25,22 +25,35 @@ async function getPorts({ total = 1}){
     return ports;
 }
 
+async function checkPorts({ ports }) {
+    for (const port of ports) {
+        try {
+            await getPort({ port });
+        } catch (e) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
 function getLocalHosts() {
     const interfaces = os.networkInterfaces();
 
     const results = new Set();
 
-	for (const _interface of Object.values(interfaces)) {
-		for (const config of _interface) {
-			if (config.family === "IPv4") results.add(config.address);
-		}
-	}
+    for (const _interface of Object.values(interfaces)) {
+        for (const config of _interface) {
+            if (config.family === "IPv4") results.add(config.address);
+        }
+    }
 
-	return results;
+    return results;
 }
 
 module.exports = {
+    checkPorts,
     getPort,
     getPorts,
-    getLocalHosts
+    getLocalHosts,
 };

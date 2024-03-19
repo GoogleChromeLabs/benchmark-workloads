@@ -479,9 +479,11 @@ importers:
 
   apps/todomvc/todomvc-web-components:
     specifiers:
+      benchmark-connector: 'workspace: *'
       http-server: ^14.1.1
       todomvc-css: workspace:*
     dependencies:
+      benchmark-connector: link:../../../packages/tools/benchmark-connector
       http-server: 14.1.1
       todomvc-css: link:../../../packages/styles/todomvc-css
 

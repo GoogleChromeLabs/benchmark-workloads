@@ -12,6 +12,7 @@ const filesToMove = {
         { src: "node_modules/todomvc-css/dist/global.css", dest: "styles/global.css" },
         { src: "node_modules/todomvc-css/dist/header.css", dest: "styles/header.css" },
         { src: "node_modules/todomvc-css/dist/footer.css", dest: "styles/footer.css" },
+        { src: "benchmark-connector.min.js", dest: "benchmark-connector.min.js" }
     ],
     app: [
         { src: "node_modules/todomvc-css/dist/global.constructable.js", dest: "styles/global.constructable.js" },

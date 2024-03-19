@@ -26,8 +26,9 @@ window.addEventListener("popstate", function(event) {
     triggerEvent(window, "statechange", event.state);
 });
 
-// this should probably come from environment variable.
-const appId = "222";
+// a prepare script within the apps appends window.name and window.version from the package.json file.
+// app id is build by appending name-version
+const appId = window.name && window.version ? `${window.name}-${window.version}` : -1;
 
 window.onmessage = async (event) => {
     // ensure we only let legit functions run...
@@ -54,3 +55,5 @@ window.onmessage = async (event) => {
 };
 
 window.top.postMessage({ type: "app-ready", status: "success", appId }, "*");
+
+console.log(`Hello, benchmark connector for ${appId} is ready!`);

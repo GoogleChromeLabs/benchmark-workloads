@@ -1,11 +1,11 @@
-import terser from '@rollup/plugin-terser';
 import cleaner from "rollup-plugin-cleaner";
+import { copyFiles } from "./plugins/copy-files/index.js";
 
 export default {
     input: "index.js",
     output: [
         {
-            file: "dist/benchmark-connector.min.js",
+            file: "dist/index.js",
             format: "es",
         },
     ],
@@ -13,6 +13,11 @@ export default {
         cleaner({
             targets: ["./dist/"],
         }),
-        terser(),
+        copyFiles({
+            src: ["scripts/*"],
+            dest: "dist/",
+            rename: (name, extension) => `${name}.min.${extension}`,
+            minify: true
+        }),
     ],
 };

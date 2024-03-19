@@ -1,18 +1,19 @@
 {
-    "name": "benchmark-connector",
-    "version": "1.0.0",
-    "description": "A script to connect a workload to a benchmark.",
-    "main": "index.js",
-    "scripts": {
-      "build": "rollup -c --bundleConfigAsCjs"
-    },
-    "devDependencies": {
-      "@rollup/plugin-terser": "^0.4.3",
-      "rollup": "^3.23.0",
-      "rollup-plugin-cleaner": "^1.0.0"
-    },
-    "files": [
-      "/dist"
-    ]
-  }
-  
+  "name": "benchmark-connector",
+  "version": "1.0.0",
+  "description": "A script to connect a workload to a benchmark.",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c --bundleConfigAsCjs"
+  },
+  "devDependencies": {
+    "fs-extra": "^11.1.1",
+    "globby": "^13.2.0",
+    "rollup": "^3.23.0",
+    "rollup-plugin-cleaner": "^1.0.0",
+    "terser": "^5.29.2"
+  },
+  "files": [
+    "/dist"
+  ]
+}

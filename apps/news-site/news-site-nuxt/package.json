@@ -8,7 +8,7 @@
         "npm": ">=8.19.3"
     },
     "scripts": {
-        "prepare": "node scripts/prepare.js",
+        "prepare": "node node_modules/benchmark-connector/dist/prepare.min.js",
         "dev": "npm run prepare && nuxt dev",
         "build": "npm run prepare && nuxt build",
         "build:static": "npm run prepare && TARGET=static nuxt generate",

@@ -11,7 +11,6 @@ async function deleteFile(src) {
 }
 
 async function copyAndUpdate({ meta, src, dest }) {
-
     let contents = await fs.readFile(`${src}`, "utf8");
 
     if (meta) {
@@ -25,7 +24,11 @@ async function copyAndUpdate({ meta, src, dest }) {
 
 async function prepare() {
     await deleteFile("public/benchmark-connector.min.js");
-    await copyAndUpdate({ meta: "./package.json", src: "node_modules/benchmark-connector/dist/benchmark-connector.min.js", dest: "public/benchmark-connector.min.js" });
+    await copyAndUpdate({
+        meta: "./package.json",
+        src: "node_modules/benchmark-connector/dist/benchmark-connector.min.js",
+        dest: "public/benchmark-connector.min.js",
+    });
     console.log("Done with preparation!");
 }
 

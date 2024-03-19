@@ -521,13 +521,17 @@ importers:
 
   packages/tools/benchmark-connector:
     specifiers:
-      '@rollup/plugin-terser': ^0.4.3
+      fs-extra: ^11.1.1
+      globby: ^13.2.0
       rollup: ^3.23.0
       rollup-plugin-cleaner: ^1.0.0
+      terser: ^5.29.2
     devDependencies:
-      '@rollup/plugin-terser': 0.4.4_rollup@3.29.4
+      fs-extra: 11.2.0
+      globby: 13.2.2
       rollup: 3.29.4
       rollup-plugin-cleaner: 1.0.0_rollup@3.29.4
+      terser: 5.29.2
 
   packages/tools/big-dom-generator:
     specifiers:
@@ -697,7 +701,6 @@ importers:
 
   packages/tools/workloads-manager:
     specifiers:
-      '@rollup/plugin-terser': ^0.4.3
       chalk: 4.1.2
       fs-extra: ^11.1.1
       globby: ^13.2.0
@@ -706,7 +709,6 @@ importers:
     dependencies:
       chalk: 4.1.2
     devDependencies:
-      '@rollup/plugin-terser': 0.4.4_rollup@3.29.4
       fs-extra: 11.2.0
       globby: 13.2.2
       rollup: 3.29.4
@@ -21771,6 +21773,17 @@ packages:
 
   /terser/5.28.1:
     resolution: {integrity: sha512-wM+bZp54v/E9eRRGXb5ZFDvinrJIOaTapx3WUokyVGZu5ucVCK55zEgGd5Dl2fSr3jUo5sDiERErUWLY6QPFyA==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dependencies:
+      '@jridgewell/source-map': 0.3.5
+      acorn: 8.11.3
+      commander: 2.20.3
+      source-map-support: 0.5.21
+    dev: true
+
+  /terser/5.29.2:
+    resolution: {integrity: sha512-ZiGkhUBIM+7LwkNjXYJq8svgkd+QK3UUr0wJqY4MieaezBSAIPgbSPZyIx0idM6XWK5CMzSWa8MJIzmRcB8Caw==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:

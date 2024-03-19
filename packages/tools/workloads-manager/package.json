@@ -2,6 +2,7 @@
   "name": "workloads-manager",
   "version": "1.0.0",
   "description": "A script to build and serve workloads.",
+  "license": "SEE LICENSE IN LICENSE",
   "main": "index.js",
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs",

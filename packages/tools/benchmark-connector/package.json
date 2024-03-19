@@ -2,6 +2,7 @@
   "name": "benchmark-connector",
   "version": "1.0.0",
   "description": "A script to connect a workload to a benchmark.",
+  "license": "SEE LICENSE IN LICENSE",
   "main": "index.js",
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs"

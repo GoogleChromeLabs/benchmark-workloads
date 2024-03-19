@@ -8,8 +8,9 @@
         "npm": ">=8.19.3"
     },
     "scripts": {
-        "dev": "webpack serve --open --config webpack.dev.js",
-        "build:static": "webpack --config webpack.prod.js", 
+        "prepare": "HOST='./dist' node node_modules/benchmark-connector/dist/prepare.min.js",
+        "dev": "npm run prepare && webpack serve --config webpack.dev.js",
+        "build:static": "webpack --config webpack.prod.js && npm run prepare", 
         "start:static": "http-server ./dist -c-1 --cors --silent",
         "test": "jest"
     },
@@ -18,6 +19,7 @@
         "@babel/preset-env": "^7.20.2",
         "@babel/preset-react": "^7.18.6",
         "babel-loader": "^9.1.2",
+        "benchmark-connector": "workspace: *",
         "css-loader": "^6.7.3",
         "css-minimizer-webpack-plugin": "^4.2.2",
         "eslint-plugin-react": "^7.32.2",

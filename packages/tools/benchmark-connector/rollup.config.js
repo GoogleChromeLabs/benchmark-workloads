@@ -1,5 +1,5 @@
 import cleaner from "rollup-plugin-cleaner";
-import { copyFiles } from "./plugins/copy-files/index.js";
+import { copyFiles } from "./node_modules/rollup-copy-files/dist/index.min.js";
 
 export default {
     input: "index.js",

@@ -1,8 +1,8 @@
 import css from "rollup-plugin-import-css";
 import cleaner from "rollup-plugin-cleaner";
 
-import { constructableCSS } from "./plugins/constructable-css/index.js";
-import { copyFiles } from "./plugins/copy-files/index.js";
+import { constructableCSS } from "./node_modules/rollup-constructable-css/dist/index.min.js";
+import { copyFiles } from "./node_modules/rollup-copy-files/dist/index.min.js";
 
 export default {
     input: "src/js/index.js",

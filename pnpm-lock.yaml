@@ -479,11 +479,45 @@ importers:
       http-server: 14.1.1
       todomvc-css: link:../../../packages/styles/todomvc-css
 
+  packages/plugins/rollup-constructable-css:
+    specifiers:
+      '@rollup/plugin-terser': ^0.4.3
+      fs-extra: ^11.1.1
+      globby: ^13.2.0
+      rollup: ^3.23.0
+      rollup-plugin-cleaner: ^1.0.0
+      strip-comments: ^2.0.1
+    devDependencies:
+      '@rollup/plugin-terser': 0.4.4_rollup@3.29.4
+      fs-extra: 11.2.0
+      globby: 13.2.2
+      rollup: 3.29.4
+      rollup-plugin-cleaner: 1.0.0_rollup@3.29.4
+      strip-comments: 2.0.1
+
+  packages/plugins/rollup-copy-files:
+    specifiers:
+      '@rollup/plugin-terser': ^0.4.3
+      fs-extra: ^11.1.1
+      globby: ^13.2.0
+      rollup: ^3.23.0
+      rollup-plugin-cleaner: ^1.0.0
+      terser: ^5.29.2
+    devDependencies:
+      '@rollup/plugin-terser': 0.4.4_rollup@3.29.4
+      fs-extra: 11.2.0
+      globby: 13.2.2
+      rollup: 3.29.4
+      rollup-plugin-cleaner: 1.0.0_rollup@3.29.4
+      terser: 5.29.2
+
   packages/styles/news-site-css:
     specifiers:
       fs-extra: ^11.1.1
       globby: ^13.2.0
       rollup: ^3.23.0
+      rollup-constructable-css: workspace:*
+      rollup-copy-files: workspace:*
       rollup-plugin-cleaner: ^1.0.0
       rollup-plugin-import-css: ^3.2.1
       strip-comments: ^2.0.1
@@ -493,6 +527,8 @@ importers:
       fs-extra: 11.2.0
       globby: 13.2.2
       rollup: 3.29.4
+      rollup-constructable-css: link:../../plugins/rollup-constructable-css
+      rollup-copy-files: link:../../plugins/rollup-copy-files
       rollup-plugin-cleaner: 1.0.0_rollup@3.29.4
       rollup-plugin-import-css: 3.4.0_rollup@3.29.4
       strip-comments: 2.0.1
@@ -504,6 +540,8 @@ importers:
       fs-extra: ^11.1.1
       globby: ^13.2.0
       rollup: ^3.23.0
+      rollup-constructable-css: workspace:*
+      rollup-copy-files: workspace:*
       rollup-plugin-cleaner: ^1.0.0
       rollup-plugin-import-css: ^3.2.1
       strip-comments: ^2.0.1
@@ -513,6 +551,8 @@ importers:
       fs-extra: 11.2.0
       globby: 13.2.2
       rollup: 3.29.4
+      rollup-constructable-css: link:../../plugins/rollup-constructable-css
+      rollup-copy-files: link:../../plugins/rollup-copy-files
       rollup-plugin-cleaner: 1.0.0_rollup@3.29.4
       rollup-plugin-import-css: 3.4.0_rollup@3.29.4
       strip-comments: 2.0.1
@@ -524,12 +564,14 @@ importers:
       fs-extra: ^11.1.1
       globby: ^13.2.0
       rollup: ^3.23.0
+      rollup-copy-files: workspace:*
       rollup-plugin-cleaner: ^1.0.0
       terser: ^5.29.2
     devDependencies:
       fs-extra: 11.2.0
       globby: 13.2.2
       rollup: 3.29.4
+      rollup-copy-files: link:../../plugins/rollup-copy-files
       rollup-plugin-cleaner: 1.0.0_rollup@3.29.4
       terser: 5.29.2
 
@@ -705,6 +747,7 @@ importers:
       fs-extra: ^11.1.1
       globby: ^13.2.0
       rollup: ^3.23.0
+      rollup-copy-files: workspace:*
       rollup-plugin-cleaner: ^1.0.0
     dependencies:
       chalk: 4.1.2
@@ -712,6 +755,7 @@ importers:
       fs-extra: 11.2.0
       globby: 13.2.2
       rollup: 3.29.4
+      rollup-copy-files: link:../../plugins/rollup-copy-files
       rollup-plugin-cleaner: 1.0.0_rollup@3.29.4
 
 packages:
@@ -13964,7 +14008,7 @@ packages:
       he: 1.2.0
       param-case: 3.0.4
       relateurl: 0.2.7
-      terser: 5.28.1
+      terser: 5.29.2
     dev: true
 
   /html-minifier/4.0.0:
@@ -21732,7 +21776,7 @@ packages:
       jest-worker: 27.5.1
       schema-utils: 3.3.0
       serialize-javascript: 6.0.2
-      terser: 5.28.1
+      terser: 5.29.2
       webpack: 5.76.1
     dev: true
 
@@ -21756,7 +21800,7 @@ packages:
       jest-worker: 27.5.1
       schema-utils: 3.3.0
       serialize-javascript: 6.0.2
-      terser: 5.28.1
+      terser: 5.29.2
       webpack: 5.90.3_webpack-cli@5.1.4
     dev: true
 

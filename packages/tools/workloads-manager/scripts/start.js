@@ -1,6 +1,6 @@
 const path = require("path");
 const { findDirectories, executeScript } = require("./utils");
-const { getPorts, getLocalHosts } = require("./ports");
+const { getPorts, getLocalHosts, checkPorts } = require("./ports");
 const chalk = require("chalk");
 
 const defaultPorts = [3001, 3002, 3003, 3004, 3005, 3006, 3007, 3008, 3009, 3010, 3011, 3012, 3013, 3014, 3015, 3016, 3017];
@@ -31,6 +31,7 @@ async function start() {
             if (temp.length !== directories.length) {
                 throw Error("Not enough ports passed in");
             }
+
             ports = temp.map(s => {
                 const port = Number(s);
                 if (isNaN(port)) {
@@ -38,6 +39,11 @@ async function start() {
                 }
                 return port;
             });
+        }
+
+        const portsAreValid = await checkPorts({ ports });
+        if (!portsAreValid) {
+            throw Error ("Not all ports are valid");
         }
     } else {
         ports = await getPorts({ total: directories.length });

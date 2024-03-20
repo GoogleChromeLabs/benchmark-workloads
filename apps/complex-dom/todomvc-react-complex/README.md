@@ -1,4 +1,4 @@
-# Speedometer 3.0: TodoMVC: React Complex DOM
+# TodoMVC: React Complex DOM
 
 ## Description
 

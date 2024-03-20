@@ -35,7 +35,11 @@ export default {
         production && terser(),
         production && filesize(),
         copy({
-            targets: [{ src: "public/index.html", dest: "dist/" }, { src: "public/benchmark-connector.min.js", dest: "dist/" }],
+            targets: [
+                { src: "public/index.html", dest: "dist/" },
+                { src: "public/benchmark-connector.min.js", dest: "dist/" },
+                { src: "public/favicon.ico", dest: "dist/" }
+            ],
         }),
     ],
 };

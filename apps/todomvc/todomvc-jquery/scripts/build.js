@@ -12,7 +12,8 @@ const filesToMove = [
     "node_modules/jquery/dist/jquery.min.js",
     "node_modules/handlebars/dist/handlebars.min.js",
     "node_modules/director/build/director.min.js",
-    "benchmark-connector.min.js"
+    "benchmark-connector.min.js",
+    "favicon.ico"
 ];
 
 const copy = async (src, dest) => {

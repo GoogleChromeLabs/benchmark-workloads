@@ -13,6 +13,7 @@ const filesToMove = [
     "node_modules/underscore/underscore-min.js",
     "node_modules/backbone/backbone-min.js",
     "node_modules/backbone/backbone-min.js.map",
+    "favicon.ico",
     "benchmark-connector.min.js"
 ];
 

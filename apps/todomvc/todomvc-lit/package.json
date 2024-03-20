@@ -61,7 +61,8 @@
                 "rollup",
                 "prepare",
                 "copy-index-html",
-                "copy-benchmark-connector"
+                "copy-benchmark-connector",
+                "copy-favicon"
             ]
         },
         "tsc": {
@@ -104,6 +105,15 @@
             ],
             "output": [
                 "dist/benchmark-connector.min.js"
+            ]
+        },
+        "copy-favicon": {
+            "command": "cp favicon.ico dist/favicon.ico",
+            "files": [
+                "favicon.ico"
+            ],
+            "output": [
+                "dist/favicon.ico"
             ]
         },
         "prepare": {

@@ -139,6 +139,7 @@ importers:
       '@angular/platform-browser-dynamic': ^14.2.0
       '@angular/router': ^14.2.0
       '@types/jasmine': ~4.0.0
+      benchmark-connector: 'workspace: *'
       http-server: ^14.1.1
       jasmine-core: ~4.3.0
       karma: ~6.4.0
@@ -160,6 +161,7 @@ importers:
       '@angular/platform-browser': 14.3.0_wd3bqoh2pkuw5m54j2g5y4s4ra
       '@angular/platform-browser-dynamic': 14.3.0_66avhzcjyfbc4wwcsnykbga42a
       '@angular/router': 14.3.0_rmubd7q5dbiie2xgqqhnhdvaaa
+      benchmark-connector: link:../../../packages/tools/benchmark-connector
       http-server: 14.1.1
       rxjs: 7.5.7
       todomvc-app-css: 2.4.3

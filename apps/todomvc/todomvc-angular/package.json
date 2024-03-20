@@ -8,9 +8,10 @@
       "npm": ">=8.19.3"
   },
     "scripts": {
+        "prepare": "HOST='./' node node_modules/benchmark-connector/dist/prepare.min.js",
         "ng": "ng",
-        "dev": "ng serve",
-        "build:static": "ng build --source-map=true",
+        "dev": "npm run prepare && ng serve",
+        "build:static": "npm run prepare && ng build --source-map=true",
         "start:static": "http-server ./dist -c-1 --cors --silent",
         "watch": "ng build --watch --configuration development",
         "test": "ng test"
@@ -24,6 +25,7 @@
         "@angular/platform-browser": "^14.2.0",
         "@angular/platform-browser-dynamic": "^14.2.0",
         "@angular/router": "^14.2.0",
+        "benchmark-connector": "workspace: *",
         "http-server": "^14.1.1",
         "rxjs": "~7.5.0",
         "todomvc-app-css": "^2.4.2",

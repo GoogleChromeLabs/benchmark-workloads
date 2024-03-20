@@ -36,6 +36,17 @@ importers:
     devDependencies:
       vite: 4.5.2
 
+  apps/complex-dom/todomvc-angular-complex:
+    specifiers:
+      big-dom-generator: workspace:*
+      http-server: ^14.1.1
+      todomvc-angular: workspace:*
+    dependencies:
+      http-server: 14.1.1
+    devDependencies:
+      big-dom-generator: link:../../../packages/tools/big-dom-generator
+      todomvc-angular: link:../../todomvc/todomvc-angular
+
   apps/complex-dom/todomvc-react-complex:
     specifiers:
       big-dom-generator: workspace:*

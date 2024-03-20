@@ -8,12 +8,14 @@
         "npm": ">=8.19.3"
     },
     "scripts": {
+        "prepare": "HOST='./public' node node_modules/benchmark-connector/dist/prepare.min.js",
         "watch": "rollup -c -w",
         "dev": "npm run start:static & npm run watch",
         "build:static": "rollup -c",
-        "start:static": "http-server ./dist -c-1 --cors --silent"
+        "start:static": "http-server ./dist -c-1 --cors"
     },
     "dependencies": {
+        "benchmark-connector": "workspace: *",
         "todomvc-app-css": "^2.4.2",
         "http-server": "^14.1.1"
     },

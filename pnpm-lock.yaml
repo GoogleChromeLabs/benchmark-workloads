@@ -442,6 +442,7 @@ importers:
   apps/todomvc/todomvc-svelte:
     specifiers:
       '@rollup/plugin-node-resolve': ^15.0.2
+      benchmark-connector: 'workspace: *'
       http-server: ^14.1.1
       rollup-plugin-copy: ^3.4.0
       rollup-plugin-filesize: ^10.0.0
@@ -451,6 +452,7 @@ importers:
       svelte: ^3.58.0
       todomvc-app-css: ^2.4.2
     dependencies:
+      benchmark-connector: link:../../../packages/tools/benchmark-connector
       http-server: 14.1.1
       todomvc-app-css: 2.4.3
     devDependencies:

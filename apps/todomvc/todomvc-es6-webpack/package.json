@@ -10,15 +10,16 @@
     "scripts": {
         "prepare": "HOST='./dist' node node_modules/benchmark-connector/dist/prepare.min.js",
         "dev": "npm run prepare && webpack serve --config webpack.dev.js",
-        "build:static": "webpack --config webpack.prod.js && npm run prepare", 
+        "build:static": "webpack --config webpack.prod.js && npm run prepare",
         "start:static": "http-server ./dist -c-1 --cors --silent"
     },
     "dependencies": {
-        "todomvc-app-css": "^2.4.2",
-        "http-server": "^14.1.1"
+        "http-server": "^14.1.1",
+        "todomvc-app-css": "^2.4.2"
     },
     "devDependencies": {
         "benchmark-connector": "workspace: *",
+        "copy-webpack-plugin": "^11.0.0",
         "css-loader": "^6.7.3",
         "css-minimizer-webpack-plugin": "^4.2.2",
         "html-webpack-plugin": "^5.5.0",
@@ -31,5 +32,5 @@
     },
     "files": [
         "/dist"
-      ]
+    ]
 }

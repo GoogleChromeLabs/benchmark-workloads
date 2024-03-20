@@ -471,6 +471,7 @@ importers:
       '@vue/cli-plugin-babel': ~5.0.0
       '@vue/cli-plugin-eslint': ~5.0.0
       '@vue/cli-service': ~5.0.0
+      benchmark-connector: 'workspace: *'
       core-js: ^3.8.3
       eslint: ^7.32.0
       eslint-plugin-vue: ^8.0.3
@@ -480,6 +481,7 @@ importers:
       vue: ^3.2.47
       vue-router: ^4.1.6
     dependencies:
+      benchmark-connector: link:../../../packages/tools/benchmark-connector
       core-js: 3.36.0
       http-server: 14.1.1
       todomvc-app-css: 2.4.3

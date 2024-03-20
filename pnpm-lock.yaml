@@ -353,6 +353,7 @@ importers:
       webpack-dev-server: ^4.11.1
       webpack-merge: ^5.8.0
     dependencies:
+      benchmark-connector: link:../../../packages/tools/benchmark-connector
       classnames: 2.5.1
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
@@ -363,7 +364,6 @@ importers:
       '@babel/preset-env': 7.23.9_@babel+core@7.23.9
       '@babel/preset-react': 7.23.3_@babel+core@7.23.9
       babel-loader: 9.1.3_vtgzbzabbslhewbwwixiwlz6va
-      benchmark-connector: link:../../../packages/tools/benchmark-connector
       css-loader: 6.10.0_webpack@5.90.3
       css-minimizer-webpack-plugin: 4.2.2_webpack@5.90.3
       eslint-plugin-react: 7.33.2_eslint@8.56.0
@@ -384,6 +384,7 @@ importers:
       '@testing-library/jest-dom': ^5.16.5
       '@testing-library/react': ^12.1.5
       babel-loader: ^9.1.2
+      benchmark-connector: 'workspace: *'
       classnames: ^2.2.5
       css-loader: ^6.7.3
       css-minimizer-webpack-plugin: ^4.2.2
@@ -407,6 +408,7 @@ importers:
       webpack-dev-server: ^4.11.1
       webpack-merge: ^5.8.0
     dependencies:
+      benchmark-connector: link:../../../packages/tools/benchmark-connector
       classnames: 2.5.1
       prop-types: 15.8.1
       react: 16.14.0

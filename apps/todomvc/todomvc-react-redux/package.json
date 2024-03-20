@@ -8,10 +8,11 @@
         "npm": ">=8.19.3"
     },
     "scripts": {
-        "dev": "webpack serve --open --config webpack.dev.js",
+        "prepare": "HOST='./dist' node node_modules/benchmark-connector/dist/prepare.min.js",
+        "dev": "npm run prepare && webpack serve --config webpack.dev.js",
         "sanitize": "OUTPUT_FOLDER=./dist node node_modules/sanitize-language/dist/index.min.js",
-        "build:static": "webpack --config webpack.prod.js && npm run sanitize",
-        "start:static": "http-server ./dist -c-1 --cors --silent",
+        "build:static": "webpack --config webpack.prod.js && npm run sanitize && npm run prepare",
+        "start:static": "http-server ./dist -c-1 --cors",
         "test": "jest"
     },
     "devDependencies": {
@@ -36,6 +37,7 @@
         "webpack-merge": "^5.8.0"
     },
     "dependencies": {
+        "benchmark-connector": "workspace: *",
         "classnames": "^2.2.5",
         "prop-types": "^15.8.1",
         "react": "^16.14.0",

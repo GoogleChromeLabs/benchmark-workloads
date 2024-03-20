@@ -8,11 +8,13 @@
       "npm": ">=8.19.3"
   },
   "scripts": {
-      "dev": "http-server ./ -p 3001 -c-1 --cors -o",
-      "build:static": "node scripts/build.js",
-      "start:static": "http-server ./dist -c-1 --cors --silent"
+    "prepare": "HOST='./' node node_modules/benchmark-connector/dist/prepare.min.js",
+    "dev": "npm run prepare && http-server ./ -c-1 --cors -o",
+    "build:static": "npm run prepare && node scripts/build.js",
+    "start:static": "http-server ./dist -c-1 --cors --silent"
   },
   "dependencies": {
+    "benchmark-connector": "workspace: *",
     "director": "~1.2.2",
     "handlebars": "^4.0.6",
     "http-server": "^14.1.1",

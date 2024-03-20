@@ -7,7 +7,13 @@ const targetDirectory = "./dist";
 
 const htmlFile = "index.html";
 
-const filesToMove = ["node_modules/todomvc-app-css/index.css", "node_modules/jquery/dist/jquery.min.js", "node_modules/handlebars/dist/handlebars.min.js", "node_modules/director/build/director.min.js"];
+const filesToMove = [
+    "node_modules/todomvc-app-css/index.css",
+    "node_modules/jquery/dist/jquery.min.js",
+    "node_modules/handlebars/dist/handlebars.min.js",
+    "node_modules/director/build/director.min.js",
+    "benchmark-connector.min.js"
+];
 
 const copy = async (src, dest) => {
     await fs.copyFile(src, dest);
@@ -21,17 +27,27 @@ const build = async () => {
     await fs.mkdir(targetDirectory);
 
     // copy src folder
-    await fs.cp(sourceDirectory, targetDirectory, { recursive: true }, (err) => {
-        if (err)
-            console.error(err);
-    });
+    await fs.cp(
+        sourceDirectory,
+        targetDirectory,
+        { recursive: true },
+        (err) => {
+            if (err) console.error(err);
+        }
+    );
 
     // copy html file
-    await fs.copyFile(path.join(rootDirectory, htmlFile), path.join(targetDirectory, htmlFile));
+    await fs.copyFile(
+        path.join(rootDirectory, htmlFile),
+        path.join(targetDirectory, htmlFile)
+    );
 
     // copy files to move
     for (let i = 0; i < filesToMove.length; i++)
-        await copy(filesToMove[i], path.join(targetDirectory, path.basename(filesToMove[i])));
+        await copy(
+            filesToMove[i],
+            path.join(targetDirectory, path.basename(filesToMove[i]))
+        );
 
     // read html file
     let html = await fs.readFile(path.join(targetDirectory, htmlFile), "utf8");

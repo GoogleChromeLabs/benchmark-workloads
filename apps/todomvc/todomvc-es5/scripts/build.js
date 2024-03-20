@@ -7,7 +7,7 @@ const targetDirectory = "./dist";
 
 const htmlFile = "index.html";
 
-const filesToMove = ["node_modules/todomvc-app-css/index.css"];
+const filesToMove = ["node_modules/todomvc-app-css/index.css", "benchmark-connector.min.js"];
 
 const copy = async (src, dest) => {
     await fs.copyFile(src, dest);

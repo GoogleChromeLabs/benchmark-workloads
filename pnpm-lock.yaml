@@ -257,6 +257,7 @@ importers:
       '@rollup/plugin-terser': ^0.4.3
       '@rollup/plugin-typescript': ^11.1.1
       '@web/dev-server': ^0.2.1
+      benchmark-connector: 'workspace: *'
       http-server: ^14.1.1
       lit: ^3.0.0-pre.0
       rollup: ^2.79.1
@@ -265,6 +266,7 @@ importers:
       typescript: ^5.0.4
       wireit: ^0.9.5
     dependencies:
+      benchmark-connector: link:../../../packages/tools/benchmark-connector
       http-server: 14.1.1
       lit: 3.1.2
       tslib: 2.6.2

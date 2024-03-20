@@ -8,9 +8,10 @@
         "npm": ">=8.19.3"
     },
     "scripts": {
+        "prepare": "wireit",
         "dev": "wireit",
         "build:static": "wireit",
-        "start:static": "http-server ./dist -c-1 --cors --silent",
+        "start:static": "http-server ./dist -c-1 --cors",
         "tsc": "wireit",
         "rollup": "wireit",
         "copy-index-html": "wireit"
@@ -26,6 +27,7 @@
         "wireit": "^0.9.5"
     },
     "dependencies": {
+        "benchmark-connector": "workspace: *",
         "http-server": "^14.1.1",
         "lit": "^3.0.0-pre.0",
         "tslib": "^2.5.2"
@@ -44,7 +46,8 @@
         "dev": {
             "#comment": "like serve, only it doesn't do the slow rollup build",
             "dependencies": [
-                "tsc"
+                "tsc",
+                "prepare"
             ],
             "files": [
                 "web-dev-server.config.mjs"
@@ -56,7 +59,9 @@
             "dependencies": [
                 "tsc",
                 "rollup",
-                "copy-index-html"
+                "prepare",
+                "copy-index-html",
+                "copy-benchmark-connector"
             ]
         },
         "tsc": {
@@ -91,6 +96,18 @@
             "output": [
                 "dist/index.html"
             ]
+        },
+        "copy-benchmark-connector": {
+            "command": "cp benchmark-connector.min.js dist/benchmark-connector.min.js",
+            "files": [
+                "benchmark-connector.min.js"
+            ],
+            "output": [
+                "dist/benchmark-connector.min.js"
+            ]
+        },
+        "prepare": {
+            "command": "HOST='./' node node_modules/benchmark-connector/dist/prepare.min.js"
         }
     },
     "files": [

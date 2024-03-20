@@ -289,6 +289,7 @@ importers:
       '@rollup/plugin-commonjs': ^24.0.1
       '@rollup/plugin-node-resolve': ^15.0.1
       '@rollup/plugin-terser': ^0.4.0
+      benchmark-connector: 'workspace: *'
       classnames: ^2.3.2
       eslint-plugin-react: ^7.32.2
       http-server: ^14.1.1
@@ -304,6 +305,7 @@ importers:
       rollup-plugin-resolve: ^0.0.1-predev.1
       todomvc-app-css: ^2.4.2
     dependencies:
+      benchmark-connector: link:../../../packages/tools/benchmark-connector
       classnames: 2.5.1
       http-server: 14.1.1
       linkstate: 2.0.1_preact@10.19.6

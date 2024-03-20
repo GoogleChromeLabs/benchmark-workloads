@@ -20,6 +20,18 @@ pnpm -F charts start:static
 
 ## complex-dom
 
+### todomvc-angular-complex
+```bash
+pnpm -F todomvc-angular-complex build:static
+pnpm -F todomvc-angular-complex start:static
+```
+
+### todomvc-backbone-complex
+```bash
+pnpm -F todomvc-backbone-complex build:static
+pnpm -F todomvc-backbone-complex start:static
+```
+
 ### todomvc-react-complex
 ```bash
 pnpm -F todomvc-react-complex build:static

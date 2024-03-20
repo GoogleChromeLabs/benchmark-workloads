@@ -183,12 +183,14 @@ importers:
   apps/todomvc/todomvc-backbone:
     specifiers:
       backbone: ^1.4.1
+      benchmark-connector: 'workspace: *'
       http-server: ^14.1.1
       jquery: ^3.6.4
       todomvc-app-css: ^2.4.2
       underscore: ^1.13.6
     dependencies:
       backbone: 1.6.0
+      benchmark-connector: link:../../../packages/tools/benchmark-connector
       http-server: 14.1.1
       jquery: 3.7.1
       todomvc-app-css: 2.4.3

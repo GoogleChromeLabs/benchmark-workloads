@@ -12,7 +12,7 @@
         "watch": "rollup -c -w",
         "dev": "npm run start:static & npm run watch",
         "build:static": "rollup -c",
-        "start:static": "http-server ./dist -c-1 --cors"
+        "start:static": "http-server ./dist -c-1 --cors --silent"
     },
     "dependencies": {
         "benchmark-connector": "workspace: *",

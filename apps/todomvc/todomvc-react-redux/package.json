@@ -12,7 +12,7 @@
         "dev": "npm run prepare && webpack serve --config webpack.dev.js",
         "sanitize": "OUTPUT_FOLDER=./dist node node_modules/sanitize-language/dist/index.min.js",
         "build:static": "webpack --config webpack.prod.js && npm run sanitize && npm run prepare",
-        "start:static": "http-server ./dist -c-1 --cors",
+        "start:static": "http-server ./dist -c-1 --cors --silent",
         "test": "jest"
     },
     "devDependencies": {

@@ -11,7 +11,7 @@
         "prepare": "HOST='./public' node node_modules/benchmark-connector/dist/prepare.min.js",
         "dev": "npm run prepare && npm-run-all --parallel start:static watch",
         "build:static": "npm run prepare && rollup -c --bundleConfigAsCjs",
-        "start:static": "http-server ./dist -c-1 --cors",
+        "start:static": "http-server ./dist -c-1 --cors --silent",
         "watch": "ROLLUP_WATCH=true rollup -c -w --bundleConfigAsCjs"
     },
     "devDependencies": {

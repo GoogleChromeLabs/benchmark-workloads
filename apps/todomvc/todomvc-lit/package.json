@@ -11,7 +11,7 @@
         "prepare": "wireit",
         "dev": "wireit",
         "build:static": "wireit",
-        "start:static": "http-server ./dist -c-1 --cors",
+        "start:static": "http-server ./dist -c-1 --cors --silent",
         "tsc": "wireit",
         "rollup": "wireit",
         "copy-index-html": "wireit"

@@ -32,6 +32,12 @@ pnpm -F todomvc-backbone-complex build:static
 pnpm -F todomvc-backbone-complex start:static
 ```
 
+### todomvc-es5-complex
+```bash
+pnpm -F todomvc-es5-complex build:static
+pnpm -F todomvc-es5-complex start:static
+```
+
 ### todomvc-jquery-complex
 ```bash
 pnpm -F todomvc-jquery-complex build:static

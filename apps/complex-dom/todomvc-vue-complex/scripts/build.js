@@ -3,16 +3,17 @@
  */
 const path = require("path");
 const { buildComplex } = require("big-dom-generator/utils/buildComplex");
+const standaloneApp = "todomvc-vue";
 
 const options = {
     callerDirectory: path.resolve(__dirname),
-    sourceDirectory: path.join("..", "node_modules", "todomvc-vue", "dist"),
+    sourceDirectory: path.join("..", "node_modules", `${standaloneApp}`, "dist"),
     title: "TodoMVC: Vue Complex DOM",
     filesToMove: ["node_modules/big-dom-generator/dist/big-dom.css", "node_modules/big-dom-generator/dist/logo.png"],
     cssFilePath: path.resolve(__dirname, "..", "node_modules", "big-dom-generator", "utils", "app.css"),
     cssFolder: "css",
     cssFileNamePattern: /^app.*\.css$/,
-    standaloneDirectory: path.resolve(__dirname, "..", "..", "vue"),
+    standaloneDirectory: path.resolve(__dirname, "..", "..", `${standaloneApp}`),
     complexDirectory: path.resolve(__dirname, ".."),
 };
 

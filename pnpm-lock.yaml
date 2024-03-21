@@ -157,6 +157,17 @@ importers:
       big-dom-generator: link:../../../packages/tools/big-dom-generator
       todomvc-vue: link:../../todomvc/todomvc-vue
 
+  apps/complex-dom/todomvc-web-components-complex:
+    specifiers:
+      big-dom-generator: workspace:*
+      http-server: ^14.1.1
+      todomvc-web-components: workspace:*
+    dependencies:
+      http-server: 14.1.1
+    devDependencies:
+      big-dom-generator: link:../../../packages/tools/big-dom-generator
+      todomvc-web-components: link:../../todomvc/todomvc-web-components
+
   apps/editors:
     specifiers:
       '@codemirror/lang-javascript': ^6.1.4

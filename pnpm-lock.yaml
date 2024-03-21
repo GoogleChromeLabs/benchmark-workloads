@@ -102,6 +102,17 @@ importers:
       big-dom-generator: link:../../../packages/tools/big-dom-generator
       todomvc-react: link:../../todomvc/todomvc-react
 
+  apps/complex-dom/todomvc-react-redux-complex:
+    specifiers:
+      big-dom-generator: workspace:*
+      http-server: ^14.1.1
+      todomvc-react-redux: workspace:*
+    dependencies:
+      http-server: 14.1.1
+    devDependencies:
+      big-dom-generator: link:../../../packages/tools/big-dom-generator
+      todomvc-react-redux: link:../../todomvc/todomvc-react-redux
+
   apps/editors:
     specifiers:
       '@codemirror/lang-javascript': ^6.1.4

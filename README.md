@@ -56,6 +56,12 @@ pnpm -F todomvc-react-complex build:static
 pnpm -F todomvc-react-complex start:static
 ```
 
+### todomvc-react-redux-complex
+```bash
+pnpm -F todomvc-react-redux-complex build:static
+pnpm -F todomvc-react-redux-complex start:static
+```
+
 ## editors
 
 ### codemirror / tiptap

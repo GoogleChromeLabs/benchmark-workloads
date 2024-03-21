@@ -1,0 +1,24 @@
+{
+    "name": "todomvc-svelte-complex",
+    "version": "1.0.0",
+    "license": "SEE LICENSE IN LICENSE",
+    "engines": {
+        "node": ">=18.13.0",
+        "npm": ">=8.19.3"
+    },
+    "scripts": {
+        "build:static": "node scripts/build.js",
+        "start:static": "http-server ./dist -c-1 --cors --silent"
+    },
+    "devDependencies": {
+        "big-dom-generator": "workspace:*",
+        "todomvc-svelte": "workspace:*"
+    },
+    "dependencies": {
+        "http-server": "^14.1.1"
+    },
+    "files": [
+        "/dist"
+    ]
+  }
+  

@@ -80,6 +80,17 @@ importers:
       big-dom-generator: link:../../../packages/tools/big-dom-generator
       todomvc-lit: link:../../todomvc/todomvc-lit
 
+  apps/complex-dom/todomvc-preact-complex:
+    specifiers:
+      big-dom-generator: workspace:*
+      http-server: ^14.1.1
+      todomvc-preact: workspace:*
+    dependencies:
+      http-server: 14.1.1
+    devDependencies:
+      big-dom-generator: link:../../../packages/tools/big-dom-generator
+      todomvc-preact: link:../../todomvc/todomvc-preact
+
   apps/complex-dom/todomvc-react-complex:
     specifiers:
       big-dom-generator: workspace:*

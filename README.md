@@ -68,6 +68,12 @@ pnpm -F todomvc-svelte-complex build:static
 pnpm -F todomvc-svelte-complex start:static
 ```
 
+### todomvc-vue-complex
+```bash
+pnpm -F todomvc-vue-complex build:static
+pnpm -F todomvc-vue-complex start:static
+```
+
 ## editors
 
 ### codemirror / tiptap

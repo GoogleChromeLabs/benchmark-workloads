@@ -44,6 +44,12 @@ pnpm -F todomvc-lit-complex build:static
 pnpm -F todomvc-lit-complex start:static
 ```
 
+### todomvc-preact-complex
+```bash
+pnpm -F todomvc-preact-complex build:static
+pnpm -F todomvc-preact-complex start:static
+```
+
 ### todomvc-react-complex
 ```bash
 pnpm -F todomvc-react-complex build:static

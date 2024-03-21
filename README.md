@@ -86,6 +86,12 @@ pnpm -F todomvc-vue-complex build:static
 pnpm -F todomvc-vue-complex start:static
 ```
 
+### todomvc-web-components-complex
+```bash
+pnpm -F todomvc-web-components-complex build:static
+pnpm -F todomvc-web-components-complex start:static
+```
+
 ## editors
 
 ### codemirror / tiptap

@@ -69,6 +69,17 @@ importers:
       big-dom-generator: link:../../../packages/tools/big-dom-generator
       todomvc-jquery: link:../../todomvc/todomvc-jquery
 
+  apps/complex-dom/todomvc-lit-complex:
+    specifiers:
+      big-dom-generator: workspace:*
+      http-server: ^14.1.1
+      todomvc-lit: workspace:*
+    dependencies:
+      http-server: 14.1.1
+    devDependencies:
+      big-dom-generator: link:../../../packages/tools/big-dom-generator
+      todomvc-lit: link:../../todomvc/todomvc-lit
+
   apps/complex-dom/todomvc-react-complex:
     specifiers:
       big-dom-generator: workspace:*

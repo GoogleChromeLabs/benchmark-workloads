@@ -38,6 +38,12 @@ pnpm -F todomvc-jquery-complex build:static
 pnpm -F todomvc-jquery-complex start:static
 ```
 
+### todomvc-lit-complex
+```bash
+pnpm -F todomvc-lit-complex build:static
+pnpm -F todomvc-lit-complex start:static
+```
+
 ### todomvc-react-complex
 ```bash
 pnpm -F todomvc-react-complex build:static

@@ -38,6 +38,12 @@ pnpm -F todomvc-es5-complex build:static
 pnpm -F todomvc-es5-complex start:static
 ```
 
+### todomvc-es6-webpack-complex
+```bash
+pnpm -F todomvc-es6-webpack-complex build:static
+pnpm -F todomvc-es6-webpack-complex start:static
+```
+
 ### todomvc-jquery-complex
 ```bash
 pnpm -F todomvc-jquery-complex build:static

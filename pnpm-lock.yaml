@@ -58,6 +58,17 @@ importers:
       big-dom-generator: link:../../../packages/tools/big-dom-generator
       todomvc-backbone: link:../../todomvc/todomvc-backbone
 
+  apps/complex-dom/todomvc-es5-complex:
+    specifiers:
+      big-dom-generator: workspace:*
+      http-server: ^14.1.1
+      todomvc-es5: workspace:*
+    dependencies:
+      http-server: 14.1.1
+    devDependencies:
+      big-dom-generator: link:../../../packages/tools/big-dom-generator
+      todomvc-es5: link:../../todomvc/todomvc-es5
+
   apps/complex-dom/todomvc-jquery-complex:
     specifiers:
       big-dom-generator: workspace:*

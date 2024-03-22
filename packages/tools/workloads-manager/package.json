@@ -5,6 +5,11 @@
   "license": "SEE LICENSE IN LICENSE",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint scripts/*",
+    "lint:fix": "npm run lint -- --fix",
+    "pretty": "prettier scripts/* --check",
+    "pretty:fix": "npm run pretty -- --write",
+    "format": "npm run pretty:fix && npm run lint:fix",
     "build": "rollup -c --bundleConfigAsCjs",
     "build:apps": "node scripts/build.js",
     "connect": "DATA='./workloads.config.json' node scripts/connect.js",
@@ -12,8 +17,11 @@
     "start:all": "node scripts/all.js"
   },
   "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
     "fs-extra": "^11.1.1",
     "globby": "^13.2.0",
+    "prettier": "^2.8.8",
     "rollup": "^3.23.0",
     "rollup-copy-files": "workspace:*",
     "rollup-plugin-cleaner": "^1.0.0"

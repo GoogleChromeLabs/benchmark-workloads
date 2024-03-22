@@ -9,6 +9,8 @@
   },
   "scripts": {
     "lint": "stylelint \"src/css/*.css\"",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "npm run lint:fix",
     "build": "rollup -c --bundleConfigAsCjs"
   },
   "devDependencies": {

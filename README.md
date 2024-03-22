@@ -5,6 +5,9 @@ Aurora Workloads is a collection of open source example apps and sites that aim 
 ## Development
 ```bash
 pnpm install
+pnpm run format:packages
+pnpm run build:apps
+pnpm run build:packages
 ```
 
 ## Apps

@@ -5,12 +5,14 @@ Aurora Workloads is a collection of open source example apps and sites that aim 
 ## Development
 ```bash
 pnpm install
-pnpm run format:packages
-pnpm run build:apps
-pnpm run build:packages
 ```
 
 ## Apps
+
+Build all apps:
+```bash
+pnpm run build:apps
+```
 
 ## charts
 
@@ -227,6 +229,13 @@ pnpm -F todomvc-web-components start:static
 ```
 
 ## Packages
+
+Format all packages and build all packages:
+
+```bash
+pnpm run format:packages
+pnpm run build:packages
+```
 
 ### Plugins
 

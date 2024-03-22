@@ -1,81 +1,60 @@
+const fs = require("fs-extra");
 const path = require("path");
-const { findDirectories, executeScript } = require("./utils");
-const { getPorts, getLocalHosts, checkPorts } = require("./ports");
 const chalk = require("chalk");
 
-const defaultPorts = [
-    3001, 3002, 3003, 3004, 3005, 3006, 3007, 3008, 3009, 3010, 3011, 3012,
-    3013, 3014, 3015, 3016, 3017,
-];
+const { findDirectoryByName, executeScript } = require("./utils");
+const { checkPort, getLocalHosts } = require("./ports");
 
 async function start() {
-    // We're looking for package.json files, to know what directory we should run the build script in.
-    const target = "package.json";
-    // We're starting from the root directory of the monorepo.
-    const start = "../../../";
-    // Name of the root directory - "aurora-workloads".
-    const root = path.basename(path.resolve(start));
-    // build to run (build, build:static, build:gh).
-    const script = "start:static";
+  // We're starting from the root directory of the monorepo.
+  const start = "../../../";
+  // Name of the root directory - "aurora-workloads".
+  const root = path.basename(path.resolve(start));
 
-    const directories = await findDirectories({ start, target, root });
+  if (!process.env.DATA) {
+    throw Error("No data file passed in!");
+  }
 
-    const reports = [];
-    const hosts = [...getLocalHosts()];
+  const { workloads } = JSON.parse(fs.readFileSync(process.env.DATA, "utf-8"));
 
-    let ports;
+  const reports = [];
+  const hosts = [...getLocalHosts()];
 
-    // should move this into a separate function...
-    if (process.env.PORTS) {
-        if (process.env.PORTS === "default") {
-            ports = [...defaultPorts];
-        } else {
-            const temp = process.env.PORTS.split(",");
-            if (temp.length !== directories.length) {
-                throw Error("Not enough ports passed in");
-            }
+  // prevents warning: MaxListenersExceededWarning: Possible EventEmitter memory leak detected.
+  process.setMaxListeners(workloads.length);
 
-            ports = temp.map((s) => {
-                const port = Number(s);
-                if (isNaN(port)) {
-                    throw Error("Not all ports a numbers");
-                }
-                return port;
-            });
-        }
+  for (const workload of workloads) {
+    const { port, name, script } = workload;
 
-        const portsAreValid = await checkPorts({ ports });
-        if (!portsAreValid) {
-            throw Error("Not all ports are valid");
-        }
-    } else {
-        ports = await getPorts({ total: directories.length });
+    if (!checkPort(port)) {
+      // What should happen in this case?
+      throw Error(`Port ${port} is not valid!`);
     }
-
-    // prevents warning: MaxListenersExceededWarning: Possible EventEmitter memory leak detected.
-    process.setMaxListeners(directories.length);
-
-    for (let i = 0; i < directories.length; i++) {
-        const directory = directories[i];
-        const port = ports[i];
-        executeScript({ script, directory, env: { PORT: port } });
-        reports.push({ port, name: path.basename(directory), directory });
-    }
-
-    console.log("*********************************");
-    console.log("The following apps have been attempted to start:");
-    reports.forEach(({ port, name }) => {
-        hosts.forEach((host) =>
-            console.log(
-                `🟢 ${chalk.blue(name)} is available at: ${chalk.underline(
-                    chalk.blue(`http://${host}:${port}`)
-                )}`
-            )
-        );
-        console.log("*********************************");
+    const results = await findDirectoryByName({
+      start,
+      target: name,
+      root,
     });
-    console.log("Bye! 👋");
+    const directory = results[0];
+
+    executeScript({ script, directory, env: { PORT: port } });
+    reports.push({ port, name, directory });
+  }
+
+  console.log("*********************************");
+  console.log("The following apps have been attempted to start:");
+  reports.forEach(({ port, name }) => {
+    hosts.forEach((host) =>
+      console.log(
+        `🟢 ${chalk.blue(name)} is available at: ${chalk.underline(
+          chalk.blue(`http://${host}:${port}`)
+        )}`
+      )
+    );
     console.log("*********************************");
+  });
+  console.log("Bye! 👋");
+  console.log("*********************************");
 }
 
 start();

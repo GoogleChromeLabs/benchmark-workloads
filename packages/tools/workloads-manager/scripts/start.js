@@ -10,8 +10,6 @@ async function start() {
     const start = "../../../";
     // Name of the root directory - "aurora-workloads".
     const root = path.basename(path.resolve(start));
-    // script to run in target directory
-    const script = "start:static";
 
     if (!process.env.DATA) {
         throw Error("No data file passed in!");
@@ -28,7 +26,7 @@ async function start() {
     process.setMaxListeners(workloads.length);
 
     for (const workload of workloads) {
-        const { port, name } = workload;
+        const { port, name, script } = workload;
 
         if (!checkPort(port)) {
             throw Error(`Port ${port} is not valid!`);

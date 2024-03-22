@@ -2,11 +2,13 @@
     "workloads": [
         { 
             "name": "news-site-next",
-            "port": 8081
+            "port": 8081,
+            "script": "start:static"
         },
         {
             "name": "news-site-nuxt",
-            "port": 8082
+            "port": 8082,
+            "script": "start:static"
         }
     ]
 }

@@ -37,6 +37,16 @@ async function checkPorts({ ports }) {
     return true;
 }
 
+async function checkPort({ port }) {
+    try {
+        await getPort({ port });
+    } catch (e) {
+        return false;
+    }
+
+    return true;
+}
+
 function getLocalHosts() {
     const interfaces = os.networkInterfaces();
 
@@ -52,6 +62,7 @@ function getLocalHosts() {
 }
 
 module.exports = {
+    checkPort,
     checkPorts,
     getPort,
     getPorts,

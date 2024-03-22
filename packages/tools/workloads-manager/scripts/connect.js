@@ -1,3 +1,4 @@
+const fs = require("fs-extra");
 const net = require("net");
 const { getLocalHosts } = require("./ports");
 const { showLoadingAnimation } = require("./loader");
@@ -48,22 +49,25 @@ async function waitForConnectionWithTimeout({ host, port }) {
 }
 
 async function connect() {
-    const hosts = getLocalHosts();
-    // just testing first available local host
-    const host = hosts.values().next().value;
-    const data = [
-        { host, port: 3001 },
-        { host, port: 3002 },
-        { host, port: 3003 },
-        { host, port: 3004 },
-    ];
+    if (!process.env.DATA) {
+        throw Error("No data file passed in!");
+    }
 
-    // console.log("Waiting for connection..")
-    const loadingRef = showLoadingAnimation({ text: "Waiting for connection." });
+    const { workloads } = JSON.parse(
+        fs.readFileSync(process.env.DATA, "utf-8")
+    );
+
+    const hosts = getLocalHosts();
+    // just using one local host value for now
+    const host = hosts.values().next().value;
+
+    const loadingRef = showLoadingAnimation({
+        text: "Waiting for connection.",
+    });
 
     await Promise.all(
-        data.map(({ host, port }) =>
-            waitForConnectionWithTimeout({ host, port })
+        workloads.map(({ port }) =>
+            waitForConnectionWithTimeout({ port, host })
         )
     );
 

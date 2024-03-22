@@ -1,0 +1,12 @@
+{
+    "workloads": [
+        { 
+            "name": "news-site-next",
+            "port": 8081
+        },
+        {
+            "name": "news-site-nuxt",
+            "port": 8082
+        }
+    ]
+}

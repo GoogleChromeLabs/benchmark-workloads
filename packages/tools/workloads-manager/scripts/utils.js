@@ -50,6 +50,27 @@ async function findDirectories({ start, target, root, directories = [] }) {
     return directories;
 }
 
+async function findDirectoryByName({ start, target, root, result = [] }) {
+    const list = await fs.readdir(start);
+    for (const entry of list) {
+        const current = path.resolve(start, entry);
+        const stat = await fs.stat(current);
+        if (stat && stat.isDirectory()) {
+            if (entry === target) {
+                result.push(current);
+            } else if (!excludeList.includes(entry)) {
+                await findDirectoryByName({
+                    start: current,
+                    target,
+                    root,
+                    result,
+                });
+            }
+        }
+    }
+    return result;
+}
+
 function executeScriptSync({ script, directory, env = {} }) {
     console.log(
         `Attempting to run the ${script} script, with env: ${env}.. ⚙️`
@@ -109,6 +130,7 @@ async function executeScript({ script, directory, env = {} }) {
 
 module.exports = {
     findDirectories,
+    findDirectoryByName,
     executeScript,
     executeScriptSync,
 };

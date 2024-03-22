@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "format:packages": "pnpm -F './packages/**' format"
+    "format:packages": "pnpm -F './packages/**' format",
+    "build:apps": "pnpm -F './apps/**' build:static",
+    "build:packages": "pnpm -F './packages/**' build" 
   },
   "keywords": [],
   "author": "",

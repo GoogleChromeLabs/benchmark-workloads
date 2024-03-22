@@ -278,7 +278,7 @@ pnpm -F sanitize-language build
 
 #### workloads-manager
 - build:apps: builds all workloads in the apps directory.
-- start: starts node server for static workloads in the apps directory.
+- start: starts node server for static workloads from the workloads.config.json file.
 
 ```bash
 pnpm -F workloads-manager build

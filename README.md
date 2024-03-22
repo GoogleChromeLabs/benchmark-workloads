@@ -229,11 +229,13 @@ pnpm -F todomvc-web-components start:static
 
 #### rollup-constructable-css
 ```bash
+pnpm -F rollup-constructable-css format
 pnpm -F rollup-constructable-css build
 ```
 
 #### rollup-copy-files
 ```bash
+pnpm -F rollup-copy-files format
 pnpm -F rollup-copy-files build
 ```
 
@@ -242,14 +244,14 @@ pnpm -F rollup-copy-files build
 #### news-site-css
 
 ```bash
-pnpm -F news-site-css lint
+pnpm -F news-site-css format
 pnpm -F news-site-css build
 ```
 
 #### todomvc-css
 
 ```bash
-pnpm -F todomvc-css lint
+pnpm -F todomvc-css format
 pnpm -F todomvc-css build
 ```
 
@@ -261,6 +263,7 @@ pnpm -F todomvc-css build
 - prepare.min.js: script to copy benchmark-connector.min.js file to the public folder of workload.
 
 ```bash
+pnpm -F benchmark-connector format
 pnpm -F benchmark-connector build
 ```
 
@@ -273,6 +276,7 @@ pnpm -F big-dom-generator build
 #### sanitize-language
 
 ```bash
+pnpm -F sanitize-language format
 pnpm -F sanitize-language build
 ```
 
@@ -281,6 +285,7 @@ pnpm -F sanitize-language build
 - start: starts node server for static workloads from the workloads.config.json file.
 
 ```bash
+pnpm -F workloads-manager format
 pnpm -F workloads-manager build
 pnpm -F workloads-manager build:apps
 pnpm -F workloads-manager start

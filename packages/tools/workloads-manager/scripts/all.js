@@ -1,7 +1,7 @@
 /*
-    "start": "node scripts/start.js",
-    "start:ports": "PORTS='5001,5002,5003,5004,5005,5006,5007,5008,5009,5010,5011,5012,5013,5014,5015,5016,5017,5018,5019,5020,5021,5022,5023,5024,5025,5026,5027,5028' node scripts/start.js",
-    "start:default": "PORTS=default node scripts/start.js",
+    "start:all": "node scripts/all.js",
+    "start:all:ports": "PORTS='5001,5002,5003,5004,5005,5006,5007,5008,5009,5010,5011,5012,5013,5014,5015,5016,5017,5018,5019,5020,5021,5022,5023,5024,5025,5026,5027,5028' node scripts/all.js",
+    "start:all:default": "PORTS=default node scripts/all.js",
 */
 
 const path = require("path");

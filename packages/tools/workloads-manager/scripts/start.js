@@ -29,6 +29,7 @@ async function start() {
         const { port, name, script } = workload;
 
         if (!checkPort(port)) {
+            // What should happen in this case?
             throw Error(`Port ${port} is not valid!`);
         }
         const results = await findDirectoryByName({

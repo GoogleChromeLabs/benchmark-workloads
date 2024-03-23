@@ -5,6 +5,11 @@ const chalk = require("chalk");
 const { findDirectoryByName, executeScript } = require("./utils");
 const { checkPort, getLocalHosts } = require("./ports");
 
+// workloads.config has a type property to determine which script to use to start the workload.
+const startScripts = {
+  "static": "start:static",
+}
+
 async function start() {
   // We're starting from the root directory of the monorepo.
   const start = "../../../";
@@ -24,7 +29,7 @@ async function start() {
   process.setMaxListeners(workloads.length);
 
   for (const workload of workloads) {
-    const { port, name, script } = workload;
+    const { port, name, type } = workload;
 
     if (!checkPort(port)) {
       // What should happen in this case?
@@ -37,7 +42,7 @@ async function start() {
     });
     const directory = results[0];
 
-    executeScript({ script, directory, env: { PORT: port } });
+    executeScript({ script: startScripts[type], directory, env: { PORT: port } });
     reports.push({ port, name, directory });
   }
 

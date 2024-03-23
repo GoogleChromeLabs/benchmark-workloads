@@ -2,13 +2,18 @@
     "workloads": [
         { 
             "name": "news-site-next",
+            "frameworkVersion": "13.5.1",
+            "buildVersion": "1.0.0",
             "port": 8081,
-            "script": "start:static"
+            "type": "static"
         },
         {
             "name": "news-site-nuxt",
+            "frameworkVersion": "3.8.1",
+            "buildVersion": "1.0.0",
             "port": 8082,
-            "script": "start:static"
+            "script": "start:static",
+            "type": "static"
         }
     ]
 }

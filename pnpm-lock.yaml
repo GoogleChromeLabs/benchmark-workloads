@@ -303,6 +303,7 @@ importers:
 
   apps/todomvc/todomvc-backbone:
     specifiers:
+      app-build-scripts: workspace:*
       backbone: ^1.4.1
       benchmark-connector: 'workspace: *'
       http-server: ^14.1.1
@@ -316,9 +317,12 @@ importers:
       jquery: 3.7.1
       todomvc-app-css: 2.4.3
       underscore: 1.13.6
+    devDependencies:
+      app-build-scripts: link:../../../packages/tools/app-build-scripts
 
   apps/todomvc/todomvc-es5:
     specifiers:
+      app-build-scripts: workspace:*
       benchmark-connector: 'workspace: *'
       http-server: ^14.1.1
       todomvc-app-css: ^2.4.2
@@ -326,6 +330,8 @@ importers:
       benchmark-connector: link:../../../packages/tools/benchmark-connector
       http-server: 14.1.1
       todomvc-app-css: 2.4.3
+    devDependencies:
+      app-build-scripts: link:../../../packages/tools/app-build-scripts
 
   apps/todomvc/todomvc-es6-webpack:
     specifiers:
@@ -360,6 +366,7 @@ importers:
 
   apps/todomvc/todomvc-jquery:
     specifiers:
+      app-build-scripts: workspace:*
       benchmark-connector: 'workspace: *'
       director: ~1.2.2
       handlebars: ^4.0.6
@@ -373,6 +380,8 @@ importers:
       http-server: 14.1.1
       jquery: 3.7.1
       todomvc-app-css: 2.4.3
+    devDependencies:
+      app-build-scripts: link:../../../packages/tools/app-build-scripts
 
   apps/todomvc/todomvc-lit:
     specifiers:

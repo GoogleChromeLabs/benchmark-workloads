@@ -1,4 +1,4 @@
-import { createDirectory, copyDirectory, copyFiles, updateImports } from "app-build-scripts";
+const { createDirectory, copyDirectory, copyFiles, updateImports } = require("app-build-scripts");
 
 const filesToMove = [
     { src: "index.html", dest: "./dist/index.html" },
@@ -38,7 +38,7 @@ const importsToRename = [
             "./dist/components/todo-topbar/todo-topbar.component.js",
         ],
     }
-]
+];
 
 const build = async () => {
     // create dist folder

@@ -1,69 +1,93 @@
 const fs = require("fs").promises;
-const path = require("path");
-
-const rootDirectory = "./";
-const sourceDirectory = "./src";
-const targetDirectory = "./dist";
-
-const htmlFile = "index.html";
+const { dirname } = require("path");
 
 const filesToMove = [
-    "node_modules/todomvc-app-css/index.css",
-    "node_modules/jquery/dist/jquery.min.js",
-    "node_modules/handlebars/dist/handlebars.min.js",
-    "node_modules/director/build/director.min.js",
-    "benchmark-connector.min.js",
-    "favicon.ico"
+    { src: "index.html", dest: "./dist/index.html" },
+    { src: "favicon.ico", dest: "./dist/favicon.ico" },
+    { src: "benchmark-connector.min.js", dest: "./dist/benchmark-connector.min.js" },
+    { src: "node_modules/todomvc-app-css/index.css", dest: "./dist/index.css" },
+    { src: "node_modules/jquery/dist/jquery.min.js", dest: "./dist/jquery.min.js" },
+    { src: "node_modules/handlebars/dist/handlebars.min.js", dest: "./dist/handlebars.min.js" },
+    { src: "node_modules/director/build/director.min.js", dest: "./dist/director.min.js" }
 ];
 
-const copy = async (src, dest) => {
+const importsToRename = [
+    {
+        src: "node_modules/todomvc-app-css/",
+        dest: "",
+        files: [ "./dist/index.html" ]
+    },
+    {
+        src: "src/",
+        dest: "",
+        files: [ "./dist/index.html" ]
+    },
+    {
+        src: "node_modules/jquery/dist/",
+        dest: "",
+        files: [ "./dist/index.html" ]
+    },
+    {
+        src: "node_modules/handlebars/dist/",
+        dest: "",
+        files: [ "./dist/index.html" ]
+    },
+    {
+        src: "node_modules/director/build/",
+        dest: "",
+        files: [ "./dist/index.html" ]
+    },
+]
+
+async function createDirectory(directory) {
+    await fs.rm(directory, { recursive: true, force: true });
+    await fs.mkdir(directory);
+}
+
+async function copyDirectory(src, dest) {
+    await fs.cp(src, dest, { recursive: true }, (err) => {
+        if (err)
+            console.error(err);
+    });
+}
+
+async function copyFile(src, dest) {
+    await fs.mkdir(dirname(dest), { recursive: true });
     await fs.copyFile(src, dest);
 };
 
-const build = async () => {
-    // remove dist directory if it exists
-    await fs.rm(targetDirectory, { recursive: true, force: true });
+async function copyFiles(files) {
+    for (const file of files)
+        await copyFile(file.src, `${file.dest}`);
+};
 
-    // re-create the directory.
-    await fs.mkdir(targetDirectory);
+async function updateImportsInFile({ file, src, dest }) {
+    let contents = await fs.readFile(`${file}`, "utf8");
+    contents = contents.replaceAll(src, dest);
+    await fs.writeFile(`${file}`, contents);
+};
+
+async function updateImports({ files, src, dest }) {
+    for (const file of files) {
+        await updateImportsInFile({ file, src, dest })
+    }
+}
+
+const build = async () => {
+    // create dist folder
+    await createDirectory("./dist");
 
     // copy src folder
-    await fs.cp(
-        sourceDirectory,
-        targetDirectory,
-        { recursive: true },
-        (err) => {
-            if (err) console.error(err);
-        }
-    );
+    await copyDirectory("./src", "./dist");
 
-    // copy html file
-    await fs.copyFile(
-        path.join(rootDirectory, htmlFile),
-        path.join(targetDirectory, htmlFile)
-    );
+    // copy files to Move
+    await copyFiles(filesToMove);
 
-    // copy files to move
-    for (let i = 0; i < filesToMove.length; i++)
-        await copy(
-            filesToMove[i],
-            path.join(targetDirectory, path.basename(filesToMove[i]))
-        );
-
-    // read html file
-    let html = await fs.readFile(path.join(targetDirectory, htmlFile), "utf8");
-
-    // remove base paths from files to move
-    for (let i = 0; i < filesToMove.length; i++)
-        html = html.replace(filesToMove[i], path.basename(filesToMove[i]));
-
-    // remove basePath from source directory
-    const basePath = `${path.basename(sourceDirectory)}/`;
-    const re = new RegExp(basePath, "g");
-    html = html.replace(re, "");
-
-    // write html files
-    await fs.writeFile(`${targetDirectory}/${htmlFile}`, html);
+    // rename imports files
+    for (const entry of importsToRename){
+        const { files, src, dest } = entry;
+        await updateImports({ files, src, dest });
+    }
 
     console.log("done!!");
 };

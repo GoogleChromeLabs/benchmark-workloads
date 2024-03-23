@@ -262,6 +262,7 @@ pnpm -F todomvc-web-components start:static
 ## Packages
 
 Directory that contains shareable utilities that can be consumed by the apps, or installed by a benchmark. 
+
 To format all packages or to build all packages, the following script can be used:
 
 ```bash

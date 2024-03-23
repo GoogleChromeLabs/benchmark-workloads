@@ -269,6 +269,13 @@ pnpm -F todomvc-css build
 
 ### Tools
 
+#### app-build-scripts
+
+```bash
+pnpm -F app-build-scripts format
+pnpm -F app-build-scripts build
+```
+
 #### benchmark-connector
 
 - benchmark-connector.min.js: communication between benchmark and workload.

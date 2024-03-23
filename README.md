@@ -1,8 +1,16 @@
 # Aurora Workloads
 
 Aurora Workloads is a collection of open source example apps and sites that aim to be representative of the web. These workloads can be consumed by benchmarks for testing and benchmarking purposes.
+This repo contains two distinct directories, which groups containing projects into `apps` and `packages`.
+
+-   `apps`: Main directory for workload apps and websites.
+-   `packages`: Reusable projects that can be consumed by workloads or benchmarks.
 
 ## Development
+
+Pnpm is used to set up this monorepo. In order to develop or test locally, please ensure that pnpm is installed on you machine.
+Before running any projects, the following script should be run to install all dependencies:
+
 ```bash
 pnpm install
 ```
@@ -10,6 +18,7 @@ pnpm install
 ## Apps
 
 Build all apps:
+
 ```bash
 pnpm run build:apps
 ```
@@ -17,6 +26,7 @@ pnpm run build:apps
 ## charts
 
 ### chartjs / observable-plot
+
 ```bash
 pnpm -F charts dev
 pnpm -F charts build:static
@@ -26,72 +36,84 @@ pnpm -F charts start:static
 ## complex-dom
 
 ### todomvc-angular-complex
+
 ```bash
 pnpm -F todomvc-angular-complex build:static
 pnpm -F todomvc-angular-complex start:static
 ```
 
 ### todomvc-backbone-complex
+
 ```bash
 pnpm -F todomvc-backbone-complex build:static
 pnpm -F todomvc-backbone-complex start:static
 ```
 
 ### todomvc-es5-complex
+
 ```bash
 pnpm -F todomvc-es5-complex build:static
 pnpm -F todomvc-es5-complex start:static
 ```
 
 ### todomvc-es6-webpack-complex
+
 ```bash
 pnpm -F todomvc-es6-webpack-complex build:static
 pnpm -F todomvc-es6-webpack-complex start:static
 ```
 
 ### todomvc-jquery-complex
+
 ```bash
 pnpm -F todomvc-jquery-complex build:static
 pnpm -F todomvc-jquery-complex start:static
 ```
 
 ### todomvc-lit-complex
+
 ```bash
 pnpm -F todomvc-lit-complex build:static
 pnpm -F todomvc-lit-complex start:static
 ```
 
 ### todomvc-preact-complex
+
 ```bash
 pnpm -F todomvc-preact-complex build:static
 pnpm -F todomvc-preact-complex start:static
 ```
 
 ### todomvc-react-complex
+
 ```bash
 pnpm -F todomvc-react-complex build:static
 pnpm -F todomvc-react-complex start:static
 ```
 
 ### todomvc-react-redux-complex
+
 ```bash
 pnpm -F todomvc-react-redux-complex build:static
 pnpm -F todomvc-react-redux-complex start:static
 ```
 
 ### todomvc-svelte-complex
+
 ```bash
 pnpm -F todomvc-svelte-complex build:static
 pnpm -F todomvc-svelte-complex start:static
 ```
 
 ### todomvc-vue-complex
+
 ```bash
 pnpm -F todomvc-vue-complex build:static
 pnpm -F todomvc-vue-complex start:static
 ```
 
 ### todomvc-web-components-complex
+
 ```bash
 pnpm -F todomvc-web-components-complex build:static
 pnpm -F todomvc-web-components-complex start:static
@@ -100,6 +122,7 @@ pnpm -F todomvc-web-components-complex start:static
 ## editors
 
 ### codemirror / tiptap
+
 ```bash
 pnpm -F editors dev
 pnpm -F editors build:static
@@ -240,12 +263,14 @@ pnpm run build:packages
 ### Plugins
 
 #### rollup-constructable-css
+
 ```bash
 pnpm -F rollup-constructable-css format
 pnpm -F rollup-constructable-css build
 ```
 
 #### rollup-copy-files
+
 ```bash
 pnpm -F rollup-copy-files format
 pnpm -F rollup-copy-files build
@@ -278,8 +303,8 @@ pnpm -F app-build-scripts build
 
 #### benchmark-connector
 
-- benchmark-connector.min.js: communication between benchmark and workload.
-- prepare.min.js: script to copy benchmark-connector.min.js file to the public folder of workload.
+-   benchmark-connector.min.js: communication between benchmark and workload.
+-   prepare.min.js: script to copy benchmark-connector.min.js file to the public folder of workload.
 
 ```bash
 pnpm -F benchmark-connector format
@@ -300,8 +325,9 @@ pnpm -F sanitize-language build
 ```
 
 #### workloads-manager
-- build:apps: builds all workloads in the apps directory.
-- start: starts node server for static workloads from the workloads.config.json file.
+
+-   build:apps: builds all workloads in the apps directory.
+-   start: starts node server for static workloads from the workloads.config.json file.
 
 ```bash
 pnpm -F workloads-manager format

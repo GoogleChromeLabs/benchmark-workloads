@@ -1,60 +1,59 @@
-const fs = require("fs").promises;
-const path = require("path");
-
-const rootDirectory = "./";
-const sourceDirectory = "./src";
-const targetDirectory = "./dist";
-
-const htmlFile = "index.html";
+const { createDirectory, copyDirectory, copyFiles, updateImports } = require("app-build-scripts");
 
 const filesToMove = [
-    "node_modules/todomvc-app-css/index.css",
-    "node_modules/jquery/dist/jquery.min.js",
-    "node_modules/underscore/underscore-min.js",
-    "node_modules/backbone/backbone-min.js",
-    "node_modules/backbone/backbone-min.js.map",
-    "favicon.ico",
-    "benchmark-connector.min.js"
+    { src: "index.html", dest: "./dist/index.html" },
+    { src: "favicon.ico", dest: "./dist/favicon.ico" },
+    { src: "benchmark-connector.min.js", dest: "./dist/benchmark-connector.min.js" },
+    { src: "node_modules/todomvc-app-css/index.css", dest: "./dist/index.css" },
+    { src: "node_modules/jquery/dist/jquery.min.js", dest: "./dist/jquery.min.js" },
+    { src: "node_modules/underscore/underscore-min.js", dest: "./dist/underscore-min.js" },
+    { src: "node_modules/backbone/backbone-min.js", dest: "./dist/backbone-min.js" },
+    { src: "node_modules/backbone/backbone-min.js.map", dest: "./dist/backbone-min.js.map" }
 ];
 
-const copy = async (src, dest) => {
-    await fs.copyFile(src, dest);
-};
+const importsToRename = [
+    {
+        src: "node_modules/todomvc-app-css/",
+        dest: "",
+        files: [ "./dist/index.html" ]
+    },
+    {
+        src: "src/",
+        dest: "",
+        files: [ "./dist/index.html" ]
+    },
+    {
+        src: "node_modules/jquery/dist/",
+        dest: "",
+        files: [ "./dist/index.html" ]
+    },
+    {
+        src: "node_modules/underscore/",
+        dest: "",
+        files: [ "./dist/index.html" ]
+    },
+    {
+        src: "node_modules/backbone/",
+        dest: "",
+        files: [ "./dist/index.html" ]
+    },
+];
 
 const build = async () => {
-    // remove dist directory if it exists
-    await fs.rm(targetDirectory, { recursive: true, force: true });
-
-    // re-create the directory.
-    await fs.mkdir(targetDirectory);
+    // create dist folder
+    await createDirectory("./dist");
 
     // copy src folder
-    await fs.cp(sourceDirectory, targetDirectory, { recursive: true }, (err) => {
-        if (err)
-            console.error(err);
-    });
+    await copyDirectory("./src", "./dist");
 
-    // copy html file
-    await fs.copyFile(path.join(rootDirectory, htmlFile), path.join(targetDirectory, htmlFile));
+    // copy files to Move
+    await copyFiles(filesToMove);
 
-    // copy files to move
-    for (let i = 0; i < filesToMove.length; i++)
-        await copy(filesToMove[i], path.join(targetDirectory, path.basename(filesToMove[i])));
-
-    // read html file
-    let html = await fs.readFile(path.join(targetDirectory, htmlFile), "utf8");
-
-    // remove base paths from files to move
-    for (let i = 0; i < filesToMove.length; i++)
-        html = html.replace(filesToMove[i], path.basename(filesToMove[i]));
-
-    // remove basePath from source directory
-    const basePath = `${path.basename(sourceDirectory)}/`;
-    const re = new RegExp(basePath, "g");
-    html = html.replace(re, "");
-
-    // write html files
-    await fs.writeFile(`${targetDirectory}/${htmlFile}`, html);
+    // rename imports files
+    for (const entry of importsToRename){
+        const { files, src, dest } = entry;
+        await updateImports({ files, src, dest });
+    }
 
     console.log("done!!");
 };

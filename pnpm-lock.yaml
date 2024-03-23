@@ -303,6 +303,7 @@ importers:
 
   apps/todomvc/todomvc-backbone:
     specifiers:
+      app-build-scripts: workspace:*
       backbone: ^1.4.1
       benchmark-connector: 'workspace: *'
       http-server: ^14.1.1
@@ -316,9 +317,12 @@ importers:
       jquery: 3.7.1
       todomvc-app-css: 2.4.3
       underscore: 1.13.6
+    devDependencies:
+      app-build-scripts: link:../../../packages/tools/app-build-scripts
 
   apps/todomvc/todomvc-es5:
     specifiers:
+      app-build-scripts: workspace:*
       benchmark-connector: 'workspace: *'
       http-server: ^14.1.1
       todomvc-app-css: ^2.4.2
@@ -326,6 +330,8 @@ importers:
       benchmark-connector: link:../../../packages/tools/benchmark-connector
       http-server: 14.1.1
       todomvc-app-css: 2.4.3
+    devDependencies:
+      app-build-scripts: link:../../../packages/tools/app-build-scripts
 
   apps/todomvc/todomvc-es6-webpack:
     specifiers:
@@ -360,6 +366,7 @@ importers:
 
   apps/todomvc/todomvc-jquery:
     specifiers:
+      app-build-scripts: workspace:*
       benchmark-connector: 'workspace: *'
       director: ~1.2.2
       handlebars: ^4.0.6
@@ -373,6 +380,8 @@ importers:
       http-server: 14.1.1
       jquery: 3.7.1
       todomvc-app-css: 2.4.3
+    devDependencies:
+      app-build-scripts: link:../../../packages/tools/app-build-scripts
 
   apps/todomvc/todomvc-lit:
     specifiers:
@@ -626,6 +635,7 @@ importers:
 
   apps/todomvc/todomvc-web-components:
     specifiers:
+      app-build-scripts: workspace:*
       benchmark-connector: 'workspace: *'
       http-server: ^14.1.1
       todomvc-css: workspace:*
@@ -633,6 +643,8 @@ importers:
       benchmark-connector: link:../../../packages/tools/benchmark-connector
       http-server: 14.1.1
       todomvc-css: link:../../../packages/styles/todomvc-css
+    devDependencies:
+      app-build-scripts: link:../../../packages/tools/app-build-scripts
 
   packages/plugins/rollup-constructable-css:
     specifiers:
@@ -725,6 +737,22 @@ importers:
       strip-comments: 2.0.1
       stylelint: 15.11.0
       stylelint-config-standard: 33.0.0_stylelint@15.11.0
+
+  packages/tools/app-build-scripts:
+    specifiers:
+      '@rollup/plugin-terser': ^0.4.3
+      eslint: ^8.57.0
+      eslint-config-prettier: ^9.1.0
+      prettier: ^2.8.8
+      rollup: ^3.23.0
+      rollup-plugin-cleaner: ^1.0.0
+    devDependencies:
+      '@rollup/plugin-terser': 0.4.4_rollup@3.29.4
+      eslint: 8.57.0
+      eslint-config-prettier: 9.1.0_eslint@8.57.0
+      prettier: 2.8.8
+      rollup: 3.29.4
+      rollup-plugin-cleaner: 1.0.0_rollup@3.29.4
 
   packages/tools/benchmark-connector:
     specifiers:

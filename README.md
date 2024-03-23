@@ -17,7 +17,15 @@ pnpm install
 
 ## Apps
 
-Build all apps:
+This is the main directory for all example apps. Within this directory, these apps are grouped by categories:
+
+- `charts`: Various charting apps.
+- `complex-dom`: TodoMvc apps wrapped in a complex dom.
+- `editors`: Various editing apps.
+- `news-site`: Various versions of a news site.
+- `todomvc`: Various versions of a todo application.
+
+To build all apps, the following script can be used:
 
 ```bash
 pnpm run build:apps
@@ -253,7 +261,8 @@ pnpm -F todomvc-web-components start:static
 
 ## Packages
 
-Format all packages and build all packages:
+Directory that contains shareable utilities that can be consumed by the apps, or installed by a benchmark. 
+To format all packages or to build all packages, the following script can be used:
 
 ```bash
 pnpm run format:packages

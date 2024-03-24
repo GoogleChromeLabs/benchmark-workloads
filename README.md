@@ -17,7 +17,7 @@ pnpm install
 
 ## Apps
 
-This is the main directory for all example apps. Within this directory, these apps are grouped by categories:
+Main directory for all workloads, which are grouped by categories:
 
 - `charts`: Various charting apps.
 - `complex-dom`: TodoMvc apps wrapped in a complex dom.
@@ -272,6 +272,8 @@ pnpm run build:packages
 
 ### Plugins
 
+Various plugins for bundlers.
+
 #### rollup-constructable-css
 
 ```bash
@@ -287,6 +289,8 @@ pnpm -F rollup-copy-files build
 ```
 
 ### Styles
+
+Styles for workloads.
 
 #### news-site-css
 
@@ -304,7 +308,11 @@ pnpm -F todomvc-css build
 
 ### Tools
 
+Tools that are used by workloads or benchmarks.
+
 #### app-build-scripts
+
+A script that helps moving workload files to an output folder. This script also takes care or renaming references in the index.html file, to ensure the output folder contains a locally contained build.
 
 ```bash
 pnpm -F app-build-scripts format
@@ -312,6 +320,8 @@ pnpm -F app-build-scripts build
 ```
 
 #### benchmark-connector
+
+Enables communication between benchmarks and workloads.
 
 -   benchmark-connector.min.js: communication between benchmark and workload.
 -   prepare.min.js: script to copy benchmark-connector.min.js file to the public folder of workload.
@@ -323,11 +333,15 @@ pnpm -F benchmark-connector build
 
 #### big-dom-generator
 
+Used to generate a complex dom for todomvc apps.
+
 ```bash
 pnpm -F big-dom-generator build
 ```
 
 #### sanitize-language
+
+Utility to remove words from output files that should be ommited.
 
 ```bash
 pnpm -F sanitize-language format
@@ -335,6 +349,8 @@ pnpm -F sanitize-language build
 ```
 
 #### workloads-manager
+
+Manages all workloads, by using the following commands:
 
 -   build:apps: builds all workloads in the apps directory.
 -   start: starts node server for static workloads from the workloads.config.json file.

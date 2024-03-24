@@ -203,7 +203,19 @@ pnpm -F editors start:static
 
 ### News Site
 
-A news site clone, that allows testing of a single-page application.
+A news site that allows testing of a single-page application. The content is derrived from a static local source and is available in english, japanese and arabic.
+Styling supports left-to-right (LTR) and right-to-left (RTL) and can be forced by passing in the following url parameters:
+
+- `dir`: "rtl" or "ltr"
+- `lang`: "en", "jp" or "ar" (defaults to "en" if language is not found)
+
+Several interactions are available, such as:
+
+- navigating to different pages
+- expanding and collapsing a sitebar
+- showing and hiding of login modal
+- showing and hiding of settings modal
+- toggling of drop-down menu
 
 #### news-site-next
 

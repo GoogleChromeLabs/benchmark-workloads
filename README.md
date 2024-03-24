@@ -67,7 +67,7 @@ Main directory for all workloads, which are grouped by categories:
 - `news-site`: Various versions of a news site.
 - `todomvc`: Various versions of a todo application.
 
-### charts
+### Charts
 
 Charting apps allow us to test SVG and canvas rendering by displaying charts in various workloads. 
 These apps represent popular sites that display financial information, stock charts or dashboards. 
@@ -85,7 +85,7 @@ pnpm -F charts build:static
 pnpm -F charts start:static
 ```
 
-### complex-dom
+### Complex DOM
 
 The complex DOM workloads embed various TodoMVC implementations in a static UI shell that mimics a complex web page. The idea is to capture the performance impact on executing seemingly isolated actions (e.g. adding/deleting todo items) in the context of a complex website.
 
@@ -185,7 +185,7 @@ pnpm -F todomvc-web-components-complex build:static
 pnpm -F todomvc-web-components-complex start:static
 ```
 
-### editors
+### Editors
 
 Editors, for example WYSIWYG text and code editors, let us focus on editing live text and capturing form interactions. Typical scenarios are writing an email, logging into a website or filling out an online form.
 
@@ -201,7 +201,7 @@ pnpm -F editors build:static
 pnpm -F editors start:static
 ```
 
-### news-site
+### News Site
 
 A news site clone, that allows testing of a single-page application.
 
@@ -227,7 +227,7 @@ pnpm -F news-site-nuxt start
 pnpm -F news-site-next start:static
 ```
 
-### todomvc
+### TodoMVC
 
 TodoMVC is a to-do application that allows a user to keep track of tasks. The user can enter a new task, update an existing one, mark a task as completed, or delete it. In addition to the basic CRUD operations, the TodoMVC app has some added functionality: filters are available to change the view to “all”, “active” or “completed” tasks and a status text displays the number of active tasks to complete.
 

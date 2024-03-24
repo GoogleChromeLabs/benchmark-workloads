@@ -33,6 +33,14 @@ pnpm run build:apps
 
 ## charts
 
+Charting apps allow us to test SVG and canvas rendering by displaying charts in various workloads. 
+These apps represent popular sites that display financial information, stock charts or dashboards. 
+Both SVG rendering and the use of the canvas api weren’t represented in previous releases of Speedometer.
+
+Observable Plot displays a stacked bar chart, as well as a dotted chart. It is based on D3, which is a JavaScript library for visualizing tabular data and outputs SVG elements. It loops through a big dataset to build the source data that D3 needs, using map, filter and flatMap methods. As a result this exercises creation and copying of objects and arrays.
+
+Chart.js is a JavaScript charting library. The included workload displays a scatter graph with the canvas api, both with some transparency and with full opacity. This uses the same data as the previous workload, but with a different preparation phase. In this case it makes a heavy use of trigonometry to compute distances between airports.
+
 ### chartjs / observable-plot
 
 ```bash
@@ -43,9 +51,12 @@ pnpm -F charts start:static
 
 ## complex-dom
 
+The complex DOM workloads embed various TodoMVC implementations in a static UI shell that mimics a complex web page. The idea is to capture the performance impact on executing seemingly isolated actions (e.g. adding/deleting todo items) in the context of a complex website.
+
 ### todomvc-angular-complex
 
 ```bash
+pnpm -F todomvc-angular-complex dev
 pnpm -F todomvc-angular-complex build:static
 pnpm -F todomvc-angular-complex start:static
 ```
@@ -53,6 +64,7 @@ pnpm -F todomvc-angular-complex start:static
 ### todomvc-backbone-complex
 
 ```bash
+pnpm -F todomvc-backbone-complex dev
 pnpm -F todomvc-backbone-complex build:static
 pnpm -F todomvc-backbone-complex start:static
 ```
@@ -60,6 +72,7 @@ pnpm -F todomvc-backbone-complex start:static
 ### todomvc-es5-complex
 
 ```bash
+pnpm -F todomvc-es5-complex dev
 pnpm -F todomvc-es5-complex build:static
 pnpm -F todomvc-es5-complex start:static
 ```
@@ -67,6 +80,7 @@ pnpm -F todomvc-es5-complex start:static
 ### todomvc-es6-webpack-complex
 
 ```bash
+pnpm -F todomvc-es6-webpack-complex dev
 pnpm -F todomvc-es6-webpack-complex build:static
 pnpm -F todomvc-es6-webpack-complex start:static
 ```
@@ -74,6 +88,7 @@ pnpm -F todomvc-es6-webpack-complex start:static
 ### todomvc-jquery-complex
 
 ```bash
+pnpm -F todomvc-jquery-complex dev
 pnpm -F todomvc-jquery-complex build:static
 pnpm -F todomvc-jquery-complex start:static
 ```
@@ -81,6 +96,7 @@ pnpm -F todomvc-jquery-complex start:static
 ### todomvc-lit-complex
 
 ```bash
+pnpm -F todomvc-lit-complex dev
 pnpm -F todomvc-lit-complex build:static
 pnpm -F todomvc-lit-complex start:static
 ```
@@ -88,6 +104,7 @@ pnpm -F todomvc-lit-complex start:static
 ### todomvc-preact-complex
 
 ```bash
+pnpm -F todomvc-preact-complex dev
 pnpm -F todomvc-preact-complex build:static
 pnpm -F todomvc-preact-complex start:static
 ```
@@ -95,6 +112,7 @@ pnpm -F todomvc-preact-complex start:static
 ### todomvc-react-complex
 
 ```bash
+pnpm -F todomvc-react-complex dev
 pnpm -F todomvc-react-complex build:static
 pnpm -F todomvc-react-complex start:static
 ```
@@ -102,6 +120,7 @@ pnpm -F todomvc-react-complex start:static
 ### todomvc-react-redux-complex
 
 ```bash
+pnpm -F todomvc-react-redux-complex dev
 pnpm -F todomvc-react-redux-complex build:static
 pnpm -F todomvc-react-redux-complex start:static
 ```
@@ -109,6 +128,7 @@ pnpm -F todomvc-react-redux-complex start:static
 ### todomvc-svelte-complex
 
 ```bash
+pnpm -F todomvc-svelte-complex dev
 pnpm -F todomvc-svelte-complex build:static
 pnpm -F todomvc-svelte-complex start:static
 ```
@@ -116,6 +136,7 @@ pnpm -F todomvc-svelte-complex start:static
 ### todomvc-vue-complex
 
 ```bash
+pnpm -F todomvc-vue-complex dev
 pnpm -F todomvc-vue-complex build:static
 pnpm -F todomvc-vue-complex start:static
 ```
@@ -123,11 +144,18 @@ pnpm -F todomvc-vue-complex start:static
 ### todomvc-web-components-complex
 
 ```bash
+pnpm -F todomvc-web-components-complex dev
 pnpm -F todomvc-web-components-complex build:static
 pnpm -F todomvc-web-components-complex start:static
 ```
 
 ## editors
+
+Editors, for example WYSIWYG text and code editors, let us focus on editing live text and capturing form interactions. Typical scenarios are writing an email, logging into a website or filling out an online form.
+
+Codemirror is a code editor that implements a text input field with support for many editing features. Several languages and frameworks are available and for this workload we used the JavaScript library from Codemirror.
+
+Tiptap Editor is a headless, framework-agnostic rich text editor that's customizable and extendable. This workload used Tiptap as its basis and added a simple ui to interact with. 
 
 ### codemirror / tiptap
 
@@ -138,6 +166,8 @@ pnpm -F editors start:static
 ```
 
 ### news-site
+
+A news site clone, that allows testing of a single-page application.
 
 #### news-site-next
 
@@ -162,6 +192,8 @@ pnpm -F news-site-next start:static
 ```
 
 ### todomvc
+
+TodoMVC is a to-do application that allows a user to keep track of tasks. The user can enter a new task, update an existing one, mark a task as completed, or delete it. In addition to the basic CRUD operations, the TodoMVC app has some added functionality: filters are available to change the view to “all”, “active” or “completed” tasks and a status text displays the number of active tasks to complete.
 
 #### todomvc-angular
 

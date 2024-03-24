@@ -6,6 +6,23 @@ This repo contains two distinct directories, which groups containing projects in
 -   `apps`: Main directory for workload apps and websites.
 -   `packages`: Reusable projects that can be consumed by workloads or benchmarks.
 
+ **Table of content:**
+
+ - [Development](#development)
+    - [How to run a workload](#how-to-run-a-workload)
+    - [Available workload scripts](#available-workload-scripts)
+    - [How to build all workloads](#how-to-build-all-workloads)
+ - [Workloads](#workloads)
+    - [Charts](#charts)
+    - [Complex Dom](#complex-dom)
+    - [Editors](#editors)
+    - [News Site](#news-site)
+    - [TodoMVC](#todomvc)
+ - [Packages](#packages)
+    - [Plugins](#plugins)
+    - [Styles](#styles)
+    - [Tools](#tools)
+
 ## Development
 
 Pnpm is used to set up this monorepo. In order to develop or test locally, please ensure that pnpm is installed on you machine.
@@ -15,7 +32,32 @@ Before running any projects, the following script should be run to install all d
 pnpm install
 ```
 
-## Apps
+### How to run a workloads
+
+To run a single app, a filter function from pnpm can be used from the root directory. Each app can be targeted by referencing its package name.
+For example to run the `news-site-next` app in development mode, the following command can be used:
+
+```bash
+pnpm -F news-site-next dev
+```
+
+### Available Workload scripts
+
+The following scripts are currently supported by all workloads:
+
+- `dev`: Run a workload in dev mode locally.
+- `build:static`: Bundles all necessary files and copies them into a `dist` folder.
+- `start:static`: Starts a node server to serve files from the `dist` folder.
+
+### How to build all workloads
+
+To build all apps, the following script can be used:
+
+```bash
+pnpm run build:apps
+```
+
+## Workloads
 
 Main directory for all workloads, which are grouped by categories:
 
@@ -25,13 +67,7 @@ Main directory for all workloads, which are grouped by categories:
 - `news-site`: Various versions of a news site.
 - `todomvc`: Various versions of a todo application.
 
-To build all apps, the following script can be used:
-
-```bash
-pnpm run build:apps
-```
-
-## charts
+### charts
 
 Charting apps allow us to test SVG and canvas rendering by displaying charts in various workloads. 
 These apps represent popular sites that display financial information, stock charts or dashboards. 
@@ -41,7 +77,7 @@ Observable Plot displays a stacked bar chart, as well as a dotted chart. It is b
 
 Chart.js is a JavaScript charting library. The included workload displays a scatter graph with the canvas api, both with some transparency and with full opacity. This uses the same data as the previous workload, but with a different preparation phase. In this case it makes a heavy use of trigonometry to compute distances between airports.
 
-### chartjs / observable-plot
+#### chartjs / observable-plot
 
 ```bash
 pnpm -F charts dev
@@ -49,11 +85,11 @@ pnpm -F charts build:static
 pnpm -F charts start:static
 ```
 
-## complex-dom
+### complex-dom
 
 The complex DOM workloads embed various TodoMVC implementations in a static UI shell that mimics a complex web page. The idea is to capture the performance impact on executing seemingly isolated actions (e.g. adding/deleting todo items) in the context of a complex website.
 
-### todomvc-angular-complex
+#### todomvc-angular-complex
 
 ```bash
 pnpm -F todomvc-angular-complex dev
@@ -61,7 +97,7 @@ pnpm -F todomvc-angular-complex build:static
 pnpm -F todomvc-angular-complex start:static
 ```
 
-### todomvc-backbone-complex
+#### todomvc-backbone-complex
 
 ```bash
 pnpm -F todomvc-backbone-complex dev
@@ -69,7 +105,7 @@ pnpm -F todomvc-backbone-complex build:static
 pnpm -F todomvc-backbone-complex start:static
 ```
 
-### todomvc-es5-complex
+#### todomvc-es5-complex
 
 ```bash
 pnpm -F todomvc-es5-complex dev
@@ -77,7 +113,7 @@ pnpm -F todomvc-es5-complex build:static
 pnpm -F todomvc-es5-complex start:static
 ```
 
-### todomvc-es6-webpack-complex
+#### todomvc-es6-webpack-complex
 
 ```bash
 pnpm -F todomvc-es6-webpack-complex dev
@@ -85,7 +121,7 @@ pnpm -F todomvc-es6-webpack-complex build:static
 pnpm -F todomvc-es6-webpack-complex start:static
 ```
 
-### todomvc-jquery-complex
+#### todomvc-jquery-complex
 
 ```bash
 pnpm -F todomvc-jquery-complex dev
@@ -93,7 +129,7 @@ pnpm -F todomvc-jquery-complex build:static
 pnpm -F todomvc-jquery-complex start:static
 ```
 
-### todomvc-lit-complex
+#### todomvc-lit-complex
 
 ```bash
 pnpm -F todomvc-lit-complex dev
@@ -101,7 +137,7 @@ pnpm -F todomvc-lit-complex build:static
 pnpm -F todomvc-lit-complex start:static
 ```
 
-### todomvc-preact-complex
+#### todomvc-preact-complex
 
 ```bash
 pnpm -F todomvc-preact-complex dev
@@ -109,7 +145,7 @@ pnpm -F todomvc-preact-complex build:static
 pnpm -F todomvc-preact-complex start:static
 ```
 
-### todomvc-react-complex
+#### todomvc-react-complex
 
 ```bash
 pnpm -F todomvc-react-complex dev
@@ -117,7 +153,7 @@ pnpm -F todomvc-react-complex build:static
 pnpm -F todomvc-react-complex start:static
 ```
 
-### todomvc-react-redux-complex
+#### todomvc-react-redux-complex
 
 ```bash
 pnpm -F todomvc-react-redux-complex dev
@@ -125,7 +161,7 @@ pnpm -F todomvc-react-redux-complex build:static
 pnpm -F todomvc-react-redux-complex start:static
 ```
 
-### todomvc-svelte-complex
+#### todomvc-svelte-complex
 
 ```bash
 pnpm -F todomvc-svelte-complex dev
@@ -133,7 +169,7 @@ pnpm -F todomvc-svelte-complex build:static
 pnpm -F todomvc-svelte-complex start:static
 ```
 
-### todomvc-vue-complex
+#### todomvc-vue-complex
 
 ```bash
 pnpm -F todomvc-vue-complex dev
@@ -141,7 +177,7 @@ pnpm -F todomvc-vue-complex build:static
 pnpm -F todomvc-vue-complex start:static
 ```
 
-### todomvc-web-components-complex
+#### todomvc-web-components-complex
 
 ```bash
 pnpm -F todomvc-web-components-complex dev
@@ -149,7 +185,7 @@ pnpm -F todomvc-web-components-complex build:static
 pnpm -F todomvc-web-components-complex start:static
 ```
 
-## editors
+### editors
 
 Editors, for example WYSIWYG text and code editors, let us focus on editing live text and capturing form interactions. Typical scenarios are writing an email, logging into a website or filling out an online form.
 
@@ -157,7 +193,7 @@ Codemirror is a code editor that implements a text input field with support for 
 
 Tiptap Editor is a headless, framework-agnostic rich text editor that's customizable and extendable. This workload used Tiptap as its basis and added a simple ui to interact with. 
 
-### codemirror / tiptap
+#### codemirror / tiptap
 
 ```bash
 pnpm -F editors dev

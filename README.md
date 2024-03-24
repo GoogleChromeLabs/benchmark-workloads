@@ -11,6 +11,7 @@ This repo contains two distinct directories, which groups containing projects in
  - [Development](#development)
     - [How to run a workload](#how-to-run-a-workload)
     - [Available workload scripts](#available-workload-scripts)
+    - [Workload-Benchmark communication](#workload-benchmark-communication)
     - [How to build all workloads](#how-to-build-all-workloads)
  - [Workloads](#workloads)
     - [Charts](#charts)
@@ -25,7 +26,7 @@ This repo contains two distinct directories, which groups containing projects in
 
 ## Development
 
-Pnpm is used to set up this monorepo. In order to develop or test locally, please ensure that pnpm is installed on you machine.
+This monorepo is managed by [pnpm](https://pnpm.io/). In order to develop or test locally, please ensure that [pnpm is installed](https://pnpm.io/installation) on you machine.
 Before running any projects, the following script should be run to install all dependencies:
 
 ```bash
@@ -49,9 +50,15 @@ The following scripts are currently supported by all workloads:
 - `build:static`: Bundles all necessary files and copies them into a `dist` folder.
 - `start:static`: Starts a node server to serve files from the `dist` folder.
 
+### Workload-Benchmark communication
+
+To enable communication between the workloads and a benchmark using postMessage, the [benchmark-connector](#benchmark-connector) package is used.
+Each workload that opts into this feature has the benchmark-connector package installed.
+Some workloads use a `prepare` script to copy the relevant JavaScript file to the appropriate directory.
+
 ### How to build all workloads
 
-To build all apps, the following script can be used:
+To run the build script on all apps, the following command can be used:
 
 ```bash
 pnpm run build:apps

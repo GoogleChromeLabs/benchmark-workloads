@@ -108,12 +108,20 @@ Observable Plot displays a stacked bar chart, as well as a dotted chart. It is b
 
 Chart.js is a JavaScript charting library. The included workload displays a scatter graph with the canvas api, both with some transparency and with full opacity. This uses the same data as the previous workload, but with a different preparation phase. In this case it makes a heavy use of trigonometry to compute distances between airports.
 
-#### chartjs / observable-plot
+#### Charts - Chartjs
 
 ```bash
-pnpm -F charts dev
-pnpm -F charts build:static
-pnpm -F charts start:static
+pnpm -F charts-chartjs dev
+pnpm -F charts-chartjs build:static
+pnpm -F charts-chartjs start:static
+```
+
+#### Charts - Observable Plot
+
+```bash
+pnpm -F charts-observable-plot dev
+pnpm -F charts-observable-plot build:static
+pnpm -F charts-observable-plot start:static
 ```
 
 ### Complex DOM
@@ -224,12 +232,20 @@ Codemirror is a code editor that implements a text input field with support for 
 
 Tiptap Editor is a headless, framework-agnostic rich text editor that's customizable and extendable. This workload used Tiptap as its basis and added a simple ui to interact with. 
 
-#### codemirror / tiptap
+#### Editors - Codemirror
 
 ```bash
-pnpm -F editors dev
-pnpm -F editors build:static
-pnpm -F editors start:static
+pnpm -F editors-codemirror dev
+pnpm -F editors-codemirror build:static
+pnpm -F editors-codemirror start:static
+```
+
+#### Editors - TipTap
+
+```bash
+pnpm -F editors-tiptap dev
+pnpm -F editors-tiptap build:static
+pnpm -F editors-tiptap start:static
 ```
 
 ### News Site

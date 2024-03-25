@@ -2,7 +2,7 @@
     "workloads": [
         { 
             "name": "news-site-next",
-            "port": 8081,
+            "port": 8083,
             "type": "static",
             "meta": {
                 "buildVersion": "1.0.0",
@@ -13,7 +13,7 @@
         },
         {
             "name": "news-site-nuxt",
-            "port": 8082,
+            "port": 8084,
             "type": "static",
             "meta": {
                 "buildVersion": "1.0.0",

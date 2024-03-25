@@ -15,7 +15,7 @@ importers:
       fs-extra: 10.1.0
       globby: 11.1.0
 
-  apps/charts:
+  apps/charts/chartsjs:
     specifiers:
       '@observablehq/plot': ^0.6.4
       benchmark-connector: 'workspace: *'
@@ -27,7 +27,28 @@ importers:
       vite: ^4.1.0
     dependencies:
       '@observablehq/plot': 0.6.13
-      benchmark-connector: link:../../packages/tools/benchmark-connector
+      benchmark-connector: link:../../../packages/tools/benchmark-connector
+      chart.js: 4.4.2
+      d3-array: 3.2.4
+      d3-dsv: 3.0.1
+      d3-format: 3.1.0
+      http-server: 14.1.1
+    devDependencies:
+      vite: 4.5.2
+
+  apps/charts/observable-plot:
+    specifiers:
+      '@observablehq/plot': ^0.6.4
+      benchmark-connector: 'workspace: *'
+      chart.js: ^4.2.1
+      d3-array: ^3.2.4
+      d3-dsv: ^3.0.1
+      d3-format: ^3.1.0
+      http-server: ^14.1.1
+      vite: ^4.1.0
+    dependencies:
+      '@observablehq/plot': 0.6.13
+      benchmark-connector: link:../../../packages/tools/benchmark-connector
       chart.js: 4.4.2
       d3-array: 3.2.4
       d3-dsv: 3.0.1
@@ -168,7 +189,7 @@ importers:
       big-dom-generator: link:../../../packages/tools/big-dom-generator
       todomvc-web-components: link:../../todomvc/todomvc-web-components
 
-  apps/editors:
+  apps/editors/codemirror:
     specifiers:
       '@codemirror/lang-javascript': ^6.1.4
       '@codemirror/state': ^6.4.1
@@ -185,7 +206,28 @@ importers:
       '@codemirror/lang-javascript': 6.2.2
       '@tiptap/core': 2.2.4_@tiptap+pm@2.2.4
       '@tiptap/starter-kit': 2.2.4_@tiptap+pm@2.2.4
-      benchmark-connector: link:../../packages/tools/benchmark-connector
+      benchmark-connector: link:../../../packages/tools/benchmark-connector
+      codemirror: 6.0.1_@lezer+common@1.2.1
+      vite: 4.5.2
+
+  apps/editors/tiptap:
+    specifiers:
+      '@codemirror/lang-javascript': ^6.1.4
+      '@codemirror/state': ^6.4.1
+      '@tiptap/core': ^2.0.0-beta.217
+      '@tiptap/starter-kit': ^2.0.0-beta.217
+      benchmark-connector: 'workspace: *'
+      codemirror: ^6.0.1
+      http-server: ^14.1.1
+      vite: ^4.1.0
+    dependencies:
+      '@codemirror/state': 6.4.1
+      http-server: 14.1.1
+    devDependencies:
+      '@codemirror/lang-javascript': 6.2.2
+      '@tiptap/core': 2.2.4_@tiptap+pm@2.2.4
+      '@tiptap/starter-kit': 2.2.4_@tiptap+pm@2.2.4
+      benchmark-connector: link:../../../packages/tools/benchmark-connector
       codemirror: 6.0.1_@lezer+common@1.2.1
       vite: 4.5.2
 

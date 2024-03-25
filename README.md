@@ -490,15 +490,13 @@ pnpm -F workloads-server start
 ```
 
 The workloads server depends on a `workloads.config.json` file, which contains a list of apps to run.
-The `ports` key is a list of ports to start a server on.
-The `workloads` key contains an array of workloads.
 
+- The `ports` key is a list of ports to start a server on.
+- The `workloads` key contains an array of workloads.
+
+Each workload contains the following keys:
 - `name`: Package name of the workload.
 - `type`: Build type, to determine how to run it Currently only `static` is supported.
-- `meta`: Additional information (optional)
-  - `buildVersion`: Package build version.
-  - `frameworkName`: Name of the framework used.
-  - `frameworkVersion`: Version of the framework used.
 
 ```json
 {
@@ -507,11 +505,6 @@ The `workloads` key contains an array of workloads.
         { 
             "name": "news-site-next",
             "type": "static",
-            "meta": {
-                "buildVersion": "1.0.0",
-                "frameworkName": "next",
-                "frameworkVersion": "13.5.1"
-            }
             
         }
     ]

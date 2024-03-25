@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const target = process.env.TARGET ?? "node";
-const repository = process.env.REPO ?? "news-site-next-static";
+const repository = process.env.REPO ?? "news-site-next";
 let nextConfig = {};
 
 const baseConfig = {

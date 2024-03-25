@@ -10,7 +10,7 @@ This repo contains two distinct directories, which groups containing projects in
 
  - [Development](#development)
     - [How to run a workload](#how-to-run-a-workload)
-    - [How to run all default workloads](#how-to-run-all-default-workloads)
+    - [How to run default workloads](#how-to-run-default-workloads)
     - [Available workload scripts](#available-workload-scripts)
     - [Workload-Benchmark communication](#workload-benchmark-communication)
     - [How to build all workloads](#how-to-build-all-workloads)
@@ -29,7 +29,7 @@ This repo contains two distinct directories, which groups containing projects in
       - [TodoMVC CSS](#todomvc-css)
     - [Tools](#tools)
       - [Benchmark Connector](#benchmark-connector)
-      - [Workloads Manager](#workloads-manager)
+      - [Workloads Server](#workloads-server)
 
 ## Development
 
@@ -58,12 +58,12 @@ For example to run the `news-site-next` app in development mode, the following c
 pnpm -F news-site-next dev
 ```
 
-### How to run all default workloads
+### How to run default workloads
 
-See [Workloads Manager](#workloads-manager).
+See [Workloads Server](#workloads-server).
 
 ```bash
-pnpm -F workloads-manager start
+pnpm -F workloads-server start
 ```
 
 ### Available Workload scripts
@@ -475,25 +475,25 @@ pnpm -F sanitize-language format
 pnpm -F sanitize-language build
 ```
 
-#### workloads-manager
+#### workloads-server
 
 Manages all workloads, by using the following commands:
 
--   build:apps: builds all workloads in the apps directory.
+-   connect: waits for a connection on all ports from the workloads.config.json file.
 -   start: starts node server for static workloads from the workloads.config.json file.
 
 ```bash
-pnpm -F workloads-manager format
-pnpm -F workloads-manager build
-pnpm -F workloads-manager build:apps
-pnpm -F workloads-manager start
+pnpm -F workloads-server format
+pnpm -F workloads-server build
+pnpm -F workloads-server connect
+pnpm -F workloads-server start
 ```
 
-The workloads manager depends on a `workloads.config.json` file, which contains a list of apps to run.
+The workloads server depends on a `workloads.config.json` file, which contains a list of apps to run.
+The `ports` key is a list of ports to start a server on.
 The `workloads` key contains an array of workloads.
 
 - `name`: Package name of the workload.
-- `port`: Port to run the workload on.
 - `type`: Build type, to determine how to run it Currently only `static` is supported.
 - `meta`: Additional information (optional)
   - `buildVersion`: Package build version.
@@ -502,10 +502,10 @@ The `workloads` key contains an array of workloads.
 
 ```json
 {
+    "ports": [8080, 8081]
     "workloads": [
         { 
             "name": "news-site-next",
-            "port": 8081,
             "type": "static",
             "meta": {
                 "buildVersion": "1.0.0",

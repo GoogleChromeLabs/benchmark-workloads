@@ -32,8 +32,17 @@ This repo contains two distinct directories, which groups containing projects in
 
 ## Development
 
-This monorepo is managed by [pnpm](https://pnpm.io/). In order to develop or test locally, please ensure that [pnpm is installed](https://pnpm.io/installation) on you machine.
-Before running any projects, the following script should be run to install all dependencies:
+This monorepo is managed by [pnpm](https://pnpm.io/). In order to develop or test locally, please ensure that pnpm is installed on your machine.
+
+Install pnpm globally with npm:
+
+```bash
+npm install -g pnpm
+```
+
+For troubleshooting, refer to this [guide](https://pnpm.io/installation).
+
+Once pnpm is available, the following script installs all dependencies for all projects:
 
 ```bash
 pnpm install

@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const target = process.env.TARGET ?? "node";
-const repository = process.env.REPO ?? "news-site-next";
 let nextConfig = {};
 
 const baseConfig = {
@@ -17,22 +16,9 @@ const staticConfig = {
     },
 };
 
-const githubConfig = {
-    output: "export",
-    distDir: "docs",
-    assetPrefix: "./",
-    basePath: `/${repository}`,
-    images: {
-        unoptimized: true,
-    }
-};
-
 switch (target) {
     case "static":
         nextConfig = { ...baseConfig, ...staticConfig };
-        break;
-    case "github":
-        nextConfig = { ...baseConfig, ...githubConfig };
         break;
     default:
         nextConfig = { ...baseConfig };

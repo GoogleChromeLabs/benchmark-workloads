@@ -15,7 +15,6 @@
         "dev": "npm run prepare && nuxt dev",
         "build": "npm run prepare && nuxt build",
         "build:static": "npm run prepare && TARGET=static nuxt generate",
-        "build:gh": "npm run prepare && TARGET=github nuxt generate && touch docs/.nojekyll",
         "start": "nuxt preview",
         "start:static": "http-server ./dist -c-1 --cors --silent",
         "postinstall": "nuxt prepare",

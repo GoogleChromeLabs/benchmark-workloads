@@ -3,7 +3,6 @@ import { defineNuxtConfig } from "nuxt/config";
 import path from "path";
 
 const target = process.env.TARGET ?? "node";
-const repository = process.env.REPO ?? "news-site-nuxt-static";
 
 let nuxtConfig = {};
 
@@ -60,25 +59,9 @@ const staticConfig = {
     },
 };
 
-const githubConfig = {
-    ssr: false,
-    nitro: {
-        output: {
-            publicDir: path.join(__dirname, "docs"),
-        },
-    },
-    app: {
-        head: { ...headConfig },
-        baseURL: `/${repository}`,
-    },
-};
-
 switch (target) {
     case "static":
         nuxtConfig = { ...baseConfig, ...staticConfig };
-        break;
-    case "github":
-        nuxtConfig = { ...baseConfig, ...githubConfig };
         break;
     default:
         nuxtConfig = { ...baseConfig };

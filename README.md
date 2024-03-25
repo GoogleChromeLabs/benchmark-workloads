@@ -21,8 +21,14 @@ This repo contains two distinct directories, which groups containing projects in
     - [TodoMVC](#todomvc)
  - [Packages](#packages)
     - [Plugins](#plugins)
+      - [Rollup Constructable CSS](#rollup-constructable-css)
+      - [Rollup Copy Files](#rollup-copy-files)
     - [Styles](#styles)
+      - [News Site CSS](#news-site-css)
+      - [TodoMVC CSS](#todomvc-css)
     - [Tools](#tools)
+      - [Benchmark Connector](#benchmark-connector)
+      - [Workloads Manager](#workloads-manager)
 
 ## Development
 

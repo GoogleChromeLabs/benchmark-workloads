@@ -1,7 +1,10 @@
 {
     "name": "news-site-nuxt",
     "version": "1.0.0",
-    "author": "Thorsten Kober",
+    "meta": {
+        "frameworkName": "nuxt",
+        "frameworkVersion": "3.8.1"
+    },
     "license": "SEE LICENSE IN LICENSE",
     "engines": {
         "node": ">=18.13.0",

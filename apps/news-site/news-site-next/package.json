@@ -1,7 +1,10 @@
 {
     "name": "news-site-next",
     "version": "1.0.0",
-    "author": "Thorsten Kober",
+    "meta": {
+        "frameworkName": "next",
+        "frameworkVersion": "13.5.1"
+    },
     "license": "SEE LICENSE IN LICENSE",
     "engines": {
         "node": ">=18.13.0",

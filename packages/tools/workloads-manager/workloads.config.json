@@ -4,18 +4,22 @@
             "name": "news-site-next",
             "port": 8081,
             "type": "static",
-            "buildVersion": "1.0.0",
-            "framework": "next",
-            "frameworkVersion": "13.5.1"
+            "meta": {
+                "buildVersion": "1.0.0",
+                "frameworkName": "next",
+                "frameworkVersion": "13.5.1"
+            }
             
         },
         {
             "name": "news-site-nuxt",
             "port": 8082,
             "type": "static",
-            "buildVersion": "1.0.0",
-            "framework": "nuxt",
-            "frameworkVersion": "3.8.1"
+            "meta": {
+                "buildVersion": "1.0.0",
+                "frameworkName": "nuxt",
+                "frameworkVersion": "3.8.1"
+            }
         }
     ]
 }

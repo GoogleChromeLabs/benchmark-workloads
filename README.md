@@ -463,3 +463,32 @@ pnpm -F workloads-manager build
 pnpm -F workloads-manager build:apps
 pnpm -F workloads-manager start
 ```
+
+The workloads manager depends on a `workloads.config.json` file, which contains a list of apps to run.
+The `workloads` key contains an array of workloads.
+
+- `name`: Package name of the workload.
+- `port`: Port to run the workload on.
+- `type`: Build type, to determine how to run it Currently only `static` is supported.
+- `meta`: Additional information (optional)
+  - `buildVersion`: Package build version.
+  - `frameworkName`: Name of the framework used.
+  - `frameworkVersion`: Version of the framework used.
+
+```json
+{
+    "workloads": [
+        { 
+            "name": "news-site-next",
+            "port": 8081,
+            "type": "static",
+            "meta": {
+                "buildVersion": "1.0.0",
+                "frameworkName": "next",
+                "frameworkVersion": "13.5.1"
+            }
+            
+        }
+    ]
+}
+```

@@ -232,7 +232,7 @@ Codemirror is a code editor that implements a text input field with support for 
 
 Tiptap Editor is a headless, framework-agnostic rich text editor that's customizable and extendable. This workload used Tiptap as its basis and added a simple ui to interact with. 
 
-#### editors-codemirro
+#### editors-codemirror
 
 ```bash
 pnpm -F editors-codemirror dev

@@ -37,6 +37,6 @@
     },
     "files": [
         "/dist",
-        "/docs"
+        "/output"
       ]
 }

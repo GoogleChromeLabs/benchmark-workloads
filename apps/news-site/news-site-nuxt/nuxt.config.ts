@@ -59,12 +59,20 @@ const staticConfig = {
     },
 };
 
+const dynamicConfig = {
+    nitro: {
+        output: {
+            publicDir: path.join(__dirname, "output"),
+        },
+    },
+};
+
 switch (target) {
     case "static":
         nuxtConfig = { ...baseConfig, ...staticConfig };
         break;
     default:
-        nuxtConfig = { ...baseConfig };
+        nuxtConfig = { ...baseConfig, ...dynamicConfig };
 }
 
 export default defineNuxtConfig(nuxtConfig);

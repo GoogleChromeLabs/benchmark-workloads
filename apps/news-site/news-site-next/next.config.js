@@ -16,12 +16,16 @@ const staticConfig = {
     },
 };
 
+const dynamicConfig = {
+    distDir: "output",
+};
+
 switch (target) {
     case "static":
         nextConfig = { ...baseConfig, ...staticConfig };
         break;
     default:
-        nextConfig = { ...baseConfig };
+        nextConfig = { ...baseConfig, ...dynamicConfig };
 }
 
 module.exports = nextConfig;

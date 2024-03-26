@@ -1027,9 +1027,11 @@ importers:
       rollup: ^3.23.0
       rollup-copy-files: workspace:*
       rollup-plugin-cleaner: ^1.0.0
+      vhost: ^3.0.2
     dependencies:
       chalk: 4.1.2
       express: 4.19.2
+      vhost: 3.0.2
     devDependencies:
       eslint: 8.57.0
       eslint-config-prettier: 9.1.0_eslint@8.57.0
@@ -22924,6 +22926,11 @@ packages:
   /vary/1.1.2:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
+
+  /vhost/3.0.2:
+    resolution: {integrity: sha512-S3pJdWrpFWrKMboRU4dLYgMrTgoPALsmYwOvyebK2M6X95b9kQrjZy5rwl3uzzpfpENe/XrNYu/2U+e7/bmT5g==}
+    engines: {node: '>= 0.8.0'}
+    dev: false
 
   /vite-node/1.3.1_@types+node@18.19.18:
     resolution: {integrity: sha512-azbRrqRxlWTJEVbzInZCTchx0X69M/XPTCz4H+TLvlTcR/xH/3hkRqhOakT41fMJCMzXTu4UvegkZiEoJAWvng==}

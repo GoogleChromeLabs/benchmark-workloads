@@ -12,7 +12,8 @@
     "format": "npm run pretty:fix && npm run lint:fix",
     "build": "rollup -c --bundleConfigAsCjs",
     "connect": "DATA='./workloads.config.json' node scripts/connect.js",
-    "start": "DATA='./workloads.config.json' node scripts/start.js"
+    "start": "DATA='./workloads.config.json' node scripts/start.js",
+    "start:folder": "DATA='./workloads.config.json' node scripts/start.folder.js"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
@@ -29,6 +30,7 @@
   ],
   "dependencies": {
     "chalk": "4.1.2",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "vhost": "^3.0.2"
   }
 }

@@ -2,35 +2,9 @@ const fs = require("fs-extra");
 const path = require("path");
 const chalk = require("chalk");
 const express = require("express");
-var vhost = require('vhost');
 
 const { findDirectoryByName } = require("./utils");
-const { checkPort } = require("./ports");
-
-/*
-For subdomain to work locally, the ect/hosts file needs to contain the subdomains:
-
-127.0.0.1   workloads.com
-127.0.0.1   charts-chartjs.workloads.com
-127.0.0.1   charts-observable-plot.workloads.com
-127.0.0.1   editors-codemirror.workloads.com
-127.0.0.1   editors-tiptap.workloads.com
-127.0.0.1   news-site-next.workloads.com
-127.0.0.1   news-site-nuxt.workloads.com
-127.0.0.1   todomvc-angular.workloads.com
-127.0.0.1   todomvc-backbone.workloads.com
-127.0.0.1   todomvc-es5.workloads.com
-127.0.0.1   todomvc-es6-webpack.workloads.com
-127.0.0.1   todomvc-jquery.workloads.com
-127.0.0.1   todomvc-lit.workloads.com
-127.0.0.1   todomvc-preact.workloads.com
-127.0.0.1   todomvc-react.workloads.com
-127.0.0.1   todomvc-react-redux.workloads.com
-127.0.0.1   todomvc-svelte.workloads.com
-127.0.0.1   todomvc-vue.workloads.com
-127.0.0.1   todomvc-web-components.workloads.com
-
-*/
+const { checkPort, getLocalHosts } = require("./ports");
 
 async function createApp({ workloads, start }) {
   // Name of the root directory - "aurora-workloads".
@@ -38,8 +12,7 @@ async function createApp({ workloads, start }) {
   const app = express();
 
   for (const workload of workloads) {
-    const { name, domain } = workload;
-    const host = domain.replace("*", name);
+    const { name } = workload;
 
     const results = await findDirectoryByName({
       start,
@@ -48,9 +21,7 @@ async function createApp({ workloads, start }) {
     });
 
     const directory = results[0];
-    const webapp = express();
-    webapp.use("/", express.static(`${directory}/dist`));
-    app.use(vhost(host, webapp));
+    app.use(`/${name}`, express.static(`${directory}/dist`));
   }
 
   return app;
@@ -80,17 +51,18 @@ async function start() {
     apps.push({ port, app: await createApp({ workloads, start }) });
   }
 
+  const hosts = [...getLocalHosts()];
   console.log("*********************************");
   for (const { app, port } of apps) {
     app.listen(port, () => {
       workloads.forEach(workload => {
-        const { domain, name } = workload;
-        const host = domain.replace("*", name);
-        console.log(
-          `🟢 ${workload.name} is available at: ${chalk.underline(
-              chalk.blue(`http://${host}:${port}`)
-          )}`
-          )
+            hosts.forEach((host) =>
+            console.log(
+            `🟢 [${port}]: ${workload.name} is available at: ${chalk.underline(
+                chalk.blue(`http://${host}:${port}/${workload.name}`)
+            )}`
+            )
+        );
         console.log("*********************************");
       })
     });

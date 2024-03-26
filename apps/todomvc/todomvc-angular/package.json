@@ -8,7 +8,7 @@
       "npm": ">=8.19.3"
   },
     "scripts": {
-        "prepare": "HOST='./' node node_modules/benchmark-connector/dist/prepare.min.js",
+        "prepare": "HOST='./src' node node_modules/benchmark-connector/dist/prepare.min.js",
         "ng": "ng",
         "dev": "npm run prepare && ng serve",
         "build:static": "npm run prepare && ng build --source-map=true",

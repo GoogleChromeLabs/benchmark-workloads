@@ -15,7 +15,8 @@
     "connect": "DATA='./workloads.config.json' node scripts/connect.js",
     "start": "DATA='./workloads.config.domain.json' node scripts/start.domain.js",
     "start:folder": "DATA='./workloads.config.folder.json' node scripts/start.folder.js",
-    "start:ports": "DATA='./workloads.config.ports.json' node scripts/start.ports.js"
+    "start:ports": "DATA='./workloads.config.ports.json' node scripts/start.ports.js",
+    "start:all": "node scripts/start.all.js"
   },
   "devDependencies": {
     "eslint": "^8.57.0",

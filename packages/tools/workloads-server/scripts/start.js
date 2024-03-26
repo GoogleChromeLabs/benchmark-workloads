@@ -87,7 +87,7 @@ async function start() {
         const { domain, name } = workload;
         const host = domain.replace("*", name);
         console.log(
-          `🟢 ${workload.name} is available at: ${chalk.underline(
+          `🟢 ${chalk.green(workload.name)} is available at: ${chalk.underline(
               chalk.blue(`http://${host}:${port}`)
           )}`
           )

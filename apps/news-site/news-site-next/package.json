@@ -16,7 +16,7 @@
         "build": "npm run prepare && next build",
         "build:static": "npm run prepare && TARGET=static next build",
         "start": "next start",
-        "start:static": "http-server ./dist/statics -c-1 --cors --silent",
+        "start:static": "http-server ./dist -c-1 --cors --silent",
         "lint": "next lint",
         "lint:fix": "DEBUG=eslint:cli-engine eslint \"**/*.{js,mjs,jsx,ts,tsx}\" --fix",
         "pretty:check": "prettier --check ./",

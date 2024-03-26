@@ -1,13 +1,8 @@
 {
   "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
-  "/": "pages/index.html",
-  "/opinion": "pages/opinion.html",
-  "/health": "pages/health.html",
-  "/business": "pages/business.html",
-  "/politics": "pages/politics.html",
-  "/us": "pages/us.html",
-  "/world": "pages/world.html",
   "/_error": "pages/_error.js",
-  "/404": "pages/404.html"
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js",
+  "/world": "pages/world.js",
+  "/us": "pages/us.js"
 }

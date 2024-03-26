@@ -59,10 +59,12 @@ importers:
 
   apps/complex-dom/todomvc-angular-complex:
     specifiers:
+      benchmark-connector: 'workspace: *'
       big-dom-generator: workspace:*
       http-server: ^14.1.1
       todomvc-angular: workspace:*
     dependencies:
+      benchmark-connector: link:../../../packages/tools/benchmark-connector
       http-server: 14.1.1
     devDependencies:
       big-dom-generator: link:../../../packages/tools/big-dom-generator
@@ -70,10 +72,12 @@ importers:
 
   apps/complex-dom/todomvc-backbone-complex:
     specifiers:
+      benchmark-connector: 'workspace: *'
       big-dom-generator: workspace:*
       http-server: ^14.1.1
       todomvc-backbone: workspace:*
     dependencies:
+      benchmark-connector: link:../../../packages/tools/benchmark-connector
       http-server: 14.1.1
     devDependencies:
       big-dom-generator: link:../../../packages/tools/big-dom-generator
@@ -81,10 +85,12 @@ importers:
 
   apps/complex-dom/todomvc-es5-complex:
     specifiers:
+      benchmark-connector: 'workspace: *'
       big-dom-generator: workspace:*
       http-server: ^14.1.1
       todomvc-es5: workspace:*
     dependencies:
+      benchmark-connector: link:../../../packages/tools/benchmark-connector
       http-server: 14.1.1
     devDependencies:
       big-dom-generator: link:../../../packages/tools/big-dom-generator
@@ -92,10 +98,12 @@ importers:
 
   apps/complex-dom/todomvc-es6-webpack-complex:
     specifiers:
+      benchmark-connector: 'workspace: *'
       big-dom-generator: workspace:*
       http-server: ^14.1.1
       todomvc-es6-webpack: workspace:*
     dependencies:
+      benchmark-connector: link:../../../packages/tools/benchmark-connector
       http-server: 14.1.1
     devDependencies:
       big-dom-generator: link:../../../packages/tools/big-dom-generator
@@ -103,10 +111,12 @@ importers:
 
   apps/complex-dom/todomvc-jquery-complex:
     specifiers:
+      benchmark-connector: 'workspace: *'
       big-dom-generator: workspace:*
       http-server: ^14.1.1
       todomvc-jquery: workspace:*
     dependencies:
+      benchmark-connector: link:../../../packages/tools/benchmark-connector
       http-server: 14.1.1
     devDependencies:
       big-dom-generator: link:../../../packages/tools/big-dom-generator
@@ -114,10 +124,12 @@ importers:
 
   apps/complex-dom/todomvc-lit-complex:
     specifiers:
+      benchmark-connector: 'workspace: *'
       big-dom-generator: workspace:*
       http-server: ^14.1.1
       todomvc-lit: workspace:*
     dependencies:
+      benchmark-connector: link:../../../packages/tools/benchmark-connector
       http-server: 14.1.1
     devDependencies:
       big-dom-generator: link:../../../packages/tools/big-dom-generator
@@ -125,10 +137,12 @@ importers:
 
   apps/complex-dom/todomvc-preact-complex:
     specifiers:
+      benchmark-connector: 'workspace: *'
       big-dom-generator: workspace:*
       http-server: ^14.1.1
       todomvc-preact: workspace:*
     dependencies:
+      benchmark-connector: link:../../../packages/tools/benchmark-connector
       http-server: 14.1.1
     devDependencies:
       big-dom-generator: link:../../../packages/tools/big-dom-generator
@@ -136,10 +150,12 @@ importers:
 
   apps/complex-dom/todomvc-react-complex:
     specifiers:
+      benchmark-connector: 'workspace: *'
       big-dom-generator: workspace:*
       http-server: ^14.1.1
       todomvc-react: workspace:*
     dependencies:
+      benchmark-connector: link:../../../packages/tools/benchmark-connector
       http-server: 14.1.1
     devDependencies:
       big-dom-generator: link:../../../packages/tools/big-dom-generator
@@ -147,10 +163,12 @@ importers:
 
   apps/complex-dom/todomvc-react-redux-complex:
     specifiers:
+      benchmark-connector: 'workspace: *'
       big-dom-generator: workspace:*
       http-server: ^14.1.1
       todomvc-react-redux: workspace:*
     dependencies:
+      benchmark-connector: link:../../../packages/tools/benchmark-connector
       http-server: 14.1.1
     devDependencies:
       big-dom-generator: link:../../../packages/tools/big-dom-generator
@@ -158,10 +176,12 @@ importers:
 
   apps/complex-dom/todomvc-svelte-complex:
     specifiers:
+      benchmark-connector: 'workspace: *'
       big-dom-generator: workspace:*
       http-server: ^14.1.1
       todomvc-svelte: workspace:*
     dependencies:
+      benchmark-connector: link:../../../packages/tools/benchmark-connector
       http-server: 14.1.1
     devDependencies:
       big-dom-generator: link:../../../packages/tools/big-dom-generator
@@ -169,10 +189,12 @@ importers:
 
   apps/complex-dom/todomvc-vue-complex:
     specifiers:
+      benchmark-connector: 'workspace: *'
       big-dom-generator: workspace:*
       http-server: ^14.1.1
       todomvc-vue: workspace:*
     dependencies:
+      benchmark-connector: link:../../../packages/tools/benchmark-connector
       http-server: 14.1.1
     devDependencies:
       big-dom-generator: link:../../../packages/tools/big-dom-generator
@@ -180,10 +202,12 @@ importers:
 
   apps/complex-dom/todomvc-web-components-complex:
     specifiers:
+      benchmark-connector: 'workspace: *'
       big-dom-generator: workspace:*
       http-server: ^14.1.1
       todomvc-web-components: workspace:*
     dependencies:
+      benchmark-connector: link:../../../packages/tools/benchmark-connector
       http-server: 14.1.1
     devDependencies:
       big-dom-generator: link:../../../packages/tools/big-dom-generator
@@ -240,7 +264,6 @@ importers:
       classnames: ^2.3.2
       eslint: 8.39.0
       eslint-config-next: 13.3.4
-      express: ^4.19.2
       http-server: ^14.1.1
       install: ^0.13.0
       news-site-css: workspace:*
@@ -258,7 +281,6 @@ importers:
       classnames: 2.5.1
       eslint: 8.39.0
       eslint-config-next: 13.3.4_nx3uwtstnvrksnfvdrrar7vgdi
-      express: 4.19.2
       http-server: 14.1.1
       install: 0.13.0
       news-site-css: link:../../../packages/styles/news-site-css
@@ -268,6 +290,9 @@ importers:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       uuid: 9.0.1
+
+  apps/news-site/news-site-next/output:
+    specifiers: {}
 
   apps/news-site/news-site-nuxt:
     specifiers:
@@ -990,29 +1015,6 @@ importers:
       eslint-config-prettier: 9.1.0_eslint@8.57.0
       prettier: 2.8.8
       rollup: 3.29.4
-      rollup-plugin-cleaner: 1.0.0_rollup@3.29.4
-
-  packages/tools/workloads-manager:
-    specifiers:
-      chalk: 4.1.2
-      eslint: ^8.57.0
-      eslint-config-prettier: ^9.1.0
-      fs-extra: ^11.1.1
-      globby: ^13.2.0
-      prettier: ^2.8.8
-      rollup: ^3.23.0
-      rollup-copy-files: workspace:*
-      rollup-plugin-cleaner: ^1.0.0
-    dependencies:
-      chalk: 4.1.2
-    devDependencies:
-      eslint: 8.57.0
-      eslint-config-prettier: 9.1.0_eslint@8.57.0
-      fs-extra: 11.2.0
-      globby: 13.2.2
-      prettier: 2.8.8
-      rollup: 3.29.4
-      rollup-copy-files: link:../../plugins/rollup-copy-files
       rollup-plugin-cleaner: 1.0.0_rollup@3.29.4
 
   packages/tools/workloads-server:

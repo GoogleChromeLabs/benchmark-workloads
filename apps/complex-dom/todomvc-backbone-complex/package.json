@@ -7,7 +7,8 @@
         "npm": ">=8.19.3"
     },
     "scripts": {
-        "build:static": "node scripts/build.js",
+        "prepare": "HOST='./dist' node node_modules/benchmark-connector/dist/prepare.min.js",
+        "build:static": "node scripts/build.js && npm run prepare",
         "start:static": "http-server ./dist -c-1 --cors --silent"
     },
     "devDependencies": {
@@ -15,6 +16,7 @@
         "todomvc-backbone": "workspace:*"
     },
     "dependencies": {
+        "benchmark-connector": "workspace: *",
         "http-server": "^14.1.1"
     },
     "files": [

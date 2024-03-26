@@ -13,6 +13,7 @@ const excludeList = [
   ".rollup.cache",
   ".wireit",
   "dist",
+  "output",
   "docs",
   "node_modules",
   "packages",
@@ -72,7 +73,7 @@ async function findDirectoryByName({ start, target, root, result = [] }) {
 }
 
 function executeScriptSync({ script, directory, env = {} }) {
-  console.log(`Attempting to run the ${script} script, with env: ${env}.. ⚙️`);
+  // console.log(`Attempting to run the ${script} script, with env: ${env}.. ⚙️`);
   try {
     execSync(`npm run ${script}`, {
       cwd: directory,
@@ -94,7 +95,7 @@ function executeScriptSync({ script, directory, env = {} }) {
 }
 
 async function executeScript({ script, directory, env = {} }) {
-  // console.log(`Attempting to run the ${script} script, with env: ${env}.. ⚙️`);
+  // console.log(`Attempting to run the ${script} script, with env: ${env}.. , in directory: ${directory} ⚙️`);
 
   const currentHex = "#" + Math.floor(Math.random() * 16777215).toString(16);
 

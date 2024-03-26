@@ -54,7 +54,8 @@ function getLocalHosts() {
 
   for (const _interface of Object.values(interfaces)) {
     for (const config of _interface) {
-      if (config.family === "IPv4") results.add(config.address);
+      // temp: only IPv4 and local hosts
+      if (config.family === "IPv4" && config.internal) results.add(config.address);
     }
   }
 

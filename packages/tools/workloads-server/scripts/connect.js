@@ -64,7 +64,7 @@ async function connect() {
   });
 
   await Promise.all(
-    ports.map(port => waitForConnectionWithTimeout({ port, host }))
+    ports.map((port) => waitForConnectionWithTimeout({ port, host }))
   );
 
   clearInterval(loadingRef);

@@ -56,16 +56,18 @@ async function start() {
   console.log("*********************************");
   for (const { app, port } of apps) {
     app.listen(port, () => {
-      workloads.forEach(workload => {
-            hosts.forEach((host) =>
-            console.log(
-            `🟢 [${port}]: ${chalk.green(workload.name)} is available at: ${chalk.underline(
-                chalk.blue(`http://${host}:${port}/${workload.name}`)
+      workloads.forEach((workload) => {
+        hosts.forEach((host) =>
+          console.log(
+            `🟢 [${port}]: ${chalk.green(
+              workload.name
+            )} is available at: ${chalk.underline(
+              chalk.blue(`http://${host}:${port}/${workload.name}`)
             )}`
-            )
+          )
         );
         console.log("*********************************");
-      })
+      });
     });
   }
 }

@@ -7,8 +7,8 @@ const { checkPort, getLocalHosts } = require("./ports");
 
 // workloads.config has a type property to determine which script to use to start the workload.
 const startScripts = {
-  "static": "start:static",
-}
+  static: "start:static",
+};
 
 async function start() {
   // We're starting from the root directory of the monorepo.
@@ -42,7 +42,11 @@ async function start() {
     });
     const directory = results[0];
 
-    executeScript({ script: startScripts[type], directory, env: { PORT: port } });
+    executeScript({
+      script: startScripts[type],
+      directory,
+      env: { PORT: port },
+    });
     reports.push({ port, name, directory });
   }
 

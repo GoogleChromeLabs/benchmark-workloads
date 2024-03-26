@@ -2,7 +2,7 @@ const fs = require("fs-extra");
 const path = require("path");
 const chalk = require("chalk");
 const express = require("express");
-var vhost = require('vhost');
+var vhost = require("vhost");
 
 const { findDirectoryByName } = require("./utils");
 const { checkPort } = require("./ports");
@@ -99,16 +99,16 @@ async function start() {
   console.log("*********************************");
   for (const { app, port } of apps) {
     app.listen(port, () => {
-      workloads.forEach(workload => {
+      workloads.forEach((workload) => {
         const { domain, name } = workload;
         const host = domain.replace("*", name);
         console.log(
           `🟢 ${chalk.green(workload.name)} is available at: ${chalk.underline(
-              chalk.blue(`http://${host}:${port}`)
+            chalk.blue(`http://${host}:${port}`)
           )}`
-          )
+        );
         console.log("*********************************");
-      })
+      });
     });
   }
 }

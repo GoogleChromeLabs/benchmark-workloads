@@ -52,13 +52,14 @@ async function start() {
   }
 
   const hosts = [...getLocalHosts()];
+  console.log("hosts", hosts);
   console.log("*********************************");
   for (const { app, port } of apps) {
     app.listen(port, () => {
       workloads.forEach(workload => {
             hosts.forEach((host) =>
             console.log(
-            `🟢 [${port}]: ${workload.name} is available at: ${chalk.underline(
+            `🟢 [${port}]: ${chalk.green(workload.name)} is available at: ${chalk.underline(
                 chalk.blue(`http://${host}:${port}/${workload.name}`)
             )}`
             )

@@ -11,12 +11,16 @@ const { checkPort } = require("./ports");
 For subdomain to work locally, the ect/hosts file needs to contain the subdomains:
 
 127.0.0.1   workloads.com
+
 127.0.0.1   charts-chartjs.workloads.com
 127.0.0.1   charts-observable-plot.workloads.com
+
 127.0.0.1   editors-codemirror.workloads.com
 127.0.0.1   editors-tiptap.workloads.com
+
 127.0.0.1   news-site-next.workloads.com
 127.0.0.1   news-site-nuxt.workloads.com
+
 127.0.0.1   todomvc-angular.workloads.com
 127.0.0.1   todomvc-backbone.workloads.com
 127.0.0.1   todomvc-es5.workloads.com
@@ -30,6 +34,18 @@ For subdomain to work locally, the ect/hosts file needs to contain the subdomain
 127.0.0.1   todomvc-vue.workloads.com
 127.0.0.1   todomvc-web-components.workloads.com
 
+127.0.0.1   todomvc-angular-complex.workloads.com
+127.0.0.1   todomvc-backbone-complex.workloads.com
+127.0.0.1   todomvc-es5-complex.workloads.com
+127.0.0.1   todomvc-es6-webpack-complex.workloads.com
+127.0.0.1   todomvc-jquery-complex.workloads.com
+127.0.0.1   todomvc-lit-complex.workloads.com
+127.0.0.1   todomvc-preact-complex.workloads.com
+127.0.0.1   todomvc-react-complex.workloads.com
+127.0.0.1   todomvc-react-redux-complex.workloads.com
+127.0.0.1   todomvc-svelte-complex.workloads.com
+127.0.0.1   todomvc-vue-complex.workloads.com
+127.0.0.1   todomvc-web-components-complex.workloads.com
 */
 
 async function createApp({ workloads, start }) {

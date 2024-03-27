@@ -1,6 +1,13 @@
 const fs = require("fs").promises;
 const { resolve } = require("path");
 
+/**
+ * deleteFile
+ * 
+ * Deletes a file with a src input.
+ * 
+ * @param {string} src Path to the file to delete.
+ */
 async function deleteFile(src) {
   try {
     await fs.unlink(src);
@@ -10,6 +17,17 @@ async function deleteFile(src) {
   }
 }
 
+/**
+ * copyAndUpdate
+ * 
+ * Reads a source file and appends information from a meta file.
+ * The new content gets copied to a destination folder.
+ * 
+ * @param {Object} config Config object to use. 
+ * @param {string} config.meta File that contains metadata, typically the package.json file.
+ * @param {string} config.src Source file to copy.
+ * @param {string} config.dest Destination of updated file.
+ */
 async function copyAndUpdate({ meta, src, dest }) {
   let contents = await fs.readFile(`${src}`, "utf8");
 
@@ -22,6 +40,13 @@ async function copyAndUpdate({ meta, src, dest }) {
   await fs.writeFile(`${dest}`, contents);
 }
 
+/**
+ * prepare
+ * 
+ * Function that copies the benchmark-connector.min file with new metadata to a new location.
+ * An optional 'HOST' environment variable can be used to assign a custom host directory.
+ * 
+ */
 async function prepare() {
   const hostDirectory = process.env.HOST ?? "public";
   await deleteFile(`${hostDirectory}/benchmark-connector.min.js`);

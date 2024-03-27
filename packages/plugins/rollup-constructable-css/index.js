@@ -2,6 +2,14 @@ import fs from "fs-extra";
 import path from "path";
 import strip from "strip-comments";
 
+/**
+ * create
+ *
+ * Helper function that reads a source css file and creates a constructable JavaScript file in a destination folder.
+ *
+ * @param {string} src - The source css file.
+ * @param {string} dest - The destination folder for the created file.
+ */
 async function create(src, dest) {
   const contents = await fs.readFile(src, "utf-8");
   const stripped = strip(contents);
@@ -13,6 +21,16 @@ async function create(src, dest) {
   await fs.writeFile(outputPath, output);
 }
 
+/**
+ * constructableCSS
+ *
+ * A rollup plugin that generates constructible css from css files.
+ *
+ * @param {Object} config - Config to create constructible css.
+ * @param {string} config.src - The source css files.
+ * @param {string} config.dest - The destination folder for the created files.
+ * @param {string} config.hook - The rollup output generation hook {@link https://rollupjs.org/plugin-development/#output-generation-hooks|Rollup Output Generation Hooks}.
+ */
 function constructableCSS({
   src,
   dest = "dist/",

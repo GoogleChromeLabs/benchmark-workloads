@@ -55,9 +55,9 @@ async function connect() {
 
   const { ports } = JSON.parse(fs.readFileSync(process.env.DATA, "utf-8"));
 
-  const hosts = getLocalHosts();
+  const hosts = [...getLocalHosts()];
   // just using one local host value for now
-  const host = hosts.values().next().value;
+  const host = hosts[0];
 
   const loadingRef = showLoadingAnimation({
     text: "Waiting for connection.",

@@ -20,6 +20,19 @@ const excludeList = [
   "public",
 ];
 
+/**
+ * findDirectories
+ * 
+ * Takes a start directory and searches for sub directories that contain a target file.
+ * If a target file is present, it will be returned in a directories array.
+ * 
+ * @param {Object} config - Config object for function to run.
+ * @param {string} config.start - Start folder to search from.
+ * @param {string} config.target - The file to search for.
+ * @param {string} config.root - Start folder package name.
+ * @param {string[]} config.directories - Array of directories.
+ * @returns {string[]} Array of directories.
+ */
 async function findDirectories({ start, target, root, directories = [] }) {
   const list = await fs.readdir(start);
   for (const entry of list) {
@@ -37,11 +50,6 @@ async function findDirectories({ start, target, root, directories = [] }) {
     } else {
       if (entry === target) {
         if (path.basename(path.dirname(current)) !== root) {
-          /* console.log(
-                        `Found a ${target} in the "${path.basename(
-                            path.dirname(current)
-                        )}" directory 🚀`
-                    ); */
           directories.push(path.dirname(current));
         }
       }
@@ -51,6 +59,18 @@ async function findDirectories({ start, target, root, directories = [] }) {
   return directories;
 }
 
+/**
+ * findDirectoryByName
+ * 
+ * Takes a start directory and searches for sub directories with the target name.
+ * 
+ * @param {Object} config - Config object for function to run.
+ * @param {string} config.start - Start folder to search from.
+ * @param {string} config.target - The directory name.
+ * @param {string} config.root - Start folder package name.
+ * @param {string[]} config.directories - Array of directories.
+ * @returns {string[]} Array of directories.
+ */
 async function findDirectoryByName({ start, target, root, result = [] }) {
   const list = await fs.readdir(start);
   for (const entry of list) {
@@ -72,8 +92,18 @@ async function findDirectoryByName({ start, target, root, result = [] }) {
   return result;
 }
 
+/**
+ * executeScriptSync
+ * 
+ * Function to execute a script sync.
+ * 
+ * @param {Object} config - Config object for function to run.
+ * @param {string} config.script - Name of the script to run.
+ * @param {string} config.directory - Directory of the script.
+ * @param {Object} config.env - Environment variables to pass in.
+ * @returns {Object} Status object with directory name and status (success | failure).
+ */
 function executeScriptSync({ script, directory, env = {} }) {
-  // console.log(`Attempting to run the ${script} script, with env: ${env}.. ⚙️`);
   try {
     execSync(`npm run ${script}`, {
       cwd: directory,
@@ -94,9 +124,17 @@ function executeScriptSync({ script, directory, env = {} }) {
   }
 }
 
+/**
+ * executeScript
+ * 
+ * Function to execute a script async.
+ * 
+ * @param {Object} config - Config object for function to run.
+ * @param {string} config.script - Name of the script to run.
+ * @param {string} config.directory - Directory of the script.
+ * @param {Object} config.env - Environment variables to pass in.
+ */
 async function executeScript({ script, directory, env = {} }) {
-  // console.log(`Attempting to run the ${script} script, with env: ${env}.. , in directory: ${directory} ⚙️`);
-
   const currentHex = "#" + Math.floor(Math.random() * 16777215).toString(16);
 
   const child = exec(`npm run ${script}`, {

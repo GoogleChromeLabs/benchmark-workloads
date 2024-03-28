@@ -1,6 +1,11 @@
 const path = require("path");
 const { findDirectories, executeScriptSync } = require("./utils");
 
+/**
+ * build
+ * 
+ * Function to build all apps, by scanning the apps folder for nested apps to run a build script on.
+ */
 async function build() {
   // We're looking for package.json files, to know what directory we should run the build script in.
   const target = "package.json";

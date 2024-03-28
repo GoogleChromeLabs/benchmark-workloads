@@ -7,6 +7,17 @@ const connectionTimeout = 300;
 const retryTimeout = 500;
 const maxTimeout = 10000;
 
+/**
+ * checkConnection
+ * 
+ * Takes a host and port to check if a connection exists.
+ * This is done, by using net.connect and listening for the 'connect' or 'error' event.
+ * 
+ * @param {Object} config - Config object for function to run.
+ * @param {string} config.host - Host to use.
+ * @param {string} config.port - Port to use.
+ * @return {Promise<Boolean>} Wheter a connection was detected or not.
+ */
 function checkConnection({ host, port }) {
   return new Promise((resolve) => {
     const connection = net.connect(port, host);
@@ -26,6 +37,17 @@ function checkConnection({ host, port }) {
   });
 }
 
+/**
+ * waitForConnection
+ * 
+ * Keeps waiting for a connection to get established.
+ * Since this long-polling solution never times out, 'waitForConnectionWithTimeout' should be preferred.
+ * 
+ * @param {Object} config - Config object for function to run.
+ * @param {string} config.host - Host to use.
+ * @param {string} config.port - Port to use.
+ * @return {Promise<Boolean>} Wheter a connection was detected or not.
+ */
 async function waitForConnection({ host, port }) {
   if (await checkConnection({ host, port })) {
     return true;
@@ -35,6 +57,16 @@ async function waitForConnection({ host, port }) {
   return waitForConnection({ host, port });
 }
 
+/**
+ * waitForConnectionWithTimeout
+ * 
+ * Keeps waiting for a connection to get established, until it times out.
+ * 
+ * @param {Object} config - Config object for function to run.
+ * @param {string} config.host - Host to use.
+ * @param {string} config.port - Port to use.
+ * @return {Promise<Boolean>} Wheter a connection was detected or not.
+ */
 async function waitForConnectionWithTimeout({ host, port }) {
   const timeoutRef = setTimeout(function () {
     process.once("exit", () =>
@@ -48,6 +80,12 @@ async function waitForConnectionWithTimeout({ host, port }) {
   return response;
 }
 
+/**
+ * connect
+ * 
+ * Function that waits for all ports to be connected.
+ * It expects a workloads.config.json file to be passed in as a 'DATA' env.
+ */
 async function connect() {
   if (!process.env.DATA) {
     throw Error("No data file passed in!");

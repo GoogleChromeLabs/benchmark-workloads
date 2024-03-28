@@ -23,7 +23,7 @@ async function deleteFile(src) {
  * Reads a source file and appends information from a meta file.
  * The new content gets copied to a destination folder.
  * 
- * @param {Object} config Config object to use. 
+ * @param {Object} config - Config object for function to run.
  * @param {string} config.meta File that contains metadata, typically the package.json file.
  * @param {string} config.src Source file to copy.
  * @param {string} config.dest Destination of updated file.

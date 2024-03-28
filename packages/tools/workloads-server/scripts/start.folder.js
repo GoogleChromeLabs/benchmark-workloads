@@ -6,6 +6,20 @@ const express = require("express");
 const { findDirectoryByName } = require("./utils");
 const { checkPort, getLocalHosts } = require("./ports");
 
+/**
+ * createApp
+ * 
+ * Creates an express server, which serves workloads in a nested structure.
+ * 
+ * Example:
+ * localhost/news-site-next
+ * localhost/news-site-nuxt
+ * 
+ * @param {Object} config - Config object for function to run.
+ * @param {Object} config.workloads - Workloads from workloads.config.json file.
+ * @param {string} config.start - Start folder to use for discovering workloads folders.
+ * @returns The main express app to use.
+ */
 async function createApp({ workloads, start }) {
   // Name of the root directory - "aurora-workloads".
   const root = path.basename(path.resolve(start));
@@ -27,6 +41,10 @@ async function createApp({ workloads, start }) {
   return app;
 }
 
+/**
+ * Starts all workloads from a workloads.config.json file.
+ * It starts an express server, which serves all workloads in nested routes.
+ */
 async function start() {
   // We're starting from the root directory of the monorepo.
   const start = "../../../";

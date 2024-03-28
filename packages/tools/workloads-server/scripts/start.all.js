@@ -1,22 +1,28 @@
-/*
-    "start:all": "node scripts/all.js",
-    "start:all:ports": "PORTS='5001,5002,5003,5004,5005,5006,5007,5008,5009,5010,5011,5012,5013,5014,5015,5016,5017,5018,5019,5020,5021,5022,5023,5024,5025,5026,5027,5028, 5029, 5030' node scripts/all.js",
-    "start:all:default": "PORTS=default node scripts/all.js",
-*/
-
 const path = require("path");
 const { findDirectories, executeScript } = require("./utils");
 const { getPorts, getLocalHosts, checkPorts } = require("./ports");
 const chalk = require("chalk");
 
 // [TEMP]: Increase if we add more workloads
-// [TEMP]: Also increase ports in start:ports script in package.json
 const defaultPorts = [
   3001, 3002, 3003, 3004, 3005, 3006, 3007, 3008, 3009, 3010, 3011, 3012, 3013,
   3014, 3015, 3016, 3017, 3018, 3019, 3020, 3021, 3022, 3023, 3024, 3025, 3026,
   3027, 3028, 3029, 3030
 ];
 
+/**
+ * Start all workloads in the apps directory, by searching for package.json files in the apps directory.
+ * Ports are assigned in different ways:
+ * 
+ * Random ports - Selects a random port for each workload to start it with.
+ * Default ports - Uses the ports from the defaultPorts array to start all workloads.
+ * PORTS env - Uses the ports from the PORTS env that's passed in to start all workloads.
+ * 
+ * Examples:
+ * "start:all": "node scripts/start.all.js",
+ * "start:all:ports": "PORTS='5001,5002' node scripts/start.all.js",
+ * "start:all:default": "PORTS=default node scripts/start.all.js",
+ */
 async function start() {
   // We're looking for package.json files, to know what directory we should run the build script in.
   const target = "package.json";

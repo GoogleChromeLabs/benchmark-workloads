@@ -10,6 +10,10 @@ const startScripts = {
   static: "start:static",
 };
 
+/**
+ * Starts all workloads from a workloads.config.json file.
+ * It uses a different port for each workload, as assigned in the json file.
+ */
 async function start() {
   // We're starting from the root directory of the monorepo.
   const start = "../../../";

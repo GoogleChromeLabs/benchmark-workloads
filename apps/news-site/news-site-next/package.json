@@ -1,20 +1,17 @@
 {
     "name": "news-site-next",
     "version": "1.0.0",
-    "meta": {
-        "frameworkName": "next",
-        "frameworkVersion": "13.5.1"
-    },
     "license": "SEE LICENSE IN LICENSE",
     "engines": {
         "node": ">=18.13.0",
         "npm": ">=8.19.3"
     },
+    "private": true,
     "scripts": {
         "prepare": "node node_modules/benchmark-connector/dist/prepare.min.js",
         "dev": "npm run prepare && next dev",
         "build": "npm run prepare && next build",
-        "build:static": "npm run prepare && TARGET=static next build",
+        "build:static": "npm run prepare && TARGET=static next build && TARGET=static-base BASE='/news-site-next' next build",
         "start": "next start",
         "start:static": "http-server ./dist -c-1 --cors --silent",
         "lint": "next lint",
@@ -40,9 +37,5 @@
         "react": "18.2.0",
         "react-dom": "18.2.0",
         "uuid": "^9.0.0"
-    },
-    "files": [
-        "/dist",
-        "/output"
-    ]
+    }
 }

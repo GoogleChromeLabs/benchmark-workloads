@@ -7,6 +7,7 @@
         "node": ">=18.13.0",
         "npm": ">=8.19.3"
     },
+    "private": true,
     "scripts": {
         "prepare": "wireit",
         "dev": "wireit",
@@ -119,8 +120,5 @@
         "prepare": {
             "command": "HOST='./' node node_modules/benchmark-connector/dist/prepare.min.js"
         }
-    },
-    "files": [
-        "/dist"
-    ]
+    }
 }

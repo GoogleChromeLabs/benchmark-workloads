@@ -13,16 +13,37 @@ const staticConfig = {
     assetPrefix: "./",
     images: {
         unoptimized: true,
+    }
+};
+
+const staticWithBaseConfig = {
+    output: "export",
+    distDir: "dist-base",
+    assetPrefix: "./",
+    images: {
+        unoptimized: true,
     },
+    basePath: process.env.BASE
 };
 
 const dynamicConfig = {
     distDir: "output",
 };
 
+const dynamicWithBaseConfig = {
+    distDir: "output-base",
+    basePath: process.env.BASE
+};
+
 switch (target) {
     case "static":
         nextConfig = { ...baseConfig, ...staticConfig };
+        break;
+    case "static-base":
+        nextConfig = { ...baseConfig, ...staticWithBaseConfig };
+        break;
+    case "dynamic-base":
+        nextConfig = { ...baseConfig, ...dynamicWithBaseConfig };
         break;
     default:
         nextConfig = { ...baseConfig, ...dynamicConfig };

@@ -1,0 +1,45 @@
+{
+  "name": "workloads-manager",
+  "version": "1.0.0",
+  "description": "A server for all apps.",
+  "license": "SEE LICENSE IN LICENSE",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18.13.0",
+    "npm": ">=8.19.3"
+  },
+  "private": true,
+  "scripts": {
+    "lint": "eslint scripts/*",
+    "lint:fix": "npm run lint -- --fix",
+    "pretty": "prettier scripts/* --check",
+    "pretty:fix": "npm run pretty -- --write",
+    "format": "npm run pretty:fix && npm run lint:fix",
+    "build": "rollup -c --bundleConfigAsCjs",
+    "build:apps": "TYPE='static' node scripts/build.js",
+    "connect": "DATA='./workloads.config.json' node scripts/connect.js",
+    "start:domain": "DATA='./workloads.config.domain.json' node scripts/start.domain.js",
+    "start:folder": "DATA='./workloads.config.folder.json' node scripts/start.folder.js",
+    "start:ports": "DATA='./workloads.config.ports.json' node scripts/start.ports.js",
+    "start:all": "node scripts/start.all.js",
+    "start": "npm run start:folder"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "fs-extra": "^11.1.1",
+    "globby": "^13.2.0",
+    "prettier": "^2.8.8",
+    "rollup": "^3.23.0",
+    "rollup-copy-files": "workspace:*",
+    "rollup-plugin-cleaner": "^1.0.0"
+  },
+  "files": [
+    "/dist"
+  ],
+  "dependencies": {
+    "chalk": "4.1.2",
+    "express": "^4.19.2",
+    "vhost": "^3.0.2"
+  }
+}

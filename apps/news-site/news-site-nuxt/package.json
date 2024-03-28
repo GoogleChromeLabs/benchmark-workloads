@@ -1,15 +1,12 @@
 {
     "name": "news-site-nuxt",
     "version": "1.0.0",
-    "meta": {
-        "frameworkName": "nuxt",
-        "frameworkVersion": "3.8.1"
-    },
     "license": "SEE LICENSE IN LICENSE",
     "engines": {
         "node": ">=18.13.0",
         "npm": ">=8.19.3"
     },
+    "private": true,
     "scripts": {
         "prepare": "node node_modules/benchmark-connector/dist/prepare.min.js",
         "dev": "npm run prepare && nuxt dev",
@@ -34,9 +31,5 @@
         "benchmark-connector": "workspace: *",
         "http-server": "^14.1.1",
         "news-site-css": "workspace:*"
-    },
-    "files": [
-        "/dist",
-        "/output"
-      ]
+    }
 }

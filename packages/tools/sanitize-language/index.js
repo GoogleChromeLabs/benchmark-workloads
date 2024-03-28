@@ -18,9 +18,9 @@ const stringReplaceRegex = new RegExp(wordsToReplace.join("|"), "gi");
 
 /**
  * getFiles
- * 
+ *
  * Takes a directory input and returns its files.
- * 
+ *
  * @param {string} dir Directory name to scan.
  * @returns {string[]} Array of file paths.
  */
@@ -37,9 +37,9 @@ async function getFiles(dir) {
 
 /**
  * readAndReplace
- * 
+ *
  * Reads a file and replaces offensive words.
- * 
+ *
  * @param {string} file File name to read and update.
  */
 async function readAndReplace(file) {
@@ -53,7 +53,7 @@ async function readAndReplace(file) {
 
 /**
  * sanitize
- * 
+ *
  * Takes an OUTPUT_FOLDER and parses its content to ensure only clean words are present in the folder.
  * Some third-party packages generate output files with variable names that are not appropriate.
  * Since we aren't always able to update such packages, this script will ensure that language used in the output files is acceptable.

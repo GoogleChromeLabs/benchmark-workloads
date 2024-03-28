@@ -2,7 +2,13 @@
   "name": "rollup-constructable-css",
   "version": "1.0.0",
   "description": "A rollup plugin to create constructable css files.",
+  "license": "SEE LICENSE IN LICENSE",
+  "engines": {
+      "node": ">=18.13.0",
+      "npm": ">=8.19.3"
+  },
   "main": "index.js",
+  "private": true,
   "scripts": {
     "lint": "eslint index.js",
     "lint:fix": "npm run lint -- --fix",

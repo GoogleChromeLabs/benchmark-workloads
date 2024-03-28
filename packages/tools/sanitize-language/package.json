@@ -4,6 +4,11 @@
   "description": "A script to parse files for non-inclusive words.",
   "license": "SEE LICENSE IN LICENSE",
   "main": "index.js",
+  "engines": {
+    "node": ">=18.13.0",
+    "npm": ">=8.19.3"
+  },
+  "private": true,
   "scripts": {
     "lint": "eslint index.js",
     "lint:fix": "npm run lint -- --fix",

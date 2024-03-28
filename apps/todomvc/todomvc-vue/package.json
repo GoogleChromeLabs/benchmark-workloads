@@ -7,6 +7,7 @@
         "node": ">=18.13.0",
         "npm": ">=8.19.3"
     },
+    "private": true,
     "scripts": {
         "prepare": "HOST='./public' node node_modules/benchmark-connector/dist/prepare.min.js",
         "sanitize": "OUTPUT_FOLDER=./dist node node_modules/sanitize-language/dist/index.min.js",
@@ -38,8 +39,5 @@
         "last 2 versions",
         "not dead",
         "not ie 11"
-    ],
-    "files": [
-        "/dist"
     ]
 }

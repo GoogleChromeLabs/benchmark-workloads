@@ -3,14 +3,14 @@ import path from "path";
 import strip from "strip-comments";
 
 /**
- * create
+ * createConstructableCSSFile
  *
  * Helper function that reads a source css file and creates a constructable JavaScript file in a destination folder.
  *
  * @param {string} src - The source css file.
  * @param {string} dest - The destination folder for the created file.
  */
-async function create(src, dest) {
+async function createConstructableCSSFile(src, dest) {
   const contents = await fs.readFile(src, "utf-8");
   const stripped = strip(contents);
   const output = `const sheet = new CSSStyleSheet();\nsheet.replaceSync(\`${stripped}\`);\nexport default sheet;\n`;
@@ -46,7 +46,9 @@ function constructableCSS({
         expandDirectories: false,
       });
 
-      await Promise.all(matchedPaths.map((src) => create(src, dest)));
+      await Promise.all(
+        matchedPaths.map((src) => createConstructableCSSFile(src, dest))
+      );
     },
   };
 }

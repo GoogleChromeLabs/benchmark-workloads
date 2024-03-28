@@ -17,9 +17,9 @@ function ensureContentsEndsWithEmptyLine(contents) {
 }
 
 /**
- * copy
+ * copyContents
  *
- * Helper function that reads a source file and copies it to a destination folder.
+ * Helper function that reads a source file and copies contents to a new location.
  *
  * @param {Object} config - Config to copy file.
  * @param {string} config.src - The source css file.
@@ -28,7 +28,7 @@ function ensureContentsEndsWithEmptyLine(contents) {
  * @param {string} config.file - Name for single output file, when merging multiple source files.
  * @param {boolean} config.minify - Flag to minify output file.
  */
-async function copy(src, dest, rename, file, minify) {
+async function copyContents(src, dest, rename, file, minify) {
   if (file) {
     let fileContents = "";
     try {
@@ -95,7 +95,7 @@ function copyFiles({
       });
 
       await Promise.all(
-        matchedPaths.map((src) => copy(src, dest, rename, file, minify))
+        matchedPaths.map((src) => copyContents(src, dest, rename, file, minify))
       );
     },
   };

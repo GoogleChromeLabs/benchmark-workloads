@@ -7,6 +7,7 @@
         "node": ">=18.13.0",
         "npm": ">=8.19.3"
     },
+    "private": true,
     "scripts": {
         "prepare": "HOST='./public' node node_modules/benchmark-connector/dist/prepare.min.js",
         "dev": "npm run prepare && npm-run-all --parallel start:static watch",
@@ -39,8 +40,5 @@
         "preact": "^10.13.1",
         "preact-router": "^4.1.0",
         "todomvc-app-css": "^2.4.2"
-    },
-    "files": [
-        "/dist"
-    ]
+    }
 }

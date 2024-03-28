@@ -6,7 +6,7 @@
   "scripts": {
     "format:packages": "pnpm -F './packages/**' format",
     "build:apps": "pnpm -F './apps/**' build:static",
-    "build:packages": "pnpm -F './packages/**' build" 
+    "build:packages": "pnpm -F './packages/**' build"
   },
   "keywords": [],
   "author": "",
@@ -27,7 +27,9 @@
     "overrides": {
       "postcss@<8.4.31": ">=8.4.31",
       "next@>=0.9.9 <13.4.20-canary.13": ">=13.4.20-canary.13",
-      "follow-redirects@<=1.15.5": ">=1.15.6"
+      "follow-redirects@<=1.15.5": ">=1.15.6",
+      "zod@<=3.22.2": ">=3.22.3",
+      "webpack-dev-middleware@<=5.3.3": ">=5.3.4"
     }
   }
 }

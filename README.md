@@ -29,7 +29,7 @@ This repo contains two distinct directories, which groups containing projects in
       - [TodoMVC CSS](#todomvc-css)
     - [Tools](#tools)
       - [Benchmark Connector](#benchmark-connector)
-      - [Workloads Server](#workloads-server)
+      - [Workloads Manager](#workloads-manager)
 
 ## Development
 
@@ -49,7 +49,7 @@ Once pnpm is available, the following script installs all dependencies for all p
 pnpm install
 ```
 
-### How to run a workloads
+### How to run a workload
 
 To run a single app, a filter function from pnpm can be used from the root directory. Each app can be targeted by referencing its package name.
 For example to run the `news-site-next` app in development mode, the following command can be used:
@@ -60,10 +60,10 @@ pnpm -F news-site-next dev
 
 ### How to run default workloads
 
-See [Workloads Server](#workloads-server).
+See [Workloads Manager](#workloads-manager).
 
 ```bash
-pnpm -F workloads-server start
+pnpm -F workloads-manager start
 ```
 
 ### Available Workload scripts
@@ -73,6 +73,28 @@ The following scripts are currently supported by all workloads:
 - `dev`: Run a workload in dev mode locally.
 - `build:static`: Bundles all necessary files and copies them into a `dist` folder.
 - `start:static`: Starts a node server to serve files from the `dist` folder.
+
+These scripts can be used either by opening a terminal in each workloads directory itself, or from the root of this repo.
+
+From a workloads directory, by navigating to the folder in your finder and opening a terminal.
+
+Example `news-site-next`:
+
+```bash
+npm run dev
+npm run build:static
+npm run start:static
+```
+
+From the root of the repo with pnpm and a filter flag.
+
+Example `news-site-next`:
+
+```bash
+pnpm -F news-site-next dev
+pnpm -F news-site-next build:static
+pnpm -F news-site-next start:static
+```
 
 ### Workload-Benchmark communication
 
@@ -475,7 +497,7 @@ pnpm -F sanitize-language format
 pnpm -F sanitize-language build
 ```
 
-#### workloads-server
+#### workloads-manager
 
 Manages all workloads, by using the following commands:
 
@@ -483,13 +505,13 @@ Manages all workloads, by using the following commands:
 -   start: starts node server for static workloads from the workloads.config.json file.
 
 ```bash
-pnpm -F workloads-server format
-pnpm -F workloads-server build
-pnpm -F workloads-server connect
-pnpm -F workloads-server start
+pnpm -F workloads-manager format
+pnpm -F workloads-manager build
+pnpm -F workloads-manager connect
+pnpm -F workloads-manager start
 ```
 
-The workloads server depends on a `workloads.config.json` file, which contains a list of apps to run.
+The workloads manager depends on a `workloads.config.json` file, which contains a list of apps to run.
 
 - The `ports` key is a list of ports to start a server on.
 - The `workloads` key contains an array of workloads.

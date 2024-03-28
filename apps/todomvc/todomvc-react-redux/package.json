@@ -7,6 +7,7 @@
         "node": ">=18.13.0",
         "npm": ">=8.19.3"
     },
+    "private": true,
     "scripts": {
         "prepare": "HOST='./dist' node node_modules/benchmark-connector/dist/prepare.min.js",
         "dev": "npm run prepare && webpack serve --config webpack.dev.js",
@@ -48,8 +49,5 @@
         "redux": "^4.2.0",
         "sanitize-language": "workspace:*",
         "todomvc-app-css": "^2.4.2"
-    },
-    "files": [
-        "/dist"
-    ]
+    }
 }

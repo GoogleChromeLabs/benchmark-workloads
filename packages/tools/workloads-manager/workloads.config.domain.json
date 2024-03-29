@@ -62,6 +62,11 @@
             "domain": "*.workloads.com"
         },
         { 
+            "name": "todomvc-preact",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
             "name": "todomvc-react",
             "type": "static",
             "domain": "*.workloads.com"
@@ -113,6 +118,11 @@
         },
         { 
             "name": "todomvc-lit-complex",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
+            "name": "todomvc-preact-complex",
             "type": "static",
             "domain": "*.workloads.com"
         },

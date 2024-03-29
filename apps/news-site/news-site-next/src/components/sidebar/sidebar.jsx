@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import Link from "next/link";
+import { HashLink } from "react-router-hash-link";
 
 import { useDataContext } from "@/context/data-context";
 
@@ -34,7 +34,7 @@ export default function Sidebar({ onClose }) {
                         <ul className={styles["sidebar-list"]}>
                             {content[key].sections.map((section) =>
                                 <li className={styles["sidebar-list-item"]} key={`sidebar-section${section.id}`}>
-                                    <Link href={`${content[key].url}#${section.id}`} onClick={onClose}>{section.name}</Link>
+                                    <HashLink to={`${content[key].url}#${section.id}`} onClick={onClose}>{section.name}</HashLink>
                                 </li>
                             )}
                         </ul>

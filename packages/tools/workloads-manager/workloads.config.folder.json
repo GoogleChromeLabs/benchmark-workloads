@@ -19,8 +19,7 @@
         },
         { 
             "name": "news-site-next",
-            "type":"static",
-            "distDirectory": "/dist-base"
+            "type":"static"
         },
         {
             "name": "news-site-nuxt",
@@ -49,6 +48,10 @@
         { 
             "name": "todomvc-lit",
             "type":"static"
+        },
+        {
+            "name": "todomvc-preact",
+            "type": "static"
         },
         { 
             "name": "todomvc-react",
@@ -96,6 +99,10 @@
         },
         { 
             "name": "todomvc-react-complex",
+            "type":"static"
+        },
+        { 
+            "name": "todomvc-preact-complex",
             "type":"static"
         },
         { 

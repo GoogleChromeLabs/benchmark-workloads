@@ -2,7 +2,7 @@ const fs = require("fs").promises;
 const path = require("path");
 const { exec, execSync } = require("child_process");
 const chalk = require("chalk");
-const { homedir } = require('os');
+const { homedir } = require("os");
 
 const excludeList = [
   ".angular",
@@ -167,7 +167,7 @@ async function executeScript({ script, directory, env = {} }) {
 
 function getHomeDirectory() {
   const homeDirectory = homedir();
-  return homeDirectory
+  return homeDirectory;
 }
 
 module.exports = {
@@ -175,5 +175,5 @@ module.exports = {
   findDirectoriesByName,
   executeScript,
   executeScriptSync,
-  getHomeDirectory
+  getHomeDirectory,
 };

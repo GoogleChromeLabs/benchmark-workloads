@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { HashLink } from "react-router-hash-link";
 
 import Header from "../header/header";
 import Navigation from "../navigation/navigation";
@@ -41,9 +41,9 @@ export default function Layout({ children, id }) {
 
     return (
         <>
-            <Link href={`${pathname}#content`} className="skip-link">
+            <HashLink to={`${pathname}#content`} className="skip-link">
                 {links.a11y.skip.label}
-            </Link>
+            </HashLink>
             <div className={styles.page} ref={pageRef}>
                 <Header />
                 <Navigation />

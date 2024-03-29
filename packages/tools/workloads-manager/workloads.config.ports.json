@@ -30,125 +30,130 @@
             "type": "static",
             "port": 8086
         },
-        { 
-            "name": "todomvc-angular",
+        {
+            "name": "react-stockcharts",
             "type": "static",
             "port": 8087
         },
         { 
-            "name": "todomvc-backbone",
+            "name": "todomvc-angular",
             "type": "static",
             "port": 8088
         },
         { 
-            "name": "todomvc-es5",
+            "name": "todomvc-backbone",
             "type": "static",
             "port": 8089
         },
         { 
-            "name": "todomvc-es6-webpack",
+            "name": "todomvc-es5",
             "type": "static",
             "port": 8090
         },
         { 
-            "name": "todomvc-jquery",
+            "name": "todomvc-es6-webpack",
             "type": "static",
             "port": 8091
         },
         { 
-            "name": "todomvc-lit",
+            "name": "todomvc-jquery",
             "type": "static",
             "port": 8092
         },
         { 
-            "name": "todomvc-preact",
+            "name": "todomvc-lit",
             "type": "static",
             "port": 8093
         },
         { 
-            "name": "todomvc-react",
+            "name": "todomvc-preact",
             "type": "static",
             "port": 8094
         },
         { 
-            "name": "todomvc-react-redux",
+            "name": "todomvc-react",
             "type": "static",
             "port": 8095
         },
         { 
-            "name": "todomvc-svelte",
+            "name": "todomvc-react-redux",
             "type": "static",
             "port": 8096
         },
         { 
-            "name": "todomvc-vue",
+            "name": "todomvc-svelte",
             "type": "static",
             "port": 8097
         },
         { 
-            "name": "todomvc-web-components",
+            "name": "todomvc-vue",
             "type": "static",
             "port": 8098
         },
         { 
-            "name": "todomvc-angular-complex",
+            "name": "todomvc-web-components",
             "type": "static",
             "port": 8099
         },
         { 
-            "name": "todomvc-backbone-complex",
+            "name": "todomvc-angular-complex",
             "type": "static",
             "port": 8100
         },
         { 
-            "name": "todomvc-es5-complex",
+            "name": "todomvc-backbone-complex",
             "type": "static",
             "port": 8101
         },
         { 
-            "name": "todomvc-es6-webpack-complex",
+            "name": "todomvc-es5-complex",
             "type": "static",
             "port": 8102
         },
         { 
-            "name": "todomvc-jquery-complex",
+            "name": "todomvc-es6-webpack-complex",
             "type": "static",
             "port": 8103
         },
         { 
-            "name": "todomvc-lit-complex",
+            "name": "todomvc-jquery-complex",
             "type": "static",
             "port": 8104
         },
         { 
-            "name": "todomvc-preact-complex",
+            "name": "todomvc-lit-complex",
             "type": "static",
             "port": 8105
         },
         { 
-            "name": "todomvc-react-complex",
+            "name": "todomvc-preact-complex",
             "type": "static",
             "port": 8106
         },
         { 
-            "name": "todomvc-react-redux-complex",
+            "name": "todomvc-react-complex",
             "type": "static",
             "port": 8107
         },
         { 
-            "name": "todomvc-svelte-complex",
+            "name": "todomvc-react-redux-complex",
             "type": "static",
             "port": 8108
         },
         { 
-            "name": "todomvc-vue-complex",
+            "name": "todomvc-svelte-complex",
             "type": "static",
             "port": 8109
         },
         { 
-            "name": "todomvc-web-components-complex",
+            "name": "todomvc-vue-complex",
             "type": "static",
             "port": 8110
+        },
+        { 
+            "name": "todomvc-web-components-complex",
+            "type": "static",
+            "port": 8111
         }
     ]
 }

@@ -6,7 +6,9 @@
   "scripts": {
     "format:packages": "pnpm -F './packages/**' format",
     "build:apps": "pnpm -F './apps/**' build:static",
-    "build:packages": "pnpm -F './packages/**' build"
+    "build:packages": "pnpm -F './packages/**' build",
+    "move:apps": "OUTPUT='../../../.workloads' pnpm -F workloads-manager move",
+    "move:temp": "OUTPUT='/Users/thorstenk/Desktop/workloads' pnpm -F workloads-manager move"
   },
   "keywords": [],
   "author": "",

@@ -12,6 +12,7 @@ const excludeList = [
   ".output",
   ".rollup.cache",
   ".wireit",
+  ".workloads",
   "dist",
   "dist-base",
   "output",

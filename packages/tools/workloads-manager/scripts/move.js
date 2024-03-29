@@ -53,8 +53,18 @@ async function moveWorkload({ workload, start, output }) {
 async function moveWorkloads() {
   // We're starting from the root directory of the monorepo.
   const start = "../../../";
-  // Adds a '.workloads' folder in the root of the monorepo.
-  const output = path.resolve(`${start}.workloads`);
+
+  // Location of the output folder, where all workloads get moved to.
+  // If an OUTPUT was passed in that's located inside the aurora-workloads repo,
+  // 
+  // please ensure that the OUTPUT gets added to the exclude list, when searching for directories:
+  // ./utils.js / excludeList
+  // 
+  // IF no OUTPUT was passed in, the default location is a folder called '.workloads' in the root of the repository ('aurora-workloads/.workloads').
+  const outputName = process.env.OUTPUT ?? `${start}.workloads`;
+
+  // Ensure node can find the output path.
+  const output = path.resolve(outputName);
 
   if (!process.env.DATA) {
     throw Error("No data file passed in!");

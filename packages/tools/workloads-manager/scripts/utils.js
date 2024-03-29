@@ -2,6 +2,7 @@ const fs = require("fs").promises;
 const path = require("path");
 const { exec, execSync } = require("child_process");
 const chalk = require("chalk");
+const { homedir } = require('os');
 
 const excludeList = [
   ".angular",
@@ -164,9 +165,15 @@ async function executeScript({ script, directory, env = {} }) {
   process.once("SIGQUIT", cleanup);
 }
 
+function getHomeDirectory() {
+  const homeDirectory = homedir();
+  return homeDirectory
+}
+
 module.exports = {
   findDirectories,
   findDirectoriesByName,
   executeScript,
   executeScriptSync,
+  getHomeDirectory
 };

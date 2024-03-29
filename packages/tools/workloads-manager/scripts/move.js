@@ -29,6 +29,16 @@ async function copyDirectory(src, dest) {
     });
 }
 
+/**
+ * moveWorkload
+ * 
+ * Copies dist files of a workload to an output folder.
+ * 
+ * @param {Object} config - Config object for function to run.
+ * @param {Object} config.workloads - Workloads from workloads.config.json file.
+ * @param {string} config.start - Start folder to use for discovering workloads folders.
+ * @param {string} config.output - Output folder to use.
+ */
 async function moveWorkload({ workload, start, output }) {
     // Name of the root directory - "aurora-workloads".
     const root = path.basename(path.resolve(start));

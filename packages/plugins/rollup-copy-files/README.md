@@ -12,6 +12,7 @@ To manually install the plugin, add the following line to your `devDependencies`
         "rollup-copy-files": "workspace:*"
     }
 ```
+Once done, install the package, by running `pnpm install`.
 
 To use the plugin, import and call the plugin within the plugins array in the `rollup.config.js` file.
 ```JavaScript

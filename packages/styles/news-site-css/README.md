@@ -1,14 +1,18 @@
 # news-site-css
 
-## How to use
-
 This package allows you to use the stylesheets in various ways, either by including the complete rules (index.css, index.min.css) in a link tag, or by importing partial css / css module files in your code.
 
-install the package
+## How to install
+
+install the package manually, by adding an entry to your package.json file and running `pnpm install`.
 
 ```bash
-npm install news-site-css
+"dependencies": {
+    "news-site-css": "workspace:*"
+}
 ```
+
+## How to use styles package
 
 including the styles in html with a link tag
 

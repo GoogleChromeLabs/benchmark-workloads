@@ -1,7 +1,5 @@
 # todomvc-css
 
-## Overview
-
 This todomvc-css repo implements changes to adhere to some a11y audit results that needed to get addressed.
 
 -   Visually, there are only minor changes introduced, that overall don't impact the look and feel of a todomvc application.
@@ -9,15 +7,19 @@ This todomvc-css repo implements changes to adhere to some a11y audit results th
 
 ![](screenshot.png)
 
-## How to use
-
 This package allows you to use the stylesheets in various ways, either by including the complete rules (index.css, index.min.css) in a link tag, or by importing partial css / css module files in your code.
 
-install the package
+## How to install
+
+Install the package manually, by adding an entry to your package.json file and running `pnpm install`.
 
 ```bash
-npm install todomvc-app-css-alt
+"dependencies": {
+    "todmvc-css": "workspace:*"
+}
 ```
+
+## How to use styles package
 
 including the styles in html with a link tag
 

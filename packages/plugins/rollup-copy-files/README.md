@@ -12,14 +12,17 @@ To manually install the plugin, add the following line to your `devDependencies`
         "rollup-copy-files": "workspace:*"
     }
 ```
+
 Once done, install the package, by running `pnpm install`.
 
 To use the plugin, import and call the plugin within the plugins array in the `rollup.config.js` file.
+
 ```JavaScript
 import { copyFiles } from "./node_modules/rollup-copy-files/dist/index.min.js";
 ```
 
 To copy all files from the `src/css` folder, but omit the `src/css/partials.css` file:
+
 ```JavaScript
 export default {
     plugins: [
@@ -32,6 +35,7 @@ export default {
 ```
 
 To copy a file and rename it (`src/css/index.css` => `dist/index.module.css`):
+
 ```JavaScript
 export default {
     plugins: [
@@ -45,6 +49,7 @@ export default {
 ```
 
 To merge all files from the `src/css` folder into one `dist/index.css` file:
+
 ```JavaScript
 export default {
     plugins: [

@@ -12,7 +12,7 @@ install the package manually, by adding an entry to your package.json file and r
 }
 ```
 
-## How to use styles package
+## How to use
 
 including the styles in html with a link tag
 

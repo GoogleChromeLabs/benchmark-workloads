@@ -1,4 +1,4 @@
-# Charts - Chartsjs
+# Charts - Chartjs
 
 ## How to run locally
 

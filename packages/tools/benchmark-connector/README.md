@@ -1,7 +1,7 @@
 # benchmark-connector
 
 The benchmark-connector enables communication between the benchmark and a workload via the `post-message` api.
-Each workload that wants to opt in, needs the `benchmark-connector.min.js` file added to its html pages.
+Each workload that wants to opt in needs the `benchmark-connector.min.js` file added to its html pages.
 
 A `prepare` file is available, that can copy the benchmark-connector.min.js file from the node-modules folder to the appropriate directory of the workload. This is typically the `public`, `dist` or the `root` folder and is customizable through the `HOST` environment variable of the npm script. During the prepare process, two global variables get set and added to the benchmark-connector.min file:
 

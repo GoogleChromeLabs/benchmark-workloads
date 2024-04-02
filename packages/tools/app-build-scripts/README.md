@@ -4,8 +4,8 @@ A collection of helper functions to create a static output for a workload withou
 
 ## example
 
-The following example is taken from the [todomvc-es5](../../../apps/todomvc//todomvc-es5/README.md) workload.
-The [package.json](../../../apps//todomvc//todomvc-es5/package.json) contains a build script that copies and updates all relevant files to a `dist` folder.
+The following example is taken from the [todomvc-es5](../../../apps/todomvc/todomvc-es5/README.md) workload.
+The [package.json](../../../apps/todomvc/todomvc-es5/package.json) contains a build script that copies and updates all relevant files to a `dist` folder.
 
 [source](../../../apps/todomvc/todomvc-es5/scripts/build.js)
 

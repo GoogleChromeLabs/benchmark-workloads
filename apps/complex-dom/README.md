@@ -9,7 +9,7 @@ A collection of todomvc apps wrapped in a complex dom.
 -   [todomvc-jquery-complex](./todomvc-jquery-complex/README.md)
 -   [todomvc-lit-complex](./todomvc-lit-complex/README.md)
 -   [todomvc-preact-complex](./todomvc-preact-complex/README.md)
--   [todomvc-reac-complex](./todomvc-react-complex/README.md)
+-   [todomvc-react-complex](./todomvc-react-complex/README.md)
 -   [todomvc-react-redux-complex](./todomvc-react-redux-complex/README.md)
 -   [todomvc-svelte-complex](./todomvc-svelte-complex/README.md)
 -   [todomvc-vue-complex](./todomvc-vue-complex/README.md)

@@ -18,7 +18,7 @@ To manually install the plugin, add the following line to your `devDependencies`
 Once done, install the package, by running `pnpm install`.
 
 To use the plugin, import and call the plugin within the plugins array in the `rollup.config.js` file.
-The following example uses all files within the `src/css` directory, but omits the `src/css/partials.css` file. d
+The following example uses all files within the `src/css` directory, but omits the `src/css/partials.css` file. 
 
 ```JavaScript
 import { constructableCSS } from "./node_modules/rollup-constructable-css/dist/index.min.js";

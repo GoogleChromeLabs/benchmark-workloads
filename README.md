@@ -292,7 +292,6 @@ Several interactions are available, such as:
 pnpm -F news-site-next dev
 pnpm -F news-site-next build
 pnpm -F news-site-next build:static
-pnpm -F news-site-next build:gh
 pnpm -F news-site-next start
 pnpm -F news-site-next start:static
 ```
@@ -303,7 +302,6 @@ pnpm -F news-site-next start:static
 pnpm -F news-site-nuxt dev
 pnpm -F news-site-nuxt build
 pnpm -F news-site-nuxt build:static
-pnpm -F news-site-nuxt build:gh
 pnpm -F news-site-nuxt start
 pnpm -F news-site-next start:static
 ```

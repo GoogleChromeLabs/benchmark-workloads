@@ -4,7 +4,7 @@ This package allows you to use the stylesheets in various ways, either by includ
 
 ## How to install
 
-install the package manually, by adding an entry to your package.json file and running `pnpm install`.
+Install the package manually, by adding an entry to your package.json file and running `pnpm install`.
 
 ```bash
 "dependencies": {

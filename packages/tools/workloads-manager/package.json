@@ -18,6 +18,7 @@
     "build": "rollup -c --bundleConfigAsCjs",
     "build:apps": "TYPE='static' node scripts/build.js",
     "connect": "DATA='./workloads.config.json' node scripts/connect.js",
+    "move": "DATA='./workloads.config.folder.json' node scripts/move.js",
     "start:domain": "DATA='./workloads.config.domain.json' node scripts/start.domain.js",
     "start:folder": "DATA='./workloads.config.folder.json' node scripts/start.folder.js",
     "start:ports": "DATA='./workloads.config.ports.json' node scripts/start.ports.js",

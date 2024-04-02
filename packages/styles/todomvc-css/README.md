@@ -15,7 +15,7 @@ Install the package manually, by adding an entry to your package.json file and r
 
 ```bash
 "dependencies": {
-    "todmvc-css": "workspace:*"
+    "todomvc-css": "workspace:*"
 }
 ```
 

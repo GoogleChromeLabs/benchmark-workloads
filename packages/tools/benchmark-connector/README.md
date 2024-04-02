@@ -8,7 +8,7 @@ A `prepare` file is available, that can copy the benchmark-connector.min.js file
 -   window.name: Package name of the workload.
 -   window.version: Package version of the workload.
 
-Both variables are used to create an `appId`, which will get send with each postMessage event.
+Both variables are used to create an `appId`, which will get sent with each postMessage event.
 
 An initial `app-ready` message is broadcasted after the benchmark-connector's initialization:
 

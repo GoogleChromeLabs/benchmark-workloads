@@ -1,14 +1,18 @@
 # news-site-css
 
-## How to use
-
 This package allows you to use the stylesheets in various ways, either by including the complete rules (index.css, index.min.css) in a link tag, or by importing partial css / css module files in your code.
 
-install the package
+## How to install
+
+Install the package manually, by adding an entry to your package.json file and running `pnpm install`.
 
 ```bash
-npm install news-site-css
+"dependencies": {
+    "news-site-css": "workspace:*"
+}
 ```
+
+## How to use
 
 including the styles in html with a link tag
 
@@ -31,18 +35,21 @@ export default function Footer() {
     return <footer className={styles.footer}></footer>;
 }
 ```
+
 constructable stylesheets:
-``` javascript
+
+```javascript
 import sheet from "news-site-css/dist/footer.constructable.js";
 
 document.adoptedStyleSheets = [...document.adoptedStyleSheets, sheet];
 ```
 
 constructable stylesheets in shadow DOM:
-``` javascript
+
+```javascript
 import sheet from "news-site-css/dist/footer.constructable.js";
 
-const node = document.createElement('div');
-const shadow = node.attachShadow({ mode: 'open' });
+const node = document.createElement("div");
+const shadow = node.attachShadow({ mode: "open" });
 shadow.adoptedStyleSheets = [sheet];
 ```

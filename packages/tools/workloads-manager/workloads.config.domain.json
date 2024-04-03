@@ -11,6 +11,11 @@
             "type": "static",
             "domain": "*.workloads.com"
         },
+        {
+            "name": "charts-react-stockcharts",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
         { 
             "name": "editors-codemirror",
             "type": "static",
@@ -28,11 +33,6 @@
         },
         {
             "name": "news-site-nuxt",
-            "type": "static",
-            "domain": "*.workloads.com"
-        },
-        {
-            "name": "react-stockcharts",
             "type": "static",
             "domain": "*.workloads.com"
         },

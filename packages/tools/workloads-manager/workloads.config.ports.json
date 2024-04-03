@@ -10,28 +10,28 @@
             "type": "static",
             "port": 8082
         },
-        { 
-            "name": "editors-codemirror",
+        {
+            "name": "charts-react-stockcharts",
             "type": "static",
             "port": 8083
         },
         { 
-            "name": "editors-tiptap",
+            "name": "editors-codemirror",
             "type": "static",
             "port": 8084
         },
         { 
-            "name": "news-site-next",
+            "name": "editors-tiptap",
             "type": "static",
             "port": 8085
         },
-        {
-            "name": "news-site-nuxt",
+        { 
+            "name": "news-site-next",
             "type": "static",
             "port": 8086
         },
         {
-            "name": "react-stockcharts",
+            "name": "news-site-nuxt",
             "type": "static",
             "port": 8087
         },

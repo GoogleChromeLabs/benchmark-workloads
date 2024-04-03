@@ -1,4 +1,4 @@
-# React Stockcharts
+# Charts - React Stockcharts
 
 Uses [react-stockcharts](https://github.com/rrag/react-stockcharts)
 

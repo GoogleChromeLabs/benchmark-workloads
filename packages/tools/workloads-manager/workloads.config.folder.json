@@ -9,6 +9,10 @@
             "name": "charts-observable-plot",
             "type":"static"
         },
+        {
+            "name": "charts-react-stockcharts",
+            "type": "static"
+        },
         { 
             "name": "editors-codemirror",
             "type":"static"
@@ -24,10 +28,6 @@
         {
             "name": "news-site-nuxt",
             "type":"static"
-        },
-        {
-            "name": "react-stockcharts",
-            "type": "static"
         },
         { 
             "name": "todomvc-angular",

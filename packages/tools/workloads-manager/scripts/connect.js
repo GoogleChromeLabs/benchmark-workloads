@@ -2,6 +2,7 @@ const fs = require("fs-extra");
 const net = require("net");
 const { getLocalHosts } = require("./ports");
 const { showLoadingAnimation } = require("./loader");
+const { getArguments } = require("./utils");
 
 const connectionTimeout = 300;
 const retryTimeout = 500;
@@ -87,11 +88,12 @@ async function waitForConnectionWithTimeout({ host, port }) {
  * It expects a workloads.config.json file to be passed in as a 'DATA' env.
  */
 async function connect() {
-  if (!process.env.DATA) {
+  const { data } = getArguments({ args: process.argv });
+  if (!data) {
     throw Error("No data file passed in!");
   }
 
-  const { ports } = JSON.parse(fs.readFileSync(process.env.DATA, "utf-8"));
+  const { ports } = JSON.parse(fs.readFileSync(data, "utf-8"));
 
   const hosts = [...getLocalHosts()];
   // just using one local host value for now

@@ -1,5 +1,5 @@
 const path = require("path");
-const { findDirectories, executeScript } = require("./utils");
+const { findDirectories, executeScript, getArguments } = require("./utils");
 const { getPorts, getLocalHosts, checkPorts } = require("./ports");
 const chalk = require("chalk");
 
@@ -37,22 +37,22 @@ async function start() {
   const reports = [];
   const hosts = [...getLocalHosts()];
 
-  let ports;
+  let portsToUse;
 
-  // should move this into a separate function...
-  if (process.env.PORTS) {
-    if (process.env.PORTS === "default") {
+  const { ports } = getArguments({ args: process.argv });
+  if (ports) {
+    if (ports === "default") {
       if (defaultPorts.length !== directories.length) {
         throw Error("Not enough default ports.");
       }
-      ports = [...defaultPorts];
+      portsToUse = [...defaultPorts];
     } else {
-      const temp = process.env.PORTS.split(",");
+      const temp = ports.split(",");
       if (temp.length !== directories.length) {
         throw Error("Not enough ports passed in.");
       }
 
-      ports = temp.map((s) => {
+      portsToUse = temp.map((s) => {
         const port = Number(s);
         if (isNaN(port)) {
           throw Error("Not all ports a numbers.");
@@ -61,12 +61,12 @@ async function start() {
       });
     }
 
-    const portsAreValid = await checkPorts({ ports });
+    const portsAreValid = await checkPorts({ ports: portsToUse });
     if (!portsAreValid) {
       throw Error("Not all ports are valid");
     }
   } else {
-    ports = await getPorts({ total: directories.length });
+    portsToUse = await getPorts({ total: directories.length });
   }
 
   // prevents warning: MaxListenersExceededWarning: Possible EventEmitter memory leak detected.
@@ -74,7 +74,7 @@ async function start() {
 
   for (let i = 0; i < directories.length; i++) {
     const directory = directories[i];
-    const port = ports[i];
+    const port = portsToUse[i];
     executeScript({ script, directory, env: { PORT: port } });
     reports.push({ port, name: path.basename(directory), directory });
   }

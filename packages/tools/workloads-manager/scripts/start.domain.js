@@ -4,7 +4,7 @@ const chalk = require("chalk");
 const express = require("express");
 var vhost = require("vhost");
 
-const { findDirectoriesByName } = require("./utils");
+const { findDirectoriesByName, getArguments } = require("./utils");
 const { checkPort } = require("./ports");
 
 /**
@@ -90,13 +90,13 @@ async function start() {
   // We're starting from the root directory of the monorepo.
   const start = "../../../";
 
-  if (!process.env.DATA) {
+  const { data } = getArguments({ args: process.argv });
+
+  if (!data) {
     throw Error("No data file passed in!");
   }
 
-  const { workloads, ports } = JSON.parse(
-    fs.readFileSync(process.env.DATA, "utf-8")
-  );
+  const { workloads, ports } = JSON.parse(fs.readFileSync(data, "utf-8"));
 
   // prevents warning: MaxListenersExceededWarning: Possible EventEmitter memory leak detected.
   process.setMaxListeners(ports.length);

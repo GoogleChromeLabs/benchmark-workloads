@@ -89,6 +89,7 @@ async function waitForConnectionWithTimeout({ host, port }) {
  */
 async function connect() {
   const { data } = getArguments({ args: process.argv });
+
   if (!data) {
     throw Error("No data file passed in!");
   }

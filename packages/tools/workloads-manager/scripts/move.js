@@ -1,7 +1,11 @@
 const fs = require("fs-extra");
 const path = require("path");
 
-const { findDirectoriesByName, getHomeDirectory, getArguments } = require("./utils");
+const {
+  findDirectoriesByName,
+  getHomeDirectory,
+  getArguments,
+} = require("./utils");
 
 /**
  * createDirectory
@@ -91,7 +95,7 @@ async function moveWorkloads() {
   const { workloads } = JSON.parse(fs.readFileSync(data, "utf-8"));
 
   for (const workload of workloads) {
-    await moveWorkload({ workload, start, output:outputPath });
+    await moveWorkload({ workload, start, output: outputPath });
   }
 
   console.log("Done!");

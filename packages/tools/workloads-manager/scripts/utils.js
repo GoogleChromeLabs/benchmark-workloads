@@ -170,10 +170,24 @@ function getHomeDirectory() {
   return homeDirectory;
 }
 
+function getArguments({ args }) {
+  const result = {};
+  for (const arg of args) {
+    if (arg.startsWith("--")){
+      const parts = arg.split("=");
+      const key = parts[0].replace("--", "");
+      const value = parts[1];
+      result[key] = value;
+    }
+  }
+  return result;
+}
+
 module.exports = {
   findDirectories,
   findDirectoriesByName,
   executeScript,
   executeScriptSync,
   getHomeDirectory,
+  getArguments,
 };

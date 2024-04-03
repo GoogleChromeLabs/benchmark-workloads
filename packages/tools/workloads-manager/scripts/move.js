@@ -1,7 +1,7 @@
 const fs = require("fs-extra");
 const path = require("path");
 
-const { findDirectoriesByName, getHomeDirectory } = require("./utils");
+const { findDirectoriesByName, getHomeDirectory, getArguments } = require("./utils");
 
 /**
  * createDirectory
@@ -61,6 +61,12 @@ async function moveWorkload({ workload, start, output }) {
 }
 
 async function moveWorkloads() {
+  const { data, output } = getArguments({ args: process.argv });
+
+  if (!data) {
+    throw Error("No data file passed in!");
+  }
+
   // We're starting from the root directory of the monorepo.
   const start = "../../../";
 
@@ -71,25 +77,21 @@ async function moveWorkloads() {
    *
    * IF no OUTPUT was passed in, the default location is a folder called '.workloads' in the root of the repository ('aurora-workloads/.workloads').
    */
-  let outputName = process.env.OUTPUT ?? `${start}.workloads`;
+  let outputName = output ?? `${start}.workloads`;
 
   if (outputName.charAt(0) === "~") {
     outputName = outputName.replace("~", getHomeDirectory());
   }
 
   // Ensure node can find the output path.
-  const output = path.resolve(outputName);
+  const outputPath = path.resolve(outputName);
 
-  if (!process.env.DATA) {
-    throw Error("No data file passed in!");
-  }
+  await createDirectory(outputPath);
 
-  await createDirectory(output);
-
-  const { workloads } = JSON.parse(fs.readFileSync(process.env.DATA, "utf-8"));
+  const { workloads } = JSON.parse(fs.readFileSync(data, "utf-8"));
 
   for (const workload of workloads) {
-    await moveWorkload({ workload, start, output });
+    await moveWorkload({ workload, start, output:outputPath });
   }
 
   console.log("Done!");

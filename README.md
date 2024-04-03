@@ -124,11 +124,12 @@ Main directory for all workloads, which are grouped by categories:
 
 Charting apps allow us to test SVG and canvas rendering by displaying charts in various workloads. 
 These apps represent popular sites that display financial information, stock charts or dashboards. 
-Both SVG rendering and the use of the canvas api weren’t represented in previous releases of Speedometer.
 
 Observable Plot displays a stacked bar chart, as well as a dotted chart. It is based on D3, which is a JavaScript library for visualizing tabular data and outputs SVG elements. It loops through a big dataset to build the source data that D3 needs, using map, filter and flatMap methods. As a result this exercises creation and copying of objects and arrays.
 
 Chart.js is a JavaScript charting library. The included workload displays a scatter graph with the canvas api, both with some transparency and with full opacity. This uses the same data as the previous workload, but with a different preparation phase. In this case it makes a heavy use of trigonometry to compute distances between airports.
+
+React Stockcharts displays a dashboard for stocks. It is based on D3 for all computation, but outputs SVG directly using React.
 
 #### charts-chartjs
 

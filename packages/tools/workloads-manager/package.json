@@ -16,7 +16,7 @@
     "pretty:fix": "npm run pretty -- --write",
     "format": "npm run pretty:fix && npm run lint:fix",
     "build": "rollup -c --bundleConfigAsCjs",
-    "build:apps": "TYPE='static' node scripts/build.js",
+    "build:apps": "node scripts/build.js --type='static",
     "connect": "DATA='./workloads.config.json' node scripts/connect.js",
     "move": "node scripts/move.js --data='./workloads.config.folder.json'",
     "start:domain": "DATA='./workloads.config.domain.json' node scripts/start.domain.js",

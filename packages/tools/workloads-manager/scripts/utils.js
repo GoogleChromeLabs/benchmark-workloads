@@ -184,7 +184,7 @@ function getHomeDirectory() {
  * @returns {Object} Parsed arguments object.
  */
 function getArguments({ args }) {
-  const result = {};
+  const result = Object.create(null, {});
   for (const arg of args) {
     if (arg.startsWith("--")) {
       const parts = arg.split("=");

@@ -57,7 +57,7 @@ async function createApp({ workloads, start }) {
  *
  * 127.0.0.1   news-site-next.workloads.com
  * 127.0.0.1   news-site-nuxt.workloads.com
- * 
+ *
  * 127.0.0.1   react-stockcharts.workloads.com
  *
  * 127.0.0.1   todomvc-angular.workloads.com

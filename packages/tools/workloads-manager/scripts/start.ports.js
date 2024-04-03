@@ -2,7 +2,11 @@ const fs = require("fs-extra");
 const path = require("path");
 const chalk = require("chalk");
 
-const { findDirectoriesByName, executeScript } = require("./utils");
+const {
+  findDirectoriesByName,
+  executeScript,
+  getArguments,
+} = require("./utils");
 const { checkPort, getLocalHosts } = require("./ports");
 
 // workloads.config has a type property to determine which script to use to start the workload.
@@ -20,11 +24,13 @@ async function start() {
   // Name of the root directory - "aurora-workloads".
   const root = path.basename(path.resolve(start));
 
-  if (!process.env.DATA) {
+  const { data } = getArguments({ args: process.argv });
+
+  if (!data) {
     throw Error("No data file passed in!");
   }
 
-  const { workloads } = JSON.parse(fs.readFileSync(process.env.DATA, "utf-8"));
+  const { workloads } = JSON.parse(fs.readFileSync(data, "utf-8"));
 
   const reports = [];
   const hosts = [...getLocalHosts()];

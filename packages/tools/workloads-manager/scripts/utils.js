@@ -165,9 +165,35 @@ async function executeScript({ script, directory, env = {} }) {
   process.once("SIGQUIT", cleanup);
 }
 
+/**
+ * getHomeDirectory
+ *
+ * @returns {string} The home directory of the os.
+ */
 function getHomeDirectory() {
   const homeDirectory = homedir();
   return homeDirectory;
+}
+
+/**
+ * getArguments
+ *
+ * Function to parse 'process.argv' and return an object with the result.
+ *
+ * @param {Object} config - Config object for function to run.
+ * @returns {Object} Parsed arguments object.
+ */
+function getArguments({ args }) {
+  const result = Object.create(null, {});
+  for (const arg of args) {
+    if (arg.startsWith("--")) {
+      const parts = arg.split("=");
+      const key = parts[0].replace("--", "");
+      const value = parts[1];
+      result[key] = value;
+    }
+  }
+  return result;
 }
 
 module.exports = {
@@ -176,4 +202,5 @@ module.exports = {
   executeScript,
   executeScriptSync,
   getHomeDirectory,
+  getArguments,
 };

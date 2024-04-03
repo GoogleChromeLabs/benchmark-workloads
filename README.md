@@ -146,6 +146,14 @@ pnpm -F charts-observable-plot build:static
 pnpm -F charts-observable-plot start:static
 ```
 
+#### charts-react-stockcharts
+
+```bash
+pnpm -F charts-react-stockcharts dev
+pnpm -F charts-react-stockcharts build:static
+pnpm -F charts-react-stockcharts start:static
+```
+
 ### Complex DOM
 
 The complex DOM workloads embed various TodoMVC implementations in a static UI shell that mimics a complex web page. The idea is to capture the performance impact on executing seemingly isolated actions (e.g. adding/deleting todo items) in the context of a complex website.

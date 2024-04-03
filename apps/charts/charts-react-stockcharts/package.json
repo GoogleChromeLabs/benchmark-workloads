@@ -1,5 +1,5 @@
 {
-    "name": "react-stockcharts",
+    "name": "charts-react-stockcharts",
     "version": "1.0.0",
     "engines": {
         "node": ">=18.13.0",

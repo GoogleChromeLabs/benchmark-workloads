@@ -81,6 +81,12 @@ window.onmessage = async (event) => {
   }
 };
 
-window.top.postMessage({ type: "app-ready", status: "success", appId }, "*");
+window.requestAnimationFrame(() => {
+  setTimeout(() => {
+      setTimeout(() => {
+        window.top.postMessage({ type: "app-ready", status: "success", appId }, "*");
+      }, 0);
+  }, 0);
+});
 
 console.log(`Hello, benchmark connector for ${appId} is ready!`);

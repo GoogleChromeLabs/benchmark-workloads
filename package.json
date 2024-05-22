@@ -8,7 +8,10 @@
     "build:apps": "pnpm -F './apps/**' build:static",
     "build:packages": "pnpm -F './packages/**' build",
     "move:apps": "pnpm -F workloads-manager move --output='../../../.workloads'",
-    "move:apps:desktop": "pnpm -F workloads-manager move --output='~/Desktop/workloads'"
+    "move:apps:desktop": "pnpm -F workloads-manager move --output='~/Desktop/workloads'",
+    "release:major": "npm version $(semver $npm_package_version -i major) && pnpm publish --tag latest && git push",
+    "release:minor": "npm version $(semver $npm_package_version -i minor) && pnpm publish --tag latest && git push",
+    "release:patch": "npm version $(semver $npm_package_version -i patch) && pnpm publish --tag latest && git push"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +23,8 @@
   "dependencies": {
     "chalk": "4.1.2",
     "fs-extra": "^10.1.0",
-    "globby": "^11.1.0"
+    "globby": "^11.1.0",
+    "semver": "^7.6.2"
   },
   "pnpm": {
     "overrides": {

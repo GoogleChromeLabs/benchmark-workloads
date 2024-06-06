@@ -83,9 +83,12 @@ window.onmessage = async (event) => {
 
 window.requestAnimationFrame(() => {
   setTimeout(() => {
-      setTimeout(() => {
-        window.top.postMessage({ type: "app-ready", status: "success", appId }, "*");
-      }, 0);
+    setTimeout(() => {
+      window.top.postMessage(
+        { type: "app-ready", status: "success", appId },
+        "*"
+      );
+    }, 0);
   }, 0);
 });
 

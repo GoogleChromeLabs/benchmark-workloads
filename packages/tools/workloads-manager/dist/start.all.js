@@ -4,9 +4,7 @@ const { getPorts, getLocalHosts, checkPorts } = require("./ports");
 const chalk = require("chalk");
 
 // [TEMP]: Increase if we add more workloads
-const defaultPorts = [
-  3001, 3002, 3003,
-];
+const defaultPorts = [3001, 3002, 3003];
 
 /**
  * Start all workloads in the apps directory, by searching for package.json files in the apps directory.

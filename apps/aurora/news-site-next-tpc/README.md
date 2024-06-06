@@ -1,4 +1,6 @@
-# The Daily Broadcast
+# News Site Next TPC - The Daily Broadcast
+This is an app, using the news site template for next.js.
+Aurora specific integration with Third-Party-Capital
 
 ## Description
 

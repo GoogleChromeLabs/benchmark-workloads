@@ -2,6 +2,7 @@ const fs = require("fs-extra");
 const net = require("net");
 const { getLocalHosts } = require("./ports");
 const { showLoadingAnimation } = require("./loader");
+const { getArguments } = require("./utils");
 
 const connectionTimeout = 300;
 const retryTimeout = 500;
@@ -9,10 +10,10 @@ const maxTimeout = 10000;
 
 /**
  * checkConnection
- * 
+ *
  * Takes a host and port to check if a connection exists.
  * This is done, by using net.connect and listening for the 'connect' or 'error' event.
- * 
+ *
  * @param {Object} config - Config object for function to run.
  * @param {string} config.host - Host to use.
  * @param {string} config.port - Port to use.
@@ -39,10 +40,10 @@ function checkConnection({ host, port }) {
 
 /**
  * waitForConnection
- * 
+ *
  * Keeps waiting for a connection to get established.
  * Since this long-polling solution never times out, 'waitForConnectionWithTimeout' should be preferred.
- * 
+ *
  * @param {Object} config - Config object for function to run.
  * @param {string} config.host - Host to use.
  * @param {string} config.port - Port to use.
@@ -59,9 +60,9 @@ async function waitForConnection({ host, port }) {
 
 /**
  * waitForConnectionWithTimeout
- * 
+ *
  * Keeps waiting for a connection to get established, until it times out.
- * 
+ *
  * @param {Object} config - Config object for function to run.
  * @param {string} config.host - Host to use.
  * @param {string} config.port - Port to use.
@@ -82,16 +83,18 @@ async function waitForConnectionWithTimeout({ host, port }) {
 
 /**
  * connect
- * 
+ *
  * Function that waits for all ports to be connected.
  * It expects a workloads.config.json file to be passed in as a 'DATA' env.
  */
 async function connect() {
-  if (!process.env.DATA) {
+  const { data } = getArguments({ args: process.argv });
+
+  if (!data) {
     throw Error("No data file passed in!");
   }
 
-  const { ports } = JSON.parse(fs.readFileSync(process.env.DATA, "utf-8"));
+  const { ports } = JSON.parse(fs.readFileSync(data, "utf-8"));
 
   const hosts = [...getLocalHosts()];
   // just using one local host value for now

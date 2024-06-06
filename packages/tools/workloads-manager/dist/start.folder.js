@@ -3,18 +3,18 @@ const path = require("path");
 const chalk = require("chalk");
 const express = require("express");
 
-const { findDirectoriesByName } = require("./utils");
+const { findDirectoriesByName, getArguments } = require("./utils");
 const { checkPort, getLocalHosts } = require("./ports");
 
 /**
  * createApp
- * 
+ *
  * Creates an express server, which serves workloads in a nested structure.
- * 
+ *
  * Example:
  * localhost/news-site-next
  * localhost/news-site-nuxt
- * 
+ *
  * @param {Object} config - Config object for function to run.
  * @param {Object} config.workloads - Workloads from workloads.config.json file.
  * @param {string} config.start - Start folder to use for discovering workloads folders.
@@ -26,7 +26,7 @@ async function createApp({ workloads, start }) {
   const app = express();
 
   for (const workload of workloads) {
-    const { name } = workload;
+    const { name, distDirectory = "/dist" } = workload;
 
     const results = await findDirectoriesByName({
       start,
@@ -35,7 +35,7 @@ async function createApp({ workloads, start }) {
     });
 
     const directory = results[0];
-    app.use(`/${name}`, express.static(`${directory}/dist`));
+    app.use(`/${name}`, express.static(`${directory}${distDirectory}`));
   }
 
   return app;
@@ -49,13 +49,13 @@ async function start() {
   // We're starting from the root directory of the monorepo.
   const start = "../../../";
 
-  if (!process.env.DATA) {
+  const { data } = getArguments({ args: process.argv });
+
+  if (!data) {
     throw Error("No data file passed in!");
   }
 
-  const { workloads, ports } = JSON.parse(
-    fs.readFileSync(process.env.DATA, "utf-8")
-  );
+  const { workloads, ports } = JSON.parse(fs.readFileSync(data, "utf-8"));
 
   // prevents warning: MaxListenersExceededWarning: Possible EventEmitter memory leak detected.
   process.setMaxListeners(ports.length);

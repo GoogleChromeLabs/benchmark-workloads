@@ -14,7 +14,7 @@ export default function ArticleMap({ map, mapClass, meta }) {
     return (
         <>
             <div className={mapClass}>
-                <GoogleMapsEmbed apiKey="" width="100%" mode={map.mode} q={map.q}/>
+                <GoogleMapsEmbed apiKey={process.env.NEXT_PUBLIC_GOOGLE_API_KEY} width="100%" mode={map.mode} q={map.q}/>
                 <ArticleTag tag={meta?.tag} />
             </div>
             <ArticleText textClass={styles["article-map-captions"]} text={meta?.captions} />

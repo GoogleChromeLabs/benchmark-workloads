@@ -9,6 +9,8 @@ export default function ArticleVideo({ video, videoClass, meta }) {
     if (!video)
         return null;
 
+    document.body.style.setProperty("--video-aspect-ratio", video.width / video.height);
+
     return (
         <>
             <div className={videoClass}>

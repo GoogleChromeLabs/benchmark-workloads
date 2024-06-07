@@ -5,6 +5,7 @@ import ArticleImage from "./article-image";
 import ArticleText from "./article-text";
 import ArticleContent from "./article-content";
 import ArticleVideo from "./article-video";
+import ArticleMap from "./article-map";
 
 import layoutStyles from "news-site-css/dist/layout.module.css";
 import articleStyles from "news-site-css/dist/article.module.css";
@@ -16,7 +17,15 @@ export default function Article({ article }) {
             <section className={articleStyles["article-body"]}>
                 { article.image
                     ? <ArticleImage imageClass={articleStyles["article-image-container"]} image={article.image} meta={article.meta} />
-                    : <ArticleVideo videoClass={articleStyles["article-video-container"]} video={article.video} meta={article.meta} />
+                    : null
+                }
+                { article.video
+                    ? <ArticleVideo videoClass={articleStyles["article-video-container"]} video={article.video} meta={article.meta} />
+                    : null
+                }
+                { article.map
+                    ? <ArticleMap mapClass={articleStyles["article-map-container"]} map={article.map} meta={article.meta} />
+                    : null
                 }
                 <ArticleText textClass={classNames(articleStyles["article-title"], "truncate-singleline")} text={article.title} type="h3" />
                 <ArticleContent type={article.type} content={article.content} display={article.display} />

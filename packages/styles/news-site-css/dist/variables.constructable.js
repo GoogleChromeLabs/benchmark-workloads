@@ -44,6 +44,8 @@ sheet.replaceSync(`:root {
     --icon-size-medium: 28px;
     --icon-size-small: 24px;
     --icon-size-tiny: 16px;
+    --map-aspect-ratio: 1/1;
+    --video-aspect-ratio: 1/1;
 
         --font-size-small: 12px;
     --font-size-medium: 16px;

@@ -49,7 +49,7 @@ export const content = {
                         class: "columns-3-wide",
                         header: "More top stories",
                         url: "#",
-                        image: {
+                        /* image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
                             width: "1280",
@@ -57,6 +57,16 @@ export const content = {
                         },
                         meta: {
                             captions: "Photo taken by someone.",
+                            tag: {
+                                type: "breaking",
+                                label: "breaking",
+                            },
+                        }, */
+                        video: {
+                            id: "z-8vVxz-If0"
+                        },
+                        meta: {
+                            captions: "Video of something important",
                             tag: {
                                 type: "breaking",
                                 label: "breaking",

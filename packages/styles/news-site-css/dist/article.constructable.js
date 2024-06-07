@@ -214,6 +214,21 @@ sheet.replaceSync(`.article-header {
 }
 
 
+.article-video-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    flex-shrink: 0;
+    position: relative;
+    background-color: var(--theme-image-placeholder);
+}
+
+.article-video-captions {
+    font-size: var(--font-size-small);
+    margin-top: var(--content-spacing-xsmall);
+}
+
 @media (forced-colors: active) {
     .article-image-tag {
         border: var(--high-contrast-small-border);

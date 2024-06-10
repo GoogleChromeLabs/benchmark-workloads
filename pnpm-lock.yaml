@@ -85,8 +85,6 @@ importers:
         specifier: ^9.0.0
         version: 9.0.1
 
-  apps/news-site/news-site-next/output: {}
-
   apps/news-site/news-site-nuxt:
     dependencies:
       benchmark-connector:
@@ -187,8 +185,6 @@ importers:
       uuid:
         specifier: ^9.0.0
         version: 9.0.1
-
-  aurora/third-parties/news-site-next-third-party-capital/output: {}
 
   packages/plugins/rollup-constructable-css:
     devDependencies:

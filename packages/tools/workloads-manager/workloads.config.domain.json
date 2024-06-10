@@ -12,6 +12,11 @@
             "domain": "*.workloads.com"
         },
         { 
+            "name": "news-site-next-third-parties",
+            "type": "static",
+            "domain": "*.workloads.com"
+        },
+        { 
             "name": "todomvc-web-components",
             "type": "static",
             "domain": "*.workloads.com"

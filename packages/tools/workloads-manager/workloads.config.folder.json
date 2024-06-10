@@ -10,6 +10,10 @@
             "type":"static"
         },
         { 
+            "name": "news-site-next-third-parties",
+            "type":"static"
+        },
+        { 
             "name": "todomvc-web-components",
             "type":"static"
         }

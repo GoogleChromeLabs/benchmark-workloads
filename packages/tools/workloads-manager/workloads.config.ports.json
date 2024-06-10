@@ -11,6 +11,11 @@
             "port": 8087
         },
         { 
+            "name": "news-site-next-third-parties",
+            "type": "static",
+            "port": 8088
+        },
+        { 
             "name": "todomvc-web-components",
             "type": "static",
             "port": 8099

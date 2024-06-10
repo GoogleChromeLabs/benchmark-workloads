@@ -49,19 +49,6 @@ export const content = {
                         class: "columns-3-wide",
                         header: "More top stories",
                         url: "#",
-                        /* image: {
-                            src: "placeholder_light.jpg",
-                            alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
-                        },
-                        meta: {
-                            captions: "Photo taken by someone.",
-                            tag: {
-                                type: "breaking",
-                                label: "breaking",
-                            },
-                        }, */
                         video: {
                             id: "z-8vVxz-If0",
                             width: "1280",
@@ -160,15 +147,6 @@ export const content = {
                         id: "cd53f511-0251-4fb0-ae85-9ad228551dd6",
                         class: "columns-3-balanced",
                         header: "Around the Globe",
-                        /* image: {
-                            src: "placeholder_light.jpg",
-                            alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
-                        },
-                        meta: {
-                            captions: "Photo taken by someone.",
-                        }, */
                         map: {
                             q: "Brooklyn+Bridge,New+York,NY",
                             mode: "place",

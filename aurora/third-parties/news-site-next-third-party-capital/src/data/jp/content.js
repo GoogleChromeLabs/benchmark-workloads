@@ -49,12 +49,6 @@ export const content = {
                         class: "columns-3-wide",
                         header: "より多くのトップストーリー",
                         url: "#",
-                        /* image: {
-                            src: "placeholder_light.jpg",
-                            alt: "プレースホルダー",
-                            width: "1280",
-                            height: "720",
-                        }, */
                         video: {
                             id: "z-8vVxz-If0",
                             width: "1280",
@@ -153,12 +147,6 @@ export const content = {
                         id: "cd53f511-0251-4fb0-ae85-9ad228551dd6",
                         class: "columns-3-balanced",
                         header: "世界中に",
-                        /* image: {
-                            src: "placeholder_light.jpg",
-                            alt: "プレースホルダー",
-                            width: "1280",
-                            height: "720",
-                        }, */
                         map: {
                             q: "Brooklyn+Bridge,New+York,NY",
                             mode: "place",

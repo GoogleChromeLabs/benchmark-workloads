@@ -28,7 +28,7 @@ importers:
         specifier: ^7.6.2
         version: 7.6.2
 
-  apps/aurora/third-parties/news-site-next-tpc:
+  apps/aurora/third-parties/news-site-next-third-party-capital:
     dependencies:
       '@babel/eslint-parser':
         specifier: ^7.22.5
@@ -88,7 +88,7 @@ importers:
         specifier: ^9.0.0
         version: 9.0.1
 
-  apps/aurora/third-parties/news-site-next-tpc/output: {}
+  apps/aurora/third-parties/news-site-next-third-party-capital/output: {}
 
   apps/news-site/news-site-next:
     dependencies:

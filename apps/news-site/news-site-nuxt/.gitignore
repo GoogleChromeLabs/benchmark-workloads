@@ -19,3 +19,6 @@ node_modules
 
 # output for dynamic builds
 output
+
+# env variables
+.env

@@ -131,7 +131,7 @@ importers:
         specifier: workspace:*
         version: link:../../../packages/tools/app-build-scripts
 
-  aurora/third-parties/news-site-next:
+  aurora/third-parties/news-site-next-third-party-capital:
     dependencies:
       '@babel/eslint-parser':
         specifier: ^7.22.5
@@ -188,7 +188,7 @@ importers:
         specifier: ^9.0.0
         version: 9.0.1
 
-  aurora/third-parties/news-site-next/output: {}
+  aurora/third-parties/news-site-next-third-party-capital/output: {}
 
   packages/plugins/rollup-constructable-css:
     devDependencies:

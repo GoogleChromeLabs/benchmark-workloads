@@ -1065,9 +1065,8 @@ export const content = {
                         class: "columns-3-wide",
                         header: "今日起こっています",
                         url: "#",
-                        image: {
-                            src: "placeholder_light.jpg",
-                            alt: "プレースホルダー",
+                        video: {
+                            id: "z-8vVxz-If0",
                             width: "1280",
                             height: "720",
                         },
@@ -2013,9 +2012,9 @@ export const content = {
                         class: "columns-3-balanced",
                         header: "アフリカ",
                         url: "#",
-                        image: {
-                            src: "placeholder_light.jpg",
-                            alt: "プレースホルダー",
+                        map: {
+                            q: "Brooklyn+Bridge,New+York,NY",
+                            mode: "place",
                             width: "1280",
                             height: "720",
                         },

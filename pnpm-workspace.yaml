@@ -1,5 +1,6 @@
 packages:
   # applications
   - 'apps/**/*'
+  - 'aurora/**/*'
   # packages
   - 'packages/**/*'

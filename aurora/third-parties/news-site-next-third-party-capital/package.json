@@ -11,7 +11,7 @@
         "prepare": "node node_modules/benchmark-connector/dist/prepare.min.js",
         "dev": "npm run prepare && next dev",
         "build": "npm run prepare && next build",
-        "build:static": "npm run prepare && TARGET=static next build && TARGET=static-base BASE='/news-site-next' next build",
+        "build:static": "npm run prepare && TARGET=static next build && TARGET=static-base BASE='/news-site-next-third-party-capital' next build",
         "start": "next start",
         "start:static": "http-server ./dist -c-1 --cors --silent",
         "lint": "next lint",

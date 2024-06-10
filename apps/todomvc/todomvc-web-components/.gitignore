@@ -9,10 +9,10 @@ node_modules
 
 # next.js
 .next
-output
 
 # nuxt
 .nuxt
+.output
 
 # aurora-workloads
 .workloads

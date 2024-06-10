@@ -46,6 +46,8 @@
     --icon-size-medium: 28px;
     --icon-size-small: 24px;
     --icon-size-tiny: 16px;
+    --map-aspect-ratio: 1/1;
+    --video-aspect-ratio: 1/1;
 
     /* fonts */
     --font-size-small: 12px;

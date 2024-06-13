@@ -214,6 +214,45 @@ sheet.replaceSync(`.article-header {
 }
 
 
+.article-video-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    flex-shrink: 0;
+    position: relative;
+    background-color: var(--theme-image-placeholder);
+    aspect-ratio: var(--video-aspect-ratio);
+}
+
+.article-video-captions {
+    font-size: var(--font-size-small);
+    margin-top: var(--content-spacing-xsmall);
+}
+
+.article-map-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    flex-shrink: 0;
+    position: relative;
+    background-color: var(--theme-image-placeholder);
+}
+
+.article-map-container > div {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-grow: 1;
+    aspect-ratio: var(--map-aspect-ratio);
+}
+
+.article-map-captions {
+    font-size: var(--font-size-small);
+    margin-top: var(--content-spacing-xsmall);
+}
+
 @media (forced-colors: active) {
     .article-image-tag {
         border: var(--high-contrast-small-border);

@@ -48,6 +48,8 @@
     --icon-size-medium: 28px;
     --icon-size-small: 24px;
     --icon-size-tiny: 16px;
+    --map-aspect-ratio: 1/1;
+    --video-aspect-ratio: 1/1;
 
     /* fonts */
     --font-size-small: 12px;
@@ -2052,6 +2054,45 @@ img::after {
 }
 
 /* article-list end */
+
+.article-video-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    flex-shrink: 0;
+    position: relative;
+    background-color: var(--theme-image-placeholder);
+    aspect-ratio: var(--video-aspect-ratio);
+}
+
+.article-video-captions {
+    font-size: var(--font-size-small);
+    margin-top: var(--content-spacing-xsmall);
+}
+
+.article-map-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    flex-shrink: 0;
+    position: relative;
+    background-color: var(--theme-image-placeholder);
+}
+
+.article-map-container > div {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-grow: 1;
+    aspect-ratio: var(--map-aspect-ratio);
+}
+
+.article-map-captions {
+    font-size: var(--font-size-small);
+    margin-top: var(--content-spacing-xsmall);
+}
 
 /* High Contrast / Forced-Colors: */
 @media (forced-colors: active) {

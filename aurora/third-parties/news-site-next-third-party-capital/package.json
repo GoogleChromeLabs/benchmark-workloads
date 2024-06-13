@@ -23,6 +23,7 @@
     "dependencies": {
         "@babel/eslint-parser": "^7.22.5",
         "@babel/plugin-proposal-decorators": "^7.22.5",
+        "@next/third-parties": "^14.2.3",
         "@typescript-eslint/eslint-plugin": "^5.60.1",
         "benchmark-connector": "workspace: *",
         "classnames": "^2.3.2",

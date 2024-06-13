@@ -49,9 +49,8 @@ export const content = {
                         class: "columns-3-wide",
                         header: "المزيد من القصص العليا",
                         url: "#",
-                        image: {
-                            src: "placeholder_light.jpg",
-                            alt: "عنصر نائب",
+                        video: {
+                            id: "z-8vVxz-If0",
                             width: "1280",
                             height: "720",
                         },
@@ -149,9 +148,9 @@ export const content = {
                         id: "cd53f511-0251-4fb0-ae85-9ad228551dd6",
                         class: "columns-3-balanced",
                         header: "حول العالم",
-                        image: {
-                            src: "placeholder_light.jpg",
-                            alt: "عنصر نائب",
+                        map: {
+                            q: "Brooklyn+Bridge,New+York,NY",
+                            mode: "place",
                             width: "1280",
                             height: "720",
                         },
@@ -1068,9 +1067,8 @@ export const content = {
                         class: "columns-3-wide",
                         header: "يحدث اليوم",
                         url: "#",
-                        image: {
-                            src: "placeholder_light.jpg",
-                            alt: "عنصر نائب",
+                        video: {
+                            id: "z-8vVxz-If0",
                             width: "1280",
                             height: "720",
                         },
@@ -2016,9 +2014,9 @@ export const content = {
                         class: "columns-3-balanced",
                         header: "أفريقيا",
                         url: "#",
-                        image: {
-                            src: "placeholder_light.jpg",
-                            alt: "عنصر نائب",
+                        map: {
+                            q: "Brooklyn+Bridge,New+York,NY",
+                            mode: "place",
                             width: "1280",
                             height: "720",
                         },

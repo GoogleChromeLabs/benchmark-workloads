@@ -1,6 +1,7 @@
 # The Daily Broadcast
 
 ## Description
+
 This app is a news-site built with [Nuxt](https://nuxt.com/). It utilizes the [News Site Template](https://github.com/flashdesignory/news-site-template) as the basis for styling and functionality.
 
 ## Local Development

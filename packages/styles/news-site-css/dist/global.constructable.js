@@ -123,5 +123,8 @@ body {
     height: 100%;
     overflow-x: hidden;
 }
-`);
+
+iframe {
+    height: 100%;
+}`);
 export default sheet;

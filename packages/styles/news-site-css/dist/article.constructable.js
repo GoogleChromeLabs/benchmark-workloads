@@ -240,7 +240,8 @@ sheet.replaceSync(`.article-header {
     background-color: var(--theme-image-placeholder);
 }
 
-.article-map-container > div {
+.article-map-container > div,
+.article-map-container > iframe {
     display: flex;
     width: 100%;
     height: auto;

@@ -49,9 +49,8 @@ export const content = {
                         class: "columns-3-wide",
                         header: "より多くのトップストーリー",
                         url: "#",
-                        image: {
-                            src: "placeholder_light.jpg",
-                            alt: "プレースホルダー",
+                        video: {
+                            id: "z-8vVxz-If0",
                             width: "1280",
                             height: "720",
                         },
@@ -148,9 +147,9 @@ export const content = {
                         id: "cd53f511-0251-4fb0-ae85-9ad228551dd6",
                         class: "columns-3-balanced",
                         header: "世界中に",
-                        image: {
-                            src: "placeholder_light.jpg",
-                            alt: "プレースホルダー",
+                        map: {
+                            q: "Brooklyn+Bridge,New+York,NY",
+                            mode: "place",
                             width: "1280",
                             height: "720",
                         },
@@ -1066,9 +1065,8 @@ export const content = {
                         class: "columns-3-wide",
                         header: "今日起こっています",
                         url: "#",
-                        image: {
-                            src: "placeholder_light.jpg",
-                            alt: "プレースホルダー",
+                        video: {
+                            id: "z-8vVxz-If0",
                             width: "1280",
                             height: "720",
                         },
@@ -2014,9 +2012,9 @@ export const content = {
                         class: "columns-3-balanced",
                         header: "アフリカ",
                         url: "#",
-                        image: {
-                            src: "placeholder_light.jpg",
-                            alt: "プレースホルダー",
+                        map: {
+                            q: "Brooklyn+Bridge,New+York,NY",
+                            mode: "place",
                             width: "1280",
                             height: "720",
                         },

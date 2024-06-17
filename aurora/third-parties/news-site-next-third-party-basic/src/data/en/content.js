@@ -49,14 +49,13 @@ export const content = {
                         class: "columns-3-wide",
                         header: "More top stories",
                         url: "#",
-                        image: {
-                            src: "placeholder_light.jpg",
-                            alt: "Placeholder",
+                        video: {
+                            id: "z-8vVxz-If0",
                             width: "1280",
                             height: "720",
                         },
                         meta: {
-                            captions: "Photo taken by someone.",
+                            captions: "Video of something important",
                             tag: {
                                 type: "breaking",
                                 label: "breaking",
@@ -148,14 +147,14 @@ export const content = {
                         id: "cd53f511-0251-4fb0-ae85-9ad228551dd6",
                         class: "columns-3-balanced",
                         header: "Around the Globe",
-                        image: {
-                            src: "placeholder_light.jpg",
-                            alt: "Placeholder",
+                        map: {
+                            q: "Brooklyn+Bridge,New+York,NY",
+                            mode: "place",
                             width: "1280",
                             height: "720",
                         },
                         meta: {
-                            captions: "Photo taken by someone.",
+                            captions: "Place where something happened",
                         },
                         title: "Nunc felis tellus, ultrices eget massa ac, lobortis laoreet lorem.",
                         type: "list",
@@ -1064,14 +1063,13 @@ export const content = {
                         class: "columns-3-wide",
                         header: "Happening Today",
                         url: "#",
-                        image: {
-                            src: "placeholder_light.jpg",
-                            alt: "Placeholder",
+                        video: {
+                            id: "z-8vVxz-If0",
                             width: "1280",
                             height: "720",
                         },
                         meta: {
-                            captions: "Photo taken by someone.",
+                            captions: "Video of something important",
                             tag: {
                                 type: "breaking",
                                 label: "breaking",
@@ -2015,14 +2013,14 @@ export const content = {
                         class: "columns-3-balanced",
                         header: "Africa",
                         url: "#",
-                        image: {
-                            src: "placeholder_light.jpg",
-                            alt: "Placeholder",
+                        map: {
+                            q: "Brooklyn+Bridge,New+York,NY",
+                            mode: "place",
                             width: "1280",
                             height: "720",
                         },
                         meta: {
-                            captions: "Photo taken by someone.",
+                            captions: "Place where something happened",
                         },
                         title: "Sed id semper risus in hendrerit gravida. Sagittis orci a scelerisque purus semper eget duis at tellus.",
                         type: "text",

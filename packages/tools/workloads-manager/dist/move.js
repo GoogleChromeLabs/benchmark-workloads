@@ -44,7 +44,7 @@ async function copyDirectory(src, dest) {
  * @param {string} config.output - Output folder to use.
  */
 async function moveWorkload({ workload, start, output }) {
-  // Name of the root directory - "aurora-workloads".
+  // Name of the root directory - "benchmark-workloads".
   const root = path.basename(path.resolve(start));
 
   const { name, distDirectory = "/dist" } = workload;
@@ -76,10 +76,10 @@ async function moveWorkloads() {
 
   /**
    * Location of the output folder, where all workloads get moved to.
-   * If an OUTPUT was passed in that's located inside the aurora-workloads repo, please ensure that the OUTPUT gets added to the exclude list, when searching for directories:
+   * If an OUTPUT was passed in that's located inside the benchmark-workloads repo, please ensure that the OUTPUT gets added to the exclude list, when searching for directories:
    * ./utils.js / excludeList
    *
-   * IF no OUTPUT was passed in, the default location is a folder called '.workloads' in the root of the repository ('aurora-workloads/.workloads').
+   * IF no OUTPUT was passed in, the default location is a folder called '.workloads' in the root of the repository ('benchmark-workloads/.workloads').
    */
   let outputName = output ?? `${start}.workloads`;
 

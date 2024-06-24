@@ -21,7 +21,7 @@ const startScripts = {
 async function start() {
   // We're starting from the root directory of the monorepo.
   const start = "../../../";
-  // Name of the root directory - "aurora-workloads".
+  // Name of the root directory - "benchmark-workloads".
   const root = path.basename(path.resolve(start));
 
   const { data } = getArguments({ args: process.argv });

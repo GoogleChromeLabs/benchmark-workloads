@@ -21,7 +21,7 @@ const { checkPort, getLocalHosts } = require("./ports");
  * @returns The main express app to use.
  */
 async function createApp({ workloads, start }) {
-  // Name of the root directory - "aurora-workloads".
+  // Name of the root directory - "benchmark-workloads".
   const root = path.basename(path.resolve(start));
   const app = express();
 

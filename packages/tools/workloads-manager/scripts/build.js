@@ -15,7 +15,7 @@ async function build() {
   const target = "package.json";
   // We're starting from the root directory of the monorepo.
   const start = "../../../";
-  // Name of the root directory - "aurora-workloads".
+  // Name of the root directory - "benchmark-workloads".
   const root = path.basename(path.resolve(start));
   // build to run (build, build:static, ect..).
   const { type } = getArguments({ args: process.argv }) ?? "static";

@@ -14,7 +14,7 @@ node_modules
 .nuxt
 .output
 
-# aurora-workloads
+# benchmark-workloads
 .workloads
 
 # output for dynamic builds

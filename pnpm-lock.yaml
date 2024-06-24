@@ -246,8 +246,6 @@ importers:
         specifier: ^9.0.0
         version: 9.0.1
 
-  aurora/third-parties/news-site-next-third-party-capital/output: {}
-
   packages/plugins/rollup-constructable-css:
     devDependencies:
       '@rollup/plugin-terser':

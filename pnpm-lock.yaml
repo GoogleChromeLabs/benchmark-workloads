@@ -246,6 +246,19 @@ importers:
         specifier: ^9.0.0
         version: 9.0.1
 
+  examples/hello-world:
+    dependencies:
+      benchmark-connector:
+        specifier: 'workspace: *'
+        version: link:../../packages/tools/benchmark-connector
+      http-server:
+        specifier: ^14.1.1
+        version: 14.1.1
+    devDependencies:
+      app-build-scripts:
+        specifier: workspace:*
+        version: link:../../packages/tools/app-build-scripts
+
   packages/plugins/rollup-constructable-css:
     devDependencies:
       '@rollup/plugin-terser':

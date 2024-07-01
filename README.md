@@ -216,7 +216,12 @@ pnpm -F todomvc-css build
 
 ### Tools
 
-Tools that are used by workloads or benchmarks.
+Tools that are used by workloads or benchmarks. Workloads can install these packages, by following this formula: `pnpm add [PACKAGE_NAME] -F [WORKLOAD_NAME] --workspace`.
+Example, installing `news-site-css` in the `news-site-next` workload from the root of the monorepo:
+
+```bash
+pnpm add news-site-css -F news-site-next --workspace
+```
 
 #### app-build-scripts
 
@@ -237,23 +242,6 @@ Enables communication between benchmarks and workloads.
 ```bash
 pnpm -F benchmark-connector format
 pnpm -F benchmark-connector build
-```
-
-#### big-dom-generator
-
-Used to generate a complex dom for todomvc apps.
-
-```bash
-pnpm -F big-dom-generator build
-```
-
-#### sanitize-language
-
-Utility to remove words from output files that should be ommited.
-
-```bash
-pnpm -F sanitize-language format
-pnpm -F sanitize-language build
 ```
 
 #### workloads-manager

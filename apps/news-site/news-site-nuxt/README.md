@@ -1,5 +1,9 @@
 # The Daily Broadcast
 
+## Link
+
+[https://news-site-nuxt-static.netlify.app/](https://news-site-nuxt-static.netlify.app/)
+
 ## Description
 
 This app is a news-site built with [Nuxt](https://nuxt.com/). It utilizes the [News Site Template](https://github.com/flashdesignory/news-site-template) as the basis for styling and functionality.

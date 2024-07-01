@@ -21,6 +21,7 @@ This repo is set up as a monorepo with the following folder structure:
     - [News Site](#news-site)
     - [TodoMVC](#todomvc)
  - [Packages](#packages)
+    - [Installing local packages](#installing-local-packages)
     - [Plugins](#plugins)
       - [Rollup Constructable CSS](#rollup-constructable-css)
       - [Rollup Copy Files](#rollup-copy-files)
@@ -178,6 +179,16 @@ pnpm run format:packages
 pnpm run build:packages
 ```
 
+### Installing local packages
+
+Workloads can install these packages, by following this formula: `pnpm add [PACKAGE_NAME] -F [WORKLOAD_NAME] --workspace`.
+
+Example, installing `news-site-css` in the `news-site-next` workload from the root of the monorepo:
+
+```bash
+pnpm add news-site-css -F news-site-next --workspace
+```
+
 ### Plugins
 
 Various plugins for bundlers.
@@ -216,12 +227,7 @@ pnpm -F todomvc-css build
 
 ### Tools
 
-Tools that are used by workloads or benchmarks. Workloads can install these packages, by following this formula: `pnpm add [PACKAGE_NAME] -F [WORKLOAD_NAME] --workspace`.
-Example, installing `news-site-css` in the `news-site-next` workload from the root of the monorepo:
-
-```bash
-pnpm add news-site-css -F news-site-next --workspace
-```
+Tools that are used by workloads or benchmarks.
 
 #### app-build-scripts
 

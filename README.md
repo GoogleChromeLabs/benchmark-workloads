@@ -5,11 +5,13 @@ This repo is set up as a monorepo with the following folder structure:
 
 -   `apps`: Main directory for boilerplate apps.
 -   `aurora`: Team folder for Chrome Aurora.
+-   `documents`: Miscellaneous documents, relevant to this repo.
 -   `packages`: Reusable utilities that can be consumed by workloads or benchmarks.
 
  **Table of content:**
 
  - [Development](#development)
+    - [Setup local development](#setup-local-development)
     - [How to run a workload](#how-to-run-a-workload)
     - [How to run default workloads](#how-to-run-default-workloads)
     - [Available workload scripts](#available-workload-scripts)
@@ -30,6 +32,8 @@ This repo is set up as a monorepo with the following folder structure:
       - [Workloads Manager](#workloads-manager)
 
 ## Development
+
+### Setup local development
 
 This monorepo is managed by [pnpm](https://pnpm.io/). In order to develop or test locally, please ensure that pnpm is installed on your machine.
 

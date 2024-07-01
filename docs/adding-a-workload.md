@@ -37,15 +37,15 @@ There are two main ways that team specific workloads can be added:
 
 The package.json file needs to include the following keys:
 
-`name`: A unique name for the workload.
-`engines`: contains node and npm version.
-`prepare`: script that ensures the benchmark-connector script is included.
-`dev`: script that starts a development server.
-`build`: script that should be used for a server build.
-`build`:static: script that outputs a static build.
-`start`: script that starts a production server, using the server build.
-`start:static`: script that starts a production server, using the static build.
-`format`:  script that runs eslint and prettier.
+- `name`: A unique name for the workload.
+- `engines`: contains node and npm version.
+- `prepare`: script that ensures the benchmark-connector script is included.
+- `dev`: script that starts a development server.
+- `build`: script that should be used for a server build.
+- `build`:static: script that outputs a static build.
+- `start`: script that starts a production server, using the server build.
+- `start:static`: script that starts a production server, using the static build.
+- `format`:  script that runs eslint and prettier.
 
 ```json
 {

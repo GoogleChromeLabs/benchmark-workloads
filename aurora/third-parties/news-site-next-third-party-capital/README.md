@@ -8,6 +8,10 @@ News Site, with additional [third-party-capital](https://github.com/GoogleChrome
 - Politics Page (/politics): Features Google Analytics
 - Business Page (/business): Features Google Tag Manager
 
+## Link
+
+[https://news-site-next-third-party-capital.netlify.app/](https://news-site-next-third-party-capital.netlify.app/)
+
 ## Description
 
 This app is a news-site built with [Next.js](https://nextjs.org/). It utilizes the [News Site Template](https://github.com/flashdesignory/news-site-template) as the basis for styling and functionality.

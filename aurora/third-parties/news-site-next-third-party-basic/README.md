@@ -8,6 +8,10 @@ News Site, with additional third parties.
 - Politics Page (/politics): Features Google Analytics
 - Business Page (/business): Features Google Tag Manager
 
+## Link
+
+[https://news-site-next-third-party-basic.netlify.app/](https://news-site-next-third-party-basic.netlify.app/)
+
 ## Description
 
 This app is a news-site built with [Next.js](https://nextjs.org/). It utilizes the [News Site Template](https://github.com/flashdesignory/news-site-template) as the basis for styling and functionality.

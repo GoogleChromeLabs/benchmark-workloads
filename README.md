@@ -17,6 +17,7 @@ This repo is set up as a monorepo with the following folder structure:
     - [Available workload scripts](#available-workload-scripts)
     - [Workload-Benchmark communication](#workload-benchmark-communication)
     - [How to build all workloads](#how-to-build-all-workloads)
+    - [Adding a new workload](./docs/adding-a-workload.md)
  - [Workloads](#workloads)
     - [News Site](#news-site)
     - [TodoMVC](#todomvc)
@@ -46,7 +47,7 @@ npm install -g pnpm
 
 For troubleshooting, refer to this [guide](https://pnpm.io/installation).
 
-Once pnpm is available, the following script installs all dependencies for all projects:
+Install dependencies:
 
 ```bash
 pnpm install

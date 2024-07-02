@@ -1,17 +1,17 @@
 {
     "ports": [8081],
     "workloads": [
-        { 
+        {
             "name": "news-site-next",
-            "type":"static"
+            "type": "static"
         },
         {
             "name": "news-site-nuxt",
-            "type":"static"
+            "type": "static"
         },
-        { 
+        {
             "name": "todomvc-web-components",
-            "type":"static"
+            "type": "static"
         }
     ]
 }

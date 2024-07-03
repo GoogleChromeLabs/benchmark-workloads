@@ -18,6 +18,9 @@ async function copyFile(src, dest) {
   await fs.copyFile(src, dest);
 }
 
+/**
+ * copyConfig
+ */
 async function copyConfig() {
     const { src, dest } = getArguments({ args: process.argv });
   

@@ -2,6 +2,10 @@
 
 Simple Example Workload
 
+## Link
+
+[https://benchmark-workloads-hello-world.netlify.app/](https://benchmark-workloads-hello-world.netlify.app/)
+
 ## Development
 
 ```bash

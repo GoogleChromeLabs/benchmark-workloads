@@ -1,5 +1,6 @@
 <script setup>
-import { inject, onMounted, ref } from "vue";
+import { inject } from "vue";
+import { useLocalStorage } from "#imports";
 import styles from "news-site-css/dist/dialog.module.css";
 
 const { onClose } = defineProps({
@@ -8,16 +9,11 @@ const { onClose } = defineProps({
 
 const { settings } = inject("data");
 
-const reduceMotion = ref(false);
-const highContrast = ref(false);
-
-onMounted(() => {
-    reduceMotion.value = document.documentElement.classList.contains("reduced-motion");
-    highContrast.value = document.documentElement.classList.contains("forced-colors");
-});
+const [reduceMotion, setReduceMotion] = useLocalStorage("news-site-settings-reduced-motion", false);
+const [highContrast, setHighContrast] = useLocalStorage("news-site-settings-high-contrast", false);
 
 function toggleMotion(e) {
-    reduceMotion.value = e.target.checked;
+    setReduceMotion(e.target.checked);
 
     if (e.target.checked)
         document.documentElement.classList.add("reduced-motion");
@@ -26,7 +22,7 @@ function toggleMotion(e) {
 }
 
 function toggleContrast(e) {
-    highContrast.value = e.target.checked;
+    setHighContrast(e.target.checked);
 
     if (e.target.checked)
         document.documentElement.classList.add("forced-colors");

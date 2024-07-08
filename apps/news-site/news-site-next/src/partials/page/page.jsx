@@ -6,10 +6,27 @@ import Section from "../section/section";
 import Toast from "@/components/toast/toast";
 
 import { useDataContext } from "@/context/data-context";
+import { useLocalStorage } from "@/hooks/use-local-storage";
 
 export default function Page({ id }) {
     const [showPortal, setShowPortal] = useState(false);
     const { content } = useDataContext();
+
+    /** assign app settings from local storage */
+    const [reduceMotion] = useLocalStorage("news-site-settings-reduced-motion", false);
+    const [highContrast] = useLocalStorage("news-site-settings-high-contrast", false);
+
+    useEffect(() => {
+        if (reduceMotion)
+            document.documentElement.classList.add("reduced-motion");
+        else
+            document.documentElement.classList.remove("reduced-motion");
+
+        if (highContrast)
+            document.documentElement.classList.add("forced-colors");
+        else
+            document.documentElement.classList.remove("forced-colors");
+    }, []);
 
     useEffect(() => {
         setShowPortal(content[id].notification);

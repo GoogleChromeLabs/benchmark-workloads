@@ -1,5 +1,6 @@
 <script setup>
 import { inject, onMounted, ref } from "vue";
+import { useLocalStorage } from "#imports";
 
 const { id } = defineProps({
     id: String
@@ -7,8 +8,22 @@ const { id } = defineProps({
 const { content } = inject("data");
 const showPortal = ref(false);
 
+/** assign app settings from local storage */
+const [reduceMotion] = useLocalStorage("news-site-settings-reduced-motion", false);
+const [highContrast] = useLocalStorage("news-site-settings-high-contrast", false);
+
 onMounted(() => {
     showPortal.value = content[id].notification ? true : false;
+
+    if (reduceMotion)
+        document.documentElement.classList.add("reduced-motion");
+    else
+        document.documentElement.classList.remove("reduced-motion");
+
+    if (highContrast)
+        document.documentElement.classList.add("forced-colors");
+    else
+        document.documentElement.classList.remove("forced-colors");
 });
 
 function closePortal() {

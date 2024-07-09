@@ -3,7 +3,10 @@ function run() {
     const ad = document.querySelector("#ad");
     const frames = [...ad.querySelectorAll(".frame")];
 
-    frames.forEach(frame => frame.classList.remove("show"))
+    const canvas = document.getElementById("js-confetti-canvas");
+    const jsConfetti = new JSConfetti({ canvas });
+
+    frames.forEach((frame) => frame.classList.remove("show"));
 
     const replay = document.querySelector("#replay");
     replay.addEventListener("click", () => {
@@ -12,9 +15,8 @@ function run() {
 
     const button = document.querySelector("#action");
     action.addEventListener("click", () => {
-        const jsConfetti = new JSConfetti()
-        jsConfetti.addConfetti()
-    })
+        jsConfetti.addConfetti();
+    });
 
     let animationIndex = 0;
     let frameDelay = 2000;
@@ -67,18 +69,18 @@ function run() {
 }
 
 function start() {
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const newAd = ad.cloneNode(true);
-            document.body.replaceChildren();
-            document.body.append(newAd);
-            run();
-          }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const newAd = ad.cloneNode(true);
+                document.body.replaceChildren();
+                document.body.append(newAd);
+                run();
+            }
         });
-      });
-      
-    observer.observe(document.querySelector('#ad'));
+    });
+
+    observer.observe(document.querySelector("#ad"));
 }
 
 function setSize() {
@@ -86,8 +88,8 @@ function setSize() {
     const w = urlParams.get("w")?.toLowerCase();
     const h = urlParams.get("h")?.toLowerCase();
     if (w & h) {
-        document.documentElement.style.setProperty('--adWidth', `${w}px`);
-        document.documentElement.style.setProperty('--adHeight', `${h}px`);
+        document.documentElement.style.setProperty("--adWidth", `${w}px`);
+        document.documentElement.style.setProperty("--adHeight", `${h}px`);
     }
 }
 

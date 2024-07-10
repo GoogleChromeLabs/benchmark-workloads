@@ -1,4 +1,4 @@
-import { runWorkloadTest, BenchmarkTestStep, BenchmarkTestSuite, sleep } from "./workload-testing-utils.min.js";
+import { runWorkloadTest, BenchmarkTestStep, BenchmarkTestSuite, BenchmarkTestSuites, sleep } from "./workload-testing-utils.min.js";
 
 const suites = [
     new BenchmarkTestSuite("Navigation", [
@@ -27,28 +27,9 @@ const suites = [
     ]),
 ];
 
-// should we use an array, to support multiple?
-// right now it's either all or just one.
-// window.run(["DropDown", "Navigation"])
-window.run = async function (name = "all") {
-    if (name === "all") {
-        for (const suite of suites) {
-            console.log(`Starting ${suite.name} test.`);
-            await suite.run();
-            console.log(`Completed ${suite.name} test.`);
-        }
-
-        return "Done with all tests!";
-    }
-
-    const suite = suites.find((suite) => suite.name === name);
-    if (!suite) {
-        console.error(`No suite with the name of ${name} found!`);
-        return "Done!";
-    }
-
-    console.log(`Starting ${suite.name} test.`);
-    await suite.run();
-    console.log(`Completed ${suite.name} test.`);
-    return "Done!";
-};
+/*
+await window.suites.run(["Navigation", "Dropdown"]);
+await window.suites.run(["Dropdown"]);
+await window.suites.run();
+*/
+window.suites = new BenchmarkTestSuites(window.name, suites);

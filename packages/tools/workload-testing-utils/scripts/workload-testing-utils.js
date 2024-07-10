@@ -19,10 +19,30 @@ export class BenchmarkTestSuite {
     }
 }
 
+export class BenchmarkTestSuites {
+  constructor(name, suites) {
+    this.name = name;
+    this.suites = suites;
+  }
+
+  async run(suitesToRun) {
+    console.log(`Starting tests for ${this.name}`);
+    const selectedSuites = !suitesToRun ? [...this.suites] : this.suites.filter(suite => suitesToRun.includes(suite.name));
+
+    for (const suite of selectedSuites) {
+        console.log(`Starting ${suite.name} test.`);
+        await suite.run();
+        console.log(`Completed ${suite.name} test.`);
+    }
+
+    return `Done with tests for ${this.name}`;
+  }
+}
+
 export function runWorkloadTest(test) {
   return new Promise((resolve) => {
     test();
-    setTimeout(() => resolve({ type: "workload-test-complete" }), 0);
+    setTimeout(() => resolve(), 0);
   });
 }
 

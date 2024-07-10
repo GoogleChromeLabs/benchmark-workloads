@@ -1,4 +1,4 @@
-import { runWorkloadTest, BenchmarkTestStep, BenchmarkTestSuite, sleep } from "./workload-testing-utils.min.js";
+import { runWorkloadTest, BenchmarkTestStep, BenchmarkTestSuite, BenchmarkTestSuites, sleep } from "./workload-testing-utils.min.js";
 
 const suites = [
     new BenchmarkTestSuite("Navigation", [
@@ -15,7 +15,7 @@ const suites = [
             await sleep(1000);
         }),
     ]),
-    new BenchmarkTestSuite("More Dropdown", [
+    new BenchmarkTestSuite("Dropdown", [
         new BenchmarkTestStep("Toggle More Dropdown", async () => {
             await runWorkloadTest(() => document.querySelector("#navbar-dropdown-toggle").click());
             await sleep(1000);
@@ -27,25 +27,9 @@ const suites = [
     ]),
 ];
 
-window.run = async function (name = "all") {
-    if (name === "all") {
-        for (const suite of suites) {
-            console.log(`Starting ${suite.name} test.`);
-            await suite.run();
-            console.log(`Completed ${suite.name} test.`);
-        }
-
-        return "Done with all tests!";
-    }
-
-    const suite = suites.find((suite) => suite.name === name);
-    if (!suite) {
-        console.error(`No suite with the name of ${name} found!`);
-        return "Done!";
-    }
-
-    console.log(`Starting ${suite.name} test.`);
-    await suite.run();
-    console.log(`Completed ${suite.name} test.`);
-    return "Done!";
-};
+/*
+await window.suites.run(["Navigation", "Dropdown"]);
+await window.suites.run(["Dropdown"]);
+await window.suites.run();
+*/
+window.suites = new BenchmarkTestSuites(window.name, suites);

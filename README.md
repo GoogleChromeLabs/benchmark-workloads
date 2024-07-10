@@ -7,6 +7,7 @@ This repo is set up as a monorepo with the following folder structure:
 -   `aurora`: Team folder for Chrome Aurora.
 -   `documents`: Miscellaneous documents, relevant to this repo.
 -   `packages`: Reusable utilities that can be consumed by workloads or benchmarks.
+-   `ui-widgets`: Small apps that can get embedded into a workload.
 
  **Table of content:**
 

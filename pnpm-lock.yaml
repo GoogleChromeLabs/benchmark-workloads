@@ -28,19 +28,6 @@ importers:
         specifier: ^7.6.2
         version: 7.6.2
 
-  apps/ad-campaigns/ad-css-animations:
-    dependencies:
-      benchmark-connector:
-        specifier: 'workspace: *'
-        version: link:../../../packages/tools/benchmark-connector
-      http-server:
-        specifier: ^14.1.1
-        version: 14.1.1
-    devDependencies:
-      app-build-scripts:
-        specifier: workspace:*
-        version: link:../../../packages/tools/app-build-scripts
-
   apps/news-site/news-site-next:
     dependencies:
       '@babel/eslint-parser':
@@ -489,6 +476,19 @@ importers:
       rollup-plugin-cleaner:
         specifier: ^1.0.0
         version: 1.0.0(rollup@3.29.4)
+
+  ui-widgets/ad-campaigns/ad-css-animations:
+    dependencies:
+      benchmark-connector:
+        specifier: 'workspace: *'
+        version: link:../../../packages/tools/benchmark-connector
+      http-server:
+        specifier: ^14.1.1
+        version: 14.1.1
+    devDependencies:
+      app-build-scripts:
+        specifier: workspace:*
+        version: link:../../../packages/tools/app-build-scripts
 
 packages:
 

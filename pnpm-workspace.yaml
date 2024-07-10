@@ -3,5 +3,6 @@ packages:
   - 'apps/**/*'
   - 'aurora/**/*'
   - 'examples/**/*'
+  - 'ui-widgets/**/*'
   # packages
   - 'packages/**/*'

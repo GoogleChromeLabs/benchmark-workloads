@@ -1,5 +1,4 @@
 function run() {
-    console.log("run()");
     const ad = document.querySelector("#ad");
     const frames = [...ad.querySelectorAll(".frame")];
 
@@ -23,9 +22,7 @@ function run() {
 
     function handleFrameAnimationsComplete() {
         animationIndex++;
-        if (frames[animationIndex] === undefined) {
-            console.log("all done");
-        } else {
+        if (frames[animationIndex] !== undefined) {
             setTimeout(
                 () => frames[animationIndex].classList.add("show"),
                 frameDelay

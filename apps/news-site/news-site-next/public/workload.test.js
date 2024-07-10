@@ -15,7 +15,7 @@ const suites = [
             await sleep(1000);
         }),
     ]),
-    new BenchmarkTestSuite("More Dropdown", [
+    new BenchmarkTestSuite("Dropdown", [
         new BenchmarkTestStep("Toggle More Dropdown", async () => {
             await runWorkloadTest(() => document.querySelector("#navbar-dropdown-toggle").click());
             await sleep(1000);
@@ -27,6 +27,9 @@ const suites = [
     ]),
 ];
 
+// should we use an array, to support multiple?
+// right now it's either all or just one.
+// window.run(["DropDown", "Navigation"])
 window.run = async function (name = "all") {
     if (name === "all") {
         for (const suite of suites) {

@@ -1,6 +1,11 @@
 import { runWorkloadTest, BenchmarkTestStep, BenchmarkTestSuite, BenchmarkTestSuites, sleep } from "./workload-testing-utils.min.js";
 
-const suites = [
+/*
+await window.suites.run(["Navigation", "Dropdown"]);
+await window.suites.run(["Dropdown"]);
+await window.suites.run();
+*/
+window.suites = new BenchmarkTestSuites(window.name, [
     new BenchmarkTestSuite("Navigation", [
         new BenchmarkTestStep("Navigate to US page", async () => {
             await runWorkloadTest(() => document.querySelector("#navbar-navlist-us-link").click());
@@ -25,11 +30,4 @@ const suites = [
             await sleep(1000);
         }),
     ]),
-];
-
-/*
-await window.suites.run(["Navigation", "Dropdown"]);
-await window.suites.run(["Dropdown"]);
-await window.suites.run();
-*/
-window.suites = new BenchmarkTestSuites(window.name, suites);
+]);

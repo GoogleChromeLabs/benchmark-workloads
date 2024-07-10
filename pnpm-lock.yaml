@@ -84,6 +84,9 @@ importers:
       uuid:
         specifier: ^9.0.0
         version: 9.0.1
+      workload-testing-utils:
+        specifier: 'workspace: *'
+        version: link:../../../packages/tools/workload-testing-utils
 
   apps/news-site/news-site-next/output: {}
 

@@ -39,10 +39,10 @@ export class BenchmarkTestSuites {
   }
 }
 
-export function runWorkloadTest(test) {
+export function runWorkloadTest(test, delay = 0) {
   return new Promise((resolve) => {
     test();
-    setTimeout(() => resolve(), 0);
+    setTimeout(() => resolve(), delay);
   });
 }
 

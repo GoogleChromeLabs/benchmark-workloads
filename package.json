@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "format:packages": "pnpm -F './packages/**' format",
-    "build:apps": "pnpm -F './apps/**' build:static",
+    "build:apps": "pnpm -F './apps/**' build",
+    "build:apps:static": "pnpm -F './apps/**' build:static",
     "build:packages": "pnpm -F './packages/**' build",
     "move:apps": "pnpm -F workloads-manager move:default --output='../../../.workloads'",
     "move:apps:desktop": "pnpm -F workloads-manager move:default --output='~/Desktop/workloads'",

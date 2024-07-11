@@ -26,3 +26,10 @@ Run the default test suites
 ```
 await window.suites.run();
 ```
+
+A global delay can get set, to delay each test step by a certain amount of time:
+
+```
+window.testStepDelay = 1000;
+await window.suites.run();
+```

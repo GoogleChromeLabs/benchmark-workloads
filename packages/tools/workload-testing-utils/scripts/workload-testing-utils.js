@@ -60,10 +60,10 @@ export class BenchmarkTestSuites {
  * A function that wraps a test function in a promise.
  * 
  * @param {*} test - A function that performs an interaction in the app.
- * @param {*} delay - An optional delay, which can be used to slow down interaction steps.
  * @return {Promise} A promise to ensure test runs wait for test functions to complete.
  */
-export function runWorkloadTest(test, delay = 0) {
+export function runWorkloadTest(test) {
+  const delay = window.testStepDelay ?? 0;
   return new Promise((resolve) => {
     test();
     setTimeout(() => resolve(), delay);

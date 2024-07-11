@@ -1,6 +1,6 @@
 # Workload-testing-utils
 
-Several utilities to enable consisten interaction testing in workloads.\
+Several utilities to enable consistent interaction testing in workloads.
 A workload contains one `workload.test.js` file that uses the `workload-testing-utils` library to enable the execution of its own interaction tests.
 
 -   The `workload.test.js` file uses a `BenchmarkTestSuites` instance that contains one or more `BenchmarkTestSuite` instances,

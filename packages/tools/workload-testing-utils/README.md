@@ -4,7 +4,7 @@ Several utilities to enable consistent interaction testing in workloads.
 A workload contains one `workload.test.js` file that uses the `workload-testing-utils` library to enable the execution of its own interaction tests.
 
 -   The `workload.test.js` file uses a `BenchmarkTestSuites` instance that contains one or more `BenchmarkTestSuite` instances,
--   Each `BenchmarkTestSuite` contains one ore more `BenchmarkTestStep`, which represents one or more interactions on the workload.
+-   Each `BenchmarkTestSuite` contains one or more `BenchmarkTestStep`, which represents one or more interactions on the workload.
 -   Each interaction is executed through the `runWorkloadTest` function, which wraps a DOM interaction in a promise.
 
 With this setup, each workload can run its own tests:

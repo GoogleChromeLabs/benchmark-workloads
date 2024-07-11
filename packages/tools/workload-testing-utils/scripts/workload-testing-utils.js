@@ -1,3 +1,8 @@
+/**
+ * BenchmarkTestStep
+ * 
+ * A single test step, with a common interface to interact with.
+ */
 export class BenchmarkTestStep {
   constructor(name, fn) {
       this.name = name;
@@ -5,6 +10,11 @@ export class BenchmarkTestStep {
   }
 }
 
+/**
+ * BenchmarkTestSuite
+ * 
+ * A single test suite that contains one or more test steps.
+ */
 export class BenchmarkTestSuite {
   constructor(name, tests) {
     this.name = name;
@@ -19,6 +29,11 @@ export class BenchmarkTestSuite {
     }
 }
 
+/**
+ * BenchmarkTestSuites
+ * 
+ * A collection of test suites for a single workload.
+ */
 export class BenchmarkTestSuites {
   constructor(name, suites) {
     this.name = name;
@@ -39,13 +54,18 @@ export class BenchmarkTestSuites {
   }
 }
 
+/**
+ * runWorkloadTest
+ * 
+ * A function that wraps a test function in a promise.
+ * 
+ * @param {*} test - A function that performs an interaction in the app.
+ * @param {*} delay - An optional delay, which can be used to slow down interaction steps.
+ * @return {Promise} A promise to ensure test runs wait for test functions to complete.
+ */
 export function runWorkloadTest(test, delay = 0) {
   return new Promise((resolve) => {
     test();
     setTimeout(() => resolve(), delay);
   });
-}
-
-export function sleep(delay) {
-  return new Promise((resolve) => setTimeout(() => resolve(), delay));
 }

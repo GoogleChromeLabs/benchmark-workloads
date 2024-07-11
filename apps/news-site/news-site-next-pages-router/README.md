@@ -1,5 +1,9 @@
 # The Daily Broadcast
 
+## Note
+
+This workload does not support static builds and relies on a node server to be able to run properly.
+
 ## Link
 
 [https://news-site-next-static.netlify.app/](https://news-site-next-static.netlify.app/)

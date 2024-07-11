@@ -56,7 +56,7 @@ const build = async () => {
         await updateImports({ files, src, dest });
     }
 
-    console.log("done!!");
+    console.log("Done with building!");
 };
 
 build();

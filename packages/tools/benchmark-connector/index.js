@@ -1,1 +1,1 @@
-console.log("benchmark connector")
+console.log("benchmark connector");

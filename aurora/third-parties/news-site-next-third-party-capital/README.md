@@ -16,7 +16,7 @@ News Site, with additional [third-party-capital](https://github.com/GoogleChrome
 
 This app is a news-site built with [Next.js](https://nextjs.org/). It utilizes the [News Site Template](https://github.com/flashdesignory/news-site-template) as the basis for styling and functionality.
 
-## Changes (compared to News-Site-Next):
+## Changes (compared to [News-Site-Next](../../../apps/news-site/news-site-next/README.md)):
 
 ### Content
 

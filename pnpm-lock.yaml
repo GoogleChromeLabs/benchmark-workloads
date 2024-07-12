@@ -88,6 +88,8 @@ importers:
         specifier: 'workspace: *'
         version: link:../../../packages/tools/workload-testing-utils
 
+  apps/news-site/news-site-next-pages-router/output: {}
+
   apps/news-site/news-site-next/output: {}
 
   apps/news-site/news-site-nuxt:

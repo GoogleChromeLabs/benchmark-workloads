@@ -69,3 +69,15 @@ export function runWorkloadTest(test) {
     setTimeout(() => resolve(), delay);
   });
 }
+
+/**
+ * forceLayout
+ */
+
+export function forceLayout() {
+  return new Promise((resolve) => {
+    const rect = document.body.getBoundingClientRect();
+    const e = document.elementFromPoint((rect.width / 2) | 0, (rect.height / 2) | 0);
+    resolve(e);
+  });
+}

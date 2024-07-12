@@ -30,11 +30,11 @@ export class BenchmarkTestSuite {
 }
 
 /**
- * BenchmarkTestSuites
+ * BenchmarkTestManager
  * 
  * A collection of test suites for a single workload.
  */
-export class BenchmarkTestSuites {
+export class BenchmarkTestManager {
   constructor(name, suites) {
     this.name = name;
     this.suites = suites;

@@ -71,13 +71,22 @@ export function runWorkloadTest(test) {
 }
 
 /**
- * forceLayout
+ * forceLayoutWaitFor
  */
 
-export function forceLayout() {
+export function forceLayoutWaitFor() {
   return new Promise((resolve) => {
     const rect = document.body.getBoundingClientRect();
     const e = document.elementFromPoint((rect.width / 2) | 0, (rect.height / 2) | 0);
     resolve(e);
   });
+}
+
+/**
+ * foreLayout;
+ */
+export function forceLayout() {
+  const rect = document.body.getBoundingClientRect();
+  const e = document.elementFromPoint((rect.width / 2) | 0, (rect.height / 2) | 0);
+  return e;
 }

@@ -88,8 +88,6 @@ importers:
         specifier: 'workspace: *'
         version: link:../../../packages/tools/workload-testing-utils
 
-  apps/news-site/news-site-next-pages-router/output: {}
-
   apps/news-site/news-site-next-pages-router:
     dependencies:
       '@babel/eslint-parser':

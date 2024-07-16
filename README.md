@@ -73,11 +73,17 @@ pnpm -F workloads-manager start
 
 ### Available Workload scripts
 
-The following scripts are currently supported by all workloads:
+The following scripts are currently supported:
 
+For static workloads:
 - `dev`: Run a workload in dev mode locally.
 - `build:static`: Bundles all necessary files and copies them into a `dist` folder.
 - `start:static`: Starts a node server to serve files from the `dist` folder.
+
+For server-based workloads:
+- `dev`: Run a workload in dev mode locally.
+- `build`: Bundles all necessary files and copies them into a `output` folder.
+- `start`: Starts a node server to serve files from the `output` folder.
 
 These scripts can be used either by opening a terminal in each workloads directory itself, or from the root of this repo.
 

@@ -44,52 +44,55 @@ window.addEventListener("popstate", function (event) {
  * The appId is build by appending name-version
  * It's used as an additional safe-guard to ensure the correct app responds to a message.
  *************************************************************************/
-
-const appId =
-  window.name && window.version ? `${window.name}-${window.version}` : -1;
+const appId = window.name && window.version ? `${window.name}-${window.version}` : -1;
 
 window.onmessage = async (event) => {
   // ensure we only let legit functions run...
-  if (event.data.id !== appId || event.data.type !== "benchmark-connector")
+  if (event.data.id !== appId || event.data.key !== "benchmark-connector")
     return;
 
-  const { name } = event.data;
-
-  // if a test function was received from a message, the app will attempt to run the test and report back the results.
-  const testFunction = new Function(`return ${event.data.fn}`)();
-  if (testFunction) {
-    requestAnimationFrame(() => {
-      performance.mark(`${name}-start`);
-    });
-    requestAnimationFrame(async () => {
-      await testFunction();
-      setTimeout(() => {
-        performance.mark(`${name}-end`);
-        performance.measure(`${name}`, {
-          start: `${name}-start`,
-          end: `${name}-end`,
-        });
-        const result = JSON.stringify(
-          performance.getEntriesByName(`${name}`)[0]
-        );
-        window.top.postMessage(
-          { type: "test-completed", status: "success", result },
-          "*"
-        );
-      }, 0);
-    });
+  switch(event.data.type) {
+    case "benchmark-test-step":
+        window.benchmarkTestManager.getSuiteByName(event.data.test).getTestByName(event.data.step).run();
+        sendMessage({ type: "test-complete", status: "success", appId });
+        break;
+    case "benchmark-test-function":
+        // eslint-disable-next-line no-case-declarations
+        const testFunction = new Function(`return ${event.data.fn}`)();
+        if (testFunction) {
+            requestAnimationFrame(() => {
+                performance.mark(`${event.data.step}-start`);
+            });
+            requestAnimationFrame(async () => {
+                await testFunction();
+                setTimeout(() => {
+                    performance.mark(`${event.data.step}-end`);
+                    performance.measure(`${event.data.step}`, {
+                        start: `${event.data.step}-start`,
+                        end: `${event.data.step}-end`,
+                    });
+                    const result = JSON.stringify(
+                    performance.getEntriesByName(`${event.data.step}`)[0]);
+                    window.top.postMessage({ type: "test-complete", status: "success", appId, result },"*");
+                }, 0);
+            });
+        }
   }
 };
 
-window.requestAnimationFrame(() => {
-  setTimeout(() => {
-    setTimeout(() => {
-      window.top.postMessage(
-        { type: "app-ready", status: "success", appId },
-        "*"
-      );
-    }, 0);
-  }, 0);
-});
+function sendMessage(message) {
+    window.requestAnimationFrame(() => {
+        setTimeout(() => {
+          setTimeout(() => {
+            window.top.postMessage(
+              message,
+              "*"
+            );
+          }, 0);
+        }, 0);
+      });
+}
+
+sendMessage({ type: "app-ready", status: "success", appId });
 
 console.log(`Hello, benchmark connector for ${appId} is ready!`);

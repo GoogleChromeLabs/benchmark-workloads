@@ -1,9 +1,7 @@
 const fs = require("fs").promises;
 const { dirname } = require("path");
 
-const {
-  getArguments,
-} = require("./utils");
+const { getArguments } = require("./utils");
 
 /**
  * copyFile
@@ -22,19 +20,19 @@ async function copyFile(src, dest) {
  * copyConfig
  */
 async function copyConfig() {
-    const { src, dest } = getArguments({ args: process.argv });
-  
-    if (!src) {
-      throw Error("No source file passed in!");
-    }
-  
-    if (!dest) {
-        throw Error("No output file passed in")
-    }
+  const { src, dest } = getArguments({ args: process.argv });
 
-    await copyFile(src, dest);
-  
-    console.log("Done!");
+  if (!src) {
+    throw Error("No source file passed in!");
   }
-  
-  copyConfig();
+
+  if (!dest) {
+    throw Error("No output file passed in");
+  }
+
+  await copyFile(src, dest);
+
+  console.log("Done!");
+}
+
+copyConfig();

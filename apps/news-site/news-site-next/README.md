@@ -29,7 +29,7 @@ The footer contains persistent navigation links, including sub-section links, th
 
 ### Sidebar Navigation
 
-The `sattelite icon` in the header opens a sidebar that contains persistent navigation links, including sub-section links, that directly navigate to a page's section on click.
+The `satellite icon` in the header opens a sidebar that contains persistent navigation links, including sub-section links, that directly navigate to a page's section on click.
 
 ### Settings Modal
 

@@ -1,4 +1,4 @@
-# The Daily Broadcast
+# News Site Next (Pages Router) - The Daily Broadcast
 
 ## Link
 
@@ -12,7 +12,7 @@ This app is a news-site built with [Nuxt](https://nuxt.com/). It utilizes the [N
 
 ### Routing
 
-Routing is done through a `hash router`, which ensures that full functionality is possible with static builds.
+Routing is done through a `page router`, which ensures that full functionality is possible with static builds.
 
 ### Navigation Bar
 

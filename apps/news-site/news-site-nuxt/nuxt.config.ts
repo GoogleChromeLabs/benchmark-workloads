@@ -29,6 +29,7 @@ const baseConfig = {
     router: {
         options: {
             hashMode: true,
+            scrollBehaviorType: "smooth"
         },
     },
     app: {

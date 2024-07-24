@@ -1,4 +1,4 @@
-# The Daily Broadcast
+# News Site Nuxt - The Daily Broadcast
 
 ## Link
 

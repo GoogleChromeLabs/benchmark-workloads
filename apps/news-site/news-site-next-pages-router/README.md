@@ -1,4 +1,4 @@
-# The Daily Broadcast
+# News Site Next (Pages Router) - The Daily Broadcast
 
 **_NOTE:_** This workload does not support static builds and relies on a node server to be able to run properly.
 

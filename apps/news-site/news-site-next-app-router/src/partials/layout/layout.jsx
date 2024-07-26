@@ -11,14 +11,14 @@ import { useDataContext } from "@/context/data-context";
 import { Message } from "@/components/message/message";
 
 import styles from "news-site-css/dist/layout.module.css";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/navigation";
 
 export default function Layout({ children, id }) {
     const [showMessage, setShowMessage] = useState(false);
     const { content, links } = useDataContext();
-    const router = useRouter();
+    // const router = useRouter();
 
-    function handleRouteChangeComplete(url) {
+    /* function handleRouteChangeComplete(url) {
         window.dispatchEvent(new CustomEvent("route-change-complete", { detail: { url } }));
     }
 
@@ -26,7 +26,7 @@ export default function Layout({ children, id }) {
         router.events.on("routeChangeComplete", handleRouteChangeComplete);
 
         return () => router.events.off("routeChangeComplete", handleRouteChangeComplete);
-    }, []);
+    }, []); */
 
     useEffect(() => {
         setShowMessage(content[id].message);

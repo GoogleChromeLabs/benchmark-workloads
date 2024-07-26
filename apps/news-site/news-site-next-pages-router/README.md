@@ -14,7 +14,7 @@ This app is a news-site built with [Next.js](https://nextjs.org/). It utilizes t
 
 ### Routing
 
-Routing is done through a `pages router`, which ensures that full functionality is possible with static builds.
+Routing is done through a `pages router`.
 
 ### Navigation Bar
 

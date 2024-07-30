@@ -341,6 +341,9 @@ importers:
       uuid:
         specifier: ^9.0.0
         version: 9.0.1
+      workload-testing-utils:
+        specifier: 'workspace: *'
+        version: link:../../../packages/tools/workload-testing-utils
 
   aurora/third-parties/news-site-next-third-party-basic/output: {}
 
@@ -403,6 +406,9 @@ importers:
       uuid:
         specifier: ^9.0.0
         version: 9.0.1
+      workload-testing-utils:
+        specifier: 'workspace: *'
+        version: link:../../../packages/tools/workload-testing-utils
 
   examples/hello-world:
     dependencies:

@@ -1,4 +1,4 @@
-# News Site Next (Pages Router) - The Daily Broadcast
+# News Site Next (App Router) - The Daily Broadcast
 
 **_NOTE:_** This workload does not support static builds and relies on a node server to be able to run properly.
 
@@ -14,7 +14,7 @@ This app is a news-site built with [Next.js](https://nextjs.org/). It utilizes t
 
 ### Routing
 
-Routing is done through a `pages router`.
+Routing is done through a `app router`.
 
 ### Navigation Bar
 

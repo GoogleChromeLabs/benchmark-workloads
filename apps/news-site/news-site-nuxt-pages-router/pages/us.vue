@@ -5,6 +5,10 @@ useHead({
         {
             src: "./benchmark-connector.min.js",
             tagPosition: "bodyClose",
+        },
+        {
+            src: "./workload.test.js",
+            tagPosition: "bodyClose",
         }
     ],
 });

@@ -15,6 +15,7 @@ export default function App() {
                 <Page id="politics" />
             </DataContextProvider>
             <Script src="./benchmark-connector.min.js" />
+            <Script src="./workload.test.js" type="module"/>
         </>
     );
 }

@@ -277,6 +277,9 @@ importers:
       todomvc-css:
         specifier: workspace:*
         version: link:../../../packages/styles/todomvc-css
+      workload-testing-utils:
+        specifier: 'workspace: *'
+        version: link:../../../packages/tools/workload-testing-utils
     devDependencies:
       app-build-scripts:
         specifier: workspace:*

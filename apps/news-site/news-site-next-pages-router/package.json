@@ -8,7 +8,7 @@
     },
     "private": true,
     "scripts": {
-        "prepare": "node node_modules/benchmark-connector/dist/prepare.min.js",
+        "prepare": "node node_modules/benchmark-connector/dist/prepare.min.js & node node_modules/workload-testing-utils/dist/prepare.min.js",
         "dev": "npm run prepare && next dev",
         "build": "npm run prepare && next build",
         "start": "next start",

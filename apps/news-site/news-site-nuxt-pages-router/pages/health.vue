@@ -8,6 +8,7 @@ useHead({
         },
         {
             src: "./workload.test.js",
+            type: "module",
             tagPosition: "bodyClose",
         }
     ],

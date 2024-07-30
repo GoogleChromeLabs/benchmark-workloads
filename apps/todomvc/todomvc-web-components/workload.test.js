@@ -1,4 +1,5 @@
 import { BenchmarkTestStep, BenchmarkTestSuite, BenchmarkTestManager } from "./workload-testing-utils.min.js";
+import { getTodoText } from "./todomvc-testing-utils.min.js";
 
 const numberOfItemsToAdd = 100;
 
@@ -7,7 +8,7 @@ window.benchmarkTestManager = new BenchmarkTestManager(window.name, [
         new BenchmarkTestStep("Adding items", () => {
             const input = document.querySelector("todo-app").shadowRoot.querySelector("todo-topbar").shadowRoot.querySelector(".new-todo-input");
             for (let i = 0; i < numberOfItemsToAdd; i++) {
-                input.value = "hi";
+                input.value = getTodoText(i);
                 input.dispatchEvent(new Event("input"));
                 input.dispatchEvent(new KeyboardEvent("keyup", { keyCode: 13, key: "Enter"}));
             }

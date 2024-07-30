@@ -38,9 +38,16 @@ async function copyFile(src, dest) {
  *
  */
 async function prepare() {
-  const hostDirectory = process.env.HOST ?? "public";
-  await deleteFile(`${hostDirectory}/workload-testing-utils.min.js`);
-  await copyFile("node_modules/workload-testing-utils/dist/workload-testing-utils.min.js", `${hostDirectory}/workload-testing-utils.min.js`)
+  const moduleDirectory = process.env.MODULE ?? "node_modules/workload-testing-utils/dist/";
+  const hostDirectory = process.env.HOST ?? "public/";
+  const filesString = process.env.FILES ?? "workload-testing-utils.min.js";
+
+  const files = filesString.split(",");
+
+  for (const file of files) {
+    await deleteFile(`${hostDirectory}${file}`);
+    await copyFile(`${moduleDirectory}${file}`, `${hostDirectory}${file}`);
+  }
   
   console.log("Done with preparation!");
 }

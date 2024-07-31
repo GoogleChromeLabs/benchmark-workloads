@@ -8,7 +8,7 @@
     },
     "private": true,
     "scripts": {
-        "prepare": "node node_modules/benchmark-connector/dist/prepare.min.js",
+        "prepare": "node node_modules/benchmark-connector/dist/prepare.min.js & node node_modules/workload-testing-utils/dist/prepare.min.js",
         "dev": "npm run prepare && nuxt dev",
         "build": "npm run prepare && nuxt build",
         "start": "nuxt preview",
@@ -28,6 +28,7 @@
     "dependencies": {
         "benchmark-connector": "workspace: *",
         "http-server": "^14.1.1",
-        "news-site-css": "workspace:*"
+        "news-site-css": "workspace:*",
+        "workload-testing-utils": "workspace: *"
     }
 }

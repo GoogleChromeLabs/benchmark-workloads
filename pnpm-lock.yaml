@@ -138,8 +138,13 @@ importers:
       uuid:
         specifier: ^9.0.0
         version: 9.0.1
+      workload-testing-utils:
+        specifier: 'workspace: *'
+        version: link:../../../packages/tools/workload-testing-utils
 
   apps/news-site/news-site-next-app-router/output: {}
+
+  apps/news-site/news-site-next-app-router/output/types: {}
 
   apps/news-site/news-site-next-pages-router:
     dependencies:
@@ -191,6 +196,9 @@ importers:
       uuid:
         specifier: ^9.0.0
         version: 9.0.1
+      workload-testing-utils:
+        specifier: 'workspace: *'
+        version: link:../../../packages/tools/workload-testing-utils
 
   apps/news-site/news-site-next-pages-router/output: {}
 
@@ -207,6 +215,9 @@ importers:
       news-site-css:
         specifier: workspace:*
         version: link:../../../packages/styles/news-site-css
+      workload-testing-utils:
+        specifier: 'workspace: *'
+        version: link:../../../packages/tools/workload-testing-utils
     devDependencies:
       '@nuxt/eslint-config':
         specifier: ^0.1.1
@@ -235,6 +246,9 @@ importers:
       news-site-css:
         specifier: workspace:*
         version: link:../../../packages/styles/news-site-css
+      workload-testing-utils:
+        specifier: 'workspace: *'
+        version: link:../../../packages/tools/workload-testing-utils
     devDependencies:
       '@nuxt/eslint-config':
         specifier: ^0.1.1
@@ -263,6 +277,9 @@ importers:
       todomvc-css:
         specifier: workspace:*
         version: link:../../../packages/styles/todomvc-css
+      workload-testing-utils:
+        specifier: 'workspace: *'
+        version: link:../../../packages/tools/workload-testing-utils
     devDependencies:
       app-build-scripts:
         specifier: workspace:*
@@ -324,6 +341,9 @@ importers:
       uuid:
         specifier: ^9.0.0
         version: 9.0.1
+      workload-testing-utils:
+        specifier: 'workspace: *'
+        version: link:../../../packages/tools/workload-testing-utils
 
   aurora/third-parties/news-site-next-third-party-basic/output: {}
 
@@ -386,6 +406,9 @@ importers:
       uuid:
         specifier: ^9.0.0
         version: 9.0.1
+      workload-testing-utils:
+        specifier: 'workspace: *'
+        version: link:../../../packages/tools/workload-testing-utils
 
   examples/hello-world:
     dependencies:
@@ -395,6 +418,9 @@ importers:
       http-server:
         specifier: ^14.1.1
         version: 14.1.1
+      workload-testing-utils:
+        specifier: 'workspace: *'
+        version: link:../../packages/tools/workload-testing-utils
     devDependencies:
       app-build-scripts:
         specifier: workspace:*
@@ -652,6 +678,9 @@ importers:
       http-server:
         specifier: ^14.1.1
         version: 14.1.1
+      workload-testing-utils:
+        specifier: 'workspace: *'
+        version: link:../../../packages/tools/workload-testing-utils
     devDependencies:
       app-build-scripts:
         specifier: workspace:*

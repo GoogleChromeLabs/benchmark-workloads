@@ -152,6 +152,16 @@
     transform: rotate(90deg);
 }
 
+.clickthrough {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 /* 970x250 */
 @media (width: 970px) and (height: 250px) {
    #tower {

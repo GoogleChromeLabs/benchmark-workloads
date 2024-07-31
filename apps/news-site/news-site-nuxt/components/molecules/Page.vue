@@ -1,6 +1,6 @@
 <script setup>
 import { inject, onMounted, ref } from "vue";
-import { useLocalStorage } from "#imports";
+import { useLocalStorage, useHead } from "#imports";
 
 import { useRoute } from "vue-router";
 
@@ -25,6 +25,20 @@ onMounted(() => {
         document.documentElement.classList.add("forced-colors");
     else
         document.documentElement.classList.remove("forced-colors");
+});
+
+useHead({
+    script: [
+        {
+            src: "./benchmark-connector.min.js",
+            tagPosition: "bodyClose",
+        },
+        {
+            src: "./workload.test.js",
+            type: "module",
+            tagPosition: "bodyClose",
+        }
+    ],
 });
 
 function closePortal() {

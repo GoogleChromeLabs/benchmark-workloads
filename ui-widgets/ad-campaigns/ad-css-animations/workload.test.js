@@ -1,6 +1,14 @@
-import { BenchmarkTestStep, BenchmarkTestSuite, BenchmarkTestManager, forceLayout } from "./workload-testing-utils.min.js";
+import { BenchmarkTestStep, BenchmarkTestSuite, BenchmarkTestManager } from "./workload-testing-utils.min.js";
 
-console.log(BenchmarkTestManager);
-console.log(BenchmarkTestStep);
-console.log(BenchmarkTestSuite);
-console.log(forceLayout);
+window.benchmarkTestManager = new BenchmarkTestManager(window.name, [
+    new BenchmarkTestSuite("Ad", [
+        new BenchmarkTestStep("Clickthrough", () => {
+            const button = document.querySelector(".clickthrough");
+            button.click();
+        }),
+        new BenchmarkTestStep("Action", () => {
+            const button = document.querySelector("#action");
+            button.click();
+        }),
+    ])
+]);

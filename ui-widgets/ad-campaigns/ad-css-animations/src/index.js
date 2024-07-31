@@ -5,6 +5,17 @@ function run() {
     const canvas = document.getElementById("js-confetti-canvas");
     const jsConfetti = new JSConfetti({ canvas });
 
+    let animationIndex = 0;
+    const frameDelay = 2000;
+    const lastFrame = frames.length - 1;
+
+    const clickthroughs = document.querySelectorAll(".clickthrough");
+    clickthroughs.forEach(element => element.addEventListener("click", () => {
+        frames[animationIndex]?.classList.remove("show");
+        animationIndex = lastFrame;
+        frames[animationIndex]?.classList.add("show");
+    }))
+
     frames.forEach((frame) => frame.classList.remove("show"));
 
     const replay = document.querySelector("#replay");
@@ -12,13 +23,9 @@ function run() {
         start();
     });
 
-    const button = document.querySelector("#action");
     action.addEventListener("click", () => {
         jsConfetti.addConfetti();
     });
-
-    let animationIndex = 0;
-    let frameDelay = 2000;
 
     function handleFrameAnimationsComplete() {
         animationIndex++;

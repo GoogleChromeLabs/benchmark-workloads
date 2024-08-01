@@ -1,13 +1,15 @@
-import { BenchmarkTestStep, BenchmarkTestSuite, BenchmarkTestManager } from "./workload-testing-utils.min.js";
+import { BenchmarkTestStep, BenchmarkTestSuite, BenchmarkTestManager, Page } from "./workload-testing-utils.min.js";
+
+const page = new Page(document);
 
 window.benchmarkTestManager = new BenchmarkTestManager(window.name, [
     new BenchmarkTestSuite("Ad", [
         new BenchmarkTestStep("Clickthrough", () => {
-            const button = document.querySelector(".clickthrough");
+            const button = page.querySelector(".clickthrough");
             button.click();
         }),
         new BenchmarkTestStep("Action", () => {
-            const button = document.querySelector("#action");
+            const button = page.querySelector("#action");
             button.click();
         }),
     ])

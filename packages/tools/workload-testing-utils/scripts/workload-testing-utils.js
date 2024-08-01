@@ -94,10 +94,27 @@ export class BenchmarkTestManager {
 }
 
 /**
+ * getParent
+ * 
+ * @param {HTMLElement} lookupStartNode 
+ * @param {string[]} path 
+ * @returns HTMLElement or Shadow Root of parent.
+ */
+export function getParent(lookupStartNode, path) {
+    lookupStartNode = lookupStartNode.shadowRoot ?? lookupStartNode;
+    const parent = path.reduce((root, selector) => {
+        const node = root.querySelector(selector);
+        return node.shadowRoot ?? node;
+    }, lookupStartNode);
+
+    return parent;
+}
+
+/**
  * Page
  * 
  * Represents the environment of the workload, with a reference to the current document.
- * This class provides some utility functions that normalize browser apis for a more universal usage.
+ * This class provides some utility functions to simplify targeting of DOM elements.
  */
 export class Page {
     constructor(document) {
@@ -112,5 +129,50 @@ export class Page {
             (rect.height / 2) | 0
         );
         return e;
+    }
+
+    /**
+     * Returns the first element within the document that matches the specified selector, or group of selectors.
+     * If no matches are found, null is returned.
+     *
+     * An optional path param is added to be able to target elements within a shadow DOM or nested shadow DOMs.
+     *
+     * @example
+     * // DOM structure: <todo-app> -> #shadow-root -> <todo-list> -> #shadow-root -> <todo-item>
+     * // return PageElement(<todo-item>)
+     * querySelector("todo-item", ["todo-app", "todo-list"]);
+     *
+     * @param {string} selector A string containing one or more selectors to match.
+     * @param {string[]} [path] An array containing a path to the parent element.
+     * @param {HTMLElement} lookupStartNode An HTMLElement.
+     * @returns HTMLElement | null
+     */
+    querySelector(selector, path = [], lookupStartNode = this.document) {
+        const element = getParent(lookupStartNode, path).querySelector(selector);
+
+        if (element === null)
+            return null;
+        return element;
+    }
+
+    /**
+     * Returns all elements within the document that matches the specified selector, or group of selectors.
+     * If no matches are found, null is returned.
+     *
+     * An optional path param is added to be able to target elements within a shadow DOM or nested shadow DOMs.
+     *
+     * @example
+     * // DOM structure: <todo-app> -> #shadow-root -> <todo-list> -> #shadow-root -> <todo-item>
+     * // return [PageElement(<todo-item>), PageElement(<todo-item>)]
+     * querySelectorAll("todo-item", ["todo-app", "todo-list"]);
+     *
+     * @param {string} selector A string containing one or more selectors to match.
+     * @param {string[]} [path] An array containing a path to the parent element.
+     * @param {HTMLElement} lookupStartNode An HTMLElement.
+     * @returns array
+     */
+    querySelectorAll(selector, path = [], lookupStartNode = this.document) {
+        const elements = Array.from(getParent(lookupStartNode, path).querySelectorAll(selector));
+        return elements;
     }
 }

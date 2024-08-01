@@ -93,7 +93,13 @@ export class BenchmarkTestManager {
     }
 }
 
-export class Workload {
+/**
+ * Page
+ * 
+ * Represents the environment of the workload, with a reference to the current document.
+ * This class provides some utility functions that normalize browser apis for a more universal usage.
+ */
+export class Page {
     constructor(document) {
         this.document = document;
         this.body = document.body;

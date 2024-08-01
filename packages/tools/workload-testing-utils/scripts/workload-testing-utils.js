@@ -93,14 +93,18 @@ export class BenchmarkTestManager {
     }
 }
 
-/**
- * foreLayout
- */
-export function forceLayout() {
-    const rect = document.body.getBoundingClientRect();
-    const e = document.elementFromPoint(
-        (rect.width / 2) | 0,
-        (rect.height / 2) | 0
-    );
-    return e;
+export class Workload {
+    constructor(document) {
+        this.document = document;
+        this.body = document.body;
+    }
+
+    forceLayout() {
+        const rect = this.body.getBoundingClientRect();
+        const e = this.document.elementFromPoint(
+            (rect.width / 2) | 0,
+            (rect.height / 2) | 0
+        );
+        return e;
+    }
 }

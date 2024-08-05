@@ -7,11 +7,11 @@ const page = new Page(document);
 window.benchmarkTestManager = new BenchmarkTestManager(window.name, [
     new BenchmarkTestSuite("CRUD", [
         new BenchmarkTestStep("Adding items", () => {
-            const element = page.querySelector(".new-todo-input", ["todo-app", "todo-topbar"]);
+            const input = page.querySelector(".new-todo-input", ["todo-app", "todo-topbar"]);
             for (let i = 0; i < numberOfItemsToAdd; i++) {
-                element.value = getTodoText(i);
-                element.dispatchEvent(new Event("input"));
-                element.dispatchEvent(new KeyboardEvent("keyup", { keyCode: 13, key: "Enter"}));
+                input.value = getTodoText(i);
+                input.dispatchEvent(new Event("input"));
+                input.dispatchEvent(new KeyboardEvent("keyup", { keyCode: 13, key: "Enter"}));
             }
         }),
         new BenchmarkTestStep("Completing items", () => {

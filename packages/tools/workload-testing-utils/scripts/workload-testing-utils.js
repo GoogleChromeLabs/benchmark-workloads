@@ -152,7 +152,7 @@ export class Page {
 
         if (element === null)
             return null;
-        return element;
+        return new PageElement(element);
     }
 
     /**
@@ -173,6 +173,35 @@ export class Page {
      */
     querySelectorAll(selector, path = [], lookupStartNode = this.document) {
         const elements = Array.from(getParent(lookupStartNode, path).querySelectorAll(selector));
+        for (let i = 0; i < elements.length; i++)
+            elements[i] = new PageElement(elements[i]);
         return elements;
+    }
+}
+export class PageElement {
+    #node;
+
+    constructor(node) {
+        this.#node = node;
+    }
+
+    set value(value) {
+        this.#node.value = value;
+    }
+
+    get node() {
+        return this.#node;
+    }
+
+    click() {
+        this.#node.click();
+    }
+
+    focus() {
+        this.#node.focus();
+    }
+
+    dispatchEvent(event, options) {
+        this.#node.dispatchEvent(event, options);
     }
 }

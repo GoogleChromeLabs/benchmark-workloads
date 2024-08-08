@@ -2,7 +2,7 @@ import { BenchmarkTestStep, BenchmarkTestSuite, BenchmarkTestManager, forceLayou
 
 window.benchmarkTestManager = new BenchmarkTestManager(window.name, [
     new BenchmarkTestSuite("Navigation", [
-        new BenchmarkTestStep("Navigate to US page", () => {
+        new BenchmarkTestStep("Navigate-to-US-page", () => {
             for (let i = 0; i < 25; i++) {
                 getElement("#navbar-dropdown-toggle").click();
                 forceLayout();
@@ -13,7 +13,7 @@ window.benchmarkTestManager = new BenchmarkTestManager(window.name, [
             getElement("#navbar-navlist-us-link").click();
             forceLayout();
         }),
-        new BenchmarkTestStep("Navigate to World page", () => {
+        new BenchmarkTestStep("Navigate-to-World-page", () => {
             for (let i = 0; i < 25; i++) {
                 getElement("#navbar-dropdown-toggle").click();
                 forceLayout();
@@ -24,7 +24,7 @@ window.benchmarkTestManager = new BenchmarkTestManager(window.name, [
             getElement("#navbar-navlist-world-link").click();
             forceLayout();
         }),
-        new BenchmarkTestStep("Navigate to Politics page", () => {
+        new BenchmarkTestStep("Navigate-to-Politics-page", () => {
             for (let i = 0; i < 25; i++) {
                 getElement("#navbar-dropdown-toggle").click();
                 forceLayout();
@@ -37,11 +37,11 @@ window.benchmarkTestManager = new BenchmarkTestManager(window.name, [
         }),
     ]),
     new BenchmarkTestSuite("Dropdown", [
-        new BenchmarkTestStep("Toggle More Dropdown", () => {
+        new BenchmarkTestStep("Toggle-More-Dropdown", () => {
             getElement("#navbar-dropdown-toggle").click();
             forceLayout();
         }),
-        new BenchmarkTestStep("Toggle More Dropdown", () => {
+        new BenchmarkTestStep("Toggle-More-Dropdown", () => {
             getElement("#navbar-dropdown-toggle").click();
             forceLayout();
         }),

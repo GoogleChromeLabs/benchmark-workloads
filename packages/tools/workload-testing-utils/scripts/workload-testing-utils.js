@@ -93,13 +93,7 @@ export class BenchmarkTestManager {
     }
 }
 
-/**
- * getParent
- * 
- * @param {HTMLElement} lookupStartNode 
- * @param {string[]} path 
- * @returns HTMLElement or Shadow Root of parent.
- */
+// Helper Methods
 export function getParent(lookupStartNode, path) {
     lookupStartNode = lookupStartNode.shadowRoot ?? lookupStartNode;
     const parent = path.reduce((root, selector) => {
@@ -110,69 +104,21 @@ export function getParent(lookupStartNode, path) {
     return parent;
 }
 
-/**
- * Page
- * 
- * Represents the environment of the workload, with a reference to the current document.
- * This class provides some utility functions to simplify targeting of DOM elements.
- */
-export class Page {
-    constructor(document) {
-        this.document = document;
-        this.body = document.body;
-    }
+export function getElement(selector, path = [], lookupStartNode = document) {
+    const element = getParent(lookupStartNode, path).querySelector(selector);
+    return element;
+}
 
-    forceLayout() {
-        const rect = this.body.getBoundingClientRect();
-        const e = this.document.elementFromPoint(
-            (rect.width / 2) | 0,
-            (rect.height / 2) | 0
-        );
-        return e;
-    }
+export function getAllElements(selector, path = [], lookupStartNode = document) {
+    const elements = Array.from(getParent(lookupStartNode, path).querySelectorAll(selector));
+    return elements;
+}
 
-    /**
-     * Returns the first element within the document that matches the specified selector, or group of selectors.
-     * If no matches are found, null is returned.
-     *
-     * An optional path param is added to be able to target elements within a shadow DOM or nested shadow DOMs.
-     *
-     * @example
-     * // DOM structure: <todo-app> -> #shadow-root -> <todo-list> -> #shadow-root -> <todo-item>
-     * // return PageElement(<todo-item>)
-     * querySelector("todo-item", ["todo-app", "todo-list"]);
-     *
-     * @param {string} selector A string containing one or more selectors to match.
-     * @param {string[]} [path] An array containing a path to the parent element.
-     * @param {HTMLElement} lookupStartNode An HTMLElement.
-     * @returns HTMLElement | null
-     */
-    querySelector(selector, path = [], lookupStartNode = this.document) {
-        const element = getParent(lookupStartNode, path).querySelector(selector);
-
-        if (element === null)
-            return null;
-        return element;
-    }
-
-    /**
-     * Returns all elements within the document that matches the specified selector, or group of selectors.
-     * If no matches are found, null is returned.
-     *
-     * An optional path param is added to be able to target elements within a shadow DOM or nested shadow DOMs.
-     *
-     * @example
-     * // DOM structure: <todo-app> -> #shadow-root -> <todo-list> -> #shadow-root -> <todo-item>
-     * // return [PageElement(<todo-item>), PageElement(<todo-item>)]
-     * querySelectorAll("todo-item", ["todo-app", "todo-list"]);
-     *
-     * @param {string} selector A string containing one or more selectors to match.
-     * @param {string[]} [path] An array containing a path to the parent element.
-     * @param {HTMLElement} lookupStartNode An HTMLElement.
-     * @returns array
-     */
-    querySelectorAll(selector, path = [], lookupStartNode = this.document) {
-        const elements = Array.from(getParent(lookupStartNode, path).querySelectorAll(selector));
-        return elements;
-    }
+export function forceLayout() {
+    const rect = document.body.getBoundingClientRect();
+    const e = document.elementFromPoint(
+        (rect.width / 2) | 0,
+        (rect.height / 2) | 0
+    );
+    return e;
 }

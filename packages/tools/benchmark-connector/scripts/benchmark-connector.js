@@ -35,7 +35,7 @@ window.onmessage = async (event) => {
       const { result } = await window.benchmarkTestManager
         .getSuiteByName(event.data.name)
         .runAndRecord({ waitBeforeSync, measurementMethod, warmupBeforeSync });
-      sendMessage({ type: "test-complete", status: "success", appId, result });
+      sendMessage({ type: "suite-complete", status: "success", appId, result });
       break;
     case "benchmark-suite-test":
       window.benchmarkTestManager

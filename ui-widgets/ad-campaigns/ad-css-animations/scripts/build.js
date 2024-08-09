@@ -5,7 +5,7 @@ const filesToMove = [
     { src: "favicon.ico", dest: "./dist/favicon.ico" },
     { src: "benchmark-connector.min.js", dest: "./dist/benchmark-connector.min.js" },
     { src: "workload-testing-utils.min.js", dest: "./dist/workload-testing-utils.min.js" },
-    { src: "workload.test.js", dest: "./dist/workload.test.js" },
+    { src: "workload-test.js", dest: "./dist/workload-test.js" },
 ];
 
 const build = async () => {

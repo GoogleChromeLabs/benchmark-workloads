@@ -28,7 +28,7 @@ export default function App() {
             </DataContextProvider>
             <Script src="./benchmark-connector.min.js" />
             <Script src="./workload-testing-utils.min.js" type="module"/>
-            <Script src="./workload.test.js" type="module"/>
+            <Script src="./workload-test.js" type="module"/>
         </>
     );
 }

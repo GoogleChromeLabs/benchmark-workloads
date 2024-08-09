@@ -6,7 +6,7 @@ const filesToMove = [
     { src: "benchmark-connector.min.js", dest: "./dist/benchmark-connector.min.js" },
     { src: "workload-testing-utils.min.js", dest: "./dist/workload-testing-utils.min.js" },
     { src: "todomvc-testing-utils.min.js", dest: "./dist/todomvc-testing-utils.min.js" },
-    { src: "workload.test.js", dest: "./dist/workload.test.js" },
+    { src: "workload-test.js", dest: "./dist/workload-test.js" },
     { src: "node_modules/todomvc-css/dist/global.css", dest: "./dist/styles/global.css" },
     { src: "node_modules/todomvc-css/dist/header.css", dest: "./dist/styles/header.css" },
     { src: "node_modules/todomvc-css/dist/footer.css", dest: "./dist/styles/footer.css" },

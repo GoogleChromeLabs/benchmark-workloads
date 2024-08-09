@@ -15,7 +15,7 @@ export default function App() {
                 <Page id="world" />
             </DataContextProvider>
             <Script src="./benchmark-connector.min.js" />
-            <Script src="./workload.test.js" type="module"/>
+            <Script src="./workload-test.js" type="module"/>
         </>
     );
 }

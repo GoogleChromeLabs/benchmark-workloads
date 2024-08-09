@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
                 <div id="sitemap-container"></div>
                 <div id="login-container"></div>
                 <Script src="./benchmark-connector.min.js" />
-                <Script src="./workload.test.js" type="module"/>
+                <Script src="./workload-test.js" type="module"/>
             </body>
         </html>
     );

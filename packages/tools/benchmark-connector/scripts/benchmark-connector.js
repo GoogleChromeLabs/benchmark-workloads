@@ -1,39 +1,3 @@
-/************************************************************************ 
-  Custom History Events
-
-  Augments some history events with additional events for consistency:
-
-  - window.pushstate
-  - window.replacestate
-  - window.statechange
-*************************************************************************/
-function triggerEvent(element, name, state) {
-  const event = new CustomEvent(name);
-  event.name = name;
-  event.state = state;
-  element.dispatchEvent(event);
-}
-
-const pushState = history.pushState;
-history.pushState = function (state) {
-  const fn = pushState.apply(history, arguments);
-  triggerEvent(window, "pushstate", state);
-  triggerEvent(window, "statechange", state);
-  return fn;
-};
-
-const replaceState = history.replaceState;
-history.replaceState = function (state) {
-  const fn = replaceState.apply(history, arguments);
-  triggerEvent(window, "replacestate", state);
-  triggerEvent(window, "statechange", state);
-  return fn;
-};
-
-window.addEventListener("popstate", function (event) {
-  triggerEvent(window, "statechange", event.state);
-});
-
 /************************************************************************
  * Benchmark Connector
  *
@@ -46,52 +10,43 @@ window.addEventListener("popstate", function (event) {
  *************************************************************************/
 const appId = window.name && window.version ? `${window.name}-${window.version}` : -1;
 
+function sendMessage(message) {
+  window.requestAnimationFrame(() => {
+      setTimeout(() => {
+        setTimeout(() => {
+          window.top.postMessage(
+            message,
+            "*"
+          );
+        }, 0);
+      }, 0);
+    });
+}
+
 window.onmessage = async (event) => {
   // ensure we only let legit functions run...
   if (event.data.id !== appId || event.data.key !== "benchmark-connector")
     return;
 
   switch(event.data.type) {
-    case "benchmark-test-step":
-        window.benchmarkTestManager.getSuiteByName(event.data.test).getTestByName(event.data.step).run();
-        sendMessage({ type: "test-complete", status: "success", appId });
-        break;
-    case "benchmark-test-function":
-        // eslint-disable-next-line no-case-declarations
-        const testFunction = new Function(`return ${event.data.fn}`)();
-        if (testFunction) {
-            requestAnimationFrame(() => {
-                performance.mark(`${event.data.step}-start`);
-            });
-            requestAnimationFrame(async () => {
-                await testFunction();
-                setTimeout(() => {
-                    performance.mark(`${event.data.step}-end`);
-                    performance.measure(`${event.data.step}`, {
-                        start: `${event.data.step}-start`,
-                        end: `${event.data.step}-end`,
-                    });
-                    const result = JSON.stringify(
-                    performance.getEntriesByName(`${event.data.step}`)[0]);
-                    window.top.postMessage({ type: "test-complete", status: "success", appId, result },"*");
-                }, 0);
-            });
-        }
+    case "benchmark-suite":
+      window.benchmarkTestManager.getSuiteByName(event.data.name).run();
+      sendMessage({ type: "test-complete", status: "success", appId });
+      break;
+    case "benchmark-suite-async":
+      await window.benchmarkTestManager.getSuiteByName(event.data.name).runAsync();
+      sendMessage({ type: "test-complete", status: "success", appId });
+      break;
+    case "benchmark-suite-test":
+      window.benchmarkTestManager.getSuiteByName(event.data.name).getTestByName(event.data.test).run();
+      sendMessage({ type: "test-complete", status: "success", appId });
+      break;
+    case "benchmark-suite-test-async":
+      await window.benchmarkTestManager.getSuiteByName(event.data.name).getTestByName(event.data.test).runAsync();
+      sendMessage({ type: "test-complete", status: "success", appId });
+      break;
   }
 };
-
-function sendMessage(message) {
-    window.requestAnimationFrame(() => {
-        setTimeout(() => {
-          setTimeout(() => {
-            window.top.postMessage(
-              message,
-              "*"
-            );
-          }, 0);
-        }, 0);
-      });
-}
 
 sendMessage({ type: "app-ready", status: "success", appId });
 

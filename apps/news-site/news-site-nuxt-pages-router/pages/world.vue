@@ -7,7 +7,7 @@ useHead({
             tagPosition: "bodyClose",
         },
         {
-            src: "./workload.test.js",
+            src: "./workload-test.js",
             type: "module",
             tagPosition: "bodyClose",
         }

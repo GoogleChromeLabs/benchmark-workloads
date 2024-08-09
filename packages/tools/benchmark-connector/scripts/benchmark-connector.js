@@ -8,19 +8,17 @@
  * The appId is build by appending name-version
  * It's used as an additional safe-guard to ensure the correct app responds to a message.
  *************************************************************************/
-const appId = window.name && window.version ? `${window.name}-${window.version}` : -1;
+const appId =
+  window.name && window.version ? `${window.name}-${window.version}` : -1;
 
 function sendMessage(message) {
   window.requestAnimationFrame(() => {
+    setTimeout(() => {
       setTimeout(() => {
-        setTimeout(() => {
-          window.top.postMessage(
-            message,
-            "*"
-          );
-        }, 0);
+        window.top.postMessage(message, "*");
       }, 0);
-    });
+    }, 0);
+  });
 }
 
 window.onmessage = async (event) => {
@@ -28,21 +26,29 @@ window.onmessage = async (event) => {
   if (event.data.id !== appId || event.data.key !== "benchmark-connector")
     return;
 
-  switch(event.data.type) {
+  switch (event.data.type) {
     case "benchmark-suite":
-      window.benchmarkTestManager.getSuiteByName(event.data.name).run();
-      sendMessage({ type: "test-complete", status: "success", appId });
-      break;
-    case "benchmark-suite-async":
-      await window.benchmarkTestManager.getSuiteByName(event.data.name).runAsync();
-      sendMessage({ type: "test-complete", status: "success", appId });
+      // eslint-disable-next-line no-case-declarations
+      const { waitBeforeSync, measurementMethod, warmupBeforeSync } =
+        event.data;
+      // eslint-disable-next-line no-case-declarations
+      const { result } = await window.benchmarkTestManager
+        .getSuiteByName(event.data.name)
+        .runAndRecord({ waitBeforeSync, measurementMethod, warmupBeforeSync });
+      sendMessage({ type: "test-complete", status: "success", appId, result });
       break;
     case "benchmark-suite-test":
-      window.benchmarkTestManager.getSuiteByName(event.data.name).getTestByName(event.data.test).run();
+      window.benchmarkTestManager
+        .getSuiteByName(event.data.name)
+        .getTestByName(event.data.test)
+        .run();
       sendMessage({ type: "test-complete", status: "success", appId });
       break;
     case "benchmark-suite-test-async":
-      await window.benchmarkTestManager.getSuiteByName(event.data.name).getTestByName(event.data.test).runAsync();
+      await window.benchmarkTestManager
+        .getSuiteByName(event.data.name)
+        .getTestByName(event.data.test)
+        .runAsync();
       sendMessage({ type: "test-complete", status: "success", appId });
       break;
   }

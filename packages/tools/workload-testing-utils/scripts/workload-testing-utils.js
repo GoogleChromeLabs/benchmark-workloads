@@ -15,8 +15,8 @@ export class TimerTestInvoker extends TestInvoker {
         setTimeout(() => {
           this._asyncCallback();
           requestAnimationFrame(async () => {
-            await this._reportCallback();
-            resolve();
+            const result = await this._reportCallback();
+            resolve(result);
           });
         }, 0);
       }, this.waitBeforeSync);
@@ -41,8 +41,8 @@ export class RAFTestInvoker extends BaseRAFTestInvoker {
       setTimeout(() => {
         this._asyncCallback();
         setTimeout(async () => {
-          await this._reportCallback();
-          resolve();
+          const result = await this._reportCallback();
+          resolve(result);
         }, 0);
       }, 0);
     });
@@ -132,7 +132,7 @@ export class BenchmarkTestStep {
 
     // const report = () => this._recordTestResults(suite, test, syncTime, asyncTime);
     const report = () =>
-      callback({ suite: suitename, test: this.name, syncTime, asyncTime });
+      callback({ syncTime, asyncTime });
     const invoker = new invokerClass(
       runSync,
       measureAsync,
@@ -153,13 +153,6 @@ export class BenchmarkTestSuite {
   constructor(name, tests) {
     this.name = name;
     this.tests = tests;
-    this._measuredValues = {
-      tests: {},
-      total: 0,
-      mean: NaN,
-      geomean: NaN,
-      score: NaN,
-    };
   }
 
   getTestByName(name) {
@@ -176,26 +169,25 @@ export class BenchmarkTestSuite {
     measurementMethod = "raf",
     warmupBeforeSync = -1,
   }) {
-    this._measuredValues = {
-      tests: {},
+    const measuredValues = {
       total: 0,
-      mean: NaN,
-      geomean: NaN,
-      score: NaN,
     };
     const suiteStartLabel = `suite-${this.name}-start`;
     const suiteEndLabel = `suite-${this.name}-end`;
 
     performance.mark(suiteStartLabel);
 
-    for (const test of this.tests)
-      await test.runAndRecord({
-        waitBeforeSync,
-        measurementMethod,
-        warmupBeforeSync,
-        suitename: this.name,
-        callback: this.record,
-      });
+    for (const test of this.tests){
+        const result = await test.runAndRecord({
+            waitBeforeSync,
+            measurementMethod,
+            warmupBeforeSync,
+            suitename: this.name,
+            callback: this.record,
+        });
+        measuredValues[test.name] = result;
+        measuredValues.total += result.total;
+    }
 
     performance.mark(suiteEndLabel);
     performance.measure(`suite-${this.name}`, suiteStartLabel, suiteEndLabel);
@@ -203,22 +195,19 @@ export class BenchmarkTestSuite {
     return {
       type: "suite-tests-complete",
       status: "success",
-      result: this._measuredValues,
+      result: measuredValues,
+      suitename: this.name
     };
   }
 
-  record({ suite, test, syncTime, asyncTime }) {
-    const suiteResults = this._measuredValues.tests[suite.name] || {
-      tests: {},
-      total: 0,
-    };
+  record({ syncTime, asyncTime }) {
     const total = syncTime + asyncTime;
-    this._measuredValues.tests[suite.name] = suiteResults;
-    suiteResults.tests[test.name] = {
-      tests: { Sync: syncTime, Async: asyncTime },
-      total: total,
+    const results  = {
+        tests: { Sync: syncTime, Async: asyncTime },
+        total: total,
     };
-    suiteResults.total += total;
+    results.total += total; 
+    return results;
   }
 }
 

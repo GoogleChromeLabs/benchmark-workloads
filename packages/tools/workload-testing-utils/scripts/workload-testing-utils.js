@@ -170,6 +170,7 @@ export class BenchmarkTestSuite {
     warmupBeforeSync = -1,
   }) {
     const measuredValues = {
+      tests: {},
       total: 0,
     };
     const suiteStartLabel = `suite-${this.name}-start`;
@@ -185,12 +186,14 @@ export class BenchmarkTestSuite {
             suitename: this.name,
             callback: this.record,
         });
-        measuredValues[test.name] = result;
+        measuredValues.tests[test.name] = result;
         measuredValues.total += result.total;
     }
 
     performance.mark(suiteEndLabel);
     performance.measure(`suite-${this.name}`, suiteStartLabel, suiteEndLabel);
+
+    console.log(measuredValues);
 
     return {
       type: "suite-tests-complete",

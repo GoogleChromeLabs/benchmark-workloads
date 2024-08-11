@@ -209,7 +209,6 @@ export class BenchmarkTestSuite {
         tests: { Sync: syncTime, Async: asyncTime },
         total: total,
     };
-    results.total += total; 
     return results;
   }
 }

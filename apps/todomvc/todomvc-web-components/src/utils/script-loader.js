@@ -21,8 +21,8 @@ function addScript(scriptEl, location) {
 
 function initScript(scriptEl, url, strategy) {
     return new Promise((resolve, reject) => {
-      scriptEl.onload = () => resolve({success: true, type: "loadScript"});
-      scriptEl.onerror = () => reject({success: false, type: "loadScript"});
+      scriptEl.onload = () => resolve({success: true, type: "initScript"});
+      scriptEl.onerror = () => reject({success: false, type: "initScript"});
 
       switch(strategy) {
         case "lazyOnLoad":
@@ -44,7 +44,7 @@ function buildScript(scriptEl, code) {
 export async function loadScript({ url, code = "", type = "", strategy = "default", location, onError, onSuccess } = {}) {
     // create a script element
     const { scriptEl } = await createScript(type);
-    
+
     // add script to document
     await addScript(scriptEl, location);
 
@@ -55,4 +55,6 @@ export async function loadScript({ url, code = "", type = "", strategy = "defaul
         // load external url
         await initScript(scriptEl, url, strategy).then(() => onSuccess?.()).catch(() => onError?.());
     }
+
+    return ({ success: true, type: "loadScript", id});
 }

@@ -3,7 +3,7 @@ import { requestIdleCallback } from "./request-idle-callback.js";
 function createScript(type) {
     return new Promise((resolve) => {
         const scriptEl = document.createElement('script');
-        scriptEl.type = type;
+        if (type !== "") scriptEl.type = type;
         return resolve({ success: true, type: "createScript", scriptEl});
     });
 }
@@ -34,7 +34,7 @@ function initScript(scriptEl, url, strategy) {
     });
 }
 
-export async function loadScript({ url, type, strategy, location, onError, onSuccess } = {}) {
+export async function loadScript({ url, type = "", strategy = "default", location, onError, onSuccess } = {}) {
     const { scriptEl } = await createScript(type)
     await addScript(scriptEl, location);
     await initScript(scriptEl, url, strategy).then(() => onSuccess?.()).catch(() => onError?.());

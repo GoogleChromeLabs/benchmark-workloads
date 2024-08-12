@@ -41,7 +41,7 @@ function buildScript(scriptEl, code) {
     });
 }
 
-export async function loadScript({ url, code = "", type = "", strategy = "default", location, onError, onSuccess } = {}) {
+export async function loadScript({ id, url = "", code = "", type = "", strategy = "default", location = "body", onError = () => {}, onSuccess = () => {} } = {}) {
     // create a script element
     const { scriptEl } = await createScript(type);
 

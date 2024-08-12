@@ -14,7 +14,7 @@ export default function App() {
             <DataContextProvider>
                 <Page id="us" />
             </DataContextProvider>
-            <Script src="./benchmark-connector.min.js" />
+            <Script src="./benchmark-connector.min.js" strategy="lazyOnload"/>
             <Script src="./workload-test.js" type="module"/>
         </>
     );

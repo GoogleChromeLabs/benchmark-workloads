@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
                 <div id="notifications-container"></div>
                 <div id="sitemap-container"></div>
                 <div id="login-container"></div>
-                <Script src="./benchmark-connector.min.js" />
+                <Script src="./benchmark-connector.min.js" strategy="lazyOnload"/>
                 <Script src="./workload-test.js" type="module"/>
             </body>
         </html>

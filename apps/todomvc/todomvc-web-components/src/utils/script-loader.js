@@ -34,8 +34,25 @@ function initScript(scriptEl, url, strategy) {
     });
 }
 
-export async function loadScript({ url, type = "", strategy = "default", location, onError, onSuccess } = {}) {
-    const { scriptEl } = await createScript(type)
+function buildScript(scriptEl, code) {
+    return new Promise((resolve) => {
+        scriptEl.textContent = code;
+        return resolve({ success: true, type: "buildScript"});
+    });
+}
+
+export async function loadScript({ url, code = "", type = "", strategy = "default", location, onError, onSuccess } = {}) {
+    // create a script element
+    const { scriptEl } = await createScript(type);
+    
+    // add script to document
     await addScript(scriptEl, location);
-    await initScript(scriptEl, url, strategy).then(() => onSuccess?.()).catch(() => onError?.());
+
+    if (code !== "") {
+        // add inline code to script element
+        await buildScript(scriptEl, code).then(() => onSuccess?.()).catch(() => onError?.());
+    } else {
+        // load external url
+        await initScript(scriptEl, url, strategy).then(() => onSuccess?.()).catch(() => onError?.());
+    }
 }

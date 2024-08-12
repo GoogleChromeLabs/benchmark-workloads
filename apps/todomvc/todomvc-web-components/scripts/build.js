@@ -3,6 +3,7 @@ const { createDirectory, copyDirectory, copyFiles, updateImports } = require("ap
 const filesToMove = [
     { src: "index.html", dest: "./dist/index.html" },
     { src: "favicon.ico", dest: "./dist/favicon.ico" },
+    { src: "index.js", dest: "./dist/index.js" },
     { src: "benchmark-connector.min.js", dest: "./dist/benchmark-connector.min.js" },
     { src: "workload-testing-utils.min.js", dest: "./dist/workload-testing-utils.min.js" },
     { src: "todomvc-testing-utils.min.js", dest: "./dist/todomvc-testing-utils.min.js" },
@@ -28,7 +29,7 @@ const importsToRename = [
     {
         src: "src/",
         dest: "",
-        files: [ "./dist/index.html" ]
+        files: [ "./dist/index.html", "./dist/index.js" ]
     },
     {
         src: "../../../node_modules/todomvc-css/dist/",

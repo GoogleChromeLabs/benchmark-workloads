@@ -1,5 +1,13 @@
 import { requestIdleCallback } from "./request-idle-callback.js";
 
+function createScript(type) {
+    return new Promise((resolve) => {
+        const scriptEl = document.createElement('script');
+        scriptEl.type = type;
+        return resolve({ success: true, type: "createScript", scriptEl});
+    });
+}
+
 function addScript(scriptEl, location) {
     return new Promise((resolve) => {
         if (location === 'head') {
@@ -27,11 +35,7 @@ function initScript(scriptEl, url, strategy) {
 }
 
 export async function loadScript({ url, type, strategy, location, onError, onSuccess } = {}) {
-    const promisesToResolve = [];
-    const scriptEl = document.createElement('script');
-    scriptEl.type = type;
-    promisesToResolve.push(addScript(scriptEl, location));
-    promisesToResolve.push(initScript(scriptEl, url, strategy));
-
-    await Promise.all(promisesToResolve).then(() => onSuccess?.()).catch(() => onError?.());
+    const { scriptEl } = await createScript(type)
+    await addScript(scriptEl, location);
+    await initScript(scriptEl, url, strategy).then(() => onSuccess?.()).catch(() => onError?.());
 }

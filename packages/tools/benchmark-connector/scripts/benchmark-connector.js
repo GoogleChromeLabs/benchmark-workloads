@@ -33,7 +33,7 @@ window.onmessage = async (event) => {
       // eslint-disable-next-line no-case-declarations
       const { result } = await window.benchmarkTestManager
         .getSuiteByName(event.data.name)
-        .runAndRecord({ params });
+        .runAndRecord({ params, onProgress: (test) => sendMessage({ type: "step-complete", status: "success", appId, name, test }) });
       sendMessage({ type: "suite-complete", status: "success", appId, result });
       break;
     case "benchmark-suite-test":

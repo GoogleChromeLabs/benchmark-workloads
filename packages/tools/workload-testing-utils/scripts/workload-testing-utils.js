@@ -161,7 +161,7 @@ export class BenchmarkTestSuite {
     return { type: "suite-tests-complete", status: "success" };
   }
 
-  async runAndRecord({ params }) {
+  async runAndRecord({ params, onProgress }) {
     const measuredValues = {
       tests: {},
       total: 0,
@@ -179,6 +179,7 @@ export class BenchmarkTestSuite {
       });
       measuredValues.tests[test.name] = result;
       measuredValues.total += result.total;
+      onProgress?.(test.name);
     }
 
     performance.mark(suiteEndLabel);

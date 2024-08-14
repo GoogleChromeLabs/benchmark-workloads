@@ -14,8 +14,4 @@ export const requestIdleCallback = window.requestIdleCallback =
         return timeoutId;
     }
 
-export const cancelIdleCallback = window.cancelIdleCallback =
-    window.cancelIdleCallback ||
-    function (id) {
-        window.clearTimeout(id);
-    }
+export const cancelIdleCallback = window.cancelIdleCallback || window.clearTimeout.bind(window);

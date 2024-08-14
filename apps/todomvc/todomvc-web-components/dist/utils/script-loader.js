@@ -41,7 +41,7 @@ function buildScript({scriptEl, code}) {
     });
 }
 
-export async function loadScript({ id, url = "", code = "", type = "", strategy = "default", location = "body", onError = () => {}, onSuccess = () => {} } = {}) {
+export async function loadScript({ id, url = "", code = "", type = "", strategy = "default", location = "body", onError, onSuccess } = {}) {
     // create a script element
     const { scriptEl } = await createScript({type});
 
@@ -50,10 +50,12 @@ export async function loadScript({ id, url = "", code = "", type = "", strategy 
 
     if (code !== "") {
         // add inline code to script element
-        await buildScript({scriptEl, code}).then(() => onSuccess?.()).catch(() => onError?.());
+        await buildScript({scriptEl, code});
+        onSuccess?.();
     } else {
         // load external url
-        await initScript({scriptEl, url, strategy}).then(() => onSuccess?.()).catch(() => onError?.());
+        const {success} = await initScript({scriptEl, url, strategy});
+        success ? onSuccess?.() : onError?.();
     }
 
     return ({ success: true, type: "loadScript", id});

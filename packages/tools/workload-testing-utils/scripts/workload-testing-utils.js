@@ -72,9 +72,9 @@ export class BenchmarkTestStep {
   }
 
   async runAndRecord({ params, suitename, callback }) {
-    const waitBeforeSync = params.waitBeforeSync ?? 0;
-    const measurementMethod = params.measurementMethod ?? "raf";
-    const warmupBeforeSync = params.warmupBeforeSync ?? -1;
+    const waitBeforeSync = params?.waitBeforeSync ?? 0;
+    const measurementMethod = params?.measurementMethod ?? "raf";
+    const warmupBeforeSync = params?.warmupBeforeSync ?? -1;
 
     const startLabel = `${suitename}.${this.name}-start`;
     const syncEndLabel = `${suitename}.${this.name}-sync-end`;

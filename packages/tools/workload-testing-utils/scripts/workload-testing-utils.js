@@ -71,13 +71,11 @@ export class BenchmarkTestStep {
     });
   }
 
-  async runAndRecord({
-    waitBeforeSync,
-    measurementMethod,
-    warmupBeforeSync,
-    suitename,
-    callback,
-  }) {
+  async runAndRecord({ params, suitename, callback }) {
+    const waitBeforeSync = params.waitBeforeSync ?? 0;
+    const measurementMethod = params.measurementMethod ?? "raf";
+    const warmupBeforeSync = params.warmupBeforeSync ?? -1;
+
     const startLabel = `${suitename}.${this.name}-start`;
     const syncEndLabel = `${suitename}.${this.name}-sync-end`;
     const asyncStartLabel = `${suitename}.${this.name}-async-start`;
@@ -131,8 +129,7 @@ export class BenchmarkTestStep {
     };
 
     // const report = () => this._recordTestResults(suite, test, syncTime, asyncTime);
-    const report = () =>
-      callback({ syncTime, asyncTime });
+    const report = () => callback({ syncTime, asyncTime });
     const invoker = new invokerClass(
       runSync,
       measureAsync,
@@ -164,11 +161,7 @@ export class BenchmarkTestSuite {
     return { type: "suite-tests-complete", status: "success" };
   }
 
-  async runAndRecord({
-    waitBeforeSync = 0,
-    measurementMethod = "raf",
-    warmupBeforeSync = -1,
-  }) {
+  async runAndRecord({ params }) {
     const measuredValues = {
       tests: {},
       total: 0,
@@ -178,36 +171,32 @@ export class BenchmarkTestSuite {
 
     performance.mark(suiteStartLabel);
 
-    for (const test of this.tests){
-        const result = await test.runAndRecord({
-            waitBeforeSync,
-            measurementMethod,
-            warmupBeforeSync,
-            suitename: this.name,
-            callback: this.record,
-        });
-        measuredValues.tests[test.name] = result;
-        measuredValues.total += result.total;
+    for (const test of this.tests) {
+      const result = await test.runAndRecord({
+        params,
+        suitename: this.name,
+        callback: this.record,
+      });
+      measuredValues.tests[test.name] = result;
+      measuredValues.total += result.total;
     }
 
     performance.mark(suiteEndLabel);
     performance.measure(`suite-${this.name}`, suiteStartLabel, suiteEndLabel);
 
-    console.log(measuredValues);
-
     return {
       type: "suite-tests-complete",
       status: "success",
       result: measuredValues,
-      suitename: this.name
+      suitename: this.name,
     };
   }
 
   record({ syncTime, asyncTime }) {
     const total = syncTime + asyncTime;
-    const results  = {
-        tests: { Sync: syncTime, Async: asyncTime },
-        total: total,
+    const results = {
+      tests: { Sync: syncTime, Async: asyncTime },
+      total: total,
     };
     return results;
   }

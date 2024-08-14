@@ -29,12 +29,11 @@ window.onmessage = async (event) => {
   switch (event.data.type) {
     case "benchmark-suite":
       // eslint-disable-next-line no-case-declarations
-      const { waitBeforeSync, measurementMethod, warmupBeforeSync } =
-        event.data;
+      const params = await JSON.parse(event.data.params);
       // eslint-disable-next-line no-case-declarations
       const { result } = await window.benchmarkTestManager
         .getSuiteByName(event.data.name)
-        .runAndRecord({ waitBeforeSync, measurementMethod, warmupBeforeSync });
+        .runAndRecord({ params });
       sendMessage({ type: "suite-complete", status: "success", appId, result });
       break;
     case "benchmark-suite-test":

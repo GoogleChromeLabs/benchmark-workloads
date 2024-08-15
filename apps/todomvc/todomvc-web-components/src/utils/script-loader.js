@@ -39,8 +39,6 @@ export async function loadScript({
     type = "",
     strategy = "default",
     location = "body",
-    onSuccess,
-    onError,
 } = {}) {
     // create a script element
     const scriptEl = createScript({ type });
@@ -51,7 +49,6 @@ export async function loadScript({
     if (code !== "") {
         // add inline code to script element
         buildScript({ scriptEl, code });
-        onSuccess();
     } else {
         // load external url
         await initScript({ scriptEl, url, strategy });

@@ -1,3 +1,11 @@
 import { loadScript } from "./src/utils/script-loader.js";
 
-await loadScript({ id: "benchmark-connector", url: "benchmark-connector.min.js", type: "module", strategy: "lazyOnLoad" });
+function handleOnError(e) {
+    console.log("handleOnError", e);
+}
+
+function handleOnSuccess() {
+    console.log("handleOnSuccess");
+}
+
+await loadScript({ id: "benchmark-connector", url: "benchmark-connector.min.js", type: "module", strategy: "lazyOnLoad", onSuccess: handleOnSuccess, onError: handleOnError });

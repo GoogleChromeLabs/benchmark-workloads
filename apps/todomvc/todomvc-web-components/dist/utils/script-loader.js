@@ -1,62 +1,65 @@
 import { requestIdleCallback } from "./request-idle-callback.js";
 
-function createScript({type}) {
-    return new Promise((resolve) => {
-        const scriptEl = document.createElement('script');
-        if (type !== "") scriptEl.type = type;
-        return resolve({ success: true, type: "createScript", scriptEl});
-    });
+function createScript({ type }) {
+    const scriptEl = document.createElement("script");
+    if (type !== "") scriptEl.type = type;
+    return scriptEl;
 }
 
-function addScript({scriptEl, location}) {
-    return new Promise((resolve) => {
-        if (location === 'head') {
-            document.head.appendChild(scriptEl);
-        } else {
-            document.body.appendChild(scriptEl);
-        }
-        return resolve({ success: true, type: "addScript"});
-    });
+function addScript({ scriptEl, location }) {
+    if (location === "head") {
+        document.head.appendChild(scriptEl);
+    } else {
+        document.body.appendChild(scriptEl);
+    }
 }
 
-function initScript({scriptEl, url, strategy}) {
+function buildScript({ scriptEl, code }) {
+    scriptEl.textContent = code;
+}
+
+function initScript({ scriptEl, url, strategy }) {
     return new Promise((resolve, reject) => {
-      scriptEl.onload = () => resolve({success: true, type: "initScript"});
-      scriptEl.onerror = () => reject({success: false, type: "initScript"});
+        scriptEl.onload = () => resolve();
+        scriptEl.onerror = (e) => reject(e);
 
-      switch(strategy) {
-        case "lazyOnLoad":
-            requestIdleCallback(() => scriptEl.setAttribute('src', url));
-            break;
-        default:
-            scriptEl.setAttribute('src', url);
-      }
+        switch (strategy) {
+            case "lazyOnLoad":
+                requestIdleCallback(() => scriptEl.setAttribute("src", url));
+                break;
+            default:
+                scriptEl.setAttribute("src", url);
+        }
     });
 }
 
-function buildScript({scriptEl, code}) {
-    return new Promise((resolve) => {
-        scriptEl.textContent = code;
-        return resolve({ success: true, type: "buildScript"});
-    });
-}
-
-export async function loadScript({ id, url = "", code = "", type = "", strategy = "default", location = "body", onError, onSuccess } = {}) {
+export async function loadScript({
+    id,
+    url = "",
+    code = "",
+    type = "",
+    strategy = "default",
+    location = "body",
+    onSuccess,
+    onError,
+} = {}) {
     // create a script element
-    const { scriptEl } = await createScript({type});
+    const scriptEl = createScript({ type });
 
     // add script to document
-    await addScript({scriptEl, location});
+    addScript({ scriptEl, location });
 
     if (code !== "") {
         // add inline code to script element
-        await buildScript({scriptEl, code});
-        onSuccess?.();
+        buildScript({ scriptEl, code });
+        onSuccess();
     } else {
         // load external url
-        const {success} = await initScript({scriptEl, url, strategy});
-        success ? onSuccess?.() : onError?.();
+        try {
+            await initScript({ scriptEl, url, strategy });
+            onSuccess?.();
+        } catch (e) {
+            onError?.(e);
+        }
     }
-
-    return ({ success: true, type: "loadScript", id});
 }

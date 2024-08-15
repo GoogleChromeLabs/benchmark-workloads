@@ -5,7 +5,7 @@ export const requestIdleCallback = window.requestIdleCallback =
         const timeoutId = window.setTimeout(function () {
             cb({
                 didTimeout: false,
-                timeRemaining: function () {
+                timeRemaining() {
                     return Math.max(0, 50 - (Date.now() - start));
                 }
             });

@@ -54,11 +54,6 @@ export async function loadScript({
         onSuccess();
     } else {
         // load external url
-        try {
-            await initScript({ scriptEl, url, strategy });
-            onSuccess?.();
-        } catch (e) {
-            onError?.(e);
-        }
+        await initScript({ scriptEl, url, strategy });
     }
 }

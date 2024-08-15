@@ -8,4 +8,9 @@ function handleOnSuccess() {
     console.log("handleOnSuccess");
 }
 
-await loadScript({ url: "benchmark-connector.min.js", type: "module", strategy: "lazyOnLoad", onSuccess: handleOnSuccess, onError: handleOnError });
+try {
+    await loadScript({ url: "benchmark-connector.min.js", type: "module", strategy: "lazyOnLoad" });
+    handleOnSuccess();
+}catch(e) {
+    handleOnError(e);
+}

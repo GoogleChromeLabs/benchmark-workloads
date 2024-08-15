@@ -34,7 +34,6 @@ function initScript({ scriptEl, url, strategy }) {
 }
 
 export async function loadScript({
-    id,
     url = "",
     code = "",
     type = "",

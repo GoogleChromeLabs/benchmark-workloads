@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 
-import Layout from "@/partials/layout/layout";
-import Section from "../section/section";
-import Toast from "@/components/toast/toast";
+import Layout from "@/components/organisms/layout/layout";
+import Section from "@/components/organisms/section/section";
+import Toast from "@/components/molecules/toast/toast";
 
 import { useDataContext } from "@/context/data-context";
 import { useLocalStorage } from "@/hooks/use-local-storage";

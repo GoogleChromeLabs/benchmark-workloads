@@ -1,9 +1,9 @@
 import classNames from "classnames";
 
 import ArticleText from "./article-text";
-import LightningIcon from "@/assets/lightning-icon";
-import PlayIcon from "@/assets/play-icon";
-import FireIcon from "@/assets/fire-icon";
+import LightningIcon from "@/components/assets/lightning-icon";
+import PlayIcon from "@/components/assets/play-icon";
+import FireIcon from "@/components/assets/fire-icon";
 
 import styles from "news-site-css/dist/article.module.css";
 

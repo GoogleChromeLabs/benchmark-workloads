@@ -1,6 +1,6 @@
 import classNames from "classnames";
 
-import Input from "../input/input";
+import Input from "@/components/atoms/input/input";
 import { useDataContext } from "@/context/data-context";
 
 import formStyles from "news-site-css/dist/form.module.css";

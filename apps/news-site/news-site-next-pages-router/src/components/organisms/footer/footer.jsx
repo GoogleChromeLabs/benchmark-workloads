@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { createPortal } from "react-dom";
-import Dialog from "@/components/dialog/dialog";
-import SettingsIcons from "../icons/settings-icons";
-import SocialIcons from "../icons/social-icons";
-import Sitemap from "@/components/sitemap/sitemap";
+import Dialog from "@/components/organisms/dialog/dialog";
+import SettingsIcons from "@/components/molecules/icons/settings-icons";
+import SocialIcons from "@/components/molecules/icons/social-icons";
+import Sitemap from "@/components/molecules/sitemap/sitemap";
 
 import { useDataContext } from "@/context/data-context";
 

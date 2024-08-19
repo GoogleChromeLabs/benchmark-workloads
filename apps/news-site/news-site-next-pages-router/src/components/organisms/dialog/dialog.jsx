@@ -1,6 +1,6 @@
 import classNames from "classnames";
 
-import Toggle from "../toggle/toggle";
+import Toggle from "@/components/atoms/toggle/toggle";
 import { useDataContext } from "@/context/data-context";
 import { useLocalStorage } from "@/hooks/use-local-storage";
 

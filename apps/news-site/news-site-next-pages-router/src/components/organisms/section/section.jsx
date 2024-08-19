@@ -1,4 +1,4 @@
-import Article from "@/components/article/article";
+import Article from "@/components/molecules/article/article";
 
 import styles from "news-site-css/dist/layout.module.css";
 

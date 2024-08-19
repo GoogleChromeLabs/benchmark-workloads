@@ -1,7 +1,7 @@
 import classNames from "classnames";
-import FacebookIcon from "@/assets/facebook-icon";
-import InstagramIcon from "@/assets/instagram-icon";
-import TwitterIcon from "@/assets/twitter-icon";
+import FacebookIcon from "@/components/assets/facebook-icon";
+import InstagramIcon from "@/components/assets/instagram-icon";
+import TwitterIcon from "@/components/assets/twitter-icon";
 
 import { useDataContext } from "@/context/data-context";
 

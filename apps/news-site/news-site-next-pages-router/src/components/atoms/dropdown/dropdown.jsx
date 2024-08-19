@@ -1,13 +1,10 @@
 import { useState } from "react";
 import classNames from "classnames";
 
-import { useDataContext } from "@/context/data-context";
-
 import styles from "news-site-css/dist/dropdown.module.css";
 
-export default function Dropdown({ children, animatedIconClass }) {
+export default function Dropdown({ children, animatedIconClass, label }) {
     const [isOpen, setIsOpen] = useState(false);
-    const { buttons } = useDataContext();
 
     function handleChange(e) {
         setIsOpen(e.target.checked);
@@ -21,7 +18,7 @@ export default function Dropdown({ children, animatedIconClass }) {
         <div className={styles.dropdown}>
             <input type="checkbox" id="navbar-dropdown-toggle" className={styles["dropdown-toggle"]} onChange={handleChange} checked={isOpen} />
             <label htmlFor="navbar-dropdown-toggle" className={styles["dropdown-label"]}>
-                <span className={styles["dropdown-label-text"]}>{buttons.more.label}</span>
+                <span className={styles["dropdown-label-text"]}>{label}</span>
                 <div className={classNames("animated-icon", "arrow-icon", "arrow", animatedIconClass)}>
                     <span className="animated-icon-inner" title="Arrow Icon">
                         <span></span>

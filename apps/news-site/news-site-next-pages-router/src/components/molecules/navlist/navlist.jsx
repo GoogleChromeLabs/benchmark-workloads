@@ -1,12 +1,12 @@
 import { useDataContext } from "@/context/data-context";
-import Dropdown from "../dropdown/dropdown";
+import Dropdown from "@/components/atoms/dropdown/dropdown";
 import NavListItem from "./navlist-item";
 import { usePathname } from "next/navigation";
 
 import styles from "news-site-css/dist/navbar.module.css";
 
 export default function NavList({ callback, id }) {
-    const { content } = useDataContext();
+    const { content, buttons } = useDataContext();
     const pathname = usePathname();
 
     const navItems = [];
@@ -25,7 +25,7 @@ export default function NavList({ callback, id }) {
             )}
             {dropdownItems.length > 0
                 ? <li className={styles["navbar-item"]}>
-                    <Dropdown animatedIconClass={styles["navbar-label-icon"]}>
+                    <Dropdown animatedIconClass={styles["navbar-label-icon"]} label={buttons.more.label}>
                         {dropdownItems.map((key) =>
                             <NavListItem id={`${id}-${key}-link`} key={key} label={content[key].name} url={content[key].url} callback={callback} itemClass={styles["navbar-dropdown-item"]} isActive={pathname.split("/")[1] === key} />
                         )}

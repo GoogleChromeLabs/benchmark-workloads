@@ -2,13 +2,13 @@ import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-import Header from "../header/header";
-import Navigation from "../navigation/navigation";
-import Main from "../main/main";
-import Footer from "../footer/footer";
+import Header from "@/components/organisms/header/header";
+import Navigation from "@/components/organisms/navigation/navigation";
+import Main from "@/components/organisms/main/main";
+import Footer from "@/components/organisms/footer/footer";
 
 import { useDataContext } from "@/context/data-context";
-import { Message } from "@/components/message/message";
+import { Message } from "@/components/molecules/message/message";
 
 import styles from "news-site-css/dist/layout.module.css";
 import { useRouter } from "next/router";

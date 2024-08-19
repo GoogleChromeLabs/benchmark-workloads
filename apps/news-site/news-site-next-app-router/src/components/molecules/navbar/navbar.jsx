@@ -4,9 +4,9 @@ import classNames from "classnames";
 
 import { useDataContext } from "@/context/data-context";
 
-import NavList from "../navlist/navlist";
-import LogoIcon from "@/assets/logo-icon";
-import SocialIcons from "@/partials/icons/social-icons";
+import NavList from "@/components/molecules/navlist/navlist";
+import LogoIcon from "@/components/assets/logo-icon";
+import SocialIcons from "@/components/molecules/icons/social-icons";
 
 import navbarStyles from "news-site-css/dist/navbar.module.css";
 import navStyles from "news-site-css/dist/nav.module.css";

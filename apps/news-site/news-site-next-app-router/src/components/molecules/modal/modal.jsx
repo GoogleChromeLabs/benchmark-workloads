@@ -1,6 +1,6 @@
 import classNames from "classnames";
 
-import Form from "../form/form";
+import Form from "@/components/molecules/form/form";
 import { useDataContext } from "@/context/data-context";
 
 import styles from "news-site-css/dist/modal.module.css";

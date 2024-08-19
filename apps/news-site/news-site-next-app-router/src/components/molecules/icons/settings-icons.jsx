@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import A11yIcon from "@/assets/a11y-icon";
+import A11yIcon from "@/components/assets/a11y-icon";
 
 import styles from "news-site-css/dist/icons-group.module.css";
 

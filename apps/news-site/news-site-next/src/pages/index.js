@@ -1,6 +1,6 @@
 import React from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import Page from "@/partials/page/page";
+import Page from "@/components/organisms/page/page";
 import Head from "next/head";
 import { DataContextProvider } from "@/context/data-context";
 import Script from "next/script";

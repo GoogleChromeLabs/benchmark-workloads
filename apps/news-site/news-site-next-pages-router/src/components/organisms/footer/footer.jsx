@@ -3,7 +3,7 @@ import { createPortal } from "react-dom";
 import Dialog from "@/components/organisms/dialog/dialog";
 import SettingsIcons from "@/components/molecules/icons/settings-icons";
 import SocialIcons from "@/components/molecules/icons/social-icons";
-import Sitemap from "@/components/molecules/sitemap/sitemap";
+import Sitemap from "@/partials/sitemap/sitemap";
 
 import { useDataContext } from "@/context/data-context";
 

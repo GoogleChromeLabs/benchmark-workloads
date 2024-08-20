@@ -1,6 +1,6 @@
 import classNames from "classnames";
 
-import ArticleText from "./article-text";
+import ArticleText from "@/components/molecules/article/article-text";
 import LightningIcon from "@/components/assets/lightning-icon";
 import PlayIcon from "@/components/assets/play-icon";
 import FireIcon from "@/components/assets/fire-icon";

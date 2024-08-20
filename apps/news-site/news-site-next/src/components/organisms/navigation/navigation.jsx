@@ -2,7 +2,7 @@ import { useState } from "react";
 import { createPortal } from "react-dom";
 import classNames from "classnames";
 
-import Sidebar from "@/components/molecules/sidebar/sidebar";
+import Sidebar from "@/partials/sidebar/sidebar";
 import Modal from "@/components/molecules/modal/modal";
 import Navbar from "@/components/molecules/navbar/navbar";
 

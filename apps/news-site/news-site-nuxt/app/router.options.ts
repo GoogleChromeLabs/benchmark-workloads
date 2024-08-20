@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import type { RouterConfig } from "@nuxt/schema";
-import PageVue from "~/components/organisms/Page.vue";
+import PageVue from "~/partials/Page.vue";
 // https://router.vuejs.org/api/interfaces/routeroptions.html
 export default <RouterConfig>{
     routes: (_routes: any) => [

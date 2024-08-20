@@ -1,6 +1,6 @@
 import Image from "next/image";
-import ArticleText from "./article-text";
-import ArticleTag from "./article-tag";
+import ArticleText from "@/components/molecules/article/article-text";
+import ArticleTag from "@/components/molecules/article/article-tag";
 
 import styles from "news-site-css/dist/article.module.css";
 

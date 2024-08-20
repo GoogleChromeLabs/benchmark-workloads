@@ -1,9 +1,9 @@
 import React from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import Page from "@/components/organisms/page/page";
-import PageGA from "@/components/organisms/page/page-ga";
-import PageGTM from "@/components/organisms/page/page-gtm";
-import PageGTMGA from "@/components/organisms/page/page-gtm-ga";
+import Page from "@/partials/page/page";
+import PageGA from "@/partials/page/page-ga";
+import PageGTM from "@/partials/page/page-gtm";
+import PageGTMGA from "@/partials/page/page-gtm-ga";
 import Head from "next/head";
 import { DataContextProvider } from "@/context/data-context";
 import Script from "next/script";

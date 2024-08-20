@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 import classNames from "classnames";
 
-import ArticleImage from "./article-image";
+import ArticleImage from "@/components/molecules/article/article-image";
 import ArticleText from "./article-text";
 
 import styles from "news-site-css/dist/article.module.css";

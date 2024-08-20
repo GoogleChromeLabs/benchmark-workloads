@@ -1,6 +1,6 @@
 import { useDataContext } from "@/context/data-context";
 import Dropdown from "@/components/atoms/dropdown/dropdown";
-import NavListItem from "./navlist-item";
+import NavListItem from "@/components/molecules/navlist/navlist-item";
 import { usePathname } from "next/navigation";
 
 import styles from "news-site-css/dist/navbar.module.css";

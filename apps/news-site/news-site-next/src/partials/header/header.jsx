@@ -1,4 +1,4 @@
-import TitleIcon from "@/assets/title-icon";
+import TitleIcon from "@/components/assets/title-icon";
 
 import styles from "news-site-css/dist/header.module.css";
 import { NavLink } from "react-router-dom";

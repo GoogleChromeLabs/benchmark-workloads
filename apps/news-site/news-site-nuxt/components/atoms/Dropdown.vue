@@ -1,11 +1,10 @@
 <script setup>
-import { inject, ref } from "vue";
+import { ref } from "vue";
 import styles from "news-site-css/dist/dropdown.module.css";
-
-const { buttons } = inject("data");
 
 const { animatedIconClass } = defineProps({
     animatedIconClass: String,
+    label: String
 });
 
 const isOpen = ref(false);
@@ -32,7 +31,7 @@ function handleChange(e) {
       for="navbar-dropdown-toggle"
       :class="styles['dropdown-label']"
     >
-      <span :class="styles['dropdown-label-text']">{{ buttons.more.label }}</span>
+      <span :class="styles['dropdown-label-text']">{{ label }}</span>
       <div :class="['animated-icon', 'arrow-icon', 'arrow', animatedIconClass]">
         <span
           class="animated-icon-inner"

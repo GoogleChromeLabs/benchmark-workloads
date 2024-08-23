@@ -47,7 +47,7 @@ export default function Page({ id }) {
     return (
         <>
             <Layout id={id}>
-                {content[id].sections.map((section) =>
+                {content[id].map((section) =>
                     <Section key={section.id} section={section} />
                 )}
             </Layout>

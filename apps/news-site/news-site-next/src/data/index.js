@@ -1,18 +1,18 @@
+import { pages as pagesEn } from "@/data/en/pages";
+import { pages as pagesJp } from "@/data/jp/pages";
+import { pages as pagesAr } from "@/data/ar/pages";
+
+import { alerts as alertsEn } from "@/data/en/alerts";
+import { alerts as alertsJp } from "@/data/jp/alerts";
+import { alerts as alertsAr } from "@/data/ar/alerts";
+
 import { content as contentEn } from "@/data/en/content";
 import { content as contentJp } from "@/data/jp/content";
 import { content as contentAr } from "@/data/ar/content";
 
-import { settings as settingsEn } from "@/data/en/dialog";
-import { settings as settingsJp } from "@/data/jp/dialog";
-import { settings as settingsAr } from "@/data/ar/dialog";
-
-import { footer as footerEn } from "@/data/en/footer";
-import { footer as footerJp } from "@/data/jp/footer";
-import { footer as footerAr } from "@/data/ar/footer";
-
-import { sitemap as sitemapEn } from "@/data/en/sidebar";
-import { sitemap as sitemapJp } from "@/data/jp/sidebar";
-import { sitemap as sitemapAr } from "@/data/ar/sidebar";
+import { language as languageEn } from "@/data/en/language";
+import { language as languageJp } from "@/data/jp/language";
+import { language as languageAr } from "@/data/ar/language";
 
 import * as buttonsEn from "@/data/en/buttons";
 import * as buttonsJp from "@/data/jp/buttons";
@@ -28,28 +28,28 @@ import * as formsAr from "@/data/ar/form";
 
 export const dataSource = {
     en: {
+        alerts: alertsEn,
+        pages: pagesEn,
         content: contentEn,
-        settings: settingsEn,
-        footer: footerEn,
-        sitemap: sitemapEn,
+        language: languageEn,
         buttons: buttonsEn,
         links: linksEn,
         forms: formsEn,
     },
     jp: {
+        alerts: alertsJp,
+        pages: pagesJp,
         content: contentJp,
-        settings: settingsJp,
-        footer: footerJp,
-        sitemap: sitemapJp,
+        language: languageJp,
         buttons: buttonsJp,
         links: linksJp,
         forms: formsJp,
     },
     ar: {
+        alerts: alertsAr,
+        pages: pagesAr,
         content: contentAr,
-        settings: settingsAr,
-        footer: footerAr,
-        sitemap: sitemapAr,
+        language: languageAr,
         buttons: buttonsAr,
         links: linksAr,
         forms: formsAr,

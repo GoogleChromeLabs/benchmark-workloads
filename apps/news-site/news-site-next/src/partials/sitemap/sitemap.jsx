@@ -7,9 +7,9 @@ import { useDataContext } from "@/context/data-context";
 import styles from "news-site-css/dist/sitemap.module.css";
 
 export default function Sitemap() {
-    const { content } = useDataContext();
+    const { content, pages } = useDataContext();
 
-    const keys = Object.keys(content);
+    const keys = Object.keys(pages);
     const navItems = keys.reduce((result, key) => {
         result.push(key);
         return result;

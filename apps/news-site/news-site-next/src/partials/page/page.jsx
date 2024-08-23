@@ -10,7 +10,7 @@ import { useLocalStorage } from "@/hooks/use-local-storage";
 
 export default function Page({ id }) {
     const [showPortal, setShowPortal] = useState(false);
-    const { content } = useDataContext();
+    const { content, alerts } = useDataContext();
 
     /** assign app settings from local storage */
     const [reduceMotion] = useLocalStorage("news-site-settings-reduced-motion", false);
@@ -29,7 +29,7 @@ export default function Page({ id }) {
     }, []);
 
     useEffect(() => {
-        setShowPortal(content[id].notification);
+        setShowPortal(alerts[id].notification);
     }, [id]);
 
     function closePortal() {
@@ -51,7 +51,7 @@ export default function Page({ id }) {
                     <Section key={section.id} section={section} />
                 )}
             </Layout>
-            {showPortal && content[id].notification ? createPortal(<Toast notification={content[id].notification} onAccept={onAccept} onReject={onReject} onClose={onReject} />, document.getElementById("notifications-container")) : null}
+            {showPortal && alerts[id].notification ? createPortal(<Toast notification={alerts[id].notification} onAccept={onAccept} onReject={onReject} onClose={onReject} />, document.getElementById("notifications-container")) : null}
         </>
     );
 }

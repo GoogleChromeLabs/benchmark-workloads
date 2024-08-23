@@ -2,6 +2,10 @@ import { pages as pagesEn } from "@/data/en/pages";
 import { pages as pagesJp } from "@/data/jp/pages";
 import { pages as pagesAr } from "@/data/ar/pages";
 
+import { sections as sectionsEn } from "@/data/en/sections";
+import { sections as sectionsJp } from "@/data/jp/sections";
+import { sections as sectionsAr } from "@/data/ar/sections";
+
 import { alerts as alertsEn } from "@/data/en/alerts";
 import { alerts as alertsJp } from "@/data/jp/alerts";
 import { alerts as alertsAr } from "@/data/ar/alerts";
@@ -30,6 +34,7 @@ export const dataSource = {
     en: {
         alerts: alertsEn,
         pages: pagesEn,
+        sections: sectionsEn,
         content: contentEn,
         language: languageEn,
         buttons: buttonsEn,
@@ -39,6 +44,7 @@ export const dataSource = {
     jp: {
         alerts: alertsJp,
         pages: pagesJp,
+        sections: sectionsJp,
         content: contentJp,
         language: languageJp,
         buttons: buttonsJp,
@@ -48,6 +54,7 @@ export const dataSource = {
     ar: {
         alerts: alertsAr,
         pages: pagesAr,
+        sections: sectionsAr,
         content: contentAr,
         language: languageAr,
         buttons: buttonsAr,

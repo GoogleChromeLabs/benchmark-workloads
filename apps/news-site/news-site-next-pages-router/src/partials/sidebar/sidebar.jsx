@@ -6,9 +6,11 @@ import { useDataContext } from "@/context/data-context";
 import styles from "news-site-css/dist/sidebar.module.css";
 
 export default function Sidebar({ onClose }) {
-    const { content, sitemap } = useDataContext();
+    const { language, pages, sections } = useDataContext();
 
-    const keys = Object.keys(content);
+    const { sitemap } = language.sidebar;
+
+    const keys = Object.keys(pages);
     const navItems = keys.reduce((result, key) => {
         result.push(key);
         return result;
@@ -29,12 +31,12 @@ export default function Sidebar({ onClose }) {
             </header>
             <section className={styles["sidebar-body"]}>
                 {navItems.map((key) =>
-                    <details className={styles["sidebar-group"]} id={`sidebar-${content[key].name}-details`} key={`sidebar-${content[key].name}-details`}>
-                        <summary>{content[key].name}</summary>
+                    <details className={styles["sidebar-group"]} id={`sidebar-${pages[key].name}-details`} key={`sidebar-${pages[key].name}-details`}>
+                        <summary>{pages[key].name}</summary>
                         <ul className={styles["sidebar-list"]}>
-                            {content[key].sections.map((section) =>
+                            {sections[key].map((section) =>
                                 <li className={styles["sidebar-list-item"]} key={`sidebar-section${section.id}`}>
-                                    <Link href={`${content[key].url}#${section.id}`} onClick={onClose}>{section.name}</Link>
+                                    <Link href={`${pages[key].url}#${section.id}`} onClick={onClose}>{section.name}</Link>
                                 </li>
                             )}
                         </ul>

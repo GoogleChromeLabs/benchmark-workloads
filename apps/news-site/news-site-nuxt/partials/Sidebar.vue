@@ -6,9 +6,10 @@ const { onClose } = defineProps({
     onClose: Function
 });
 
-const { content, sitemap } = inject("data");
+const { language, pages, sections } = inject("data");
+const { sitemap } = language.sidebar;
 
-const keys = Object.keys(content);
+const keys = Object.keys(pages);
 const navItems = keys.reduce(
     (result, key) => {
         result.push(key);
@@ -45,19 +46,19 @@ const navItems = keys.reduce(
     <section :class="styles['sidebar-body']">
       <details
         v-for="key in navItems"
-        :id="`sidebar-${content[key].name}-details`"
-        :key="`sidebar-${content[key].name}-details`"
+        :id="`sidebar-${pages[key].name}-details`"
+        :key="`sidebar-${pages[key].name}-details`"
         :class="styles['sidebar-group']"
       >
-        <summary>{{ content[key].name }}</summary>
+        <summary>{{ pages[key].name }}</summary>
         <ul :class="styles['sidebar-list']">
           <li
-            v-for="section in content[key].sections"
+            v-for="section in sections[key]"
             :key="`sidebar-section${section.id}`"
             :class="styles['sidebar-list-item']"
           >
             <NuxtLink
-              :to="`${content[key].url}#${section.id}`"
+              :to="`${pages[key].url}#${section.id}`"
               @click="onClose"
             >
               {{ section.name }}

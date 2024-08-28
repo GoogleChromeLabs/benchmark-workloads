@@ -7,7 +7,8 @@ const { onClose } = defineProps({
     onClose: Function,
 });
 
-const { settings } = inject("data");
+const { language } = inject("data");
+const { settings } = language.dialog;
 
 const [reduceMotion, setReduceMotion] = useLocalStorage("news-site-settings-reduced-motion", false);
 const [highContrast, setHighContrast] = useLocalStorage("news-site-settings-high-contrast", false);

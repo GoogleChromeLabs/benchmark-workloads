@@ -7,15 +7,15 @@ const { callback, id } = defineProps({
     id: String,
 });
 
-const { content, buttons } = inject("data");
+const { buttons, pages } = inject("data");
 
 const navItems = [];
 const dropdownItems = [];
 
-Object.keys(content).forEach(key => {
-    if (content[key].priority === 1)
+Object.keys(pages).forEach(key => {
+    if (pages[key].priority === 1)
         navItems.push(key);
-    else if (content[key].priority === 2)
+    else if (pages[key].priority === 2)
         dropdownItems.push(key);
 });
 
@@ -30,8 +30,8 @@ Object.keys(content).forEach(key => {
     >
       <NavlistItem
         :id="`${id}-${key}-link`"
-        :label="content[key].name"
-        :url="content[key].url"
+        :label="pages[key].name"
+        :url="pages[key].url"
         :callback="callback"
       />
     </li>
@@ -50,8 +50,8 @@ Object.keys(content).forEach(key => {
         >
           <NavlistItem
             :id="`${id}-${key}-link`"
-            :label="content[key].name"
-            :url="content[key].url"
+            :label="pages[key].name"
+            :url="pages[key].url"
             :callback="callback"
           />
         </li>

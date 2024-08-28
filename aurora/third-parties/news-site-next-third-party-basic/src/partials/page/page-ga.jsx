@@ -7,7 +7,7 @@ import Toast from "@/components/molecules/toast/toast";
 
 import { useDataContext } from "@/context/data-context";
 
-import { GoogleAnalytics } from "@/components/scripts/google-analytics";
+import { GoogleAnalytics } from "@/partials/scripts/google-analytics";
 
 export default function PageGA({ id }) {
     const [showPortal, setShowPortal] = useState(false);

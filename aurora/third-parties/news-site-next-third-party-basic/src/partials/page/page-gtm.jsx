@@ -7,7 +7,7 @@ import Toast from "@/components/molecules/toast/toast";
 
 import { useDataContext } from "@/context/data-context";
 
-import { GoogleTagManager } from "@/components/scripts/google-tag-manager";
+import { GoogleTagManager } from "@/partials/scripts/google-tag-manager";
 
 export default function PageGTM({ id }) {
     const [showPortal, setShowPortal] = useState(false);

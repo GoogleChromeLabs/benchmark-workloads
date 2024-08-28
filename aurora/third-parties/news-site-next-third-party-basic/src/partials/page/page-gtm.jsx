@@ -6,12 +6,29 @@ import Section from "@/components/organisms/section/section";
 import Toast from "@/components/molecules/toast/toast";
 
 import { useDataContext } from "@/context/data-context";
+import { useLocalStorage } from "@/hooks/use-local-storage";
 
 import { GoogleTagManager } from "@/partials/scripts/google-tag-manager";
 
 export default function PageGTM({ id }) {
     const [showPortal, setShowPortal] = useState(false);
     const { content, alerts } = useDataContext();
+
+    /** assign app settings from local storage */
+    const [reduceMotion] = useLocalStorage("news-site-settings-reduced-motion", false);
+    const [highContrast] = useLocalStorage("news-site-settings-high-contrast", false);
+
+    useEffect(() => {
+        if (reduceMotion)
+            document.documentElement.classList.add("reduced-motion");
+        else
+            document.documentElement.classList.remove("reduced-motion");
+
+        if (highContrast)
+            document.documentElement.classList.add("forced-colors");
+        else
+            document.documentElement.classList.remove("forced-colors");
+    }, []);
 
     useEffect(() => {
         setShowPortal(alerts[id].notification);

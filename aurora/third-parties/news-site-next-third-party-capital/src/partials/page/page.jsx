@@ -9,10 +9,10 @@ import { useDataContext } from "@/context/data-context";
 
 export default function Page({ id }) {
     const [showPortal, setShowPortal] = useState(false);
-    const { content } = useDataContext();
+    const { content, alerts } = useDataContext();
 
     useEffect(() => {
-        setShowPortal(content[id].notification);
+        setShowPortal(alerts[id].notification);
     }, [id]);
 
     function closePortal() {
@@ -30,11 +30,11 @@ export default function Page({ id }) {
     return (
         <>
             <Layout id={id}>
-                {content[id].sections.map((section) =>
+                {content[id].map((section) =>
                     <Section key={section.id} section={section} />
                 )}
             </Layout>
-            {showPortal && content[id].notification ? createPortal(<Toast notification={content[id].notification} onAccept={onAccept} onReject={onReject} onClose={onReject} />, document.getElementById("notifications-container")) : null}
+            {showPortal && alerts[id].notification ? createPortal(<Toast notification={alerts[id].notification} onAccept={onAccept} onReject={onReject} onClose={onReject} />, document.getElementById("notifications-container")) : null}
         </>
     );
 }

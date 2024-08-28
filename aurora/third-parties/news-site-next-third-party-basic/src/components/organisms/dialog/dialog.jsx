@@ -9,7 +9,9 @@ import styles from "news-site-css/dist/dialog.module.css";
 export default function Dialog({ onClose }) {
     const [reduceMotion, setReduceMotion] = useState(false);
     const [highContrast, setHighContrast] = useState(false);
-    const { settings } = useDataContext();
+    const { language } = useDataContext();
+
+    const { settings } = language.dialog;
 
     useEffect(() => {
         setReduceMotion(document.documentElement.classList.contains("reduced-motion"));

@@ -12,10 +12,10 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 
 export default function PageGTMGA({ id }) {
     const [showPortal, setShowPortal] = useState(false);
-    const { content } = useDataContext();
+    const { content, alerts } = useDataContext();
 
     useEffect(() => {
-        setShowPortal(content[id].notification);
+        setShowPortal(alerts[id].notification);
     }, [id]);
 
     function closePortal() {
@@ -33,11 +33,11 @@ export default function PageGTMGA({ id }) {
     return (
         <>
             <Layout id={id}>
-                {content[id].sections.map((section) =>
+                {content[id].map((section) =>
                     <Section key={section.id} section={section} />
                 )}
             </Layout>
-            {showPortal && content[id].notification ? createPortal(<Toast notification={content[id].notification} onAccept={onAccept} onReject={onReject} onClose={onReject} />, document.getElementById("notifications-container")) : null}
+            {showPortal && alerts[id].notification ? createPortal(<Toast notification={alerts[id].notification} onAccept={onAccept} onReject={onReject} onClose={onReject} />, document.getElementById("notifications-container")) : null}
             <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_KEY} />
             <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_KEY} />
         </>

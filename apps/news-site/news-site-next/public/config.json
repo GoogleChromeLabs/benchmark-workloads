@@ -1,0 +1,17 @@
+{
+    "ads": {
+        "home": {
+            "hero": {
+                "src": "https://benchmark-workloads-ad-css-animations.netlify.app/",
+                "width": "970",
+                "height": "250"
+            }
+        },
+        "us": {},
+        "world": {},
+        "politics": {},
+        "business": {},
+        "opinion": {},
+        "health": {}
+    }
+}

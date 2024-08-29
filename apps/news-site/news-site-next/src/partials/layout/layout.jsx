@@ -6,6 +6,7 @@ import Header from "@/partials/header/header";
 import Navigation from "@/components/organisms/navigation/navigation";
 import Main from "@/components/organisms/main/main";
 import Footer from "@/components/organisms/footer/footer";
+import Ad from "@/components/atoms/ad/ad";
 
 import { useDataContext } from "@/context/data-context";
 import { Message } from "@/components/molecules/message/message";
@@ -15,8 +16,9 @@ import { useRouter } from "next/router";
 
 export default function Layout({ children, id }) {
     const [showMessage, setShowMessage] = useState(false);
-    const { alerts, links } = useDataContext();
+    const { alerts, links, config } = useDataContext();
     const router = useRouter();
+    const hero = config?.ads[id]?.hero;
 
     function handleRouteChangeComplete(url) {
         window.dispatchEvent(new CustomEvent("route-change-complete", { detail: { url } }));
@@ -45,6 +47,7 @@ export default function Layout({ children, id }) {
                 {links.a11y.skip.label}
             </HashLink>
             <div className={styles.page} ref={pageRef}>
+                {hero ? <Ad data={hero} location="header" /> : null }
                 <Header />
                 <Navigation />
                 {showMessage ? <Message message={alerts[id].message} onClose={closeMessage} /> : null}

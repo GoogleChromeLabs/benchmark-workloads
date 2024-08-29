@@ -15,7 +15,7 @@ import { useRouter } from "next/router";
 
 export default function Layout({ children, id }) {
     const [showMessage, setShowMessage] = useState(false);
-    const { content, links } = useDataContext();
+    const { alerts, links } = useDataContext();
     const router = useRouter();
 
     function handleRouteChangeComplete(url) {
@@ -29,8 +29,8 @@ export default function Layout({ children, id }) {
     }, []);
 
     useEffect(() => {
-        setShowMessage(content[id].message);
-    }, [content, id]);
+        setShowMessage(alerts[id].message);
+    }, [alerts, id]);
 
     const pageRef = useRef(null);
     const pathname = usePathname();
@@ -47,7 +47,7 @@ export default function Layout({ children, id }) {
             <div className={styles.page} ref={pageRef}>
                 <Header />
                 <Navigation />
-                {showMessage ? <Message message={content[id].message} onClose={closeMessage} /> : null}
+                {showMessage ? <Message message={alerts[id].message} onClose={closeMessage} /> : null}
                 <Main>{children}</Main>
                 <Footer />
             </div>

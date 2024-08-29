@@ -11,7 +11,9 @@ import styles from "news-site-css/dist/footer.module.css";
 
 export default function Footer() {
     const [showPortal, setShowPortal] = useState(false);
-    const { footer, links } = useDataContext();
+    const { language, links } = useDataContext();
+
+    const { footer } = language;
 
     function openPortal() {
         setShowPortal(true);

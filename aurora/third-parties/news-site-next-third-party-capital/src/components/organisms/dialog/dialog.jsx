@@ -1,20 +1,17 @@
-import { useState, useEffect } from "react";
 import classNames from "classnames";
 
 import Toggle from "@/components/atoms/toggle/toggle";
 import { useDataContext } from "@/context/data-context";
+import { useLocalStorage } from "@/hooks/use-local-storage";
 
 import styles from "news-site-css/dist/dialog.module.css";
 
 export default function Dialog({ onClose }) {
-    const [reduceMotion, setReduceMotion] = useState(false);
-    const [highContrast, setHighContrast] = useState(false);
-    const { settings } = useDataContext();
+    const [reduceMotion, setReduceMotion] = useLocalStorage("news-site-settings-reduced-motion", false);
+    const [highContrast, setHighContrast] = useLocalStorage("news-site-settings-high-contrast", false);
+    const { language } = useDataContext();
 
-    useEffect(() => {
-        setReduceMotion(document.documentElement.classList.contains("reduced-motion"));
-        setHighContrast(document.documentElement.classList.contains("forced-colors"));
-    }, []);
+    const { settings } = language.dialog;
 
     function toggleMotion(e) {
         setReduceMotion(e.target.checked);

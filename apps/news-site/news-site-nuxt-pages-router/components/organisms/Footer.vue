@@ -2,7 +2,9 @@
 import { inject, ref } from "vue";
 import styles from "news-site-css/dist/footer.module.css";
 
-const { footer, links } = inject("data");
+const { language, links } = inject("data");
+const { footer } = language;
+
 const showPortal = ref(false);
 
 function openPortal() {

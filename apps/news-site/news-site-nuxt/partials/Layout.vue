@@ -6,10 +6,10 @@ import styles from "news-site-css/dist/layout.module.css";
 const showMessage = ref(false);
 const route = useRoute();
 
-const { content, links } = inject("data");
+const { alerts, links } = inject("data");
 
 function updateShowMessage() {
-    showMessage.value = content[route.name]?.message ? true : false;
+    showMessage.value = alerts[route.name]?.message ? true : false;
 }
 
 onMounted(updateShowMessage);
@@ -34,10 +34,10 @@ const closeMessage = () => {
     <Header />
     <Navigation />
     <Message
-      v-if="content[route.name]?.message"
+      v-if="alerts[route.name]?.message"
       v-show="showMessage"
       :on-close="closeMessage"
-      :message="content[route.name]?.message"
+      :message="alerts[route.name]?.message"
     />
     <Main>
       <slot />

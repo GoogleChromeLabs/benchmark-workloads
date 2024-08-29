@@ -7,10 +7,10 @@ import { usePathname } from "next/navigation";
 import styles from "news-site-css/dist/sitemap.module.css";
 
 export default function Sitemap() {
-    const { content } = useDataContext();
     const pathname = usePathname();
+    const { sections, pages } = useDataContext();
 
-    const keys = Object.keys(content);
+    const keys = Object.keys(pages);
     const navItems = keys.reduce((result, key) => {
         result.push(key);
         return result;
@@ -20,14 +20,14 @@ export default function Sitemap() {
         <div className={styles.sitemap}>
             <ul className={styles["sitemap-list"]}>
                 {navItems.map((key) =>
-                    <li className={styles["sitemap-item"]} key={`sitemap-page-${content[key].name}`}>
-                        <Link href={content[key].url} className={classNames({ [styles.active]: pathname.split("/")[1] === key })}>
-                            <h4 className={styles["sitemap-header"]}>{content[key].name}</h4>
+                    <li className={styles["sitemap-item"]} key={`sitemap-page-${pages[key].name}`}>
+                        <Link href={pages[key].url} className={classNames({ [styles.active]: pathname.split("/")[1] === key })}>
+                            <h4 className={styles["sitemap-header"]}>{pages[key].name}</h4>
                         </Link>
                         <ul className={styles["sitemap-sublist"]}>
-                            {content[key].sections.map((section) =>
+                            {sections[key].map((section) =>
                                 <li className={styles["sitemap-subitem"]} key={`sitemap-section${section.id}`}>
-                                    <Link href={`${content[key].url}#${section.id}`}>{section.name}</Link>
+                                    <Link href={`${pages[key].url}#${section.id}`}>{section.name}</Link>
                                 </li>
                             )}
                         </ul>

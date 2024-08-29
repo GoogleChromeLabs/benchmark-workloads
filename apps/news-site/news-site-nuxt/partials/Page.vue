@@ -4,7 +4,7 @@ import { useLocalStorage, useHead } from "#imports";
 
 import { useRoute } from "vue-router";
 
-const { content } = inject("data");
+const { content, alerts } = inject("data");
 const showPortal = ref(false);
 
 const { name } = useRoute();
@@ -14,7 +14,7 @@ const [reduceMotion] = useLocalStorage("news-site-settings-reduced-motion", fals
 const [highContrast] = useLocalStorage("news-site-settings-high-contrast", false);
 
 onMounted(() => {
-    showPortal.value = content[name].notification ? true : false;
+    showPortal.value = alerts[name].notification ? true : false;
 
     if (reduceMotion)
         document.documentElement.classList.add("reduced-motion");
@@ -48,18 +48,18 @@ function closePortal() {
 
 <template>
   <Section
-    v-for="section in content[name].sections"
+    v-for="section in content[name]"
     :key="section.name"
     :section="section"
   />
   <Teleport to="body">
     <Toast
-      v-if="content[name].notification"
+      v-if="alerts[name].notification"
       v-show="showPortal"
       :on-close="closePortal"
       :on-accept="closePortal"
       :on-reject="closePortal"
-      :notification="content[name].notification"
+      :notification="alerts[name].notification"
     />
   </Teleport>
 </template>

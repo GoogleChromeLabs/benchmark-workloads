@@ -6,9 +6,9 @@ defineProps({
     onClick: Function
 });
 
-const { content } = inject("data");
+const { sections, pages } = inject("data");
 
-const keys = Object.keys(content);
+const keys = Object.keys(pages);
 const navItems = keys.reduce(
     (result, key) => {
         result.push(key);
@@ -23,24 +23,24 @@ const navItems = keys.reduce(
     <ul :class="styles['sitemap-list']">
       <li
         v-for="key in navItems"
-        :key="`sitemap-page-${content[key].name}`"
+        :key="`sitemap-page-${pages[key].name}`"
         :class="styles['sitemap-item']"
       >
         <NuxtLink
-          :to="content[key].url"
+          :to="pages[key].url"
           :active-class="styles['active']"
         >
           <h4 :class="styles['sitemap-header']">
-            {{ content[key].name }}
+            {{ pages[key].name }}
           </h4>
         </NuxtLink>
         <ul :class="styles['sitemap-sublist']">
           <li
-            v-for="section in content[key].sections"
+            v-for="section in sections[key]"
             :key="`sitemap-section${section.id}`"
             :class="styles['sitemap-subitem']"
           >
-            <NuxtLink :to="`${content[key].url}#${section.id}`">
+            <NuxtLink :to="`${pages[key].url}#${section.id}`">
               {{ section.name }}
             </NuxtLink>
           </li>

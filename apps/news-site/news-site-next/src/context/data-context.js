@@ -48,8 +48,7 @@ export const DataContextProvider = ({ children }) => {
          * decide to load config
          */
         if (configParam) {
-            const configSource = process.env.TARGET && process.env.TARGET === "static" ? `./${configParam}` : `/${configParam}`;
-            getAndInitializeStaticConfig(configSource)
+            getAndInitializeStaticConfig(configParam)
                 .then(data => {
                     if (ignore)
                         return;

@@ -7,9 +7,21 @@ const DEFAULT_DIR = "ltr";
 
 const DataContext = createContext(null);
 
+let ignore = false;
+
+async function getAndInitializeStaticConfig(url) {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+}
+
 export const DataContextProvider = ({ children }) => {
     const [value, setValue] = useState({});
+    // initialized should persist between re-renders
     const initialized = useRef(false);
+
+    // ignore always resets on re-render, hence global var
+    ignore = false;
 
     useEffect(() => {
         if (initialized.current)
@@ -29,16 +41,6 @@ export const DataContextProvider = ({ children }) => {
         /**
          * read config and fetch
          */
-        const fetchData = async(url, key) => {
-            const response = await fetch(url);
-            const data = await response.json();
-            setValue({
-                lang,
-                dir,
-                ...dataSource[lang],
-                [key]: { ...data },
-            });
-        };
 
         const configParam = urlParams.get("config");
 
@@ -47,7 +49,18 @@ export const DataContextProvider = ({ children }) => {
          */
         if (configParam) {
             const configSource = process.env.TARGET && process.env.TARGET === "static" ? `./${configParam}` : `/${configParam}`;
-            fetchData(configSource, "config");
+            getAndInitializeStaticConfig(configSource)
+                .then(data => {
+                    if (ignore)
+                        return;
+
+                    setValue({
+                        lang,
+                        dir,
+                        ...dataSource[lang],
+                        config: { ...data },
+                    });
+                });
         } else {
             setValue({
                 lang,
@@ -57,6 +70,11 @@ export const DataContextProvider = ({ children }) => {
         }
 
         initialized.current = true;
+
+        // eslint-disable-next-line consistent-return
+        return () => {
+            ignore = true;
+        };
     }, []);
 
     return <DataContext.Provider value={value}>{children}</DataContext.Provider>;

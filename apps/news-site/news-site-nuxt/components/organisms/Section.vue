@@ -16,9 +16,9 @@ const { section } = defineProps({
   </div>
   <section :class="styles.row">
     <Article
-      v-for="(articles, index) in section.articles"
-      :key="`${section.id}-${index}`"
-      :article="articles"
+      v-for="(article) in section.articles"
+      :key="article.id"
+      :article="article"
     />
   </section>
 </template>

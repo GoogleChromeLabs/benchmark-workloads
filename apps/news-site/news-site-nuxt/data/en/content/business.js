@@ -137,6 +137,7 @@ export const business = [
                 type: "excerpt",
                 content: [
                     {
+                        id: "1f074185-0c72-47cc-b889-2b0d5be855eb",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -146,6 +147,7 @@ export const business = [
                         text: "Bibendum arcu vitae elementum curabitur vitae nunc sed. Ipsum faucibus vitae aliquet nec ullamcorper sit. Blandit libero volutpat sed cras ornare arcu dui. Maecenas sed enim ut sem viverra aliquet.",
                     },
                     {
+                        id: "5ba10ec7-2031-4e61-98c4-4fa2e681c0e2",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -155,6 +157,7 @@ export const business = [
                         text: "Arcu risus quis varius quam quisque id diam vel quam. Sed risus pretium quam vulputate dignissim suspendisse in. Amet aliquam id diam maecenas ultricies mi. Egestas dui id ornare arcu odio.",
                     },
                     {
+                        id: "8534ba50-7daa-43da-ab5e-929b06ee127f",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -172,6 +175,7 @@ export const business = [
                 type: "excerpt",
                 content: [
                     {
+                        id: "c9e71431-0407-4329-bbb3-61a820dc636a",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -181,6 +185,7 @@ export const business = [
                         text: "Ut etiam sit amet nisl purus in mollis nunc sed. Eget mauris pharetra et ultrices neque ornare aenean. Magna sit amet purus gravida quis blandit turpis.",
                     },
                     {
+                        id: "d0c42c8e-e4a5-46b7-a7a7-9e3e8dfb34a3",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -190,6 +195,7 @@ export const business = [
                         text: "Eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Viverra aliquet eget sit amet tellus cras. Consequat id porta nibh venenatis. Ac felis donec et odio pellentesque diam volutpat commodo sed.",
                     },
                     {
+                        id: "c3bbf9c0-e133-405b-8a1b-e24da3258980",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -207,6 +213,7 @@ export const business = [
                 type: "excerpt",
                 content: [
                     {
+                        id: "bc0da085-5ade-493d-8784-78ae2607cf29",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -216,6 +223,7 @@ export const business = [
                         text: "Bibendum arcu vitae elementum curabitur vitae nunc sed. Facilisis mauris sit amet massa vitae tortor condimentum lacinia.",
                     },
                     {
+                        id: "9ae84ec2-229d-4969-870a-23e8561146ef",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -225,6 +233,7 @@ export const business = [
                         text: "Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis. At in tellus integer feugiat scelerisque varius morbi enim. Nisi vitae suscipit tellus mauris a.",
                     },
                     {
+                        id: "8b9e5c03-b566-4e78-9df3-768698a17713",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -248,6 +257,7 @@ export const business = [
                 display: "grid-wrap",
                 content: [
                     {
+                        id: "75dba799-f4f1-43d7-909c-81e107a61281",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -264,6 +274,7 @@ export const business = [
                         url: "#",
                     },
                     {
+                        id: "7d882247-3db1-4882-a609-ee5eed6dc6df",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -280,6 +291,7 @@ export const business = [
                         url: "#",
                     },
                     {
+                        id: "de04fa72-d96e-4eb7-bbf7-d587e31a5f6b",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -296,6 +308,7 @@ export const business = [
                         url: "#",
                     },
                     {
+                        id: "d6275634-2236-4a3c-b787-a71d33ae5bdf",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -386,6 +399,7 @@ export const business = [
                 type: "grid",
                 content: [
                     {
+                        id: "a623eb53-c205-4ba7-88cc-7d28a402fbe7",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -402,6 +416,7 @@ export const business = [
                         url: "#",
                     },
                     {
+                        id: "5a406442-2994-47c1-9e9c-51ccb2c12dbc",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -426,6 +441,7 @@ export const business = [
                 type: "grid",
                 content: [
                     {
+                        id: "12d94ea1-157a-4f3d-87bf-28c305b52aea",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -442,6 +458,7 @@ export const business = [
                         url: "#",
                     },
                     {
+                        id: "8f623500-fbd4-4bc0-9a72-31b7c18749a8",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -472,16 +489,19 @@ export const business = [
                 type: "articles-list",
                 content: [
                     {
+                        id: "d7e4b0d6-79f6-4ee0-9a25-07948eb0f199",
                         title: "Ic turpis egestas maecenas pharetra convallis. Dui accumsan sit amet nulla facilisi morbi tempus.",
                         content:
                                     "A scelerisque purus semper eget duis at. Condimentum lacinia quis vel eros donec ac odio. Pretium fusce id velit ut tortor pretium viverra suspendisse. Blandit aliquam etiam erat velit scelerisque in. Est placerat in egestas erat imperdiet sed euismod nisi. Suspendisse potenti nullam ac tortor vitae purus faucibus.",
                     },
                     {
+                        id: "e1c56eba-491c-461f-85dd-a3df520dfbfc",
                         title: "Risus commodo viverra maecenas accumsan lacus vel.",
                         content:
                                     "Est ullamcorper eget nulla facilisi etiam dignissim diam quis enim. Iaculis eu non diam phasellus. Odio aenean sed adipiscing diam donec. Eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum.",
                     },
                     {
+                        id: "3b46da4b-dd8e-49fd-b53f-64effe759dea",
                         title: "Vitae ultricies leo integer malesuada nunc vel risus commodo.",
                         content:
                                     "Donec et odio pellentesque diam volutpat. Sed libero enim sed faucibus turpis in eu. Aliquam nulla facilisi cras fermentum odio eu feugiat pretium. Tristique risus nec feugiat in fermentum. Turpis egestas maecenas pharetra convallis posuere morbi leo urna.",
@@ -495,16 +515,19 @@ export const business = [
                 type: "articles-list",
                 content: [
                     {
+                        id: "c1d78742-406a-4123-86cd-bc4fad85f28b",
                         title: "Elementum integer enim neque volutpat.",
                         content:
                                     "Dignissim diam quis enim lobortis scelerisque. Lacus vestibulum sed arcu non odio euismod lacinia at quis. Mi bibendum neque egestas congue quisque. Arcu dui vivamus arcu felis bibendum ut tristique. Consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis.",
                     },
                     {
+                        id: "01ca72c3-7112-4a57-9173-a527977755ae",
                         title: "Vitae turpis massa sed elementum tempus egestas sed.",
                         content:
                                     "Eu lobortis elementum nibh tellus molestie. Egestas congue quisque egestas diam in arcu cursus euismod quis. Purus non enim praesent elementum facilisis. Suscipit tellus mauris a diam maecenas sed enim ut sem. Sed elementum tempus egestas sed sed risus pretium quam.",
                     },
                     {
+                        id: "7734f54b-5b1b-4a6f-b81a-b15b0f0d52cb",
                         title: "Consequat ac felis donec et odio pellentesque diam.",
                         content:
                                     "Pharetra diam sit amet nisl suscipit adipiscing bibendum. Mi eget mauris pharetra et ultrices neque ornare. Habitant morbi tristique senectus et netus et. Quis eleifend quam adipiscing vitae. Fames ac turpis egestas maecenas pharetra convallis posuere morbi.",
@@ -518,16 +541,19 @@ export const business = [
                 type: "articles-list",
                 content: [
                     {
+                        id: "379fa367-cf87-4b0a-8ab6-1a0b1a8d7943",
                         title: "Lacus sed viverra tellus in. Eget mi proin sed libero enim sed.",
                         content:
                                     "A diam maecenas sed enim. Platea dictumst vestibulum rhoncus est pellentesque elit. Metus dictum at tempor commodo ullamcorper. Est ullamcorper eget nulla facilisi etiam dignissim diam. Felis eget velit aliquet sagittis id consectetur purus.",
                     },
                     {
+                        id: "508c1266-d70f-4e9d-ae5f-fab87fccc1a0",
                         title: "Est lorem ipsum dolor sit amet. Duis ultricies lacus sed turpis tincidunt.",
                         content:
                                     "Mattis pellentesque id nibh tortor id aliquet lectus. Odio aenean sed adipiscing diam donec adipiscing. Mi in nulla posuere sollicitudin aliquam ultrices sagittis. Dictum varius duis at consectetur lorem donec massa sapien faucibus.",
                     },
                     {
+                        id: "b3fa7b41-ed86-4ab1-a86a-21283741d1a0",
                         title: "Duis ut diam quam nulla porttitor massa id.",
                         content:
                                     "Id aliquet lectus proin nibh nisl condimentum id venenatis. Ultrices in iaculis nunc sed augue lacus viverra vitae congue. Lectus urna duis convallis convallis tellus id interdum velit. Duis convallis convallis tellus id interdum. Et malesuada fames ac turpis egestas sed.",
@@ -547,6 +573,7 @@ export const business = [
                 type: "excerpt",
                 content: [
                     {
+                        id: "a9ae906b-e98d-412d-89a1-baba39c0be01",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -556,6 +583,7 @@ export const business = [
                         text: "Pretium fusce id velit ut tortor pretium viverra suspendisse potenti. Nisi scelerisque eu ultrices vitae auctor eu. Amet massa vitae tortor condimentum lacinia quis vel. In arcu cursus euismod quis.",
                     },
                     {
+                        id: "217c58fc-0edf-417d-9305-4abc0615eef8",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -565,6 +593,7 @@ export const business = [
                         text: "Tempus urna et pharetra pharetra massa massa ultricies mi. Vestibulum lorem sed risus ultricies tristique nulla aliquet enim. Sit amet luctus venenatis lectus magna fringilla urna.",
                     },
                     {
+                        id: "82606dff-6bc4-4b84-b0d8-c7557f6482e4",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -582,6 +611,7 @@ export const business = [
                 type: "excerpt",
                 content: [
                     {
+                        id: "2c06041f-b0b4-47f3-a1c4-ab3fb25f0803",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -591,6 +621,7 @@ export const business = [
                         text: "Risus quis varius quam quisque id diam vel quam. Risus at ultrices mi tempus imperdiet nulla malesuada. Aliquet enim tortor at auctor urna. Sapien et ligula ullamcorper malesuada proin libero. Nunc sed augue lacus viverra vitae congue.",
                     },
                     {
+                        id: "b408a578-0fda-4423-9635-cbf1c2aa675d",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -600,6 +631,7 @@ export const business = [
                         text: "Quisque id diam vel quam elementum pulvinar etiam non. Lacus laoreet non curabitur gravida arcu ac tortor dignissim convallis. Ac ut consequat semper viverra nam libero justo.",
                     },
                     {
+                        id: "635b4368-112d-4062-8e8c-e95171cffa6f",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -617,6 +649,7 @@ export const business = [
                 type: "excerpt",
                 content: [
                     {
+                        id: "5a5482c2-f4ef-4cca-98b4-1e6cdca39ec5",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -626,6 +659,7 @@ export const business = [
                         text: "Pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus et. Sed enim ut sem viverra aliquet eget. Porttitor lacus luctus accumsan tortor. Sit amet justo donec enim diam.",
                     },
                     {
+                        id: "f6fa61d0-5086-445c-8192-9f78ce2c3a63",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -635,6 +669,7 @@ export const business = [
                         text: "Nibh sit amet commodo nulla facilisi nullam vehicula. Lectus mauris ultrices eros in cursus turpis massa. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Sed adipiscing diam donec adipiscing tristique risus nec feugiat in.",
                     },
                     {
+                        id: "f3f5f6b2-cdcf-49b6-b650-bb80c9459dde",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -658,16 +693,19 @@ export const business = [
                 type: "articles-list",
                 content: [
                     {
+                        id: "f452479c-6084-4b57-925d-a7851a0a1211",
                         title: "Eleifend donec pretium vulputate sapien nec sagittis.",
                         content:
                                     "Adipiscing bibendum est ultricies integer quis. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Suspendisse in est ante in. Semper auctor neque vitae tempus quam pellentesque. Et tortor at risus viverra adipiscing at in tellus integer.",
                     },
                     {
+                        id: "1caebfb3-912b-485d-a4b7-4500adb5066a",
                         title: "Ornare aenean euismod elementum nisi quis eleifend quam.",
                         content:
                                     "Pretium aenean pharetra magna ac. Sem nulla pharetra diam sit amet nisl suscipit adipiscing bibendum. Neque vitae tempus quam pellentesque nec nam aliquam sem. Potenti nullam ac tortor vitae purus faucibus ornare suspendisse. Ipsum nunc aliquet bibendum enim facilisis gravida neque.",
                     },
                     {
+                        id: "341d9b4b-d3eb-4728-922e-222d745665c1",
                         title: "Ultrices sagittis orci a scelerisque purus semper. Porttitor massa id neque aliquam vestibulum morbi blandit.",
                         content:
                                     "Augue eget arcu dictum varius. Aliquet nibh praesent tristique magna sit amet purus gravida. Mattis enim ut tellus elementum. A diam sollicitudin tempor id eu nisl nunc mi. Justo nec ultrices dui sapien eget mi proin. Euismod lacinia at quis risus sed vulputate odio.",
@@ -681,16 +719,19 @@ export const business = [
                 type: "articles-list",
                 content: [
                     {
+                        id: "40e13034-8351-4f8a-8e1d-3d6f068e6709",
                         title: "Dictum sit amet justo donec. Justo donec enim diam vulputate ut pharetra sit.",
                         content:
                                     "Bibendum enim facilisis gravida neque. Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue. Auctor neque vitae tempus quam pellentesque nec. Justo donec enim diam vulputate ut pharetra sit amet. Aliquam sem fringilla ut morbi tincidunt augue interdum velit.",
                     },
                     {
+                        id: "2b763d78-1424-4a2e-a5a2-79fe02253600",
                         title: "Massa massa ultricies mi quis hendrerit dolor magna eget.",
                         content:
                                     "Ornare massa eget egestas purus viverra accumsan in nisl nisi. A arcu cursus vitae congue mauris rhoncus. Gravida arcu ac tortor dignissim convallis aenean et tortor. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Volutpat diam ut venenatis tellus in metus.",
                     },
                     {
+                        id: "3d29bcd8-9d18-4dac-8f98-197c968f90bd",
                         title: "Duis at consectetur lorem donec massa sapien faucibus.",
                         content:
                                     "acilisis gravida neque convallis a cras semper auctor neque. Non nisi est sit amet facilisis magna etiam tempor. Posuere morbi leo urna molestie at elementum eu. Tellus in hac habitasse platea dictumst vestibulum rhoncus est pellentesque.",
@@ -704,15 +745,18 @@ export const business = [
                 type: "articles-list",
                 content: [
                     {
+                        id: "4887a57f-dee5-4023-a173-bcb2a691f6ca",
                         title: "Odio aenean sed adipiscing diam donec adipiscing tristique risus nec.",
                         content: "Pharetra vel turpis nunc eget. Non arcu risus quis varius quam quisque id. Augue ut lectus arcu bibendum at varius vel pharetra vel. Rhoncus dolor purus non enim praesent elementum.",
                     },
                     {
+                        id: "73bd8127-50e4-44e7-836d-07e330226717",
                         title: "Quis enim lobortis scelerisque fermentum. Nisl rhoncus mattis rhoncus urna. Felis eget velit aliquet sagittis id consectetur purus ut.",
                         content:
                                     "Enim nec dui nunc mattis enim ut. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. Sed vulputate mi sit amet mauris commodo. Ultricies lacus sed turpis tincidunt id aliquet risus feugiat. In hac habitasse platea dictumst vestibulum rhoncus est.",
                     },
                     {
+                        id: "a585ea07-caf5-44b9-88d2-f8f5f8ae6f02",
                         title: "landit cursus risus at ultrices mi tempus imperdiet nulla malesuada.",
                         content:
                                     "Vitae justo eget magna fermentum iaculis eu non diam phasellus. Et netus et malesuada fames ac turpis. In eu mi bibendum neque egestas congue. Justo eget magna fermentum iaculis eu non diam. Feugiat nibh sed pulvinar proin gravida hendrerit lectus a.",
@@ -732,6 +776,7 @@ export const business = [
                 type: "grid",
                 content: [
                     {
+                        id: "7498eaec-d8dc-442f-b939-2bff86ed2c6e",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -748,6 +793,7 @@ export const business = [
                         url: "#",
                     },
                     {
+                        id: "cce7d8eb-b0d7-40a6-bc7d-932ac420fd43",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -772,6 +818,7 @@ export const business = [
                 type: "grid",
                 content: [
                     {
+                        id: "40389294-8c93-4c5a-8a63-57ffefdd8f89",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -788,6 +835,7 @@ export const business = [
                         url: "#",
                     },
                     {
+                        id: "bb50d294-0aaa-40c1-aebd-f727bc270b17",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -817,6 +865,7 @@ export const business = [
                 type: "preview",
                 content: [
                     {
+                        id: "d9326d57-6280-4f00-a047-12be65eb3ca2",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -826,6 +875,7 @@ export const business = [
                         title: "Facilisis magna etiam tempor orci eu lobortis elementum nibh tellus. Morbi enim nunc faucibus a pellentesque sit amet porttitor eget.",
                     },
                     {
+                        id: "bbe374d2-6058-4800-8ecb-2101785ba463",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -842,6 +892,7 @@ export const business = [
                 type: "preview",
                 content: [
                     {
+                        id: "e84ec76b-e0ec-4477-adcd-3a7f49516895",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -851,6 +902,7 @@ export const business = [
                         title: "Sit amet aliquam id diam maecenas ultricies. Magna sit amet purus gravida quis blandit. Risus nullam eget felis eget nunc. Ac felis donec et odio pellentesque diam volutpat commodo sed.",
                     },
                     {
+                        id: "f5cddda2-e658-4f4f-b245-33228dad3eb3",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -867,6 +919,7 @@ export const business = [
                 type: "preview",
                 content: [
                     {
+                        id: "41f2e683-c165-4573-a50d-27aad4deae11",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -876,6 +929,7 @@ export const business = [
                         title: "Aliquam malesuada bibendum arcu vitae elementum curabitur. A pellentesque sit amet porttitor eget dolor morbi non.",
                     },
                     {
+                        id: "8249c70b-245f-44e4-829e-d08a273522c7",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -892,6 +946,7 @@ export const business = [
                 type: "preview",
                 content: [
                     {
+                        id: "1d5eee05-b406-4853-b5ba-f37728062b2e",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -901,6 +956,7 @@ export const business = [
                         title: "Cursus mattis molestie a iaculis at. Nullam eget felis eget nunc. Tortor id aliquet lectus proin nibh nisl condimentum id.",
                     },
                     {
+                        id: "66f72ca0-97b1-48f1-9aa5-ad53f4d040d5",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",

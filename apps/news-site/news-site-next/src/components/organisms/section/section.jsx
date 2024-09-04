@@ -11,8 +11,8 @@ export default function Section({ section }) {
                 </div>
                 : null}
             <section className={styles.row}>
-                {section.articles.map((article, index) =>
-                    <Article key={`${section.id}-${index}`} article={article} />
+                {section.articles.map((article) =>
+                    <Article key={article.id} article={article} />
                 )}
             </section>
         </>

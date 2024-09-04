@@ -85,15 +85,19 @@ export const opinion = [
                 type: "list",
                 content: [
                     {
+                        id: "240604e5-bec1-4618-96b2-0779e444bbd6",
                         content: "Tortor consequat id porta nibh venenatis cras sed.",
                     },
                     {
+                        id: "0c00a629-e255-4378-8a83-c03f7931c4ad",
                         content: "Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet consectetur.",
                     },
                     {
+                        id: "1c1c8def-c6a4-46e1-abc3-41f5047fac43",
                         content: "Adipiscing diam donec adipiscing tristique risus nec feugiat in.",
                     },
                     {
+                        id: "58d833c6-a8c8-407a-9f19-beca0f8c162f",
                         content: "Ultrices neque ornare aenean euismod elementum nisi quis.",
                     },
                 ],
@@ -115,15 +119,19 @@ export const opinion = [
                 type: "list",
                 content: [
                     {
+                        id: "92224182-af6a-4b62-88cb-570784a44f48",
                         content: "Nisi porta lorem mollis aliquam ut porttitor leo a diam.",
                     },
                     {
+                        id: "a6afd1c2-8601-44c0-b0f4-1ce53c49c18e",
                         content: "Purus ut faucibus pulvinar elementum integer enim neque volutpat ac.",
                     },
                     {
+                        id: "a50daa85-285a-4352-95f0-110d84a29bfe",
                         content: "Suspendisse in est ante in nibh mauris cursus.",
                     },
                     {
+                        id: "81b0cb6e-a5d2-4520-9760-91dd4b87b416",
                         content: "Aliquam vestibulum morbi blandit cursus. Leo integer malesuada nunc vel risus commodo viverra maecenas.",
                     },
                 ],
@@ -159,6 +167,7 @@ export const opinion = [
                 type: "excerpt",
                 content: [
                     {
+                        id: "8b9fef9b-1387-432b-9f0a-a4fbe8525c39",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -168,6 +177,7 @@ export const opinion = [
                         text: "Egestas congue quisque egestas diam in arcu. Sollicitudin tempor id eu nisl nunc mi.",
                     },
                     {
+                        id: "dbbbe43b-354b-458e-832a-1a1de4e4a68c",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -177,6 +187,7 @@ export const opinion = [
                         text: "A condimentum vitae sapien pellentesque habitant morbi tristique senectus. Neque laoreet suspendisse interdum consectetur.",
                     },
                     {
+                        id: "4d5f3465-3649-40d0-a15e-28b4c6c7a333",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -194,6 +205,7 @@ export const opinion = [
                 type: "excerpt",
                 content: [
                     {
+                        id: "ac384e2a-611f-4910-8c89-2922238dff84",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -203,6 +215,7 @@ export const opinion = [
                         text: "Malesuada fames ac turpis egestas integer eget. Ante metus dictum at tempor commodo ullamcorper. Ipsum dolor sit amet consectetur.",
                     },
                     {
+                        id: "c5622af2-af36-4d93-9fab-5fed3226f48c",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -212,6 +225,7 @@ export const opinion = [
                         text: "Dictumst quisque sagittis purus sit amet. Cras fermentum odio eu feugiat pretium. Pretium aenean pharetra magna ac placerat vestibulum lectus.",
                     },
                     {
+                        id: "1e5314da-3b79-4da7-a845-d3c27c37ba70",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -229,6 +243,7 @@ export const opinion = [
                 type: "excerpt",
                 content: [
                     {
+                        id: "af1969b9-e8de-4e1f-84b5-353ea124a6b0",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -238,6 +253,7 @@ export const opinion = [
                         text: "Nullam eget felis eget nunc. Fames ac turpis egestas integer eget aliquet nibh praesent tristique.",
                     },
                     {
+                        id: "ba3d22b7-a6e8-4f6e-a97a-ac179e4c44de",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -247,6 +263,7 @@ export const opinion = [
                         text: "Massa ultricies mi quis hendrerit dolor magna eget est.",
                     },
                     {
+                        id: "3724b29a-64a3-4426-9354-7f6026d5ce30",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -281,18 +298,22 @@ export const opinion = [
                 display: "bullets",
                 content: [
                     {
+                        id: "66f18c80-0f84-4713-ba04-ec7aa1f3441a",
                         content: "Et tortor consequat id porta nibh venenatis cras sed felis. Neque aliquam vestibulum morbi blandit cursus risus at ultrices mi.",
                         url: "#",
                     },
                     {
+                        id: "a446329a-425a-4599-81c7-a867ab764af9",
                         content: "Commodo quis imperdiet massa tincidunt nunc. Diam maecenas sed enim ut sem viverra aliquet eget sit.",
                         url: "#",
                     },
                     {
+                        id: "273c6981-6b94-4b79-9017-5a8ee610450f",
                         content: "Aliquam malesuada bibendum arcu vitae elementum curabitur. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat.",
                         url: "#",
                     },
                     {
+                        id: "142b6b03-0141-443f-bb2f-06310fc3ff76",
                         content: "Quis enim lobortis scelerisque fermentum. Nibh venenatis cras sed felis eget velit aliquet.",
                         url: "#",
                     },
@@ -316,18 +337,22 @@ export const opinion = [
                 display: "bullets",
                 content: [
                     {
+                        id: "434b9a09-048a-4389-963d-f1a9e28a2e0b",
                         content: "In hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit. At lectus urna duis convallis convallis tellus id interdum.",
                         url: "#",
                     },
                     {
+                        id: "5d479d71-0510-46c7-a97e-96dfaac89f33",
                         content: "Ultrices eros in cursus turpis massa tincidunt dui. Mi tempus imperdiet nulla malesuada pellentesque.",
                         url: "#",
                     },
                     {
+                        id: "c237c9c4-d382-4e70-8888-32fe5b57153b",
                         content: "Ipsum faucibus vitae aliquet nec ullamcorper sit. Eleifend donec pretium vulputate sapien nec sagittis aliquam.",
                         url: "#",
                     },
                     {
+                        id: "1747a7d7-a717-4dc1-b972-aea76168bd6e",
                         content: "In hac habitasse platea dictumst. Pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu.",
                         url: "#",
                     },
@@ -351,18 +376,22 @@ export const opinion = [
                 display: "bullets",
                 content: [
                     {
+                        id: "17e825fc-4471-405d-8134-3105d0d5c419",
                         content: "Urna porttitor rhoncus dolor purus. Eget sit amet tellus cras adipiscing enim.",
                         url: "#",
                     },
                     {
+                        id: "dffa8c9a-0f03-4a0c-a1cb-fb26e0a74a49",
                         content: "Leo urna molestie at elementum eu facilisis sed. Metus dictum at tempor commodo ullamcorper a.",
                         url: "#",
                     },
                     {
+                        id: "1c5c95cc-41e8-418b-9caa-f3e743b53fbf",
                         content: "Non odio euismod lacinia at quis risus sed vulputate.",
                         url: "#",
                     },
                     {
+                        id: "5be13fa0-0e42-47f1-8d7b-e24c24f78972",
                         content: "Justo donec enim diam vulputate ut. Euismod elementum nisi quis eleifend.",
                         url: "#",
                     },
@@ -380,6 +409,7 @@ export const opinion = [
                 type: "grid",
                 content: [
                     {
+                        id: "ce8185af-104d-4d9c-910b-8b96bcd6cf26",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -394,6 +424,7 @@ export const opinion = [
                         },
                     },
                     {
+                        id: "e3af13d9-da0e-4068-9e92-ca09bb0d9eea",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -408,6 +439,7 @@ export const opinion = [
                         },
                     },
                     {
+                        id: "2c4f8f8c-cbe4-4a3f-9306-5142eea5a43d",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -422,6 +454,7 @@ export const opinion = [
                         },
                     },
                     {
+                        id: "de921ec9-3c73-4008-a124-d30477ffc0b7",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -460,15 +493,19 @@ export const opinion = [
                 type: "list",
                 content: [
                     {
+                        id: "048f3e7e-882e-474b-a0eb-8cc82d599336",
                         content: "Eget felis eget nunc lobortis mattis aliquam faucibus purus in.",
                     },
                     {
+                        id: "f736ae42-3fe7-4fab-85dc-2922e272f2b5",
                         content: "Adipiscing elit ut aliquam purus sit amet luctus venenatis lectus.",
                     },
                     {
+                        id: "54266d53-a192-4922-936f-144431407990",
                         content: "Eu volutpat odio facilisis mauris sit amet massa.",
                     },
                     {
+                        id: "268294f4-0cec-4074-9cc4-07a93fbe8b66",
                         content: "Vitae tortor condimentum lacinia quis vel eros donec ac.",
                     },
                 ],
@@ -490,15 +527,19 @@ export const opinion = [
                 type: "list",
                 content: [
                     {
+                        id: "9ef95ded-e833-44ee-8cb4-6538078e97d4",
                         content: "Enim facilisis gravida neque convallis a.",
                     },
                     {
+                        id: "915b97eb-9f89-4f5a-aeee-32a17b6f45da",
                         content: "Ridiculus mus mauris vitae ultricies leo integer malesuada.",
                     },
                     {
+                        id: "2f17a946-0402-4d3b-bce7-e8fdaedc7fbe",
                         content: "Elementum nisi quis eleifend quam. Sed elementum tempus egestas sed sed.",
                     },
                     {
+                        id: "733ff090-3c8c-47fb-895e-f5d63e9d0f3a",
                         content: "Ut tellus elementum sagittis vitae et leo duis ut diam. Ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim.",
                     },
                 ],
@@ -520,15 +561,19 @@ export const opinion = [
                 type: "list",
                 content: [
                     {
+                        id: "8ff75479-7c53-4fb2-a720-475a1974f64f",
                         content: "Metus dictum at tempor commodo ullamcorper a lacus vestibulum.",
                     },
                     {
+                        id: "92c8590a-8431-4007-9a35-518f9a3b0095",
                         content: "In nisl nisi scelerisque eu ultrices. In fermentum et sollicitudin ac orci phasellus egestas.",
                     },
                     {
+                        id: "5d805677-408b-4317-a93b-8a0de95b313a",
                         content: "Ut aliquam purus sit amet luctus venenatis lectus magna fringilla.",
                     },
                     {
+                        id: "b51989a3-ffbe-40b4-9cfb-e52db8c1e48c",
                         content: "Morbi enim nunc faucibus a pellentesque. Mi ipsum faucibus vitae aliquet nec ullamcorper.",
                     },
                 ],
@@ -546,16 +591,19 @@ export const opinion = [
                 type: "articles-list",
                 content: [
                     {
+                        id: "d2cc2f04-fc60-4314-b1bd-aacee5b80eed",
                         title: "Dis parturient montes nascetur ridiculus mus mauris vitae.",
                         content:
                                     "Justo donec enim diam vulputate ut pharetra sit amet aliquam. Curabitur vitae nunc sed velit dignissim sodales. Varius vel pharetra vel turpis nunc eget lorem. Sed viverra ipsum nunc aliquet bibendum. Ultrices in iaculis nunc sed augue.",
                     },
                     {
+                        id: "fe657d1b-916c-4f59-b6f9-54d21ba90f07",
                         title: "Vitae turpis massa sed elementum tempus egestas sed sed risus.",
                         content:
                                     "Nascetur ridiculus mus mauris vitae ultricies leo integer. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Ultrices gravida dictum fusce ut placerat orci nulla pellentesque. Gravida arcu ac tortor dignissim convallis aenean. Urna duis convallis convallis tellus id interdum.",
                     },
                     {
+                        id: "48fa5839-11d9-4721-a8e2-f734734904a2",
                         title: "Rutrum tellus pellentesque eu tincidunt tortor. Volutpat sed cras ornare arcu.",
                         content:
                                     "estibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Urna porttitor rhoncus dolor purus. Nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Ultrices in iaculis nunc sed augue lacus. Nunc pulvinar sapien et ligula ullamcorper.",
@@ -569,15 +617,18 @@ export const opinion = [
                 type: "articles-list",
                 content: [
                     {
+                        id: "bd091840-fde1-44f6-8830-9b165cfa0b66",
                         title: "Tellus id interdum velit laoreet id donec ultrices tincidunt arcu.",
                         content:
                                     "Eget est lorem ipsum dolor sit amet. Faucibus scelerisque eleifend donec pretium vulputate sapien. Quam adipiscing vitae proin sagittis. Quisque id diam vel quam elementum pulvinar etiam non. Laoreet non curabitur gravida arcu ac tortor dignissim convallis aenean.",
                     },
                     {
+                        id: "7d052a73-7477-41d4-9b46-82f33e09fb2f",
                         title: "Scelerisque viverra mauris in aliquam sem fringilla ut.",
                         content: "Amet mauris commodo quis imperdiet. Eu consequat ac felis donec et odio pellentesque. Hendrerit gravida rutrum quisque non tellus orci ac. Amet cursus sit amet dictum.",
                     },
                     {
+                        id: "1d6f6db3-f9d9-4fc2-ad08-0edcf39d5fd3",
                         title: "Vulputate eu scelerisque felis imperdiet. Non quam lacus suspendisse faucibus interdum posuere.",
                         content:
                                     "Luctus venenatis lectus magna fringilla urna porttitor. Hac habitasse platea dictumst vestibulum rhoncus. Orci a scelerisque purus semper eget duis at tellus. Risus nec feugiat in fermentum posuere urna nec tincidunt praesent.",
@@ -591,16 +642,19 @@ export const opinion = [
                 type: "articles-list",
                 content: [
                     {
+                        id: "23fe0c63-75fb-498d-a7f2-4e91b29530b7",
                         title: "Non quam lacus suspendisse faucibus.",
                         content:
                                     "Nisi quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Odio euismod lacinia at quis. Molestie a iaculis at erat. Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Donec ac odio tempor orci dapibus.",
                     },
                     {
+                        id: "c14a8fd5-1a01-4e2e-8ca3-2b3f951dd211",
                         title: "Sit amet consectetur adipiscing elit. Lorem sed risus ultricies tristique nulla aliquet.",
                         content:
                                     "Neque aliquam vestibulum morbi blandit cursus risus at. Habitant morbi tristique senectus et netus et. Quis blandit turpis cursus in. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna. Vel risus commodo viverra maecenas. Tortor dignissim convallis aenean et tortor at.",
                     },
                     {
+                        id: "f8abd77a-596c-4df7-9fa9-38d08f8b6516",
                         title: "Ullamcorper sit amet risus nullam eget.",
                         content:
                                     "urpis nunc eget lorem dolor sed viverra ipsum nunc aliquet. Mollis aliquam ut porttitor leo a diam. Posuere morbi leo urna molestie. Suscipit tellus mauris a diam maecenas sed. Ultrices dui sapien eget mi proin sed libero enim sed.",
@@ -620,6 +674,7 @@ export const opinion = [
                 type: "grid",
                 content: [
                     {
+                        id: "05d58548-eec8-4806-8935-a50a72d863cb",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -636,6 +691,7 @@ export const opinion = [
                         url: "#",
                     },
                     {
+                        id: "d825b148-633e-46f6-9f25-5d2b1b42d926",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -660,6 +716,7 @@ export const opinion = [
                 type: "grid",
                 content: [
                     {
+                        id: "35ef50c4-f574-484f-bf93-0f9eb004b18b",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -676,6 +733,7 @@ export const opinion = [
                         url: "#",
                     },
                     {
+                        id: "3d2cb1ef-f74b-4eac-b237-c9ac0a0e94d4",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -706,6 +764,7 @@ export const opinion = [
                 type: "excerpt",
                 content: [
                     {
+                        id: "e015fd9b-c112-4aec-895b-463080039812",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -715,6 +774,7 @@ export const opinion = [
                         text: "Nibh sed pulvinar proin gravida hendrerit lectus. Habitasse platea dictumst quisque sagittis purus sit amet. Mi sit amet mauris commodo quis.",
                     },
                     {
+                        id: "e3910d58-0e1f-4ee1-872b-8bd39ec70833",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -724,6 +784,7 @@ export const opinion = [
                         text: "Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Arcu non odio euismod lacinia. Ac turpis egestas sed tempus urna.",
                     },
                     {
+                        id: "89525746-2a5c-426b-950f-8b8e7a0e77eb",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -741,6 +802,7 @@ export const opinion = [
                 type: "excerpt",
                 content: [
                     {
+                        id: "91eb5eba-6ce6-4376-b8a9-874a8e759285",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -750,6 +812,7 @@ export const opinion = [
                         text: "Venenatis tellus in metus vulputate eu scelerisque felis. Orci phasellus egestas tellus rutrum tellus pellentesque eu. Id leo in vitae turpis massa sed elementum.",
                     },
                     {
+                        id: "daedcebf-d529-4dc6-9215-ca7b83bc288f",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -759,6 +822,7 @@ export const opinion = [
                         text: "Feugiat vivamus at augue eget arcu dictum varius duis at. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget.",
                     },
                     {
+                        id: "1bd419c1-0664-4b54-963b-fda397fecbf0",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -776,6 +840,7 @@ export const opinion = [
                 type: "excerpt",
                 content: [
                     {
+                        id: "90217b1a-7e75-4b34-aed5-6be1b2b8c016",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -785,6 +850,7 @@ export const opinion = [
                         text: "Mattis rhoncus urna neque viverra. Hendrerit gravida rutrum quisque non tellus orci ac. Ut venenatis tellus in metus.",
                     },
                     {
+                        id: "61b9356e-2ea7-4770-81b5-a6af21721fec",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -794,6 +860,7 @@ export const opinion = [
                         text: "Enim ut tellus elementum sagittis vitae et leo duis. Dictumst quisque sagittis purus sit amet volutpat consequat.",
                     },
                     {
+                        id: "401e246d-ffda-4c74-897f-1889de7ffeb1",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -817,6 +884,7 @@ export const opinion = [
                 type: "grid",
                 content: [
                     {
+                        id: "106eea44-16f1-403d-b075-4baa5e5998e0",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -833,6 +901,7 @@ export const opinion = [
                         url: "#",
                     },
                     {
+                        id: "952c96cc-a882-4100-b9c5-21572c70abef",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -857,6 +926,7 @@ export const opinion = [
                 type: "grid",
                 content: [
                     {
+                        id: "406e421a-7044-4256-964b-9decfcf6958d",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -873,6 +943,7 @@ export const opinion = [
                         url: "#",
                     },
                     {
+                        id: "f16fc9bc-ac9e-492b-b9fa-9512181bd45e",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -902,6 +973,7 @@ export const opinion = [
                 type: "preview",
                 content: [
                     {
+                        id: "1f2b0751-1d26-420c-a4ab-dfe8189afa55",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -918,6 +990,7 @@ export const opinion = [
                 type: "preview",
                 content: [
                     {
+                        id: "61856b32-0a27-4767-a624-9292b797d463",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -934,6 +1007,7 @@ export const opinion = [
                 type: "preview",
                 content: [
                     {
+                        id: "64853755-7212-46ff-b036-eb078a15e975",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",
@@ -950,6 +1024,7 @@ export const opinion = [
                 type: "preview",
                 content: [
                     {
+                        id: "809a6cab-ccb0-4270-9555-948eff9e7291",
                         image: {
                             src: "placeholder_light.jpg",
                             alt: "Placeholder",

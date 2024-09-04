@@ -29,7 +29,8 @@ export default function Page({ id }) {
     }, []);
 
     useEffect(() => {
-        setShowPortal(alerts[id].notification);
+        if (alerts)
+            setShowPortal(alerts[id].notification);
     }, [id]);
 
     function closePortal() {
@@ -43,6 +44,9 @@ export default function Page({ id }) {
     function onReject() {
         closePortal();
     }
+
+    if (!content)
+        return null;
 
     return (
         <>

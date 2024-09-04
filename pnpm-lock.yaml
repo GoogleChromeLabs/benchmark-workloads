@@ -81,9 +81,6 @@ importers:
       react-router-hash-link:
         specifier: ^2.4.3
         version: 2.4.3(react-router-dom@6.22.1)(react@18.2.0)
-      uuid:
-        specifier: ^9.0.0
-        version: 9.0.1
       workload-testing-utils:
         specifier: 'workspace: *'
         version: link:../../../packages/tools/workload-testing-utils
@@ -409,6 +406,8 @@ importers:
       workload-testing-utils:
         specifier: 'workspace: *'
         version: link:../../../packages/tools/workload-testing-utils
+
+  aurora/third-parties/news-site-next-third-party-capital/output: {}
 
   examples/hello-world:
     dependencies:

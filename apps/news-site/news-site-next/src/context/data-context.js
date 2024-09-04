@@ -40,7 +40,7 @@ function getAndInitializePageConfig() {
             lang,
             dir,
             ...dataSource[lang],
-            ...config,
+            config: { ...config },
         };
     })();
     return initConfigPromise;

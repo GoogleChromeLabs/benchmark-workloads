@@ -18,7 +18,7 @@ export default function Layout({ children, id }) {
     const [showMessage, setShowMessage] = useState(false);
     const { alerts, links, config } = useDataContext();
     const router = useRouter();
-    const hero = config?.ads[id]?.hero;
+    const hero = config?.ads?.[id].hero;
 
     function handleRouteChangeComplete(url) {
         window.dispatchEvent(new CustomEvent("route-change-complete", { detail: { url } }));

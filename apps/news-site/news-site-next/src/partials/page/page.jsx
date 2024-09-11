@@ -57,7 +57,7 @@ export default function Page({ id }) {
                 {content[id].map((section, index) => {
                     return (
                         <Fragment key={section.id} >
-                            { ads[index] ? <Ad data={ads[index]} location="section"/> : null }
+                            { ads?.[index] ? <Ad data={ads[index]} location="section"/> : null }
                             <Section section={section} />
                         </Fragment>
                     );

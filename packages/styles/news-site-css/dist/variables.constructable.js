@@ -36,6 +36,8 @@ sheet.replaceSync(`:root {
     --header-advertising-height: 250px;
     --article-advertising-width: 300px;
     --article-advertising-height: 250px;
+    --section-advertising-width: 728px;
+    --section-advertising-height: 90px;
     --nav-height: 40px;
     --nav-button-height: 32px;
     --nav-button-height-mobile: 40px;

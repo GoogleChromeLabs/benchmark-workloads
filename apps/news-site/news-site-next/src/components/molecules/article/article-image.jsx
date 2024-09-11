@@ -13,7 +13,7 @@ export default function ArticleImage({ image, imageClass, meta }) {
     return (
         <>
             <div className={imageClass}>
-                <Image className={styles["article-image"]} src={imageSource} width={image.width} height={image.height} alt={image.alt} />
+                <Image className={styles["article-image"]} src={imageSource} width={image.width} height={image.height} style={{ width: "100%", height: "auto" }} alt={image.alt} />
                 <ArticleTag tag={meta?.tag} />
             </div>
             <ArticleText textClass={styles["article-image-captions"]} text={meta?.captions} />

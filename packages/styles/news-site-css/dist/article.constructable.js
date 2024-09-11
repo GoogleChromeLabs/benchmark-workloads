@@ -187,7 +187,7 @@ sheet.replaceSync(`.article-header {
 
 .article-list-item .article-hero {
     display: flex;
-    width: 33.33%;
+    width: 34%;
     flex-direction: column;
     flex-shrink: 0;
     min-width: 130px;
@@ -197,7 +197,7 @@ sheet.replaceSync(`.article-header {
 .article-list-item .article-content {
     margin-top: 0;
     margin-inline-start: var(--content-spacing-large);
-    width: 66.66%;
+    width: 66%;
 }
 
 

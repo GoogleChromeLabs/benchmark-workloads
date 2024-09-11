@@ -19,6 +19,11 @@
     color: var(--color-utils-gray-dark);
 }
 
+.advertisement-container-section {
+    margin-bottom: var(--content-spacing-xlarge);
+    color: var(--color-utils-gray-dark);
+}
+
 .advertisement-iframe {
     display: flex;
     margin: var(--content-spacing-xsmall) 0;
@@ -29,6 +34,11 @@
 .advertisement-300x250 {
     width: var(--article-advertising-width);
     height: var(--article-advertising-height);
+}
+
+.advertisement-728x90 {
+    width: var(--section-advertising-width);
+    height: var(--section-advertising-height);
 }
 
 .advertisement-970x250 {

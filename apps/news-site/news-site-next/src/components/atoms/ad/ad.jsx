@@ -4,7 +4,6 @@ import styles from "news-site-css/dist/advertisement.module.css";
 
 export default function Ad({ data, location }) {
     const source = `${data.src}?w=${data.width}&h=${data.height}`;
-    console.log("source", source);
 
     return (
         <div className={classNames(styles["advertisement-container"], styles[`advertisement-container-${location}`])}>

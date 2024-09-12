@@ -1,16 +1,19 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import { createPortal } from "react-dom";
 
 import Layout from "@/partials/layout/layout";
 import Section from "@/components/organisms/section/section";
 import Toast from "@/components/molecules/toast/toast";
+import Ad from "@/components/atoms/ad/ad";
 
 import { useDataContext } from "@/context/data-context";
 import { useLocalStorage } from "@/hooks/use-local-storage";
 
 export default function Page({ id }) {
     const [showPortal, setShowPortal] = useState(false);
-    const { content, alerts } = useDataContext();
+    const { content, alerts, config } = useDataContext();
+
+    const ads = config?.ads?.[id].sections;
 
     /** assign app settings from local storage */
     const [reduceMotion] = useLocalStorage("news-site-settings-reduced-motion", false);
@@ -51,8 +54,14 @@ export default function Page({ id }) {
     return (
         <>
             <Layout id={id}>
-                {content[id].map((section) =>
-                    <Section key={section.id} section={section} />
+                {content[id].map((section, index) => {
+                    return (
+                        <Fragment key={section.id} >
+                            { ads?.[index] ? <Ad data={ads[index]} location="section"/> : null }
+                            <Section section={section} />
+                        </Fragment>
+                    );
+                }
                 )}
             </Layout>
             {showPortal && alerts[id].notification ? createPortal(<Toast notification={alerts[id].notification} onAccept={onAccept} onReject={onReject} onClose={onReject} />, document.getElementById("notifications-container")) : null}

@@ -15,6 +15,11 @@ sheet.replaceSync(`.advertisement-container {
     color: var(--color-utils-gray-lighter);
 }
 
+.advertisement-container-section {
+    margin-bottom: var(--content-spacing-xlarge);
+    color: var(--color-utils-gray-dark);
+}
+
 .advertisement-container-article {
     margin-bottom: var(--content-spacing-xlarge);
     color: var(--color-utils-gray-dark);
@@ -30,6 +35,11 @@ sheet.replaceSync(`.advertisement-container {
 .advertisement-300x250 {
     width: var(--article-advertising-width);
     height: var(--article-advertising-height);
+}
+
+.advertisement-728x90 {
+    width: var(--section-advertising-width);
+    height: var(--section-advertising-height);
 }
 
 .advertisement-970x250 {
@@ -81,5 +91,16 @@ sheet.replaceSync(`.advertisement-container {
     stroke: var(--theme-advertisement-icon-fill);
     fill: var(--theme-advertisement-icon-fill);
 }
-`);
+
+@media (max-width: 727px) {
+    .advertisement-container-section {
+        display: none;
+    }
+}
+
+@media (max-width: 969px) {
+    .advertisement-container-header {
+        display: none;
+    }
+}`);
 export default sheet;

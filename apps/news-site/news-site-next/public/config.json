@@ -5,6 +5,18 @@
                 "src": "https://benchmark-workloads-ad-css-animations.netlify.app/",
                 "width": "970",
                 "height": "250"
+            },
+            "sections": {
+                "3": {
+                    "src": "https://benchmark-workloads-ad-css-animations.netlify.app/",
+                    "width": "728",
+                    "height": "90"
+                },
+                "6": {
+                    "src": "https://benchmark-workloads-ad-css-animations.netlify.app/",
+                    "width": "728",
+                    "height": "90"
+                }
             }
         },
         "us": {},

@@ -17,7 +17,7 @@
   "devDependencies": {
     "fs-extra": "^11.1.1",
     "globby": "^13.2.0",
-    "rollup": "^3.23.0",
+    "rollup": "^3.29.5",
     "rollup-constructable-css": "workspace:*",
     "rollup-copy-files": "workspace:*",
     "rollup-plugin-cleaner": "^1.0.0",

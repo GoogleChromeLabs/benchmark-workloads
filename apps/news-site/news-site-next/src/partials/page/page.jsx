@@ -58,7 +58,7 @@ export default function Page({ id }) {
                     return (
                         <Fragment key={section.id} >
                             { ads?.[index] ? <Ad data={ads[index]} location="section"/> : null }
-                            <Section section={section} />
+                            <Section section={section} sectionIndex={index} pageId={id} />
                         </Fragment>
                     );
                 }

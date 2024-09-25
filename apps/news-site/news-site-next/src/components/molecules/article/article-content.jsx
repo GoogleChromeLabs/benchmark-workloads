@@ -3,10 +3,12 @@ import classNames from "classnames";
 import ArticleImage from "@/components/molecules/article/article-image";
 import ArticleText from "@/components/molecules/article/article-text";
 
+import Ad from "@/components/atoms/ad/ad";
+
 import styles from "news-site-css/dist/article.module.css";
 import layoutStyles from "news-site-css/dist/layout.module.css";
 
-export default function ArticleContent({ type, content, display }) {
+export default function ArticleContent({ type, content, display, ad }) {
     if (type === "text") {
         return (
             <div className={styles["article-content"]}>
@@ -84,20 +86,24 @@ export default function ArticleContent({ type, content, display }) {
                         }
                     </div>
                 )}
+                { ad ? <Ad data={ad} location="article"/> : null }
             </div>
         );
     }
 
     if (type === "preview") {
         return (
-            <ul className={classNames(styles["article-list"], styles.vertical)}>
-                {content.map((item) =>
-                    <li key={item.id} className={styles["article-list-item"]}>
-                        <ArticleImage imageClass={styles["article-image-container"]} image={item.image} />
-                        <ArticleText textClass={classNames(styles["article-title"], "truncate-multiline", "truncate-multiline-3")} text={item.title} type="h3" />
-                    </li>
-                )}
-            </ul>
+            <>
+                <ul className={classNames(styles["article-list"], styles.vertical)}>
+                    {content.map((item) =>
+                        <li key={item.id} className={styles["article-list-item"]}>
+                            <ArticleImage imageClass={styles["article-image-container"]} image={item.image} />
+                            <ArticleText textClass={classNames(styles["article-title"], "truncate-multiline", "truncate-multiline-3")} text={item.title} type="h3" />
+                        </li>
+                    )}
+                </ul>
+                { ad ? <Ad data={ad} location="article"/> : null }
+            </>
         );
     }
 

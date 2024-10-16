@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="An advertisement" />
+    <title>Advertisement</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="assets/scripts/js-confetti.js"></script>
+    <script type="module" src="src/index.js"></script>
+    <script type="module" src="benchmark-connector.min.js"></script>
+    <script type="module" src="workload-test.js"></script>
+</head>
+
+<body>
+    <div id="ad">
+        <div id="frame-one" class="frame video" style="background-color: white;">
+            <video width="300" muted playsinline webkit-playsinline>
+                <source src="assets/videos/big-buck-bunny-trailer.mp4">
+            </video>
+            <div class="clickthrough"></div>
+        </div>
+        <div id="endframe" class="frame animated">
+            <img src="assets/images/endframe.jpg" width="300" height="250" alt="background image" class="background"/>
+            <canvas id="js-confetti-canvas"></canvas>
+            <div class="clickthrough"></div>
+            <button id="action" class="item animated button" style="margin-top: 150px;">Get it now!</button>
+            <button id="replay" class="item animated button"><svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512">
+                    <path
+                        d="M463.5 224H472c13.3 0 24-10.7 24-24V72c0-9.7-5.8-18.5-14.8-22.2s-19.3-1.7-26.2 5.2L413.4 96.6c-87.6-86.5-228.7-86.2-315.8 1c-87.5 87.5-87.5 229.3 0 316.8s229.3 87.5 316.8 0c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0c-62.5 62.5-163.8 62.5-226.3 0s-62.5-163.8 0-226.3c62.2-62.2 162.7-62.5 225.3-1L327 183c-6.9 6.9-8.9 17.2-5.2 26.2s12.5 14.8 22.2 14.8H463.5z" />
+                </svg></button>
+        </div>
+        <div class="border"></div>
+    </div>
+</body>
+
+</html>

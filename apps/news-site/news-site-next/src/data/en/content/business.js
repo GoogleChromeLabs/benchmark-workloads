@@ -9,7 +9,7 @@ export const business = [
                 header: "Investing",
                 url: "#",
                 image: {
-                    src: "assets/images/truckrun-XBWF6_TEsFM-unsplash_684.jpg",
+                    src: "assets/images/maxim-hopman-IayKLkmz6g0-unsplash_684.jpg",
                     alt: "Placeholder",
                     width: "684",
                     height: "385",
@@ -21,10 +21,7 @@ export const business = [
                         label: "breaking",
                     },
                 },
-                title: "Enim lobortis scelerisque fermentum dui faucibus in ornare. Ante metus dictum at tempor.",
-                type: "text",
-                content:
-                    "Consequat mauris nunc congue nisi vitae. Felis imperdiet proin fermentum leo vel orci porta. Facilisis gravida neque convallis a cras semper. Risus quis varius quam quisque id diam vel quam. Egestas quis ipsum suspendisse ultrices gravida. Nisl nisi scelerisque eu ultrices vitae auctor.\n\nViverra vitae congue eu consequat ac felis. Vestibulum rhoncus est pellentesque elit ullamcorper. Donec massa sapien faucibus et. Vehicula ipsum a arcu cursus vitae congue mauris rhoncus. Quis ipsum suspendisse ultrices gravida. Vel facilisis volutpat est velit egestas dui id ornare arcu. Commodo ullamcorper a lacus vestibulum.",
+                type: "text"
             },
             {
                 id: "4d5bbeee-9e05-4f95-b6bf-af41b145e4e3",
@@ -43,7 +40,7 @@ export const business = [
                 title: "Gravida in fermentum et sollicitudin ac. Varius duis at consectetur lorem donec massa sapien faucibus.",
                 type: "text",
                 content:
-                    "Nisi quis eleifend quam adipiscing vitae proin. Nunc sed velit dignissim sodales ut. Turpis nunc eget lorem dolor sed. Enim nulla aliquet porttitor lacus. Consequat ac felis donec et. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Arcu vitae elementum curabitur vitae nunc sed velit dignissim.",
+                    "Nisi quis eleifend quam adipiscing vitae proin. Nunc sed velit dignissim sodales ut. Turpis nunc eget lorem dolor sed. Enim nulla aliquet porttitor lacus. Consequat ac felis donec et. Aliquam sem fringilla ut morbi tincidunt augue interdum velit.",
             },
             {
                 id: "a788ad50-9e3a-461e-be18-828fbce1dbd9",
@@ -62,7 +59,7 @@ export const business = [
                 title: "Venenatis urna cursus eget nunc. Adipiscing elit duis tristique sollicitudin.",
                 type: "text",
                 content:
-                    "Donec adipiscing tristique risus nec. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Vitae et leo duis ut diam quam. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere lorem.\n\nAc odio tempor orci dapibus ultrices in iaculis nunc. A diam maecenas sed enim ut sem. At quis risus sed vulputate.",
+                    "Donec adipiscing tristique risus nec. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Vitae et leo duis ut diam quam. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere lorem.",
             },
         ],
     },
@@ -93,7 +90,7 @@ export const business = [
                 class: "columns-3-balanced",
                 header: "Tech",
                 image: {
-                    src: "assets/images/maxim-hopman-IayKLkmz6g0-unsplash_448.jpg",
+                    src: "assets/images/truckrun-XBWF6_TEsFM-unsplash_448.jpg",
                     alt: "Placeholder",
                     width: "448",
                     height: "252",

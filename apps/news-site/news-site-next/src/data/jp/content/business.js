@@ -8,12 +8,38 @@ export const business = [
                 class: "columns-3-wide",
                 header: "投資",
                 url: "#",
-                image: {
-                    src: "assets/images/maxim-hopman-IayKLkmz6g0-unsplash_684.jpg",
-                    alt: "プレースホルダー",
-                    width: "684",
-                    height: "385",
-                },
+                images: [
+                    {
+                        src: "assets/images/maxim-hopman-IayKLkmz6g0-unsplash_684.jpg",
+                        alt: "Placeholder",
+                        width: "684",
+                        height: "385",
+                    },
+                    {
+                        src: "assets/images/joshua-rawson-harris-KRELIShKxTM-unsplash_684.jpg",
+                        alt: "Placeholder",
+                        width: "684",
+                        height: "385",
+                    },
+                    {
+                        src: "assets/images/martin-sanchez-z2v23KWm5D0-unsplash_684.jpg",
+                        alt: "Placeholder",
+                        width: "684",
+                        height: "385",
+                    },
+                    {
+                        src: "assets/images/nasa-1lfI7wkGWZ4-unsplash_684.jpg",
+                        alt: "Placeholder",
+                        width: "684",
+                        height: "385",
+                    },
+                    {
+                        src: "assets/images/thomas-scott-yASysTwq-Is-unsplash_684.jpg",
+                        alt: "Placeholder",
+                        width: "684",
+                        height: "385",
+                    },
+                ],
                 meta: {
                     captions: "誰かが撮影した写真。",
                     tag: {
@@ -21,7 +47,6 @@ export const business = [
                         label: "速報",
                     },
                 },
-                type: "text",
             },
             {
                 id: "4d5bbeee-9e05-4f95-b6bf-af41b145e4e3",

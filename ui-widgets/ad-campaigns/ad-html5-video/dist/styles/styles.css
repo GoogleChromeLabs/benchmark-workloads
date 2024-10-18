@@ -1,0 +1,252 @@
+:root {
+    --adWidth: 300px;
+    --adHeight: 250px;
+}
+
+#ad {
+    width: var(--adWidth);
+    height: var(--adHeight);
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins Regular';
+}
+
+.border {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border: 1px solid #e84f4f;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.frame {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    font-size: 24px;
+    flex-shrink: 0;
+    user-select: none;
+}
+
+.button {
+    font-family: inherit;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* frames */
+#frame-one,
+#frame-two,
+#frame-three {
+    background-color: #2e3337;
+    color: white;
+    animation: fadeIn 1s forwards ease-in-out;
+}
+
+#frame-one-0,
+#frame-two-0,
+#frame-three-0 {
+    opacity: 0;
+    animation: fadeInAndSlideInLeft 1s forwards ease-in-out 1s;
+}
+
+#frame-one-1 {
+    opacity: 0;
+    animation: fadeInAndSlideInLeft 1s forwards ease-in-out 2s;
+}
+
+/* end frame */
+#endframe {
+    background-color: #2e3337;
+    color: white;
+    animation: fadeIn 1s forwards ease-in-out;
+    gap: 10px;
+}
+
+#tower {
+    width: 95px;
+    height: 145px;
+    background-image: url("../assets//images/radio_tower.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    transform: translate3d(-47.5px, 0, 0);
+    opacity: 0;
+    animation: fadeIn50 1s forwards ease-in-out;
+}
+
+#title {
+    width: 284px;
+    height: 53px;
+    background-image: url("../assets/images/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0;
+    animation: fadeIn 1s forwards ease-in-out 1s;
+}
+
+#tagline {
+    font-size: 16px;
+    font-family: 'Poppins Regular';
+    user-select: none;
+    color: white;
+    opacity: 0;
+    animation: fadeIn 1s forwards ease-in-out 2s;
+}
+
+#action {
+    background-color: #e84f4f;
+    padding: 0px 8px;
+    font-size: 20px;
+    font-family: 'Poppins Medium';
+    color: white;
+    opacity: 0;
+    animation: fadeIn 1s forwards ease-in-out 2.5s;
+    transition: all 0.3s ease;
+}
+
+#action:hover {
+    background-color: #f58686;
+}
+
+#replay {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 26px;
+    height: 26px;
+    opacity: 0;
+    animation: fadeIn 1s forwards ease-in-out 3s;
+}
+
+#replay svg path {
+    fill: white;
+}
+
+#replay svg {
+    transition: all 0.3s ease;
+}
+
+#replay:hover svg{
+    transform: rotate(90deg);
+}
+
+.clickthrough {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* 970x250 */
+@media (width: 970px) and (height: 250px) {
+   #tower {
+    left: 50%;
+    top: 40px;
+    transform: translate3d(-47.5px, 0, 0);
+   }
+}
+
+/* 600x250 */
+@media (width: 600px) and (height: 250px) {
+    #tower {
+     left: 50%;
+     top: 40px;
+     transform: translate3d(-47.5px, 0, 0);
+    }
+}
+
+/* 728x90 */
+@media (width: 728px) and (height: 90px) {
+    #endframe {
+     flex-direction: row;
+    }
+
+    #tower {
+        left:150px;
+        top: 0px;
+    }
+ }
+
+/* animation specific */
+.show {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeIn50 {
+    from { opacity: 0; }
+    to { opacity: 0.5; }
+}
+
+@keyframes fadeInAndSlideInLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(calc(var(--adWidth)/2 * -1), 0, 0);
+      }
+    
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translate3d(calc(var(--adWidth)/2), 0, 0);
+      }
+    
+      to {
+        transform: translate3d(0, 0, 0);
+      }
+}
+
+/* js-confetti */
+#js-confetti-canvas {
+    width: var(--adWidth);
+    height: var(--adHeight);
+    position: absolute;
+    left: 0;
+    top: 0;
+}

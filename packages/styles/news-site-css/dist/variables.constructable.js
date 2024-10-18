@@ -43,6 +43,7 @@ sheet.replaceSync(`:root {
     --nav-button-height-mobile: 40px;
     --footer-height: 32px;
     --icon-size: 32px;
+    --icon-size-large: 40px;
     --icon-size-medium: 28px;
     --icon-size-small: 24px;
     --icon-size-tiny: 16px;

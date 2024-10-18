@@ -15,6 +15,17 @@
     transition-timing-function: ease;
 }
 
+.icon-button {
+    width: var(--icon-size-large);
+    height: var(--icon-size-large);
+    padding: var(--content-spacing-small);
+}
+
+.icon-button svg path {
+    fill: var(--theme-button-light-text);
+    transition: fill 0.3s ease;
+}
+
 .primary-button {
     border: 1px solid var(--theme-button-light-background);
     background-color: var(--theme-button-light-background);

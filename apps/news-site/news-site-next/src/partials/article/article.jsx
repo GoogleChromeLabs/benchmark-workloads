@@ -19,8 +19,8 @@ export default function Article({ article, ad }) {
                     : null
                 }
                 {
-                    article.images
-                        ? <ArticleCarousel imageClass={articleStyles["article-image-container"]} images={article.images} meta={article.meta}/>
+                    article.carousel
+                        ? <ArticleCarousel imageClass={articleStyles["article-image-container"]} data={article.carousel} meta={article.meta}/>
                         : null
                 }
                 <ArticleText textClass={classNames(articleStyles["article-title"], "truncate-singleline")} text={article.title} type="h3" />

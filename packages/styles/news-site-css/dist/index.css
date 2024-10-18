@@ -47,6 +47,7 @@
     --nav-button-height-mobile: 40px;
     --footer-height: 32px;
     --icon-size: 32px;
+    --icon-size-large: 40px;
     --icon-size-medium: 28px;
     --icon-size-small: 24px;
     --icon-size-tiny: 16px;
@@ -549,6 +550,17 @@ html[dir="rtl"] .arrow-icon {
     transition-property: color, background-color, border-color;
     transition-duration: 0.3s;
     transition-timing-function: ease;
+}
+
+.icon-button {
+    width: var(--icon-size-large);
+    height: var(--icon-size-large);
+    padding: var(--content-spacing-small);
+}
+
+.icon-button svg path {
+    fill: var(--theme-button-light-text);
+    transition: fill 0.3s ease;
 }
 
 .primary-button {

@@ -36,7 +36,9 @@ export default function Sidebar({ onClose }) {
                         <ul className={styles["sidebar-list"]}>
                             {sections[key].map((section) =>
                                 <li className={styles["sidebar-list-item"]} key={`sidebar-section${section.id}`}>
-                                    <HashLink to={`${pages[key].url}#${section.id}`} onClick={onClose}>{section.name}</HashLink>
+                                    <HashLink to={`${pages[key].url}#${section.id}`} onClick={onClose}>
+                                        {section.name}
+                                    </HashLink>
                                 </li>
                             )}
                         </ul>

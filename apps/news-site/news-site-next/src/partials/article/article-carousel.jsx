@@ -1,5 +1,5 @@
 /* eslint-disable curly */
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import classNames from "classnames";
 import Image from "next/image";
 import ArticleTag from "@/components/molecules/article/article-tag";
@@ -21,14 +21,6 @@ export default function ArticleCarousel({ data, imageClass, meta }) {
 
     const imageDir = process.env.TARGET && process.env.TARGET === "static" ? "./" : "/";
     const aspectRatio = data.width / data.height;
-
-    useEffect(() => {
-        console.log("direction", direction);
-        console.log("prevIndex", prevIndex);
-        console.log("currentIndex", currentIndex);
-        console.log("nextIndex", nextIndex);
-        console.log("***");
-    }, [currentIndex, nextIndex, prevIndex]);
 
     function animate(dir) {
         setDirection(dir === "prev" ? "left-to-right" : "right-to-left");
@@ -55,11 +47,18 @@ export default function ArticleCarousel({ data, imageClass, meta }) {
     return (
         <div className={carouselStyles.container} style={{ aspectRatio }}>
             <div className={carouselStyles.content}>
-                {
-                    data.images.map((image, index) => <div className={classNames(imageClass, carouselStyles.image, carouselStyles[direction], { [carouselStyles["prev-slide"]]: index === prevIndex, [carouselStyles["next-slide"]]: index === nextIndex, [carouselStyles["current-slide"]]: index === currentIndex })} key={image.id} >
+                {data.images.map((image, index) =>
+                    <div
+                        className={classNames(imageClass, carouselStyles.image, carouselStyles[direction], {
+                            [carouselStyles["prev-slide"]]: index === prevIndex,
+                            [carouselStyles["next-slide"]]: index === nextIndex,
+                            [carouselStyles["current-slide"]]: index === currentIndex,
+                        })}
+                        key={image.id}
+                    >
                         <Image key={image.id} className={classNames(styles["article-image"])} src={`${imageDir}${image.src}`} width={image.width} height={image.height} alt={image.alt} />
-                    </div>)
-                }
+                    </div>
+                )}
             </div>
             <div className={carouselStyles.buttons}>
                 <button id="prev-button" className={classNames(buttonStyles.button, buttonStyles["primary-button"], buttonStyles["icon-button"])} onClick={prev}>

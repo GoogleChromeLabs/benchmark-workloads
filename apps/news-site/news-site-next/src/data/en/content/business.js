@@ -92,8 +92,7 @@ export const business = [
                 },
                 title: "Venenatis urna cursus eget nunc. Adipiscing elit duis tristique sollicitudin.",
                 type: "text",
-                content:
-                    "Donec adipiscing tristique risus nec. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Vitae et leo duis ut diam quam. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere lorem.",
+                content: "Donec adipiscing tristique risus nec. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Vitae et leo duis ut diam quam. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere lorem.",
             },
         ],
     },
@@ -134,8 +133,7 @@ export const business = [
                 },
                 title: "Posuere sollicitudin aliquam ultrices sagittis orci a.",
                 type: "text",
-                content:
-                    "Praesent elementum facilisis leo vel fringilla est ullamcorper. Scelerisque viverra mauris in aliquam sem fringilla. Donec ac odio tempor orci. Eu augue ut lectus arcu. Diam sollicitudin tempor id eu nisl nunc mi ipsum.",
+                content: "Praesent elementum facilisis leo vel fringilla est ullamcorper. Scelerisque viverra mauris in aliquam sem fringilla. Donec ac odio tempor orci. Eu augue ut lectus arcu. Diam sollicitudin tempor id eu nisl nunc mi ipsum.",
             },
             {
                 id: "bf9491d2-ffcc-4ed3-a3a4-2cfda792f06b",

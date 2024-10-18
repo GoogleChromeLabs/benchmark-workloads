@@ -115,8 +115,7 @@ export const world = [
                 },
                 title: "Et molestie ac feugiat sed lectus vestibulum mattis.",
                 type: "text",
-                content:
-                    "Suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam. Cursus vitae congue mauris rhoncus aenean vel elit scelerisque mauris. Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
+                content: "Suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam. Cursus vitae congue mauris rhoncus aenean vel elit scelerisque mauris. Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
             },
             {
                 id: "c9cd0674-b0de-4f53-9015-a97b57cf91d6",

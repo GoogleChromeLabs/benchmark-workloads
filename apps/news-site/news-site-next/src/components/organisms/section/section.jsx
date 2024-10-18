@@ -18,8 +18,8 @@ export default function Section({ section, sectionIndex, pageId }) {
                 : null}
             <section className={styles.row}>
                 {section.articles.map((article, index) =>
-                    <Fragment key={article.id} >
-                        <Article article={article} sectionIndex={sectionIndex} pageId={pageId} ad={index === section.articles.length - 1 ? ad : null}/>
+                    <Fragment key={article.id}>
+                        <Article article={article} sectionIndex={sectionIndex} pageId={pageId} ad={index === section.articles.length - 1 ? ad : null} />
                     </Fragment>
                 )}
             </section>

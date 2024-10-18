@@ -21,7 +21,8 @@ export default function NavList({ callback, id }) {
 
     return (
         <ul className={styles["navbar-list"]}>
-            {navItems.map((key) => <NavListItem id={`${id}-${key}-link`} key={key} label={pages[key].name} url={pages[key].url} callback={callback} isActive={pathname.split("/")[1] === key} />
+            {navItems.map((key) =>
+                <NavListItem id={`${id}-${key}-link`} key={key} label={pages[key].name} url={pages[key].url} callback={callback} isActive={pathname.split("/")[1] === key} />
             )}
             {dropdownItems.length > 0
                 ? <li className={styles["navbar-item"]}>

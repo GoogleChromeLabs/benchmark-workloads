@@ -33,87 +33,86 @@
     z-index: 1;
 }
 
-
 .prev-slide.right-to-left {
-  animation: prev-right-to-left 0.3s forwards;
+    animation: prev-right-to-left 0.3s forwards;
 }
 
 .current-slide.right-to-left {
-  animation: current-right-to-left 0.3s forwards;
+    animation: current-right-to-left 0.3s forwards;
 }
 
 .next-slide.right-to-left {
-  transform: translateX(100%);
+    transform: translateX(100%);
 }
 
 .prev-slide.left-to-right {
-  transform: translateX(-100%);
+    transform: translateX(-100%);
 }
 
 .current-slide.left-to-right {
-  animation: current-left-to-right 0.3s forwards;
+    animation: current-left-to-right 0.3s forwards;
 }
 
 .next-slide.left-to-right {
-  animation: next-left-to-right 0.3s forwards;
+    animation: next-left-to-right 0.3s forwards;
 }
 
 @keyframes prev-left-to-right {
-  0% {
-    transform: translateX(-100%);
-  }
+    0% {
+        transform: translateX(-100%);
+    }
 
-  100% {
-    transform: translateX(-100%);
-  }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 @keyframes current-left-to-right {
-  0% {
-    transform: translateX(-100%);
-  }
+    0% {
+        transform: translateX(-100%);
+    }
 
-  100% {
-    transform: translateX(0);
-  }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 @keyframes next-left-to-right {
-  0% {
-    transform: translateX(0);
-  }
+    0% {
+        transform: translateX(0);
+    }
 
-  100% {
-    transform: translateX(100%);
-  }
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 @keyframes prev-right-to-left {
-  0% {
-    transform: translateX(0);
-  }
+    0% {
+        transform: translateX(0);
+    }
 
-  100% {
-    transform: translateX(-100%);
-  }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 @keyframes current-right-to-left {
-  0% {
-    transform: translateX(100%);
-  }
+    0% {
+        transform: translateX(100%);
+    }
 
-  100% {
-    transform: translateX(0);
-  }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 @keyframes next-right-to-left {
-  0% {
-    transform: translateX(100%);
-  }
+    0% {
+        transform: translateX(100%);
+    }
 
-  100% {
-    transform: translateX(100%);
-  }
+    100% {
+        transform: translateX(100%);
+    }
 }

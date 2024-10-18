@@ -613,8 +613,7 @@ export const health = [
                     {
                         id: "9e31db8f-9fba-4a1f-99f8-101e357802b4",
                         title: "Sit amet justo donec enim diam vulputate ut pharetra.",
-                        content:
-                            "Nulla at volutpat diam ut venenatis tellus. Pulvinar mattis nunc sed blandit libero volutpat. Sit amet justo donec enim diam vulputate. Condimentum id venenatis a condimentum vitae sapien pellentesque habitant.",
+                        content: "Nulla at volutpat diam ut venenatis tellus. Pulvinar mattis nunc sed blandit libero volutpat. Sit amet justo donec enim diam vulputate. Condimentum id venenatis a condimentum vitae sapien pellentesque habitant.",
                     },
                 ],
             },
@@ -639,8 +638,7 @@ export const health = [
                     {
                         id: "bde5fc93-1779-4cf8-9d54-6ee9abfeb3c4",
                         title: "Rhoncus dolor purus non enim praesent elementum facilisis.",
-                        content:
-                            "Nunc consequat interdum varius sit. Non diam phasellus vestibulum lorem sed risus ultricies. Feugiat nibh sed pulvinar proin gravida hendrerit lectus a. Eget egestas purus viverra accumsan in nisl nisi scelerisque.",
+                        content: "Nunc consequat interdum varius sit. Non diam phasellus vestibulum lorem sed risus ultricies. Feugiat nibh sed pulvinar proin gravida hendrerit lectus a. Eget egestas purus viverra accumsan in nisl nisi scelerisque.",
                     },
                 ],
             },

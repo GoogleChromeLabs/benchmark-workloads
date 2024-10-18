@@ -86,7 +86,7 @@ export default function ArticleContent({ type, content, display, ad }) {
                         }
                     </div>
                 )}
-                { ad ? <Ad data={ad} location="article"/> : null }
+                {ad ? <Ad data={ad} location="article" /> : null}
             </div>
         );
     }
@@ -102,7 +102,7 @@ export default function ArticleContent({ type, content, display, ad }) {
                         </li>
                     )}
                 </ul>
-                { ad ? <Ad data={ad} location="article"/> : null }
+                {ad ? <Ad data={ad} location="article" /> : null}
             </>
         );
     }

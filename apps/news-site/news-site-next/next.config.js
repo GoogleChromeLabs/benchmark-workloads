@@ -15,8 +15,8 @@ const staticConfig = {
         unoptimized: true,
     },
     env: {
-        TARGET: "static"
-    }
+        TARGET: "static",
+    },
 };
 
 const staticWithBaseConfig = {
@@ -27,9 +27,9 @@ const staticWithBaseConfig = {
         unoptimized: true,
     },
     env: {
-        TARGET: "static"
+        TARGET: "static",
     },
-    basePath: process.env.BASE
+    basePath: process.env.BASE,
 };
 
 const dynamicConfig = {
@@ -38,7 +38,7 @@ const dynamicConfig = {
 
 const dynamicWithBaseConfig = {
     distDir: "output-base",
-    basePath: process.env.BASE
+    basePath: process.env.BASE,
 };
 
 switch (target) {

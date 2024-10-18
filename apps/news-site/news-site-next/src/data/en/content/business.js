@@ -103,8 +103,7 @@ export const business = [
                 },
                 title: "Posuere sollicitudin aliquam ultrices sagittis orci a.",
                 type: "text",
-                content:
-                    "Praesent elementum facilisis leo vel fringilla est ullamcorper. Scelerisque viverra mauris in aliquam sem fringilla. Donec ac odio tempor orci. Eu augue ut lectus arcu. Diam sollicitudin tempor id eu nisl nunc mi ipsum.",
+                content: "Praesent elementum facilisis leo vel fringilla est ullamcorper. Scelerisque viverra mauris in aliquam sem fringilla. Donec ac odio tempor orci. Eu augue ut lectus arcu. Diam sollicitudin tempor id eu nisl nunc mi ipsum.",
             },
             {
                 id: "bf9491d2-ffcc-4ed3-a3a4-2cfda792f06b",

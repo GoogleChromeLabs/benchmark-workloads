@@ -51,7 +51,7 @@ export const DataContextProvider = ({ children }) => {
 
     useEffect(() => {
         let ignore = false;
-        getAndInitializePageConfig().then(config => {
+        getAndInitializePageConfig().then((config) => {
             if (!ignore)
                 setValue(config);
         });

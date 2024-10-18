@@ -56,13 +56,12 @@ export default function Page({ id }) {
             <Layout id={id}>
                 {content[id].map((section, index) => {
                     return (
-                        <Fragment key={section.id} >
-                            { ads?.[index] ? <Ad data={ads[index]} location="section"/> : null }
+                        <Fragment key={section.id}>
+                            {ads?.[index] ? <Ad data={ads[index]} location="section" /> : null}
                             <Section section={section} sectionIndex={index} pageId={id} />
                         </Fragment>
                     );
-                }
-                )}
+                })}
             </Layout>
             {showPortal && alerts[id].notification ? createPortal(<Toast notification={alerts[id].notification} onAccept={onAccept} onReject={onReject} onClose={onReject} />, document.getElementById("notifications-container")) : null}
         </>

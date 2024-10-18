@@ -47,7 +47,7 @@ export default function Layout({ children, id }) {
                 {links.a11y.skip.label}
             </HashLink>
             <div className={styles.page} ref={pageRef}>
-                {hero ? <Ad data={hero} location="header" /> : null }
+                {hero ? <Ad data={hero} location="header" /> : null}
                 <Header />
                 <Navigation />
                 {showMessage ? <Message message={alerts[id].message} onClose={closeMessage} /> : null}

@@ -20,7 +20,7 @@
             },
             "articles": {
                 "4": {
-                    "src": "https://benchmark-workloads-ad-css-animations.netlify.app/",
+                    "src": "https://benchmark-workloads-ad-html5-video.netlify.app/",
                     "width": "300",
                     "height": "250"
                 }

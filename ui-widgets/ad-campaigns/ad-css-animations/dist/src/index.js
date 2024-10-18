@@ -5,39 +5,62 @@ function run() {
     const canvas = document.getElementById("js-confetti-canvas");
     const jsConfetti = new JSConfetti({ canvas });
 
+    let video = null;
+
     let animationIndex = 0;
     const frameDelay = 2000;
     const lastFrame = frames.length - 1;
 
     const clickthroughs = document.querySelectorAll(".clickthrough");
-    clickthroughs.forEach(element => element.addEventListener("click", () => {
-        frames[animationIndex]?.classList.remove("show");
-        animationIndex = lastFrame;
-        frames[animationIndex]?.classList.add("show");
-    }))
-
-    frames.forEach((frame) => frame.classList.remove("show"));
+    clickthroughs.forEach(element => element.addEventListener("click", showLastFrame));
 
     const replay = document.querySelector("#replay");
-    replay.addEventListener("click", () => {
-        start();
-    });
+    replay.addEventListener("click", start);
 
-    action.addEventListener("click", () => {
+    const action = document.querySelector("#action");
+    action.addEventListener("click", showConfetti);
+
+    function showConfetti() {
         jsConfetti.addConfetti();
-    });
+    }
 
-    function handleFrameAnimationsComplete() {
+    function showNextFrame(delay = frameDelay) {
         animationIndex++;
         if (frames[animationIndex] !== undefined) {
             setTimeout(
                 () => frames[animationIndex].classList.add("show"),
-                frameDelay
+                delay
             );
         }
     }
 
+    function showLastFrame() {
+        if (video !== null) {
+            cleanupVideo();
+        }
+
+        animationIndex = lastFrame;
+        frames[animationIndex]?.classList.add("show");
+    }
+
+    function handleVideoComplete() {
+        showNextFrame(0);
+    }
+
+    function initializeVideo(frame) {
+        video = frame.querySelector("video");
+        video.addEventListener("ended", handleVideoComplete);
+        video.play();
+    }
+
+    function cleanupVideo() {
+        video.removeEventListener("ended", handleVideoComplete);
+        video.pause();
+        video = null;
+    }
+
     frames.forEach((frame) => {
+        frame.classList.remove("show");
         const items = [...frame.querySelectorAll(".item")];
         let numAnimations = 0;
 
@@ -51,20 +74,24 @@ function run() {
             }
         });
 
-        function handleAnimationEnd() {
+        function handleAnimationEnd(e) {
             numAnimations--;
+
+            if (e.target.classList.contains("video")) {
+                initializeVideo(e.target);
+            }
 
             if (numAnimations === 0) {
                 frame.removeEventListener("animationend", handleAnimationEnd);
-                handleFrameAnimationsComplete();
+                showNextFrame();
                 return;
             }
         }
 
         frame.addEventListener("animationend", handleAnimationEnd);
 
-        if (numAnimations === 0) {
-            handleFrameAnimationsComplete();
+        if (numAnimations === 0 && !frame.classList.contains("video")) {
+            showNextFrame();
             return;
         }
     });

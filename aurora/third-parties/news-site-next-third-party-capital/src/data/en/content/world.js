@@ -13,6 +13,7 @@ export const world = [
                     mode: "place",
                     width: "1280",
                     height: "720",
+                    type: "Google Maps",
                 },
                 meta: {
                     captions: "Place where something happened",

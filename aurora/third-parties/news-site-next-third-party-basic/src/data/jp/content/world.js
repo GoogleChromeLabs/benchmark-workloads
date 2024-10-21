@@ -13,6 +13,7 @@ export const world = [
                     mode: "place",
                     width: "1280",
                     height: "720",
+                    type: "Google Maps",
                 },
                 meta: {
                     captions: "誰かが撮影した写真。",

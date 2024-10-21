@@ -31,6 +31,7 @@ export const home = [
                     id: "z-8vVxz-If0",
                     width: "1280",
                     height: "720",
+                    type: "Youtube Video",
                 },
                 meta: {
                     captions: "誰かが撮影した写真。",
@@ -130,6 +131,7 @@ export const home = [
                     mode: "place",
                     width: "1280",
                     height: "720",
+                    type: "Google Maps",
                 },
                 meta: {
                     captions: "誰かが撮影した写真。",

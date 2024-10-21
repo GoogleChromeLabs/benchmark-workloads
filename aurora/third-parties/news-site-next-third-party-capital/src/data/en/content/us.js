@@ -12,6 +12,7 @@ export const us = [
                     id: "z-8vVxz-If0",
                     width: "1280",
                     height: "720",
+                    type: "Youtube Video",
                 },
                 meta: {
                     captions: "Video of something important",

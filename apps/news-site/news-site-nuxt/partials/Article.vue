@@ -16,8 +16,15 @@ const { article } = defineProps({
     />
     <section :class="articleStyles['article-body']">
       <ArticleImage
+        v-if="article.image"
         :image-class="articleStyles['article-image-container']"
         :image="article.image"
+        :meta="article.meta"
+      />
+      <ArticleCarousel
+        v-if="article.carousel"
+        :image-class="articleStyles['article-image-container']"
+        :data="article.carousel"
         :meta="article.meta"
       />
       <ArticleText

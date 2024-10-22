@@ -9,17 +9,17 @@ export const language = {
                 contrast: {
                     label: "ハイコントラストモード",
                 },
-            }
-        }
+            },
+        },
     },
     footer: {
         copyright: {
             label: "全著作権所有！",
-        }
+        },
     },
     sidebar: {
         sitemap: {
             header: "サイトマップ",
-        }
-    }
+        },
+    },
 };

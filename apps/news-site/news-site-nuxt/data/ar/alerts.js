@@ -28,5 +28,5 @@ export const alerts = {
     politics: {},
     business: {},
     opinion: {},
-    health: {}
+    health: {},
 };

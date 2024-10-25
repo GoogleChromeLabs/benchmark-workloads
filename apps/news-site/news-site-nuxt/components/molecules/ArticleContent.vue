@@ -2,10 +2,11 @@
 import styles from "news-site-css/dist/article.module.css";
 import layoutStyles from "news-site-css/dist/layout.module.css";
 
-const { type, content, display } = defineProps({
+const { type, content, display, ad } = defineProps({
     type: String,
     content: [String, Array],
     display: String,
+    ad: Object
 });
 </script>
 
@@ -129,27 +130,38 @@ const { type, content, display } = defineProps({
         type="h3"
       />
     </div>
+    <Ad
+      v-if="ad"
+      :data="ad"
+      location="article"
+    />
   </div>
 
   <!-- type === preview -->
-  <ul
-    v-if="type === 'preview'"
-    :class="[styles['article-list'], styles.vertical]"
-  >
-    <li
-      v-for="item in content"
-      :key="item.id"
-      :class="styles['article-list-item']"
+  <template v-if="type === 'preview'">
+    <ul
+      :class="[styles['article-list'], styles.vertical]"
     >
-      <ArticleImage
-        :image-class="styles['article-image-container']"
-        :image="item.image"
-      />
-      <ArticleText
-        :text-class="[styles['article-title'], 'truncate-multiline', 'truncate-multiline-3']"
-        :text="item.title"
-        type="h3"
-      />
-    </li>
-  </ul>
+      <li
+        v-for="item in content"
+        :key="item.id"
+        :class="styles['article-list-item']"
+      >
+        <ArticleImage
+          :image-class="styles['article-image-container']"
+          :image="item.image"
+        />
+        <ArticleText
+          :text-class="[styles['article-title'], 'truncate-multiline', 'truncate-multiline-3']"
+          :text="item.title"
+          type="h3"
+        />
+      </li>
+    </ul>
+    <Ad
+      v-if="ad"
+      :data="ad"
+      location="article"
+    />
+  </template>
 </template>

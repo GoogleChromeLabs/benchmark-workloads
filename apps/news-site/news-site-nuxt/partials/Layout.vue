@@ -6,7 +6,8 @@ import styles from "news-site-css/dist/layout.module.css";
 const showMessage = ref(false);
 const route = useRoute();
 
-const { alerts, links } = inject("data");
+const data = inject("data");
+const { alerts, links } = data.value;
 
 function updateShowMessage() {
     showMessage.value = alerts[route.name]?.message ? true : false;
@@ -31,6 +32,11 @@ const closeMessage = () => {
     id="page"
     :class="styles.page"
   >
+    <Ad
+      v-if="data.config?.ads?.[route.name].hero"
+      :data="data.config?.ads?.[route.name].hero"
+      location="header"
+    />
     <Header />
     <Navigation />
     <Message

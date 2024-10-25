@@ -1,9 +1,17 @@
 <script setup>
+import { inject } from "vue";
 import styles from "news-site-css/dist/layout.module.css";
 
-const { section } = defineProps({
-    section: Object
+const data = inject("data");
+
+const { section, sectionIndex, pageId } = defineProps({
+    section: Object,
+    sectionIndex: Number,
+    pageId: String,
 });
+
+console.log("pageId", pageId);
+
 </script>
 
 <template>
@@ -16,9 +24,12 @@ const { section } = defineProps({
   </div>
   <section :class="styles.row">
     <Article
-      v-for="(article) in section.articles"
+      v-for="(article, index) in section.articles"
       :key="article.id"
       :article="article"
+      :section-index="sectionIndex"
+      :page-id="pageId"
+      :ad="index === section.articles.length - 1 ? data.config?.ads?.[pageId].articles?.[sectionIndex] : null"
     />
   </section>
 </template>

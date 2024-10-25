@@ -6,7 +6,7 @@ const { onClose } = defineProps({
     onClose: Function
 });
 
-const { language, pages, sections } = inject("data");
+const { language, pages, sections } = inject("data").value;
 const { sitemap } = language.sidebar;
 
 const keys = Object.keys(pages);

@@ -8,7 +8,7 @@ const { callback } = defineProps({
     callback: Function
 });
 
-const { content } = inject("data");
+const { content } = inject("data").value;
 const route = useRoute();
 
 const isOpen = ref(false);

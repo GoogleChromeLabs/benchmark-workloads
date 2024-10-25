@@ -8,7 +8,7 @@ const { onCancel, onSubmit } = defineProps({
     onSubmit: Function,
 });
 
-const { forms: { login } } = inject("data");
+const { forms: { login } } = inject("data").value;
 
 function handleSubmit(e) {
     onSubmit(e);

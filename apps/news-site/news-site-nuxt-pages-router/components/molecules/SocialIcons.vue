@@ -7,7 +7,7 @@ const { id } = defineProps({
     id: String
 });
 
-const { links } = inject("data");
+const { links } = inject("data").value;
 </script>
 
 <template>

@@ -32,8 +32,7 @@ export default function Page({ id }) {
     }, []);
 
     useEffect(() => {
-        if (alerts)
-            setShowPortal(alerts[id].notification);
+        setShowPortal(alerts?.[id].notification);
     }, [id]);
 
     function closePortal() {

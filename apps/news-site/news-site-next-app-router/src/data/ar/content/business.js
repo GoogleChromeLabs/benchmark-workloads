@@ -8,11 +8,46 @@ export const business = [
                 class: "columns-3-wide",
                 header: "الاستثمار",
                 url: "#",
-                image: {
-                    src: "assets/images/truckrun-XBWF6_TEsFM-unsplash_684.jpg",
-                    alt: "عنصر نائب",
+                carousel: {
                     width: "684",
                     height: "385",
+                    images: [
+                        {
+                            id: "038a6c60-3006-470b-9d93-323c1c585cf7",
+                            src: "assets/images/maxim-hopman-IayKLkmz6g0-unsplash_684.jpg",
+                            alt: "Placeholder",
+                            width: "684",
+                            height: "385",
+                        },
+                        {
+                            id: "25d59bcd-4740-48d3-921d-d4856317a848",
+                            src: "assets/images/joshua-rawson-harris-KRELIShKxTM-unsplash_684.jpg",
+                            alt: "Placeholder",
+                            width: "684",
+                            height: "385",
+                        },
+                        {
+                            id: "58880bc6-deea-46fc-8637-02f515e81469",
+                            src: "assets/images/martin-sanchez-z2v23KWm5D0-unsplash_684.jpg",
+                            alt: "Placeholder",
+                            width: "684",
+                            height: "385",
+                        },
+                        {
+                            id: "28b22171-338a-4ada-b87e-84a7bb42c3a3",
+                            src: "assets/images/nasa-1lfI7wkGWZ4-unsplash_684.jpg",
+                            alt: "Placeholder",
+                            width: "684",
+                            height: "385",
+                        },
+                        {
+                            id: "2587289d-eece-4001-b39e-aecfbd4a4253",
+                            src: "assets/images/thomas-scott-yASysTwq-Is-unsplash_684.jpg",
+                            alt: "Placeholder",
+                            width: "684",
+                            height: "385",
+                        },
+                    ],
                 },
                 meta: {
                     captions: "الصورة التي التقطها شخص ما.",
@@ -88,7 +123,7 @@ export const business = [
                 class: "columns-3-balanced",
                 header: "تقنية",
                 image: {
-                    src: "assets/images/maxim-hopman-IayKLkmz6g0-unsplash_448.jpg",
+                    src: "assets/images/truckrun-XBWF6_TEsFM-unsplash_448.jpg",
                     alt: "عنصر نائب",
                     width: "448",
                     height: "252",

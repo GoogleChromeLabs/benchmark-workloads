@@ -3,7 +3,7 @@ import { inject, ref } from "vue";
 import navStyles from "news-site-css/dist/nav.module.css";
 import buttonStyles from "news-site-css/dist/button.module.css";
 
-const { buttons } = inject("data");
+const { buttons } = inject("data").value;
 const showSidebar = ref(false);
 const showLogin = ref(false);
 

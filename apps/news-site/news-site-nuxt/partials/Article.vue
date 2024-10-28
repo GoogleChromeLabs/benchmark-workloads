@@ -4,6 +4,7 @@ import articleStyles from "news-site-css/dist/article.module.css";
 
 const { article } = defineProps({
     article: Object,
+    ad: Object
 });
 </script>
 
@@ -36,6 +37,7 @@ const { article } = defineProps({
         :type="article.type"
         :content="article.content"
         :display="article.display"
+        :ad="ad"
       />
     </section>
   </article>

@@ -6,7 +6,7 @@ defineProps({
     onClick: Function
 });
 
-const { sections, pages } = inject("data");
+const { sections, pages } = inject("data").value;
 
 const keys = Object.keys(pages);
 const navItems = keys.reduce(

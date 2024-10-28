@@ -1,0 +1,145 @@
+{
+    "ads": {
+        "home": {
+            "hero": {
+                "src": "https://benchmark-workloads-ad-css-animations.netlify.app/",
+                "width": "970",
+                "height": "250"
+            },
+            "sections": {
+                "3": {
+                    "src": "https://benchmark-workloads-ad-css-animations.netlify.app/",
+                    "width": "728",
+                    "height": "90"
+                },
+                "6": {
+                    "src": "https://benchmark-workloads-ad-css-animations.netlify.app/",
+                    "width": "728",
+                    "height": "90"
+                }
+            },
+            "articles": {
+                "4": {
+                    "src": "https://benchmark-workloads-ad-html5-video.netlify.app/",
+                    "width": "300",
+                    "height": "250"
+                }
+            }
+        },
+        "us": {
+            "sections": {
+                "1": {
+                    "src": "https://benchmark-workloads-ad-css-animations.netlify.app/",
+                    "width": "728",
+                    "height": "90"
+                },
+                "4": {
+                    "src": "https://benchmark-workloads-ad-css-animations.netlify.app/",
+                    "width": "728",
+                    "height": "90"
+                },
+                "7": {
+                    "src": "https://benchmark-workloads-ad-css-animations.netlify.app/",
+                    "width": "728",
+                    "height": "90"
+                }
+            }
+        },
+        "world": {
+            "sections": {
+                "3": {
+                    "src": "https://benchmark-workloads-ad-css-animations.netlify.app/",
+                    "width": "728",
+                    "height": "90"
+                },
+                "5": {
+                    "src": "https://benchmark-workloads-ad-css-animations.netlify.app/",
+                    "width": "728",
+                    "height": "90"
+                }
+            }
+        },
+        "politics": {
+            "sections": {
+                "4": {
+                    "src": "https://benchmark-workloads-ad-css-animations.netlify.app/",
+                    "width": "728",
+                    "height": "90"
+                },
+                "6": {
+                    "src": "https://benchmark-workloads-ad-css-animations.netlify.app/",
+                    "width": "728",
+                    "height": "90"
+                }
+            },
+            "articles": {
+                "0": {
+                    "src": "https://benchmark-workloads-ad-css-animations.netlify.app/",
+                    "width": "300",
+                    "height": "250"
+                }
+            }
+        },
+        "business": {
+            "sections": {
+                "2": {
+                    "src": "https://benchmark-workloads-ad-css-animations.netlify.app/",
+                    "width": "728",
+                    "height": "90"
+                },
+                "6": {
+                    "src": "https://benchmark-workloads-ad-css-animations.netlify.app/",
+                    "width": "728",
+                    "height": "90"
+                }
+            },
+            "articles": {
+                "3": {
+                    "src": "https://benchmark-workloads-ad-css-animations.netlify.app/",
+                    "width": "300",
+                    "height": "250"
+                }
+            }
+        },
+        "opinion": {
+            "sections": {
+                "0": {
+                    "src": "https://benchmark-workloads-ad-css-animations.netlify.app/",
+                    "width": "728",
+                    "height": "90"
+                },
+                "4": {
+                    "src": "https://benchmark-workloads-ad-css-animations.netlify.app/",
+                    "width": "728",
+                    "height": "90"
+                },
+                "7": {
+                    "src": "https://benchmark-workloads-ad-css-animations.netlify.app/",
+                    "width": "728",
+                    "height": "90"
+                }
+            }
+        },
+        "health": {
+            "sections": {
+                "3": {
+                    "src": "https://benchmark-workloads-ad-css-animations.netlify.app/",
+                    "width": "728",
+                    "height": "90"
+                },
+                "7": {
+                    "src": "https://benchmark-workloads-ad-css-animations.netlify.app/",
+                    "width": "728",
+                    "height": "90"
+                }
+            },
+            "articles": {
+                "4": {
+                    "src": "https://benchmark-workloads-ad-css-animations.netlify.app/",
+                    "width": "300",
+                    "height": "250"
+                }
+            }
+        }
+    }
+}

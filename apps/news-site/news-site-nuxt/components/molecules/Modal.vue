@@ -6,7 +6,7 @@ const { onClose } = defineProps({
     onClose: Function,
 });
 
-const { forms: { login } } = inject("data");
+const { forms: { login } } = inject("data").value;
 
 function handleSubmit(e) {
     const { elements } = e.target;

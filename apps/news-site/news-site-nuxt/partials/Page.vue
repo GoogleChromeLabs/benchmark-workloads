@@ -4,7 +4,8 @@ import { useLocalStorage, useHead } from "#imports";
 
 import { useRoute } from "vue-router";
 
-const { content, alerts } = inject("data");
+const data = inject("data");
+const { alerts } = data.value;
 const showPortal = ref(false);
 
 const { name } = useRoute();
@@ -47,11 +48,21 @@ function closePortal() {
 </script>
 
 <template>
-  <Section
-    v-for="section in content[name]"
+  <template
+    v-for="(section, index) in data.content[name]"
     :key="section.name"
-    :section="section"
-  />
+  >
+    <Ad
+      v-if="data.config?.ads?.[name].sections[index]"
+      :data="data.config?.ads?.[name].sections[index]"
+      location="section"
+    />
+    <Section
+      :section="section"
+      :section-index="index"
+      :page-id="name"
+    />
+  </template>
   <Teleport to="body">
     <Toast
       v-if="alerts[name].notification"

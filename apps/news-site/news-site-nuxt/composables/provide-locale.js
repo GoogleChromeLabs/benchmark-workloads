@@ -1,10 +1,35 @@
-import { provide } from "vue";
+import { provide, ref } from "vue";
 import { useHead } from "#imports";
 import { dataSource } from "../data";
 
 const RTL_LOCALES = ["ar", "he", "fa", "ps", "ur"];
 const DEFAULT_LANG = "en";
 const DEFAULT_DIR = "ltr";
+
+let initConfigPromise = null;
+function getAndInitializePageConfig() {
+    initConfigPromise ??= (async () => {
+        /**
+         * read config and fetch
+         */
+        const urlParams = new URLSearchParams(window.location.search);
+        const configParam = urlParams.get("config");
+        let config = {};
+
+        /**
+         * decide to load config
+         */
+        if (configParam) {
+            const response = await fetch(configParam);
+            config = await response.json();
+        }
+
+        return {
+            config: { ...config },
+        };
+    })();
+    return initConfigPromise;
+}
 
 export function provideLocale() {
     // temp solution
@@ -18,13 +43,20 @@ export function provideLocale() {
             htmlAttrs: { dir, lang },
         });
 
-        const value = {
+        const data = ref({
             lang,
             dir,
             ...dataSource[lang],
-        };
+        });
 
-        provide("data", value);
+        provide("data", data);
+
+        getAndInitializePageConfig().then((config) => {
+            data.value = {
+                ...data.value,
+                ...config
+            };
+        });
     } else {
         provide("data", {
             lang: "en",

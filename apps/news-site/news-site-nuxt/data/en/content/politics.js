@@ -12,10 +12,10 @@ export const politics = [
                     {
                         id: "0e4a3d8c-a290-4921-9067-0c6f06f318f6",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/emmanuel-ikwuegbu-ceawFbpA-14-unsplash_448.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "448",
+                            height: "252",
                         },
                         meta: {
                             tag: {
@@ -29,10 +29,10 @@ export const politics = [
                     {
                         id: "b5487ca6-95b7-4dc9-a96b-127ba70c1601",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/mr-cup-fabien-barral-Mwuod2cm8g4-unsplash_448.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "448",
+                            height: "252",
                         },
                         meta: {
                             tag: {
@@ -46,10 +46,10 @@ export const politics = [
                     {
                         id: "6eb4edcf-6a84-4997-b053-f63bf6757f24",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/colin-lloyd-uaM_Ijy_joY-unsplash_448.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "448",
+                            height: "252",
                         },
                         meta: {
                             tag: {
@@ -63,10 +63,10 @@ export const politics = [
                     {
                         id: "a0fd29d4-8eaa-470b-9f6e-5ee20680cba9",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/sara-cottle-bGjtWs8sXT0-unsplash_448.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "448",
+                            height: "252",
                         },
                         meta: {
                             tag: {
@@ -80,10 +80,10 @@ export const politics = [
                     {
                         id: "c46c8374-58d9-4e4d-b67c-2722031478d8",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/elimende-inagella-7OxV_qDiGRI-unsplash_448.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "448",
+                            height: "252",
                         },
                         meta: {
                             tag: {
@@ -108,10 +108,10 @@ export const politics = [
                 header: "Campaign News",
                 url: "#",
                 image: {
-                    src: "placeholder_light.jpg",
+                    src: "assets/images/alexander-grey-8lnbXtxFGZw-unsplash_684.jpg",
                     alt: "Placeholder",
-                    width: "1280",
-                    height: "720",
+                    width: "684",
+                    height: "385",
                 },
                 meta: {
                     captions: "Photo taken by someone.",
@@ -151,20 +151,20 @@ export const politics = [
                     {
                         id: "ca84a215-8a32-4591-bb30-18935c91d919",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/red-dot-Q98X_JVRGS0-unsplash_336.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         title: "Nunc aliquet bibendum enim facilisis gravida neque. Nec feugiat in fermentum posuere urna. Molestie at elementum eu facilisis sed odio morbi. Scelerisque purus semper eget duis at tellus.",
                     },
                     {
                         id: "6016d07f-159b-4bc2-91a1-0009502693e8",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/parker-johnson-v0OWc_skg0g-unsplash_336.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         title: "Eget dolor morbi non arcu risus quis. Non curabitur gravida arcu ac tortor dignissim.",
                     },
@@ -176,10 +176,10 @@ export const politics = [
                 header: "Local Government",
                 url: "#",
                 image: {
-                    src: "placeholder_light.jpg",
+                    src: "assets/images/valery-tenevoy-c0VbjkPEfmM-unsplash_336.jpg",
                     alt: "Placeholder",
-                    width: "1280",
-                    height: "720",
+                    width: "336",
+                    height: "189",
                 },
                 meta: {
                     captions: "Photo taken by someone.",
@@ -216,10 +216,10 @@ export const politics = [
                 class: "columns-3-balanced",
                 header: "Analysis",
                 image: {
-                    src: "placeholder_light.jpg",
+                    src: "assets/images/scott-graham-OQMZwNd3ThU-unsplash_448.jpg",
                     alt: "Placeholder",
-                    width: "1280",
-                    height: "720",
+                    width: "448",
+                    height: "252",
                 },
                 meta: {
                     captions: "Photo taken by someone.",
@@ -250,10 +250,10 @@ export const politics = [
                 class: "columns-3-balanced",
                 header: "Facts First",
                 image: {
-                    src: "placeholder_light.jpg",
+                    src: "assets/images/campaign-creators-pypeCEaJeZY-unsplash_448.jpg",
                     alt: "Placeholder",
-                    width: "1280",
-                    height: "720",
+                    width: "448",
+                    height: "252",
                 },
                 meta: {
                     captions: "Photo taken by someone.",
@@ -284,10 +284,10 @@ export const politics = [
                 class: "columns-3-balanced",
                 header: "More Politics News",
                 image: {
-                    src: "placeholder_light.jpg",
+                    src: "assets/images/priscilla-du-preez-GgtxccOjIXE-unsplash_448.jpg",
                     alt: "Placeholder",
-                    width: "1280",
-                    height: "720",
+                    width: "448",
+                    height: "252",
                 },
                 meta: {
                     captions: "Photo taken by someone.",
@@ -295,7 +295,7 @@ export const politics = [
                 title: "Vitae auctor eu augue ut lectus arcu bibendum at varius.",
                 type: "text",
                 content:
-                            "Pharetra diam sit amet nisl suscipit adipiscing bibendum est. Id aliquet lectus proin nibh. Porta lorem mollis aliquam ut porttitor leo a. Congue eu consequat ac felis donec et odio pellentesque.\n\nMi ipsum faucibus vitae aliquet nec ullamcorper. Sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper.",
+                    "Pharetra diam sit amet nisl suscipit adipiscing bibendum est. Id aliquet lectus proin nibh. Porta lorem mollis aliquam ut porttitor leo a. Congue eu consequat ac felis donec et odio pellentesque.\n\nMi ipsum faucibus vitae aliquet nec ullamcorper. Sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper.",
             },
         ],
     },
@@ -311,10 +311,10 @@ export const politics = [
                     {
                         id: "8879d7ec-ecde-4a40-b463-eaf0beb033db",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/ruben-valenzuela-JEp9cl5jfZA-unsplash_684.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "684",
+                            height: "385",
                         },
                         meta: {
                             tag: {
@@ -326,10 +326,10 @@ export const politics = [
                     {
                         id: "ff8f1fca-f830-4450-a946-075f95f37569",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/gregory-hayes-h5cd51KXmRQ-unsplash_684.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "684",
+                            height: "385",
                         },
                         meta: {
                             tag: {
@@ -341,10 +341,10 @@ export const politics = [
                     {
                         id: "ea8500ef-7130-40ef-bb35-a9e5fc6506b6",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/alan-rodriguez-qrD-g7oc9is-unsplash_684.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "684",
+                            height: "385",
                         },
                         meta: {
                             tag: {
@@ -356,10 +356,10 @@ export const politics = [
                     {
                         id: "6481e63a-f2ab-42d3-9c99-cc22cebb3207",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/redd-f-N9CYH-H_gBE-unsplash_684.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "684",
+                            height: "385",
                         },
                         meta: {
                             tag: {
@@ -385,30 +385,30 @@ export const politics = [
                     {
                         id: "c691231f-64bb-4710-bfbf-f4e60fc71457",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/dyana-wing-so-Og16Foo-pd8-unsplash_150.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "Est ullamcorper eget nulla facilisi etiam dignissim. Est pellentesque elit ullamcorper dignissim cras. Velit euismod in pellentesque massa placerat duis ultricies.",
                     },
                     {
                         id: "0c01ee2b-971a-427d-aa7c-02090f28b5d2",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/colin-lloyd-NKS5gg7rWGw-unsplash_150.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "Vitae suscipit tellus mauris a diam maecenas sed enim. Aenean sed adipiscing diam donec. Laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt.",
                     },
                     {
                         id: "3917e92e-a5db-4c9f-8c2a-42c0bc8f39fe",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/jon-tyson-0BLE1xp5HBQ-unsplash_150.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "Mattis enim ut tellus elementum sagittis vitae et. Massa sapien faucibus et molestie.",
                     },
@@ -423,30 +423,30 @@ export const politics = [
                     {
                         id: "7ef5a8ae-55ba-4c4e-b80d-ed02cc2a51db",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/clay-banks-BY-R0UNRE7w-unsplash_150.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "Platea dictumst quisque sagittis purus sit amet volutpat. Ante in nibh mauris cursus mattis molestie a iaculis.",
                     },
                     {
                         id: "57870f0d-6a22-4648-b1fa-66bed5b14f51",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/kelly-sikkema-A-lovieAmjA-unsplash_150.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "Quis hendrerit dolor magna eget est. Pellentesque pulvinar pellentesque habitant morbi tristique. Adipiscing commodo elit at imperdiet dui.",
                     },
                     {
                         id: "7c362a1f-12d0-4aa4-9bf9-490ea6d0ff10",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/chad-stembridge-sEHrIPpkKQY-unsplash_150.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "Donec pretium vulputate sapien nec sagittis aliquam. Cras adipiscing enim eu turpis egestas pretium aenean.",
                     },
@@ -461,30 +461,30 @@ export const politics = [
                     {
                         id: "3c3f4a8c-3b1c-4095-8030-cf45219e5032",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/derick-mckinney-muhK4oeYJiU-unsplash_150.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "Cursus sit amet dictum sit amet justo donec enim. Tempor id eu nisl nunc. Amet cursus sit amet dictum sit amet justo donec.",
                     },
                     {
                         id: "2b882425-c070-46ec-87b8-4fbd5afdf105",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/marek-studzinski-9U9I-eVx9nI-unsplash_150.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "Enim diam vulputate ut pharetra sit amet aliquam. Tristique senectus et netus et malesuada.",
                     },
                     {
                         id: "5ff98d91-9d27-4638-b093-35118ec4c4f0",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/2h-media-lPcQhLP-b4I-unsplash_150.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "Eu turpis egestas pretium aenean. Auctor elit sed vulputate mi sit amet. In nibh mauris cursus mattis molestie.",
                     },
@@ -574,30 +574,30 @@ export const politics = [
                     {
                         id: "cf0c05c6-a132-40af-b462-1928ed5299b1",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/vanilla-bear-films-JEwNQerg3Hs-unsplash_336.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         title: "Nunc aliquet bibendum enim facilisis gravida neque. Nec feugiat in fermentum posuere urna. Molestie at elementum eu facilisis sed odio morbi. Scelerisque purus semper eget duis at tellus.",
                     },
                     {
                         id: "e1d1d173-a259-4091-baea-60c3366fd879",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/dani-navarro-6CnGzrLwM28-unsplash_336.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         title: "Eget dolor morbi non arcu risus quis. Non curabitur gravida arcu ac tortor dignissim.",
                     },
                     {
                         id: "fbfdf20e-f6e3-404b-b7be-8d9c64d5f0cc",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/wan-san-yip-ID1yWa1Wpx0-unsplash_336.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         title: "Eget dolor morbi non arcu risus quis. Non curabitur gravida arcu ac tortor dignissim.",
                     },
@@ -612,30 +612,30 @@ export const politics = [
                     {
                         id: "5e31f22f-30d5-4d88-97ce-9584a378911e",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/david-beale--lQR8yeDzek-unsplash_336.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         title: "Tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum.",
                     },
                     {
                         id: "55c34060-7e3d-40a8-9a31-20a15bbed649",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/arnaud-jaegers-IBWJsMObnnU-unsplash_336.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         title: "Adipiscing tristique risus nec feugiat in fermentum posuere vulputate eu scelerisque.",
                     },
                     {
                         id: "8b96fd4c-1648-4a3c-96a5-c0ac52d02b60",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/kevin-rajaram-qhixFFO8EWQ-unsplash_336.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         title: "Potenti nullam ac tortor vitae purus. Adipiscing diam donec adipiscing tristique risus nec feugiat in fermentum.",
                     },
@@ -656,10 +656,10 @@ export const politics = [
                     {
                         id: "c3bd82d1-a2d7-4f10-ac62-e3c6f8812b55",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/kyle-glenn-gcw_WWu_uBQ-unsplash_336.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         meta: {
                             tag: {
@@ -673,10 +673,10 @@ export const politics = [
                     {
                         id: "1405735c-c7e6-4531-ad8c-d4c158960c2e",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/toa-heftiba-4xe-yVFJCvw-unsplash_336.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         meta: {
                             tag: {
@@ -698,10 +698,10 @@ export const politics = [
                     {
                         id: "d7f4ffb0-9dfe-45c5-85cf-bed1b25741bd",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/harri-kuokkanen-SEtUeWL8bIQ-unsplash_336.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         meta: {
                             tag: {
@@ -715,10 +715,10 @@ export const politics = [
                     {
                         id: "4ba86b88-39b7-44fd-bf9f-fc2bfc225281",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/ednilson-cardoso-dos-santos-haiooWA_weo-unsplash_336.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         meta: {
                             tag: {
@@ -746,30 +746,30 @@ export const politics = [
                     {
                         id: "75d1b551-a1cc-4548-aa28-f1d493c5925f",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/markus-spiske-7PMGUqYQpYc-unsplash_150.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "Consequat ac felis donec et. Libero nunc consequat interdum varius sit amet mattis vulputate enim. Cursus euismod quis viverra nibh cras pulvinar mattis nunc. Nisi lacus sed viverra tellus in hac. Aliquam malesuada bibendum arcu vitae elementum curabitur.",
                     },
                     {
                         id: "2d4876f9-45be-4aa9-8ac7-56232b55d649",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/viktor-talashuk-05HLFQu8bFw-unsplash_150.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "Neque gravida in fermentum et sollicitudin ac orci. Pretium aenean pharetra magna ac placerat vestibulum lectus mauris ultrices. Fermentum leo vel orci porta non pulvinar neque laoreet.",
                     },
                     {
                         id: "a1e61b50-4106-4f68-9f35-822452c473bd",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/anastassia-anufrieva-ecHGTPfjNfA-unsplash_150.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "Egestas diam in arcu cursus. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Augue ut lectus arcu bibendum at varius vel pharetra.",
                     },
@@ -784,30 +784,30 @@ export const politics = [
                     {
                         id: "174f4a54-5f05-499b-8255-9dce7caccff3",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/bianca-ackermann-qr0-lKAOZSk-unsplash_150.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "Aliquam eleifend mi in nulla posuere sollicitudin. Tempor nec feugiat nisl pretium fusce. Fermentum iaculis eu non diam phasellus vestibulum lorem. Scelerisque eleifend donec pretium vulputate sapien nec. Sit amet aliquam id diam maecenas ultricies mi.",
                     },
                     {
                         id: "b5b69901-c646-4034-9f11-d54357ea745b",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/phil-hearing-bu27Y0xg7dk-unsplash_150.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "Morbi leo urna molestie at elementum eu. Phasellus vestibulum lorem sed risus. Aliquet bibendum enim facilisis gravida neque. Aliquam sem et tortor consequat id porta. Interdum varius sit amet mattis vulputate enim nulla aliquet. Enim nulla aliquet porttitor lacus luctus accumsan tortor.",
                     },
                     {
                         id: "9cd2a3f7-3723-4295-af72-fbbfa4a232d2",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/mika-baumeister-Hm4zYX-BDxk-unsplash_150.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "Molestie nunc non blandit massa. Adipiscing diam donec adipiscing tristique risus nec feugiat in. Odio morbi quis commodo odio aenean sed adipiscing diam donec. Felis eget velit aliquet sagittis id consectetur purus ut. Odio ut enim blandit volutpat maecenas.",
                     },
@@ -822,30 +822,30 @@ export const politics = [
                     {
                         id: "6c3745c6-3dc4-435f-b81a-8d2b06cc1ad2",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/wesley-tingey-7BkCRNwh_V0-unsplash_150.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "Risus viverra adipiscing at in tellus integer feugiat scelerisque. Porttitor eget dolor morbi non arcu risus quis varius quam. Consectetur adipiscing elit ut aliquam purus sit. Pulvinar mattis nunc sed blandit.",
                     },
                     {
                         id: "32de17cf-8c35-4ad0-99e2-3328c80c296e",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/miguel-bruna-TzVN0xQhWaQ-unsplash_150.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "Non curabitur gravida arcu ac tortor dignissim. Purus in mollis nunc sed id semper risus in hendrerit. Vestibulum morbi blandit cursus risus. Pellentesque nec nam aliquam sem et tortor. Ac tortor dignissim convallis aenean et.",
                     },
                     {
                         id: "bb64bf13-a35b-4dad-99bf-810f67772471",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/clay-banks-cisdc-344vo-unsplash_150.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "Ullamcorper a lacus vestibulum sed arcu non. Pharetra sit amet aliquam id diam. Viverra vitae congue eu consequat ac felis donec. Amet massa vitae tortor condimentum lacinia quis vel eros.",
                     },
@@ -862,10 +862,10 @@ export const politics = [
                 class: "columns-3-balanced",
                 header: "Britain",
                 image: {
-                    src: "placeholder_light.jpg",
+                    src: "assets/images/marc-olivier-jodoin-_eclsGKsUdo-unsplash_448.jpg",
                     alt: "Placeholder",
-                    width: "1280",
-                    height: "720",
+                    width: "448",
+                    height: "252",
                 },
                 meta: {
                     captions: "Photo taken by someone.",
@@ -896,10 +896,10 @@ export const politics = [
                 class: "columns-3-balanced",
                 header: "Italy",
                 image: {
-                    src: "placeholder_light.jpg",
+                    src: "assets/images/sandip-roy-4hgTlYb9jzg-unsplash_448.jpg",
                     alt: "Placeholder",
-                    width: "1280",
-                    height: "720",
+                    width: "448",
+                    height: "252",
                 },
                 meta: {
                     captions: "Photo taken by someone.",
@@ -930,10 +930,10 @@ export const politics = [
                 class: "columns-3-balanced",
                 header: "Poland",
                 image: {
-                    src: "placeholder_light.jpg",
+                    src: "assets/images/maksym-harbar-okn8ZIjPMxI-unsplash_448.jpg",
                     alt: "Placeholder",
-                    width: "1280",
-                    height: "720",
+                    width: "448",
+                    height: "252",
                 },
                 meta: {
                     captions: "Photo taken by someone.",
@@ -974,10 +974,10 @@ export const politics = [
                     {
                         id: "e9d797f7-36d7-4dbe-8d2a-d6eb8f15bc07",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/ronda-darby-HbMLSB-uhQY-unsplash_336.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         meta: {
                             tag: {
@@ -991,10 +991,10 @@ export const politics = [
                     {
                         id: "6b9a85a6-120d-47d6-bc5d-e6d487aedf31",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/dominic-bieri-vXRt4rFr4hI-unsplash_336.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         meta: {
                             tag: {
@@ -1016,10 +1016,10 @@ export const politics = [
                     {
                         id: "9cb71ead-889b-492f-9b47-297ac6d97d96",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/inaki-del-olmo-NIJuEQw0RKg-unsplash_336.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         meta: {
                             tag: {
@@ -1033,10 +1033,10 @@ export const politics = [
                     {
                         id: "7564b782-691e-494e-9ad1-5de2a2330b17",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/matt-popovich-7mqsZsE6FaU-unsplash_336.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         meta: {
                             tag: {
@@ -1063,10 +1063,10 @@ export const politics = [
                     {
                         id: "25841bbd-93a3-472b-860f-0b0af2fc8169",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/maksim-larin-tecILYzVAzg-unsplash_336.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         title: "Duis at consectetur lorem donec massa.",
                     },
@@ -1080,10 +1080,10 @@ export const politics = [
                     {
                         id: "69c42fe8-a06e-4891-ae22-491f04d0a971",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/evie-calder-97CO-A4P0GQ-unsplash_336.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         title: "Eget mi proin sed libero enim sed. Proin libero nunc consequat interdum varius.",
                     },
@@ -1097,10 +1097,10 @@ export const politics = [
                     {
                         id: "2342acef-0339-444d-a23c-a33654c91665",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/domino-studio-164_6wVEHfI-unsplash_336.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         title: "Porta nibh venenatis cras sed felisDolor sit amet consectetur adipiscing elit ut aliquam purus sit.",
                     },
@@ -1114,10 +1114,10 @@ export const politics = [
                     {
                         id: "3b57cdb4-8635-4be8-872e-f939538c9e56",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/pat-taylor-12V36G17IbQ-unsplash_336.jpg",
                             alt: "Placeholder",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         title: "Nisl vel pretium lectus quam id leo in vitae. Ultrices neque ornare aenean euismod elementum nisi quis eleifend quam. Eget nullam non nisi est sit. Aliquet enim tortor at auctor urna.",
                     },

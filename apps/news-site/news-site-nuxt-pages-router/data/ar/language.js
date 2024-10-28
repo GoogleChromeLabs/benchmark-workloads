@@ -8,18 +8,18 @@ export const language = {
                 },
                 contrast: {
                     label: "وضع التباين العاليs",
-                }
-            }
-        }
+                },
+            },
+        },
     },
     footer: {
         copyright: {
             label: "كل الحقوق محفوظة",
-        }
+        },
     },
     sidebar: {
         sitemap: {
             header: "خريطة",
-        }
-    }
+        },
+    },
 };

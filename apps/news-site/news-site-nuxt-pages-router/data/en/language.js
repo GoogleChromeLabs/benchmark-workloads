@@ -8,18 +8,18 @@ export const language = {
                 },
                 contrast: {
                     label: "High Contrast Mode",
-                }
-            }
-        }
+                },
+            },
+        },
     },
     footer: {
         copyright: {
             label: "all rights reserved!",
-        }
+        },
     },
     sidebar: {
         sitemap: {
             header: "Sitemap",
-        }
-    }
+        },
+    },
 };

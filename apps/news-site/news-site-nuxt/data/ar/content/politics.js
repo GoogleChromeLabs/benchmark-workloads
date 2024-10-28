@@ -12,10 +12,10 @@ export const politics = [
                     {
                         id: "0e4a3d8c-a290-4921-9067-0c6f06f318f6",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/emmanuel-ikwuegbu-ceawFbpA-14-unsplash_448.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "448",
+                            height: "252",
                         },
                         meta: {
                             tag: {
@@ -29,10 +29,10 @@ export const politics = [
                     {
                         id: "b5487ca6-95b7-4dc9-a96b-127ba70c1601",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/mr-cup-fabien-barral-Mwuod2cm8g4-unsplash_448.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "448",
+                            height: "252",
                         },
                         meta: {
                             tag: {
@@ -46,10 +46,10 @@ export const politics = [
                     {
                         id: "6eb4edcf-6a84-4997-b053-f63bf6757f24",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/colin-lloyd-uaM_Ijy_joY-unsplash_448.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "448",
+                            height: "252",
                         },
                         meta: {
                             tag: {
@@ -63,10 +63,10 @@ export const politics = [
                     {
                         id: "a0fd29d4-8eaa-470b-9f6e-5ee20680cba9",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/sara-cottle-bGjtWs8sXT0-unsplash_448.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "448",
+                            height: "252",
                         },
                         meta: {
                             tag: {
@@ -80,10 +80,10 @@ export const politics = [
                     {
                         id: "c46c8374-58d9-4e4d-b67c-2722031478d8",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/elimende-inagella-7OxV_qDiGRI-unsplash_448.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "448",
+                            height: "252",
                         },
                         meta: {
                             tag: {
@@ -108,10 +108,10 @@ export const politics = [
                 header: "أخبار الحملة",
                 url: "#",
                 image: {
-                    src: "placeholder_light.jpg",
+                    src: "assets/images/alexander-grey-8lnbXtxFGZw-unsplash_684.jpg",
                     alt: "عنصر نائب",
-                    width: "1280",
-                    height: "720",
+                    width: "684",
+                    height: "385",
                 },
                 meta: {
                     captions: "الصورة التي التقطها شخص ما.",
@@ -151,20 +151,20 @@ export const politics = [
                     {
                         id: "ca84a215-8a32-4591-bb30-18935c91d919",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/red-dot-Q98X_JVRGS0-unsplash_336.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         title: "الآن يشرب الموز لمضادات الأكسدة الحوامل أو.ولا في الخميرة وضعت على الوعاء.موسى في عنصر مضادات الأكسدة لكرة القدم ولكن مرض الكراهية.الشوكولاتة الفلفل الحار تحتاج دائما الواجب المنزلي في الحزمة.",
                     },
                     {
                         id: "6016d07f-159b-4bc2-91a1-0009502693e8",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/parker-johnson-v0OWc_skg0g-unsplash_336.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         title: "تحتاج إلى كرة قدم ذكية أو قوس ابتسامة أي شخص.لا الدردشة القوس الحامل وأصول درجة الحرارة.",
                     },
@@ -176,10 +176,10 @@ export const politics = [
                 header: "حكومة محلية",
                 url: "#",
                 image: {
-                    src: "placeholder_light.jpg",
+                    src: "assets/images/valery-tenevoy-c0VbjkPEfmM-unsplash_336.jpg",
                     alt: "عنصر نائب",
-                    width: "1280",
-                    height: "720",
+                    width: "336",
+                    height: "189",
                 },
                 meta: {
                     captions: "الصورة التي التقطها شخص ما.",
@@ -216,10 +216,10 @@ export const politics = [
                 class: "columns-3-balanced",
                 header: "تحليل",
                 image: {
-                    src: "placeholder_light.jpg",
+                    src: "assets/images/scott-graham-OQMZwNd3ThU-unsplash_448.jpg",
                     alt: "عنصر نائب",
-                    width: "1280",
-                    height: "720",
+                    width: "448",
+                    height: "252",
                 },
                 meta: {
                     captions: "الصورة التي التقطها شخص ما.",
@@ -250,10 +250,10 @@ export const politics = [
                 class: "columns-3-balanced",
                 header: "الحقائق أولا",
                 image: {
-                    src: "placeholder_light.jpg",
+                    src: "assets/images/campaign-creators-pypeCEaJeZY-unsplash_448.jpg",
                     alt: "عنصر نائب",
-                    width: "1280",
-                    height: "720",
+                    width: "448",
+                    height: "252",
                 },
                 meta: {
                     captions: "الصورة التي التقطها شخص ما.",
@@ -284,10 +284,10 @@ export const politics = [
                 class: "columns-3-balanced",
                 header: "المزيد من أخبار السياسة",
                 image: {
-                    src: "placeholder_light.jpg",
+                    src: "assets/images/priscilla-du-preez-GgtxccOjIXE-unsplash_448.jpg",
                     alt: "عنصر نائب",
-                    width: "1280",
-                    height: "720",
+                    width: "448",
+                    height: "252",
                 },
                 meta: {
                     captions: "الصورة التي التقطها شخص ما.",
@@ -295,7 +295,7 @@ export const politics = [
                 title: "حياة مؤلف كتاب دعاية كرة القدم لمشروب الكحول في مختلف.",
                 type: "text",
                 content:
-                            "الحدود الأثناء، الإيطالية تم ضرب, من الى المضي الأثناء،. هو ومن حلّت تسبب. أم بها باستحداث التاريخ، الأثناء،, ضرب وقرى وحتى احداث بل, لان مع كردة الخاصّة. انذار الخاسرة العالمية دون لم, الشتاء، الشّعبين ومن كل. تشكيل لفرنسا لإنعدام أن لان.\n\nالى إعمار ضمنها و, الأحمر إيطاليا عل جُل. فرنسا مهمّات و مكن, دول ليرتفع المشتّتون ويكيبيديا، من, مع يكن معقل شدّت. أم ذات مليون والتي, وتم ان العالم، وانتهاءً. لان فكانت وأكثرها ٣٠, قام مع ونتج قتيل، وانهاء, إتفاقية بريطانيا-فرنسا إذ مما.",
+                    "الحدود الأثناء، الإيطالية تم ضرب, من الى المضي الأثناء،. هو ومن حلّت تسبب. أم بها باستحداث التاريخ، الأثناء،, ضرب وقرى وحتى احداث بل, لان مع كردة الخاصّة. انذار الخاسرة العالمية دون لم, الشتاء، الشّعبين ومن كل. تشكيل لفرنسا لإنعدام أن لان.\n\nالى إعمار ضمنها و, الأحمر إيطاليا عل جُل. فرنسا مهمّات و مكن, دول ليرتفع المشتّتون ويكيبيديا، من, مع يكن معقل شدّت. أم ذات مليون والتي, وتم ان العالم، وانتهاءً. لان فكانت وأكثرها ٣٠, قام مع ونتج قتيل، وانهاء, إتفاقية بريطانيا-فرنسا إذ مما.",
             },
         ],
     },
@@ -311,10 +311,10 @@ export const politics = [
                     {
                         id: "8879d7ec-ecde-4a40-b463-eaf0beb033db",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/ruben-valenzuela-JEp9cl5jfZA-unsplash_684.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "684",
+                            height: "385",
                         },
                         meta: {
                             tag: {
@@ -326,10 +326,10 @@ export const politics = [
                     {
                         id: "ff8f1fca-f830-4450-a946-075f95f37569",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/gregory-hayes-h5cd51KXmRQ-unsplash_684.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "684",
+                            height: "385",
                         },
                         meta: {
                             tag: {
@@ -341,10 +341,10 @@ export const politics = [
                     {
                         id: "ea8500ef-7130-40ef-bb35-a9e5fc6506b6",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/alan-rodriguez-qrD-g7oc9is-unsplash_684.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "684",
+                            height: "385",
                         },
                         meta: {
                             tag: {
@@ -356,10 +356,10 @@ export const politics = [
                     {
                         id: "6481e63a-f2ab-42d3-9c99-cc22cebb3207",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/redd-f-N9CYH-H_gBE-unsplash_684.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "684",
+                            height: "385",
                         },
                         meta: {
                             tag: {
@@ -385,30 +385,30 @@ export const politics = [
                     {
                         id: "c691231f-64bb-4710-bfbf-f4e60fc71457",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/dyana-wing-so-Og16Foo-pd8-unsplash_150.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "بـ به، وبعض ساعة. إذ تعد استبدال وأكثرها الأولية. كل الى خلاف ببعض وسوء, ضرب الصين ليرتفع هو. لمّ وبحلول مساعدة أن, بشكل الأبرياء بين أي. دون وكسبت الفترة ان. كل مرمى عسكرياً استعملت حين, بل مشروط والنفيس إيو.",
                     },
                     {
                         id: "0c01ee2b-971a-427d-aa7c-02090f28b5d2",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/colin-lloyd-NKS5gg7rWGw-unsplash_150.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "المضي الولايات ثم عدم. انتباه تغييرات لم انه, أن وكسبت الجنرال جُل. أي نفس جيوب بالمحور, عن شيء الحكم عشوائية التخطيط, بـ بقصف فشكّل نفس. حين ثانية أعلنت التحالف هو, أراضي بريطانيا، أم هذا, رئيس والفلبين لها و.",
                     },
                     {
                         id: "3917e92e-a5db-4c9f-8c2a-42c0bc8f39fe",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/jon-tyson-0BLE1xp5HBQ-unsplash_150.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "جيما السيء كل لمّ. وحتّى ويعزى كل يبق, وبداية المجتمع باستخدام بل كان. محاولات عشوائية الإقتصادية و أما, في حاول المزيفة بالولايات دنو. يكن ان مشروط الوراء. أسر أدنى وبعدما والمانيا هو, بأيدي وبعدما الجنود حين إذ. أحكم اليابانية فعل مع, ومن ما خيار فكان لبلجيكا،, ان بلا الصين بولندا، والفلبين. بين أحكم بالعمل تم, أي الذود ليبين لها.",
                     },
@@ -423,30 +423,30 @@ export const politics = [
                     {
                         id: "7ef5a8ae-55ba-4c4e-b80d-ed02cc2a51db",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/clay-banks-BY-R0UNRE7w-unsplash_150.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "نفس في الشمال استرجاع, وتم وإعلان رجوعهم جزيرتي من. بعض اتفاق البولندي عن. لمّ بل المشترك الشتاء،. سقوط إعلان الثقيلة حيث بل, والحزب السادس اليابانية مدن ثم. مشارف يتسنّى التخطيط عل جعل, أن مكن مئات بولندا،. بـ اعتداء إستعمل الانجليزية ذلك, الفترة معارضة وفرنسا بعض ان, وبداية الإطلاق بمعارضة مع عدد.",
                     },
                     {
                         id: "57870f0d-6a22-4648-b1fa-66bed5b14f51",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/kelly-sikkema-A-lovieAmjA-unsplash_150.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "عل وقرى بأيدي والحزب حدى, لكون فهرست الدّفاع في جُل. تحرّكت الحكومة دار بل, يتم و عرفها نهاية. ما الا بالعمل موالية الخطّة, هذه لفشل بالمحور الشّعبين ٣٠. تلك خيار للسيطرة لم, قبل العصبة اتفاقية المتحدة عل. بـ ا الإحتفاظ قام, قبل سكان لغزو ثم, الا تم فقامت مقاطعة شموليةً.",
                     },
                     {
                         id: "7c362a1f-12d0-4aa4-9bf9-490ea6d0ff10",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/chad-stembridge-sEHrIPpkKQY-unsplash_150.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "بـ مما ترتيب بقيادة الربيع،, مما العدّ الأراضي التغييرات تم. لمّ ان نقطة وزارة الخاسرة. أوسع الأمريكي أم وقد, قام عن القوى وقامت العالمية, تلك مع الحكم وأزيز والنرويج. بين وسفن الخارجية المتساقطة، بل, حيث وعُرفت وتنصيب و, ان شيء أملاً والقرى. قبل أن بوابة الرئيسية, قد أراض تعداد البشريةً ولم. ٣٠ أما منتصف أعمال إيطاليا, عن لغزو عالمية وبريطانيا جُل, أخر أحدث إختار بأضرار أن.",
                     },
@@ -461,30 +461,30 @@ export const politics = [
                     {
                         id: "3c3f4a8c-3b1c-4095-8030-cf45219e5032",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/derick-mckinney-muhK4oeYJiU-unsplash_150.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "يبق كل هناك بشرية مواقعها. سياسة تحرّكت اللازمة بل تعد, قد وعلى عقبت السادس ذات, من بها الخاصّة واعتلاء. بل جعل المبرمة الرئيسية بالولايات, ثم حكومة التغييرات ذلك. حيث سقوط وصافرات الإطلاق كل, أم تعد الحكم الهجوم. وتنامت استرجاع ثم بين, أمّا لإعلان الدّفاع على مع. وتم إعلان الدنمارك مع.",
                     },
                     {
                         id: "2b882425-c070-46ec-87b8-4fbd5afdf105",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/marek-studzinski-9U9I-eVx9nI-unsplash_150.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "ثم حيث أمام ويعزى الدولارات, تكبّد الشرقية ذات كل. فعل ٣٠ المسرح بلديهما, ثم تسمّى فهرست الساحل كان, ٣٠ وتم الله اوروبا. لكون وهولندا، ومن تم. إستعمل الإقتصادي جعل كل, يبق وإعلان واشتدّت ٣٠, نفس وعلى العالمي في. لدحر اتفاق عل لان, بل كما أصقاع اللازمة وحلفاؤها, الى معزّزة والديون الأرواح ما. من عرض وبعد وعلى بالولايات, قام ان الوراء أفريقيا وانتهاءً.",
                     },
                     {
                         id: "5ff98d91-9d27-4638-b093-35118ec4c4f0",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/2h-media-lPcQhLP-b4I-unsplash_150.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "ما ذات وشعار الشهيرة, بينما الشطر عل بحث. قبل بالرّد العالم، أن, جُل من وبعد الحكومة, بحشد دأبوا الشتاء ما شيء. أخر تم تحرّك الدّفاع استراليا،, بين في بشكل والروسية, في إحكام استمرار بحق. خلاف حاملات كل أسر, ممثّلة الأثنان الموسوعة ذات إذ. الا كل ويعزى تشيكوسلوفاكيا. لإعادة الجنرال عل هذه.",
                     },
@@ -574,30 +574,30 @@ export const politics = [
                     {
                         id: "cf0c05c6-a132-40af-b462-1928ed5299b1",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/vanilla-bear-films-JEwNQerg3Hs-unsplash_336.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         title: "الآن يشرب الموز لمضادات الأكسدة الحوامل أو.ولا في الخميرة وضعت على الوعاء.موسى في عنصر مضادات الأكسدة لكرة القدم ولكن مرض الكراهية.الشوكولاتة الفلفل الحار تحتاج دائما الواجب المنزلي في الحزمة.",
                     },
                     {
                         id: "e1d1d173-a259-4091-baea-60c3366fd879",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/dani-navarro-6CnGzrLwM28-unsplash_336.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         title: "تحتاج إلى كرة قدم ذكية أو قوس ابتسامة أي شخص.لا الدردشة القوس الحامل وأصول درجة الحرارة.",
                     },
                     {
                         id: "fbfdf20e-f6e3-404b-b7be-8d9c64d5f0cc",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/wan-san-yip-ID1yWa1Wpx0-unsplash_336.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         title: "بشرية عن شيء, يبق الستار والفرنسي لبولندا، بـ, وتم بل أجزاء ",
                     },
@@ -612,30 +612,30 @@ export const politics = [
                     {
                         id: "5e31f22f-30d5-4d88-97ce-9584a378911e",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/david-beale--lQR8yeDzek-unsplash_336.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         title: "الأرض في الشوكولاته كرة القدم تمويل تخمير الميكروويف.",
                     },
                     {
                         id: "55c34060-7e3d-40a8-9a31-20a15bbed649",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/arnaud-jaegers-IBWJsMObnnU-unsplash_336.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         title: "من المهم الابتسامة المحزنة أو التخلص من شوكولاتة كرة القدم الجذابة.",
                     },
                     {
                         id: "8b96fd4c-1648-4a3c-96a5-c0ac52d02b60",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/kevin-rajaram-qhixFFO8EWQ-unsplash_336.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         title: "بهدوء والكثير من الحياة الكلية.الأهم من ذلك قطره حتى ابتسامة حزينة في المرحلة الجامعية الأولى أو التغلب في التخمير.",
                     },
@@ -656,10 +656,10 @@ export const politics = [
                     {
                         id: "c3bd82d1-a2d7-4f10-ac62-e3c6f8812b55",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/kyle-glenn-gcw_WWu_uBQ-unsplash_336.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         meta: {
                             tag: {
@@ -673,10 +673,10 @@ export const politics = [
                     {
                         id: "1405735c-c7e6-4531-ad8c-d4c158960c2e",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/toa-heftiba-4xe-yVFJCvw-unsplash_336.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         meta: {
                             tag: {
@@ -698,10 +698,10 @@ export const politics = [
                     {
                         id: "d7f4ffb0-9dfe-45c5-85cf-bed1b25741bd",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/harri-kuokkanen-SEtUeWL8bIQ-unsplash_336.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         meta: {
                             tag: {
@@ -715,10 +715,10 @@ export const politics = [
                     {
                         id: "4ba86b88-39b7-44fd-bf9f-fc2bfc225281",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/ednilson-cardoso-dos-santos-haiooWA_weo-unsplash_336.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         meta: {
                             tag: {
@@ -746,30 +746,30 @@ export const politics = [
                     {
                         id: "75d1b551-a1cc-4548-aa28-f1d493c5925f",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/markus-spiske-7PMGUqYQpYc-unsplash_150.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "يعبأ الإمداد إيو عن, ما فبعد والقرى والمانيا دنو. دنو حالية إبّان أي, نفس الأجل ويعزى ان. وسفن يعادل ومحاولة أم لها. قام النفط أجزاء بـ, ما ٠٨٠٤ كُلفة أراضي بعض.",
                     },
                     {
                         id: "2d4876f9-45be-4aa9-8ac7-56232b55d649",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/viktor-talashuk-05HLFQu8bFw-unsplash_150.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "علاقة بريطانيا، أي أما. انه كل ودول وسمّيت, هو رئيس إيطاليا بريطانيا-فرنسا جهة. أطراف بقيادة عدم و, عدم ٣٠ تطوير مشروط الموسوعة. والمانيا الدنمارك لان مع, وباءت النزاع بل يبق, مرمى تكتيكاً حتى عل. هذا من رجوعهم ابتدعها بريطانيا, مما ومضى حاملات أم, إحكام الثقيل عن كما.",
                     },
                     {
                         id: "a1e61b50-4106-4f68-9f35-822452c473bd",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/anastassia-anufrieva-ecHGTPfjNfA-unsplash_150.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "و به، عجّل إستعمل, إذ أضف لفرنسا الصعداء. بين أسيا الثقيلة قد, إيو العظمى الخاسر الشتوية عل, أخر بل الدول والقرى ا. لم مشروط الإتفاقية جُل. قام رئيس الجنود الأوروبيّون بل, غينيا الخاصّة أخذ بل, وقد عل وسفن الشرق،. لها وبغطاء بتحدّي الثقيل ان, وتم بـ العناد تحرّكت الإنزال, كان ٣٠ وقبل قِبل الشّعبين. عدد فقامت وتزويده السيطرة لم, فقد كل ميناء واندونيسيا،, السيء مليارات لبلجيكا، ما وصل.",
                     },
@@ -784,30 +784,30 @@ export const politics = [
                     {
                         id: "174f4a54-5f05-499b-8255-9dce7caccff3",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/bianca-ackermann-qr0-lKAOZSk-unsplash_150.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "فبعد مليون بمباركة غير ٣٠, نفس هاربر وأكثرها الأوربيين بل, لم به، فشكّل وهولندا،. وقام باستخدام من يبق, فقد ثم الذود اليابان ايطاليا،. أن عرض غضون لغزو, تلك ثم رئيس لعملة واُسدل. أم الإنزال الإيطالية كان. أسر ليبين والنفيس أن.",
                     },
                     {
                         id: "b5b69901-c646-4034-9f11-d54357ea745b",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/phil-hearing-bu27Y0xg7dk-unsplash_150.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "عن الأول ومطالبة استعملت الا, ثم الا مسارح استعملت, أخذ إذ يتمكن اوروبا الوزراء. لم ثمّة مشروط الأمم حدى. وبدون الدمج لإعلان مع تحت, أثره، بقيادة بالتوقيع وقد ما. كما رئيس اليابان، هو, و بين قادة تمهيد, كان يعبأ عليها تم. مع جُل مسرح تكبّد الإمتعاض, وقرى إختار مسؤولية كل حدى. فاتّبع واتّجه والنرويج لمّ بل.",
                     },
                     {
                         id: "9cd2a3f7-3723-4295-af72-fbbfa4a232d2",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/mika-baumeister-Hm4zYX-BDxk-unsplash_150.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "رئيس أسيا إيو تم. غريمه للجزر مليارات بين ما. جورج سابق تكبّد ثم قبل. مع إجلاء وبحلول أما. مع يطول أحدث بتخصيص وتم.",
                     },
@@ -822,30 +822,30 @@ export const politics = [
                     {
                         id: "6c3745c6-3dc4-435f-b81a-8d2b06cc1ad2",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/wesley-tingey-7BkCRNwh_V0-unsplash_150.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "يطول دأبوا من دول, اليها المعاهدات مكن بـ. وزارة ضمنها حين كل, كل حول بمباركة والكساد ايطاليا،. لم الأحمر بالرّد الخاسر لان, فصل عل الأحمر البرية العمليات. لم وفي الحرة الإتحاد. يتسنّى المتحدة به، قد, أي الجوي تزامناً العالمية حدى, و حيث سابق اكتوبر. والحزب العصبة اسبوعين في أما.",
                     },
                     {
                         id: "32de17cf-8c35-4ad0-99e2-3328c80c296e",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/miguel-bruna-TzVN0xQhWaQ-unsplash_150.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "مارد لأداء من مكن, حيث وأزيز المؤلّفة ثم. بـ تعد بتخصيص واستمرت, من وتم البولندي اليابانية, مدن ان وعلى الشمل. به، كل بأيدي أجزاء ايطاليا،, والحزب للمجهود عل أضف. فصل ٣٠ مقاومة ويكيبيديا، الانجليزية, عل تحرّكت الساحل لبلجيكا، هذا. تم مدن لغزو الباهضة. ٣٠ الدمج جزيرتي فعل. ثم إيو تمهيد بشرية وسمّيت.",
                     },
                     {
                         id: "bb64bf13-a35b-4dad-99bf-810f67772471",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/clay-banks-cisdc-344vo-unsplash_150.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "150",
+                            height: "84",
                         },
                         text: "سقطت الجوي غير بـ, واشتدّت وباستثناء حدى إذ. المسرح بالرغم بحث أي, وقد هو قررت وزارة للجزر, واحدة إحتار بلا أن. عل نتيجة الإقتصادي كما, حتى ٣٠ العسكري لإنعدام الأوربيين. بال في كثيرة الضروري الدولارات, لهيمنة الساحة بالحرب غير أم. وقرى ولاتّساع والنرويج فصل إذ, و أعلنت بالرّغم استراليا، وفي, سياسة نهاية الساحة و دون.",
                     },
@@ -862,10 +862,10 @@ export const politics = [
                 class: "columns-3-balanced",
                 header: "بريطانيا",
                 image: {
-                    src: "placeholder_light.jpg",
+                    src: "assets/images/marc-olivier-jodoin-_eclsGKsUdo-unsplash_448.jpg",
                     alt: "عنصر نائب",
-                    width: "1280",
-                    height: "720",
+                    width: "448",
+                    height: "252",
                 },
                 meta: {
                     captions: "الصورة التي التقطها شخص ما.",
@@ -896,10 +896,10 @@ export const politics = [
                 class: "columns-3-balanced",
                 header: "إيطاليا",
                 image: {
-                    src: "placeholder_light.jpg",
+                    src: "assets/images/sandip-roy-4hgTlYb9jzg-unsplash_448.jpg",
                     alt: "عنصر نائب",
-                    width: "1280",
-                    height: "720",
+                    width: "448",
+                    height: "252",
                 },
                 meta: {
                     captions: "الصورة التي التقطها شخص ما.",
@@ -930,10 +930,10 @@ export const politics = [
                 class: "columns-3-balanced",
                 header: "بولندا",
                 image: {
-                    src: "placeholder_light.jpg",
+                    src: "assets/images/maksym-harbar-okn8ZIjPMxI-unsplash_448.jpg",
                     alt: "عنصر نائب",
-                    width: "1280",
-                    height: "720",
+                    width: "448",
+                    height: "252",
                 },
                 meta: {
                     captions: "الصورة التي التقطها شخص ما.",
@@ -974,10 +974,10 @@ export const politics = [
                     {
                         id: "e9d797f7-36d7-4dbe-8d2a-d6eb8f15bc07",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/ronda-darby-HbMLSB-uhQY-unsplash_336.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         meta: {
                             tag: {
@@ -991,10 +991,10 @@ export const politics = [
                     {
                         id: "6b9a85a6-120d-47d6-bc5d-e6d487aedf31",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/dominic-bieri-vXRt4rFr4hI-unsplash_336.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         meta: {
                             tag: {
@@ -1016,10 +1016,10 @@ export const politics = [
                     {
                         id: "9cb71ead-889b-492f-9b47-297ac6d97d96",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/inaki-del-olmo-NIJuEQw0RKg-unsplash_336.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         meta: {
                             tag: {
@@ -1033,10 +1033,10 @@ export const politics = [
                     {
                         id: "7564b782-691e-494e-9ad1-5de2a2330b17",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/matt-popovich-7mqsZsE6FaU-unsplash_336.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         meta: {
                             tag: {
@@ -1063,10 +1063,10 @@ export const politics = [
                     {
                         id: "25841bbd-93a3-472b-860f-0b0af2fc8169",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/maksim-larin-tecILYzVAzg-unsplash_336.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         title: "الواجب المنزلي في السيارة الرئيسية حتى الكتلة.",
                     },
@@ -1080,10 +1080,10 @@ export const politics = [
                     {
                         id: "69c42fe8-a06e-4891-ae22-491f04d0a971",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/evie-calder-97CO-A4P0GQ-unsplash_336.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         title: "أحتاج إلى الميكروويف الخاص بي ولكن مجاني ل.وصفة مجانية للميكروويف الآن متنوعة من حين لآخر.",
                     },
@@ -1097,10 +1097,10 @@ export const politics = [
                     {
                         id: "2342acef-0339-444d-a23c-a33654c91665",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/domino-studio-164_6wVEHfI-unsplash_336.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         title: "بريطانيا، لها, تم أما وشعار لإعادة, بل بين ببعض الأرضية. عل دنو مارد الوزراء, بل ب",
                     },
@@ -1114,10 +1114,10 @@ export const politics = [
                     {
                         id: "3b57cdb4-8635-4be8-872e-f939538c9e56",
                         image: {
-                            src: "placeholder_light.jpg",
+                            src: "assets/images/pat-taylor-12V36G17IbQ-unsplash_336.jpg",
                             alt: "عنصر نائب",
-                            width: "1280",
-                            height: "720",
+                            width: "336",
+                            height: "189",
                         },
                         title: "أو السعر المحدد كأسد في الحياة.أي عنصر أداء لكرة السلة أو كرة القدم الياسمين ما لم يكن قابلاً للخصم قدر الإمكان.ومع ذلك ، فهي ليست واحدة فقط.الماكرو في مؤلف.",
                     },

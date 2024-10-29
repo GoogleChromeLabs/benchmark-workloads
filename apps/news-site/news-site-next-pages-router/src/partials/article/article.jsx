@@ -8,6 +8,7 @@ import ArticleContent from "@/components/molecules/article/article-content";
 import layoutStyles from "news-site-css/dist/layout.module.css";
 import articleStyles from "news-site-css/dist/article.module.css";
 import ArticleCarousel from "./article-carousel";
+import ArticleVideo from "./article-video";
 
 export default function Article({ article, ad }) {
     return (
@@ -16,6 +17,7 @@ export default function Article({ article, ad }) {
             <section className={articleStyles["article-body"]}>
                 {article.image ? <ArticleImage imageClass={articleStyles["article-image-container"]} image={article.image} meta={article.meta} /> : null}
                 {article.carousel ? <ArticleCarousel imageClass={articleStyles["article-image-container"]} data={article.carousel} meta={article.meta} /> : null}
+                {article.video && article.video.type === "HTML5 Video" ? <ArticleVideo data={article.video} meta={article.meta} /> : null }
                 <ArticleText textClass={classNames(articleStyles["article-title"], "truncate-singleline")} text={article.title} type="h3" />
                 <ArticleContent type={article.type} content={article.content} display={article.display} ad={ad} />
             </section>

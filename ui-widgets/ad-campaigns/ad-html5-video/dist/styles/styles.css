@@ -250,3 +250,11 @@
     left: 0;
     top: 0;
 }
+
+/* copyright */
+#copyright {
+    position: absolute;
+    bottom: 2px;
+    margin: auto;
+    font-size: 8px;
+}

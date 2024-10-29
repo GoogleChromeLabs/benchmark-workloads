@@ -35,7 +35,7 @@ export default function ArticleVideo ({ data, meta }) {
         <>
             <div className={videoStyles.container} style={{ aspectRatio }} ref={elementRef}>
                 <div className={videoStyles.content}>
-                    <video src={videoSource} muted controls playsInline ref={videoRef} />
+                    <video id={data.id} src={videoSource} muted controls playsInline ref={videoRef} />
                 </div>
                 <ArticleTag tag={meta?.tag} />
             </div>

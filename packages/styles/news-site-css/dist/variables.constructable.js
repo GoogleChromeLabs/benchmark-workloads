@@ -13,6 +13,9 @@ sheet.replaceSync(`:root {
     --color-opacity-black-50: rgb(0 0 0 / 50%);
     --color-opacity-black-75: rgb(0 0 0 / 75%);
     --color-opacity-black-100: rgb(0 0 0 / 100%);
+    --color-opacity-white-50: rgb(255 255 255 / 50%);
+    --color-opacity-white-75: rgb(255 255 255 / 75%);
+    --color-opacity-white-100: rgb(255 255 255 / 100%);
 
         --border-radius-xsmall: 2px;
     --border-radius-small: 4px;

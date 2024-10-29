@@ -65,6 +65,10 @@ function next() {
           :height="image.height"
           :alt="image.alt"
         >
+        <ArticleText
+          :text="image.alt"
+          :text-class="carouselStyles.text"
+        />
       </div>
     </div>
     <div

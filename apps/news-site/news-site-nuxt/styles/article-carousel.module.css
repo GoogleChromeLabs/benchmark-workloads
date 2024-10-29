@@ -34,6 +34,17 @@
     z-index: 1;
 }
 
+.text {
+    position: absolute;
+    bottom: 0;
+    color: var(--color-utils-gray-dark);
+    padding: var(--content-spacing-xsmall);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-opacity-white-50);
+}
+
 .prev-slide.right-to-left {
     animation: prev-right-to-left 0.3s forwards;
 }

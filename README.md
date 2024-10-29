@@ -33,6 +33,7 @@ This repo is set up as a monorepo with the following folder structure:
     - [Tools](#tools)
       - [Benchmark Connector](#benchmark-connector)
       - [Workloads Manager](#workloads-manager)
+  - [Assets Licenses](#assets-licenses)
 
 ## Development
 
@@ -293,3 +294,9 @@ Each workload contains the following keys:
     ]
 }
 ```
+
+## Assets Licenses
+
+- News site images: https://unsplash.com/license
+- News site videos: https://pixabay.com/service/license-summary/
+- Ad trailer: https://peach.blender.org/about/

@@ -1,21 +1,24 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import { createPortal } from "react-dom";
 
 import Layout from "@/partials/layout/layout";
 import Section from "@/components/organisms/section/section";
 import Toast from "@/components/molecules/toast/toast";
+import Ad from "@/components/atoms/ad/ad";
 
 import { useDataContext } from "@/context/data-context";
 import { useLocalStorage } from "@/hooks/use-local-storage";
 
 export default function Page({ id }) {
     const [showPortal, setShowPortal] = useState(false);
-    const { content, alerts } = useDataContext();
+    const { content, alerts, config } = useDataContext();
 
     /** assign app settings from local storage */
     const [reduceMotion] = useLocalStorage("news-site-settings-reduced-motion", false);
     const [highContrast] = useLocalStorage("news-site-settings-high-contrast", false);
+
+    const ads = config?.ads?.[id].sections;
 
     useEffect(() => {
         if (reduceMotion)
@@ -30,8 +33,8 @@ export default function Page({ id }) {
     }, []);
 
     useEffect(() => {
-        setShowPortal(alerts[id].notification);
-    }, [id]);
+        setShowPortal(alerts?.[id].notification);
+    }, [id, alerts]);
 
     function closePortal() {
         setShowPortal(false);
@@ -45,12 +48,20 @@ export default function Page({ id }) {
         closePortal();
     }
 
+    if (!content)
+        return null;
+
     return (
         <>
             <Layout id={id}>
-                {content[id].map((section) =>
-                    <Section key={section.id} section={section} />
-                )}
+                {content[id].map((section, index) => {
+                    return (
+                        <Fragment key={section.id}>
+                            {ads?.[index] ? <Ad data={ads[index]} location="section" /> : null}
+                            <Section section={section} sectionIndex={index} pageId={id} />
+                        </Fragment>
+                    );
+                })}
             </Layout>
             {showPortal && alerts[id].notification ? createPortal(<Toast notification={alerts[id].notification} onAccept={onAccept} onReject={onReject} onClose={onReject} />, document.getElementById("notifications-container")) : null}
         </>

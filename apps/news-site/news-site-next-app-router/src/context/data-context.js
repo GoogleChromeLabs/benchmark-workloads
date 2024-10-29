@@ -1,8 +1,7 @@
 "use client";
 
-import { createContext, useContext, useLayoutEffect } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { dataSource } from "../data";
-import { useSearchParams } from "next/navigation";
 
 const RTL_LOCALES = ["ar", "he", "fa", "ps", "ur"];
 const DEFAULT_LANG = "en";
@@ -10,23 +9,59 @@ const DEFAULT_DIR = "ltr";
 
 const DataContext = createContext(null);
 
-export const DataContextProvider = ({ children }) => {
+let initConfigPromise = null;
+function getAndInitializePageConfig() {
+    initConfigPromise ??= (async () => {
+        /**
+         * read lang & dir
+         */
+        const urlParams = new URLSearchParams(window.location.search);
+        const langFromUrl = urlParams.get("lang")?.toLowerCase();
+        const lang = langFromUrl && langFromUrl in dataSource ? langFromUrl : DEFAULT_LANG;
+        const dir = lang && RTL_LOCALES.includes(lang) ? "rtl" : DEFAULT_DIR;
 
-    const searchParams = useSearchParams();
-    const langFromUrl = searchParams.get("lang")?.toLowerCase();
-    const lang = langFromUrl && langFromUrl in dataSource ? langFromUrl : DEFAULT_LANG;
-    const dir = lang && RTL_LOCALES.includes(lang) ? "rtl" : DEFAULT_DIR;
-
-    useLayoutEffect(() => {
         document.documentElement.setAttribute("dir", dir);
         document.documentElement.setAttribute("lang", lang);
-    }, []);
 
-    const value = {
-        lang,
-        dir,
-        ...dataSource[lang],
-    };
+        /**
+         * read config and fetch
+         */
+
+        const configParam = urlParams.get("config");
+        let config = {};
+
+        /**
+         * decide to load config
+         */
+        if (configParam) {
+            const response = await fetch(configParam);
+            config = await response.json();
+        }
+
+        return {
+            lang,
+            dir,
+            ...dataSource[lang],
+            config: { ...config },
+        };
+    })();
+    return initConfigPromise;
+}
+
+export const DataContextProvider = ({ children }) => {
+    const [value, setValue] = useState({});
+
+    useEffect(() => {
+        let ignore = false;
+        getAndInitializePageConfig().then((config) => {
+            if (!ignore)
+                setValue(config);
+        });
+
+        return () => {
+            ignore = true;
+        };
+    }, []);
 
     return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
 };

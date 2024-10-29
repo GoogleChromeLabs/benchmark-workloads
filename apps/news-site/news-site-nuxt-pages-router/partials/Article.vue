@@ -4,6 +4,7 @@ import articleStyles from "news-site-css/dist/article.module.css";
 
 const { article } = defineProps({
     article: Object,
+    ad: Object
 });
 </script>
 
@@ -16,8 +17,15 @@ const { article } = defineProps({
     />
     <section :class="articleStyles['article-body']">
       <ArticleImage
+        v-if="article.image"
         :image-class="articleStyles['article-image-container']"
         :image="article.image"
+        :meta="article.meta"
+      />
+      <ArticleCarousel
+        v-if="article.carousel"
+        :image-class="articleStyles['article-image-container']"
+        :data="article.carousel"
         :meta="article.meta"
       />
       <ArticleText
@@ -29,6 +37,7 @@ const { article } = defineProps({
         :type="article.type"
         :content="article.content"
         :display="article.display"
+        :ad="ad"
       />
     </section>
   </article>

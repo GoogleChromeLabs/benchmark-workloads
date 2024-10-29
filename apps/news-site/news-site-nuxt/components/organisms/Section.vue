@@ -10,8 +10,6 @@ const { section, sectionIndex, pageId } = defineProps({
     pageId: String,
 });
 
-console.log("pageId", pageId);
-
 </script>
 
 <template>

@@ -7,7 +7,7 @@ const { callback, id } = defineProps({
     id: String,
 });
 
-const { buttons, pages } = inject("data");
+const { buttons, pages } = inject("data").value;
 
 const navItems = [];
 const dropdownItems = [];

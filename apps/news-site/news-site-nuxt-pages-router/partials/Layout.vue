@@ -5,11 +5,14 @@ import styles from "news-site-css/dist/layout.module.css";
 
 const showMessage = ref(false);
 const route = useRoute();
+const id = ref(route.name === "index" ? "home" : route.name);
 
-const { alerts, links } = inject("data");
+const data = inject("data");
+const { alerts, links } = data.value;
 
 function updateShowMessage() {
-    showMessage.value = alerts[route.name]?.message ? true : false;
+    showMessage.value = alerts[id]?.message ? true : false;
+    id.value = route.name === "index" ? "home" : route.name;
 }
 
 onMounted(updateShowMessage);
@@ -31,13 +34,18 @@ const closeMessage = () => {
     id="page"
     :class="styles.page"
   >
+    <Ad
+      v-if="data.config?.ads?.[id].hero"
+      :data="data.config?.ads?.[id].hero"
+      location="header"
+    />
     <Header />
     <Navigation />
     <Message
-      v-if="alerts[route.name]?.message"
+      v-if="alerts[id]?.message"
       v-show="showMessage"
       :on-close="closeMessage"
-      :message="alerts[route.name]?.message"
+      :message="alerts[id]?.message"
     />
     <Main>
       <slot />

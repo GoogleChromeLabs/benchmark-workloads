@@ -7,7 +7,7 @@ const { onClose } = defineProps({
     onClose: Function,
 });
 
-const { language } = inject("data");
+const { language } = inject("data").value;
 const { settings } = language.dialog;
 
 const [reduceMotion, setReduceMotion] = useLocalStorage("news-site-settings-reduced-motion", false);

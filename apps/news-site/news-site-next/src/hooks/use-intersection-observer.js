@@ -15,7 +15,7 @@ export function useIntersectionObserver( { callback }) {
                     intersectionObserver.current.unobserve(element);
 
             };
-        }, [callback]
+        }, [elementRef]
     );
 
     function disconnect() {

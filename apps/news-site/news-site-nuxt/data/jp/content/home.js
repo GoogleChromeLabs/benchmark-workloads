@@ -50,14 +50,16 @@ export const home = [
                 class: "columns-3-narrow",
                 header: "犯罪と正義",
                 url: "#",
-                image: {
-                    src: "assets/images/jordhan-madec-AD5ylD2T0UY-unsplash_336.jpg",
-                    alt: "プレースホルダー",
-                    width: "336",
-                    height: "189",
+                video: {
+                    id: "1992-153555258",
+                    src: "assets/videos/1992-153555258_tiny.mp4",
+                    width: "640",
+                    height: "360",
+                    type: "HTML5 Video",
+                    origin: "https://pixabay.com/videos/world-globe-international-global-1992/"
                 },
                 meta: {
-                    captions: "誰かが撮影した写真。",
+                    captions: "「誰かが作ったビデオ。」",
                 },
                 title: "フットボールサラダ整数のライフセラピーには、大規模なウォームアップワークが必要です.",
                 type: "text",

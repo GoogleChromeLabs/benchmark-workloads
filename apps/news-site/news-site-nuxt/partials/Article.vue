@@ -1,6 +1,7 @@
 <script setup>
 import layoutStyles from "news-site-css/dist/layout.module.css";
 import articleStyles from "news-site-css/dist/article.module.css";
+import ArticleVideo from "./ArticleVideo.vue";
 
 const { article } = defineProps({
     article: Object,
@@ -26,6 +27,11 @@ const { article } = defineProps({
         v-if="article.carousel"
         :image-class="articleStyles['article-image-container']"
         :data="article.carousel"
+        :meta="article.meta"
+      />
+      <ArticleVideo
+        v-if="article.video && article.video.type === 'HTML5 Video'"
+        :data="article.video"
         :meta="article.meta"
       />
       <ArticleText

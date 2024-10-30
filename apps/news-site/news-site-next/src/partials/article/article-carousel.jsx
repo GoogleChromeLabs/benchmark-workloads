@@ -3,6 +3,7 @@ import { useState } from "react";
 import classNames from "classnames";
 import Image from "next/image";
 import ArticleTag from "@/components/molecules/article/article-tag";
+import ArticleText from "@/components/molecules/article/article-text";
 import LeftButton from "@/components/assets/left-button";
 import RightButton from "@/components/assets/right-button";
 
@@ -57,6 +58,7 @@ export default function ArticleCarousel({ data, imageClass, meta }) {
                         key={image.id}
                     >
                         <Image key={image.id} className={classNames(styles["article-image"])} src={`${imageDir}${image.src}`} width={image.width} height={image.height} alt={image.alt} />
+                        <ArticleText text={image.alt} textClass={carouselStyles.text} />
                     </div>
                 )}
             </div>

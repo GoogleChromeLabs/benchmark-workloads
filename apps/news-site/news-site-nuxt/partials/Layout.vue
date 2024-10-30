@@ -9,12 +9,17 @@ const route = useRoute();
 const data = inject("data");
 const { alerts, links } = data.value;
 
-function updateShowMessage() {
+function handleOnChange() {
+    const url = route.path;
+    requestIdleCallback(() => {
+        window.dispatchEvent(new CustomEvent("route-change-complete", { detail: { url } }));
+    });
+
     showMessage.value = alerts[route.name]?.message ? true : false;
 }
 
-onMounted(updateShowMessage);
-watch(() => route.path, updateShowMessage);
+onMounted(handleOnChange);
+watch(() => route.path, handleOnChange);
 
 const closeMessage = () => {
     showMessage.value = false;

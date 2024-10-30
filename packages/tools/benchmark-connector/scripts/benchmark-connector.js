@@ -22,6 +22,7 @@ function sendMessage(message) {
 }
 
 window.addEventListener("route-change-complete", function(event){
+  console.log("route-change-complete", event.detail.url);
   sendMessage({ type: "route-change-complete", url: event.detail.url, appId });
 });
 

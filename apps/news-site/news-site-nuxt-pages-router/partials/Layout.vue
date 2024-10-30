@@ -10,13 +10,18 @@ const id = ref(route.name === "index" ? "home" : route.name);
 const data = inject("data");
 const { alerts, links } = data.value;
 
-function updateShowMessage() {
+function handleOnChange() {
+    const url = route.path;
+    requestIdleCallback(() => {
+        window.dispatchEvent(new CustomEvent("route-change-complete", { detail: { url } }));
+    });
+
     showMessage.value = alerts[id]?.message ? true : false;
     id.value = route.name === "index" ? "home" : route.name;
 }
 
-onMounted(updateShowMessage);
-watch(() => route.path, updateShowMessage);
+onMounted(handleOnChange);
+watch(() => route.path, handleOnChange);
 
 const closeMessage = () => {
     showMessage.value = false;

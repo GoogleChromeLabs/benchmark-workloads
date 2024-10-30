@@ -1,5 +1,9 @@
+import { useRef } from "react";
+
 import ArticleTag from "@/components/molecules/article/article-tag";
 import ArticleText from "@/components/molecules/article/article-text";
+
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 
 import videoStyles from "./article-video.module.css";
 import styles from "news-site-css/dist/article.module.css";
@@ -8,14 +12,30 @@ export default function ArticleVideo ({ data, meta }) {
     if (!data)
         return null;
 
+    const autoplayRef = useRef(false);
+
+    const { elementRef, disconnect } = useIntersectionObserver({
+        callback: handleOnIntersection
+    });
+
+    function handleOnIntersection(entries) {
+        for (let entry of entries) {
+            if (!entry.isIntersecting)
+                return;
+
+            disconnect();
+            autoplayRef.current = true;
+        }
+    }
+
     const videoSource = process.env.TARGET && process.env.TARGET === "static" ? `./${data.src}` : `/${data.src}`;
     const aspectRatio = data.width / data.height;
 
     return (
         <>
-            <div className={videoStyles.container} style={{ aspectRatio }}>
+            <div className={videoStyles.container} style={{ aspectRatio }} ref={elementRef}>
                 <div className={videoStyles.content}>
-                    <video src={videoSource} muted autoPlay controls playsinline webkit-playsinline/>
+                    <video id={data.id} src={videoSource} muted controls playsInline autoPlay={autoplayRef} />
                 </div>
                 <ArticleTag tag={meta?.tag} />
             </div>

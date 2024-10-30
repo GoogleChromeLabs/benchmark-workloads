@@ -1,0 +1,5 @@
+<<<<<<<< HEAD:apps/news-site/news-site-next/dist/_next/static/8VALyUwZFq9aNdb-VA29t/_buildManifest.js
+self.__BUILD_MANIFEST={__rewrites:{afterFiles:[],beforeFiles:[],fallback:[]},"/":["static/chunks/463e5e2b-76fd1f216b2a8cb0.js","static/chunks/978-f094c48b437e4ca3.js","static/css/be68982bf2e9d24f.css","static/chunks/pages/index-0b3fda21f87faa08.js"],"/_error":["static/chunks/pages/_error-b750ae521d56f53f.js"],sortedPages:["/","/_app","/_error"]},self.__BUILD_MANIFEST_CB&&self.__BUILD_MANIFEST_CB();
+========
+self.__BUILD_MANIFEST={__rewrites:{afterFiles:[],beforeFiles:[],fallback:[]},"/":["static/chunks/463e5e2b-76fd1f216b2a8cb0.js","static/chunks/978-f094c48b437e4ca3.js","static/css/33ac65976d350a23.css","static/chunks/pages/index-9ce97f331f88ffe3.js"],"/_error":["static/chunks/pages/_error-b750ae521d56f53f.js"],sortedPages:["/","/_app","/_error"]},self.__BUILD_MANIFEST_CB&&self.__BUILD_MANIFEST_CB();
+>>>>>>>> main:apps/news-site/news-site-next/dist/_next/static/wrEsXCWOzM4QfYOpj55CR/_buildManifest.js

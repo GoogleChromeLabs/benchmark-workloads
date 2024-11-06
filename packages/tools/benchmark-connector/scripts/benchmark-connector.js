@@ -21,6 +21,11 @@ function sendMessage(message) {
   });
 }
 
+window.addEventListener("route-change-complete", function(event){
+  console.log("route-change-complete", event.detail.url);
+  sendMessage({ type: "route-change-complete", url: event.detail.url, appId });
+});
+
 window.onmessage = async (event) => {
   // ensure we only let legit functions run...
   if (event.data.id !== appId || event.data.key !== "benchmark-connector")

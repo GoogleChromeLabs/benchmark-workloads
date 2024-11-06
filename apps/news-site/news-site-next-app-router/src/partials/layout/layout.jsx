@@ -19,6 +19,13 @@ export default function Layout({ children, id }) {
     const hero = config?.ads?.[id].hero;
 
     useEffect(() => {
+        const url = location.pathname;
+        requestIdleCallback(() => {
+            window.dispatchEvent(new CustomEvent("route-change-complete", { detail: { url } }));
+        });
+    }, [location.pathname]);
+
+    useEffect(() => {
         setShowMessage(alerts[id].message);
     }, [alerts, id]);
 

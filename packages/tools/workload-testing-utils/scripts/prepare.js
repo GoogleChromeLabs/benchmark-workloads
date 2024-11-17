@@ -41,7 +41,7 @@ async function prepare() {
   const moduleDirectory =
     process.env.MODULE ?? "node_modules/workload-testing-utils/dist/";
   const hostDirectory = process.env.HOST ?? "public/";
-  const filesString = process.env.FILES ?? "workload-testing-utils.min.js";
+  const filesString = process.env.FILES ?? "workload-testing-utils.min.mjs,test-invoker.mjs,test-runner.mjs";
 
   const files = filesString.split(",");
 

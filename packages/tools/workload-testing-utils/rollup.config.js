@@ -14,7 +14,7 @@ export default {
             targets: ["./dist/"],
         }),
         copyFiles({
-            src: ["scripts/todomvc-testing-utils.js", "scripts/workload-testing-utils.mjs"],
+            src: ["scripts/todomvc-testing-utils.js", "scripts/workload-testing-utils.mjs", "scripts/prepare.js"],
             dest: "dist/",
             rename: (name, extension) => `${name}.min.${extension}`,
             minify: true

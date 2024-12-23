@@ -20,7 +20,7 @@ export default {
             minify: true
         }),
         copyFiles({
-            src: ["scripts/test-invoker.mjs", "scripts/test-runner.mjs"],
+            src: ["scripts/test-invoker.mjs", "scripts/test-runner.mjs", "scripts/benchmark.mjs", "scripts/helpers.mjs", "scripts/params.mjs"],
             dest: "dist/"
         })
     ],

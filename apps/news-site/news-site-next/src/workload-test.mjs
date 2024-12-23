@@ -1,8 +1,12 @@
-import { BenchmarkTestStep, BenchmarkTestSuite, BenchmarkSuitesManager, forceLayout, getElement } from "./workload-testing-utils.min.mjs";
+import { BenchmarkStep, BenchmarkSuite } from "workload-testing-utils/dist/benchmark.mjs";
+import { forceLayout, getElement } from "workload-testing-utils/dist/helpers.mjs";
 
-window.benchmarkSuitesManager = new BenchmarkSuitesManager(window.name, [
-    new BenchmarkTestSuite("default", [
-        new BenchmarkTestStep("Navigate-to-US-page", () => {
+export const appName = "news-site-next";
+export const appVersion = "1.0.0";
+
+const suites = {
+    default: new BenchmarkSuite("default", [
+        new BenchmarkStep("Navigate-to-US-page", () => {
             for (let i = 0; i < 25; i++) {
                 getElement("#navbar-dropdown-toggle").click();
                 forceLayout();
@@ -13,7 +17,7 @@ window.benchmarkSuitesManager = new BenchmarkSuitesManager(window.name, [
             getElement("#navbar-navlist-us-link").click();
             forceLayout();
         }),
-        new BenchmarkTestStep("Navigate-to-World-page", () => {
+        new BenchmarkStep("Navigate-to-World-page", () => {
             for (let i = 0; i < 25; i++) {
                 getElement("#navbar-dropdown-toggle").click();
                 forceLayout();
@@ -24,7 +28,7 @@ window.benchmarkSuitesManager = new BenchmarkSuitesManager(window.name, [
             getElement("#navbar-navlist-world-link").click();
             forceLayout();
         }),
-        new BenchmarkTestStep("Navigate-to-Politics-page", () => {
+        new BenchmarkStep("Navigate-to-Politics-page", () => {
             for (let i = 0; i < 25; i++) {
                 getElement("#navbar-dropdown-toggle").click();
                 forceLayout();
@@ -36,14 +40,6 @@ window.benchmarkSuitesManager = new BenchmarkSuitesManager(window.name, [
             forceLayout();
         }),
     ]),
-    new BenchmarkTestSuite("Dropdown", [
-        new BenchmarkTestStep("Toggle-More-Dropdown", () => {
-            getElement("#navbar-dropdown-toggle").click();
-            forceLayout();
-        }),
-        new BenchmarkTestStep("Toggle-More-Dropdown", () => {
-            getElement("#navbar-dropdown-toggle").click();
-            forceLayout();
-        }),
-    ]),
-]);
+};
+
+export default suites;

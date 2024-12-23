@@ -1,11 +1,22 @@
-import React from "react";
+import { useEffect } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Page from "@/partials/page/page";
 import Head from "next/head";
 import { DataContextProvider } from "@/context/data-context";
-import Script from "next/script";
+import { BenchmarkConnector } from "workload-testing-utils/dist/benchmark.mjs";
+import suites, { appName, appVersion } from "@/workload-test.mjs";
 
 export default function App() {
+    useEffect(() => {
+        /*
+        window.addEventListener("message", (event) => console.log(event.data));
+        window.postMessage({ id: "news-next-1", key: "benchmark-connector", type: "benchmark-suite", name: "default" }, "*");
+        */
+        const benchmarkConnector = new BenchmarkConnector(suites, appName, appVersion);
+        benchmarkConnector.connect();
+
+        return () => benchmarkConnector.disconnect();
+    }, []);
     return (
         <>
             <Head>
@@ -26,7 +37,6 @@ export default function App() {
                     </Routes>
                 </Router>
             </DataContextProvider>
-            <Script src="./benchmark-connector.min.js" onReady={() => window.initWorkload()} />
         </>
     );
 }

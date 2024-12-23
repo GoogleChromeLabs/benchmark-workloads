@@ -1,54 +1,31 @@
 const fs = require("fs").promises;
-const { dirname } = require("path");
+const { resolve } = require("path");
 
-/**
- * deleteFile
- *
- * Deletes a file with a src input.
- *
- * @param {string} src Path to the file to delete.
- */
-async function deleteFile(src) {
-  try {
-    await fs.unlink(src);
-    console.log(`File ${src} has been deleted.`);
-  } catch (err) {
-    console.error("No previous file exists, no need to delete!");
+async function updateVariables({ meta, src }) {
+  let contents = await fs.readFile(`${src}`, "utf8");
+
+  if (meta) {
+    const metaData = await fs.readFile(resolve(meta));
+    const { name, version } = JSON.parse(metaData);
+    const nameRegex = new RegExp(`appName = .*`);
+    contents = contents.replace(nameRegex, `appName = "${name}";`);
+    const versionRegex = new RegExp(`appVersion = .*`);
+    contents = contents.replace(versionRegex, `appVersion = "${version}";`);
   }
-}
 
-/**
- * copyFile
- *
- * Copies a file from a source to a destination.
- *
- * @param {string} src Source file.
- * @param {string} dest Destination file.
- */
-async function copyFile(src, dest) {
-  await fs.mkdir(dirname(dest), { recursive: true });
-  await fs.copyFile(src, dest);
+  await fs.writeFile(`${src}`, contents);
 }
-
 /**
  * prepare
  *
- * Function that copies the workload-testing-utils.min file to a new location.
- * An optional 'HOST' environment variable can be used to assign a custom host directory.
+ * Function that reads the package.json file and updates the appName and appVersion variables in the src/workload-tests.mjs file.
  *
  */
 async function prepare() {
-  const moduleDirectory =
-    process.env.MODULE ?? "node_modules/workload-testing-utils/dist/";
-  const hostDirectory = process.env.HOST ?? "public/";
-  const filesString = process.env.FILES ?? "workload-testing-utils.min.js";
-
-  const files = filesString.split(",");
-
-  for (const file of files) {
-    await deleteFile(`${hostDirectory}${file}`);
-    await copyFile(`${moduleDirectory}${file}`, `${hostDirectory}${file}`);
-  }
+  await updateVariables({
+    meta: "./package.json",
+    src: `src/workload-test.mjs`,
+  })
 
   console.log("Done with preparation!");
 }

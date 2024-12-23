@@ -40,6 +40,16 @@ const suites = {
             forceLayout();
         }),
     ]),
+    Dropdown: new BenchmarkSuite("Dropdown", [
+        new BenchmarkStep("Toggle-More-Dropdown", () => {
+            getElement("#navbar-dropdown-toggle").click();
+            forceLayout();
+        }),
+        new BenchmarkStep("Toggle-More-Dropdown", () => {
+            getElement("#navbar-dropdown-toggle").click();
+            forceLayout();
+        }),
+    ]),
 };
 
 export default suites;

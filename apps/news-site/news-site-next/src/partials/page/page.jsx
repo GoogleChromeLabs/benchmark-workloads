@@ -9,6 +9,9 @@ import Ad from "@/components/atoms/ad/ad";
 import { useDataContext } from "@/context/data-context";
 import { useLocalStorage } from "@/hooks/use-local-storage";
 
+import { BenchmarkConnector } from "workload-testing-utils/dist/benchmark.mjs";
+import suites, { appName, appVersion } from "@/workload-test.mjs";
+
 export default function Page({ id }) {
     const [showPortal, setShowPortal] = useState(false);
     const { content, alerts, config } = useDataContext();
@@ -18,6 +21,18 @@ export default function Page({ id }) {
     /** assign app settings from local storage */
     const [reduceMotion] = useLocalStorage("news-site-settings-reduced-motion", false);
     const [highContrast] = useLocalStorage("news-site-settings-high-contrast", false);
+
+    useEffect(() => {
+        /*
+            Paste below into dev console for manual testing:
+            window.addEventListener("message", (event) => console.log(event.data));
+            window.postMessage({ id: "news-site-next-1.0.0", key: "benchmark-connector", type: "benchmark-suite", name: "default" }, "*");
+        */
+        const benchmarkConnector = new BenchmarkConnector(suites, appName, appVersion);
+        benchmarkConnector.connect();
+
+        return () => benchmarkConnector.disconnect();
+    }, []);
 
     useEffect(() => {
         if (reduceMotion)

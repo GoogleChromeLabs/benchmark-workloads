@@ -1,11 +1,29 @@
-const { createDirectory, copyFiles, copyDirectory } = require("app-build-scripts");
+const { createDirectory, copyFiles, copyDirectory, updateImports } = require("app-build-scripts");
 
 const filesToMove = [
     { src: "index.html", dest: "./dist/index.html" },
     { src: "favicon.ico", dest: "./dist/favicon.ico" },
-    { src: "benchmark-connector.min.js", dest: "./dist/benchmark-connector.min.js" },
-    { src: "workload-testing-utils.min.js", dest: "./dist/workload-testing-utils.min.js" },
-    { src: "workload-test.js", dest: "./dist/workload-test.js" },
+    { src: "node_modules/workload-testing-utils/dist/test-invoker.mjs", dest: "./dist/src/test-invoker.mjs" },
+    { src: "node_modules/workload-testing-utils/dist/test-runner.mjs", dest: "./dist/src/test-runner.mjs" },
+    { src: "node_modules/workload-testing-utils/dist/params.mjs", dest: "./dist/src/params.mjs" },
+    { src: "node_modules/workload-testing-utils/dist/benchmark.mjs", dest: "./dist/src/benchmark.mjs" },
+    { src: "node_modules/workload-testing-utils/dist/helpers.mjs", dest: "./dist/src/helpers.mjs" },
+];
+
+const importsToRename = [
+    {
+        src: "/src/",
+        dest: "./",
+        files: [ "./dist/src/index.js" ]
+    },
+    {
+        src: "/node_modules/workload-testing-utils/dist/",
+        dest: "./",
+        files: [
+            "./dist/src/index.js",
+            "./dist/src/workload-test.mjs"
+        ]
+    }
 ];
 
 const build = async () => {
@@ -24,7 +42,13 @@ const build = async () => {
     // copy styles folder
     await copyDirectory("./styles", "./dist/styles");
 
-    console.log("done!!");
+    // rename imports files
+    for (const entry of importsToRename){
+        const { files, src, dest } = entry;
+        await updateImports({ files, src, dest });
+    }
+
+    console.log("Done with building!");
 };
 
 build();

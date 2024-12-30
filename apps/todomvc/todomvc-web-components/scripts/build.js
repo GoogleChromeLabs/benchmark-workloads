@@ -3,11 +3,6 @@ const { createDirectory, copyDirectory, copyFiles, updateImports } = require("ap
 const filesToMove = [
     { src: "index.html", dest: "./dist/index.html" },
     { src: "favicon.ico", dest: "./dist/favicon.ico" },
-    { src: "index.js", dest: "./dist/index.js" },
-    { src: "benchmark-connector.min.js", dest: "./dist/benchmark-connector.min.js" },
-    { src: "workload-testing-utils.min.js", dest: "./dist/workload-testing-utils.min.js" },
-    { src: "todomvc-testing-utils.min.js", dest: "./dist/todomvc-testing-utils.min.js" },
-    { src: "workload-test.js", dest: "./dist/workload-test.js" },
     { src: "node_modules/todomvc-css/dist/global.css", dest: "./dist/styles/global.css" },
     { src: "node_modules/todomvc-css/dist/header.css", dest: "./dist/styles/header.css" },
     { src: "node_modules/todomvc-css/dist/footer.css", dest: "./dist/styles/footer.css" },
@@ -18,6 +13,12 @@ const filesToMove = [
     { src: "node_modules/todomvc-css/dist/bottombar.constructable.js", dest: "./dist/styles/bottombar.constructable.js" },
     { src: "node_modules/todomvc-css/dist/todo-list.constructable.js", dest: "./dist/styles/todo-list.constructable.js" },
     { src: "node_modules/todomvc-css/dist/todo-item.constructable.js", dest: "./dist/styles/todo-item.constructable.js" },
+    { src: "node_modules/workload-testing-utils/dist/test-invoker.mjs", dest: "./dist/src/test-invoker.mjs" },
+    { src: "node_modules/workload-testing-utils/dist/test-runner.mjs", dest: "./dist/src/test-runner.mjs" },
+    { src: "node_modules/workload-testing-utils/dist/params.mjs", dest: "./dist/src/params.mjs" },
+    { src: "node_modules/workload-testing-utils/dist/benchmark.mjs", dest: "./dist/src/benchmark.mjs" },
+    { src: "node_modules/workload-testing-utils/dist/helpers.mjs", dest: "./dist/src/helpers.mjs" },
+    { src: "node_modules/workload-testing-utils/dist/todomvc-testing-utils.min.js", dest: "./dist/src/todomvc-testing-utils.min.js" },
 ];
 
 const importsToRename = [
@@ -27,20 +28,28 @@ const importsToRename = [
         files: [ "./dist/index.html" ]
     },
     {
-        src: "src/",
-        dest: "",
-        files: [ "./dist/index.html", "./dist/index.js" ]
+        src: "../../../node_modules/todomvc-css/dist/",
+        dest: "../../../styles/",
+        files: [
+            "./dist/src/components/todo-app/todo-app.component.js",
+            "./dist/src/components/todo-bottombar/todo-bottombar.component.js",
+            "./dist/src/components/todo-item/todo-item.component.js",
+            "./dist/src/components/todo-list/todo-list.component.js",
+            "./dist/src/components/todo-topbar/todo-topbar.component.js",
+        ],
     },
     {
-        src: "../../../node_modules/todomvc-css/dist/",
-        dest: "../../styles/",
+        src: "/src/",
+        dest: "./",
+        files: [ "./dist/src/index.js" ]
+    },
+    {
+        src: "/node_modules/workload-testing-utils/dist/",
+        dest: "./",
         files: [
-            "./dist/components/todo-app/todo-app.component.js",
-            "./dist/components/todo-bottombar/todo-bottombar.component.js",
-            "./dist/components/todo-item/todo-item.component.js",
-            "./dist/components/todo-list/todo-list.component.js",
-            "./dist/components/todo-topbar/todo-topbar.component.js",
-        ],
+            "./dist/src/index.js",
+            "./dist/src/workload-test.mjs"
+        ]
     }
 ];
 
@@ -49,7 +58,7 @@ const build = async () => {
     await createDirectory("./dist");
 
     // copy src folder
-    await copyDirectory("./src", "./dist");
+    await copyDirectory("./src", "./dist/src");
 
     // copy files to Move
     await copyFiles(filesToMove);

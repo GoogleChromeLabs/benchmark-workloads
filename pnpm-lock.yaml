@@ -39,9 +39,6 @@ importers:
       '@typescript-eslint/eslint-plugin':
         specifier: ^5.60.1
         version: 5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.39.0)(typescript@5.3.3)
-      benchmark-connector:
-        specifier: 'workspace: *'
-        version: link:../../../packages/tools/benchmark-connector
       classnames:
         specifier: ^2.3.2
         version: 2.5.1
@@ -96,9 +93,6 @@ importers:
       '@typescript-eslint/eslint-plugin':
         specifier: ^5.60.1
         version: 5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.39.0)(typescript@5.3.3)
-      benchmark-connector:
-        specifier: 'workspace: *'
-        version: link:../../../packages/tools/benchmark-connector
       classnames:
         specifier: ^2.3.2
         version: 2.5.1
@@ -154,9 +148,6 @@ importers:
       '@typescript-eslint/eslint-plugin':
         specifier: ^5.60.1
         version: 5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.39.0)(typescript@5.3.3)
-      benchmark-connector:
-        specifier: 'workspace: *'
-        version: link:../../../packages/tools/benchmark-connector
       classnames:
         specifier: ^2.3.2
         version: 2.5.1
@@ -203,9 +194,6 @@ importers:
 
   apps/news-site/news-site-nuxt:
     dependencies:
-      benchmark-connector:
-        specifier: 'workspace: *'
-        version: link:../../../packages/tools/benchmark-connector
       http-server:
         specifier: ^14.1.1
         version: 14.1.1
@@ -234,9 +222,6 @@ importers:
 
   apps/news-site/news-site-nuxt-pages-router:
     dependencies:
-      benchmark-connector:
-        specifier: 'workspace: *'
-        version: link:../../../packages/tools/benchmark-connector
       http-server:
         specifier: ^14.1.1
         version: 14.1.1
@@ -265,9 +250,6 @@ importers:
 
   apps/todomvc/todomvc-web-components:
     dependencies:
-      benchmark-connector:
-        specifier: 'workspace: *'
-        version: link:../../../packages/tools/benchmark-connector
       http-server:
         specifier: ^14.1.1
         version: 14.1.1
@@ -293,9 +275,6 @@ importers:
       '@typescript-eslint/eslint-plugin':
         specifier: ^5.60.1
         version: 5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.39.0)(typescript@5.3.3)
-      benchmark-connector:
-        specifier: 'workspace: *'
-        version: link:../../../packages/tools/benchmark-connector
       classnames:
         specifier: ^2.3.2
         version: 2.5.1
@@ -358,9 +337,6 @@ importers:
       '@typescript-eslint/eslint-plugin':
         specifier: ^5.60.1
         version: 5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.39.0)(typescript@5.3.3)
-      benchmark-connector:
-        specifier: 'workspace: *'
-        version: link:../../../packages/tools/benchmark-connector
       classnames:
         specifier: ^2.3.2
         version: 2.5.1
@@ -411,9 +387,6 @@ importers:
 
   examples/hello-world:
     dependencies:
-      benchmark-connector:
-        specifier: 'workspace: *'
-        version: link:../../packages/tools/benchmark-connector
       http-server:
         specifier: ^14.1.1
         version: 14.1.1
@@ -671,9 +644,6 @@ importers:
 
   ui-widgets/ad-campaigns/ad-css-animations:
     dependencies:
-      benchmark-connector:
-        specifier: 'workspace: *'
-        version: link:../../../packages/tools/benchmark-connector
       http-server:
         specifier: ^14.1.1
         version: 14.1.1
@@ -687,9 +657,6 @@ importers:
 
   ui-widgets/ad-campaigns/ad-html5-video:
     dependencies:
-      benchmark-connector:
-        specifier: 'workspace: *'
-        version: link:../../../packages/tools/benchmark-connector
       http-server:
         specifier: ^14.1.1
         version: 14.1.1

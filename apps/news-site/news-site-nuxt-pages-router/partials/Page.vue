@@ -1,6 +1,9 @@
 <script setup>
 import { inject, onMounted, ref } from "vue";
-import { useLocalStorage, useHead } from "#imports";
+import { useLocalStorage } from "#imports";
+
+import { BenchmarkConnector } from "workload-testing-utils/dist/benchmark.mjs";
+import suites, { appName, appVersion } from "../src/workload-test.mjs";
 
 const { id } = defineProps({
     id: String
@@ -25,20 +28,16 @@ onMounted(() => {
         document.documentElement.classList.add("forced-colors");
     else
         document.documentElement.classList.remove("forced-colors");
-});
 
-useHead({
-    script: [
-        {
-            src: "./benchmark-connector.min.js",
-            tagPosition: "bodyClose",
-        },
-        {
-            src: "./workload-test.js",
-            type: "module",
-            tagPosition: "bodyClose",
-        }
-    ],
+    /*
+        Paste below into dev console for manual testing:
+        window.addEventListener("message", (event) => console.log(event.data));
+        window.postMessage({ id: "news-site-nuxt-pages-router-1.0.0", key: "benchmark-connector", type: "benchmark-suite", name: "default" }, "*");
+    */
+    const benchmarkConnector = new BenchmarkConnector(suites, appName, appVersion);
+    benchmarkConnector.connect();
+
+    return () => benchmarkConnector.disconnect();
 });
 
 function closePortal() {

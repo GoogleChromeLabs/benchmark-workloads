@@ -2,7 +2,6 @@ import React from "react";
 import Page from "@/partials/page/page";
 import Head from "next/head";
 import { DataContextProvider } from "@/context/data-context";
-import Script from "next/script";
 
 export default function App() {
     return (
@@ -14,8 +13,6 @@ export default function App() {
             <DataContextProvider>
                 <Page id="world" />
             </DataContextProvider>
-            <Script src="./benchmark-connector.min.js" strategy="lazyOnload"/>
-            <Script src="./workload-test.js" type="module"/>
         </>
     );
 }

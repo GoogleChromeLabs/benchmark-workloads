@@ -6,7 +6,6 @@ import PageGTM from "@/partials/page/page-gtm";
 import PageGTMGA from "@/partials/page/page-gtm-ga";
 import Head from "next/head";
 import { DataContextProvider } from "@/context/data-context";
-import Script from "next/script";
 
 export default function App() {
     return (
@@ -29,8 +28,6 @@ export default function App() {
                     </Routes>
                 </Router>
             </DataContextProvider>
-            <Script src="./benchmark-connector.min.js" strategy="lazyOnload"/>
-            <Script src="./workload-test.js" type="module"/>
         </>
     );
 }

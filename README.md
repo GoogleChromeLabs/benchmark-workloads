@@ -31,7 +31,6 @@ This repo is set up as a monorepo with the following folder structure:
       - [News Site CSS](#news-site-css)
       - [TodoMVC CSS](#todomvc-css)
     - [Tools](#tools)
-      - [Benchmark Connector](#benchmark-connector)
       - [Workloads Manager](#workloads-manager)
   - [Assets Licenses](#assets-licenses)
 
@@ -110,8 +109,7 @@ pnpm -F news-site-next start:static
 
 ### Workload-Benchmark communication
 
-To enable communication between the workloads and a benchmark using postMessage, the [benchmark-connector](#benchmark-connector) package is used.
-Each workload that opts into this feature has the benchmark-connector package installed.
+To enable communication between the workloads and a benchmark using postMessage, a BenchmarkConnector class is used.
 Some workloads use a `prepare` script to copy the relevant JavaScript file to the appropriate directory.
 
 ### How to build all workloads
@@ -245,18 +243,6 @@ A script that helps moving workload files to an output folder. This script also 
 ```bash
 pnpm -F app-build-scripts format
 pnpm -F app-build-scripts build
-```
-
-#### benchmark-connector
-
-Enables communication between benchmarks and workloads.
-
--   benchmark-connector.min.js: communication between benchmark and workload.
--   prepare.min.js: script to copy benchmark-connector.min.js file to the public folder of workload.
-
-```bash
-pnpm -F benchmark-connector format
-pnpm -F benchmark-connector build
 ```
 
 #### workloads-manager

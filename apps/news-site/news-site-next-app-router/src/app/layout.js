@@ -1,5 +1,4 @@
 import { DataContextProvider } from "@/context/data-context";
-import Script from "next/script";
 
 import "news-site-css/dist/variables.css";
 import "news-site-css/dist/global.css";
@@ -23,8 +22,6 @@ export default function RootLayout({ children }) {
                 <div id="notifications-container"></div>
                 <div id="sitemap-container"></div>
                 <div id="login-container"></div>
-                <Script src="./benchmark-connector.min.js" strategy="lazyOnload"/>
-                <Script src="./workload-test.js" type="module"/>
             </body>
         </html>
     );

@@ -14,10 +14,14 @@ export default {
             targets: ["./dist/"],
         }),
         copyFiles({
-            src: ["scripts/*"],
+            src: ["scripts/todomvc-testing-utils.js", "scripts/workload-testing-utils.mjs", "scripts/prepare.js"],
             dest: "dist/",
             rename: (name, extension) => `${name}.min.${extension}`,
             minify: true
         }),
+        copyFiles({
+            src: ["scripts/test-invoker.mjs", "scripts/test-runner.mjs", "scripts/benchmark.mjs", "scripts/helpers.mjs", "scripts/params.mjs"],
+            dest: "dist/"
+        })
     ],
 };

@@ -12,7 +12,6 @@
         "dev": "npm run prepare && nuxt dev",
         "build": "npm run prepare && nuxt build",
         "start": "nuxt preview",
-        "postinstall": "nuxt prepare",
         "lint:fix": "eslint . --fix",
         "pretty:check": "prettier --check ./",
         "pretty:fix": "prettier --write ./",

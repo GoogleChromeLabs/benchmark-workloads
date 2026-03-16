@@ -22,3 +22,7 @@ output
 
 # env variables
 .env
+
+# dist/build output (contains compiled secrets)
+dist
+dist-base

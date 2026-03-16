@@ -15,7 +15,6 @@
         "build:static:base": "npm run prepare && TARGET=static-base BASE='/news-site-next' nuxt generate",
         "start": "nuxt preview",
         "start:static": "http-server ./dist -c-1 --cors --silent",
-        "postinstall": "nuxt prepare",
         "lint:fix": "eslint . --fix",
         "pretty:check": "prettier --check ./",
         "pretty:fix": "prettier --write ./",
